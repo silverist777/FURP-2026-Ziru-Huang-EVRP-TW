@@ -1,0 +1,107 @@
+{
+  "name": "smoke_test_evrptw",
+  "problem_type": "EVRPTW",
+  "objective": {
+    "primary": "minimize_vehicle_count",
+    "secondary": "minimize_total_distance"
+  },
+  "distance": {
+    "metric": "euclidean",
+    "scale": 100
+  },
+  "duration": {
+    "metric": "euclidean",
+    "scale": 10
+  },
+  "solver": {
+    "name": "PyVRP",
+    "runtime_seconds": 10,
+    "seed": 1,
+    "display": true
+  },
+  "vehicles": {
+    "num_available": 2,
+    "capacity": 3,
+    "start_depot": "depot",
+    "end_depot": "depot",
+    "tw_early": 0,
+    "tw_late": 130,
+    "battery_capacity": 1200,
+    "initial_battery": 1200
+  },
+  "depot": {
+    "name": "depot",
+    "x": 0,
+    "y": 0,
+    "tw_early": 0,
+    "tw_late": 130
+  },
+  "energy": {
+    "consumption_per_distance": 1.0,
+    "minimum_battery": 0
+  },
+  "charging": {
+    "policy": "full_recharge",
+    "allow_partial_recharge": true,
+    "charging_rate": 20.0,
+    "fixed_service_duration": 0
+  },
+  "charging_stations": [
+    {
+      "name": "s1",
+      "x": 1,
+      "y": 1,
+      "service_duration": 0,
+      "tw_early": 0,
+      "tw_late": 130,
+      "charging_rate": 20.0
+    }
+  ],
+  "clients": [
+    {
+      "name": "c1",
+      "x": 1,
+      "y": 0,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 0,
+      "tw_late": 20
+    },
+    {
+      "name": "c2",
+      "x": 2,
+      "y": 0,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 15,
+      "tw_late": 40
+    },
+    {
+      "name": "c3",
+      "x": 0,
+      "y": 2,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 10,
+      "tw_late": 45
+    },
+    {
+      "name": "c4",
+      "x": 2,
+      "y": 2,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 35,
+      "tw_late": 75
+    },
+    {
+      "name": "c5",
+      "x": 3,
+      "y": 3,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 60,
+      "tw_late": 100
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "name": "scale_up_evrptw",
+  "problem_type": "EVRPTW",
+  "objective": {
+    "primary": "minimize_vehicle_count",
+    "secondary": "minimize_total_distance"
+  },
+  "distance": {
+    "metric": "euclidean",
+    "scale": 100
+  },
+  "duration": {
+    "metric": "euclidean",
+    "scale": 10
+  },
+  "solver": {
+    "name": "PyVRP",
+    "runtime_seconds": 2,
+    "seed": 1,
+    "display": true
+  },
+  "vehicles": {
+    "num_available": 5,
+    "capacity": 5,
+    "start_depot": "depot",
+    "end_depot": "depot",
+    "tw_early": 0,
+    "tw_late": 260,
+    "battery_capacity": 2000,
+    "initial_battery": 2000
+  },
+  "depot": {
+    "name": "depot",
+    "x": 0,
+    "y": 0,
+    "tw_early": 0,
+    "tw_late": 260
+  },
+  "energy": {
+    "consumption_per_distance": 1.0,
+    "minimum_battery": 0
+  },
+  "charging": {
+    "policy": "full_recharge",
+    "allow_partial_recharge": true,
+    "charging_rate": 30.0,
+    "fixed_service_duration": 0
+  },
+  "charging_stations": [
+    {
+      "name": "s01",
+      "x": 1,
+      "y": 2,
+      "service_duration": 0,
+      "tw_early": 0,
+      "tw_late": 260,
+      "charging_rate": 30.0
+    },
+    {
+      "name": "s02",
+      "x": 3,
+      "y": -1,
+      "service_duration": 0,
+      "tw_early": 0,
+      "tw_late": 260,
+      "charging_rate": 30.0
+    }
+  ],
+  "clients": [
+    {
+      "name": "c01",
+      "x": 1,
+      "y": 0,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 0,
+      "tw_late": 35
+    },
+    {
+      "name": "c02",
+      "x": 2,
+      "y": 0,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 10,
+      "tw_late": 55
+    },
+    {
+      "name": "c03",
+      "x": 3,
+      "y": 1,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 25,
+      "tw_late": 80
+    },
+    {
+      "name": "c04",
+      "x": 4,
+      "y": 1,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 40,
+      "tw_late": 105
+    },
+    {
+      "name": "c05",
+      "x": 0,
+      "y": 1,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 0,
+      "tw_late": 40
+    },
+    {
+      "name": "c06",
+      "x": 0,
+      "y": 2,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 15,
+      "tw_late": 65
+    },
+    {
+      "name": "c07",
+      "x": 1,
+      "y": 3,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 35,
+      "tw_late": 95
+    },
+    {
+      "name": "c08",
+      "x": 1,
+      "y": 4,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 55,
+      "tw_late": 125
+    },
+    {
+      "name": "c09",
+      "x": 2,
+      "y": 2,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 20,
+      "tw_late": 85
+    },
+    {
+      "name": "c10",
+      "x": 3,
+      "y": 3,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 45,
+      "tw_late": 115
+    },
+    {
+      "name": "c11",
+      "x": 4,
+      "y": 3,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 65,
+      "tw_late": 140
+    },
+    {
+      "name": "c12",
+      "x": 5,
+      "y": 4,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 90,
+      "tw_late": 175
+    },
+    {
+      "name": "c13",
+      "x": -1,
+      "y": 1,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 0,
+      "tw_late": 50
+    },
+    {
+      "name": "c14",
+      "x": -2,
+      "y": 2,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 25,
+      "tw_late": 85
+    },
+    {
+      "name": "c15",
+      "x": -3,
+      "y": 2,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 50,
+      "tw_late": 120
+    },
+    {
+      "name": "c16",
+      "x": -4,
+      "y": 3,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 80,
+      "tw_late": 165
+    },
+    {
+      "name": "c17",
+      "x": 1,
+      "y": -1,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 0,
+      "tw_late": 50
+    },
+    {
+      "name": "c18",
+      "x": 2,
+      "y": -2,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 25,
+      "tw_late": 90
+    },
+    {
+      "name": "c19",
+      "x": 3,
+      "y": -2,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 55,
+      "tw_late": 130
+    },
+    {
+      "name": "c20",
+      "x": 4,
+      "y": -3,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 90,
+      "tw_late": 180
+    }
+  ]
+}

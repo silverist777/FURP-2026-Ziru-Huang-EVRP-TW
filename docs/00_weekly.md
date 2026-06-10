@@ -36,9 +36,11 @@
 
 **Progress this week**
 - Set up repository from the FURP template.
-- 
+- Apply PyVRP to solve traditional VRPTW problems
+- Read EVPR-TW related paper and got to know the VNS+TS metaheuristic algorithm. 
+
 **Challenges & blockers**
-- _..._
+- PyVRP cannot solve EVRP-TW problems because electric-related parameters are not contained.
 
 **Next steps**
 - _..._

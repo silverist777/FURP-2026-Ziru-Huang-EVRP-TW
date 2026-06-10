@@ -32,10 +32,10 @@ This is your project home for the FURP programme. **Fork this template**, rename
 | Supervising faculty |FoSE |
 | Project lead | Tianxiang Cui |
 | Team or individual | Individual |
-| Cited paper being replicated | _title + link/DOI_ |
+| Cited paper being replicated | The Electric Vehicle-Routing Problem with Time Windows and Recharging Stationshttps://pubsonline.informs.org/doi/10.1287/trsc.2013.0490 |
 
 **One-line summary:** _What is your project about? (1–2 sentences)_
-
+Find optimal routes for Electric vehicle under constraints.
 ---
 
 ## Repository structure
