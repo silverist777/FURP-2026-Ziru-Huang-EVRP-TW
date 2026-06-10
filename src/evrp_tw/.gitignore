@@ -1,7 +1,0 @@
-.venv/
-.venv_pyvrp/
-__pycache__/
-.ipynb_checkpoints/
-outputs/
-*.pyc
-

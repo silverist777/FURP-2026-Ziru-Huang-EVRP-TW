@@ -1,5 +1,0 @@
-pyvrp==0.13.4
-matplotlib
-pandas
-jupyter
-
