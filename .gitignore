@@ -34,3 +34,4 @@ data/
 .env
 *.key
 secrets.*
+src/evrp_tw/paper/
