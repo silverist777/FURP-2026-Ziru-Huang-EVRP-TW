@@ -28,6 +28,8 @@ Thumbs.db
 *.ckpt
 *.pth
 data/
+!src/data/
+!src/data/*.json
 !**/data/.gitkeep
 
 # Secrets — NEVER commit credentials
@@ -36,3 +38,4 @@ data/
 secrets.*
 src/evrp_tw/paper/
 src/1803.08475v3.pdf
+src/evrp_tw

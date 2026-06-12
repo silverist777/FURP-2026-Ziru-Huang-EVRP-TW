@@ -43,7 +43,8 @@
 - PyVRP cannot solve EVRP-TW problems because electric-related parameters are not contained.
 
 **Next steps**
-- _..._
+- build a pipeline for EVRP-TW problem
+- Implement attention model to solve this problem
 
 **Hours spent (optional):**
 
