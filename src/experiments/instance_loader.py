@@ -3,7 +3,12 @@ import json
 from math import hypot
 from pathlib import Path
 
-from feasibility_checker import CheckerConfig, CustomerSpec, DepotSpec
+from feasibility_checker import (
+    CheckerConfig,
+    ChargingStationSpec,
+    CustomerSpec,
+    DepotSpec,
+)
 
 
 DEFAULT_DISTANCE_SCALE = 1
@@ -131,14 +136,31 @@ class InstanceData:
             for client in self.clients
         ]
 
+    def checker_charging_station_specs(self):
+        return [
+            ChargingStationSpec(
+                name=station.name,
+                x=station.x,
+                y=station.y,
+                service_duration=station.service_duration,
+                tw_early=station.tw_early,
+                tw_late=station.tw_late,
+                charging_rate=station.charging_rate,
+            )
+            for station in self.charging_stations
+        ]
+
     def checker_config(self):
         return CheckerConfig(
             vehicle_capacity=self.vehicle.capacity,
             distance_scale=self.distance_scale,
             duration_scale=self.duration_scale,
             battery_capacity=self.vehicle.battery_capacity,
+            initial_battery=self.vehicle.initial_battery,
             energy_per_distance=self.energy.consumption_per_distance,
             minimum_battery=self.energy.minimum_battery,
+            charging_rate=self.charging.charging_rate,
+            allow_partial_recharge=self.charging.allow_partial_recharge,
         )
 
 
@@ -166,6 +188,10 @@ def load_instance(path):
     with instance_path.open(encoding="utf-8") as file:
         data = json.load(file)
 
+    return load_instance_data(data, default_name=instance_path.stem)
+
+
+def load_instance_data(data, default_name="instance"):
     depot = as_mapping(data.get("depot"))
     depot_name = get_or_default(depot, "name", "depot")
     depot_tw_early = get_or_default(depot, "tw_early", DEFAULT_TW_EARLY)
@@ -220,7 +246,7 @@ def load_instance(path):
     ]
 
     return InstanceData(
-        name=get_or_default(data, "name", instance_path.stem),
+        name=get_or_default(data, "name", default_name),
         problem_type=get_or_default(data, "problem_type", "VRPTW"),
         objective=first_present(
             data.get("objective"),

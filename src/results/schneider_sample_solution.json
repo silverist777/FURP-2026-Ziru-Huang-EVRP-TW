@@ -1,0 +1,188 @@
+{
+  "status": "solved",
+  "source": {
+    "path": "src/data/schneider_sample.txt",
+    "instance": "schneider_sample",
+    "problem_type": "EVRPTW"
+  },
+  "solver": {
+    "baseline": "PyVRP VRPTW",
+    "repair": "station_insertion_label_setting",
+    "pyvrp_version": "0.13.4",
+    "runtime_seconds": 1,
+    "seed": 1
+  },
+  "routes": [
+    {
+      "route_index": 1,
+      "visits": [
+        "D0",
+        "S1",
+        "C2",
+        "S1",
+        "C1",
+        "D0"
+      ]
+    }
+  ],
+  "metrics": {
+    "feasible": true,
+    "vehicle_count": 1,
+    "total_distance": 16,
+    "total_duration": 38,
+    "makespan": 38,
+    "served_customers": 2,
+    "missing_customers": 0,
+    "duplicate_customers": 0,
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 2,
+    "charging_time": 12
+  },
+  "baseline": {
+    "pyvrp_solution_feasible": true,
+    "pyvrp_time_warp": 0,
+    "customer_routes": [
+      [
+        "C2",
+        "C1"
+      ]
+    ]
+  },
+  "repair": {
+    "feasible": true,
+    "split_count": 0,
+    "station_insertions": 2,
+    "attempts": [
+      {
+        "customers": [
+          "C2",
+          "C1"
+        ],
+        "feasible": true,
+        "reason": ""
+      }
+    ],
+    "unsolved": []
+  },
+  "violations": [],
+  "report": {
+    "feasible": true,
+    "total_distance": 16,
+    "total_duration": 38,
+    "makespan": 38,
+    "served_customers": 2,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 2,
+    "charging_time": 12,
+    "synchronization_violations": 0,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "S1",
+          "C2",
+          "S1",
+          "C1"
+        ],
+        "load": 2,
+        "distance": 16,
+        "duration": 38,
+        "wait_time": 0,
+        "return_time": 38,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 2,
+        "charging_time": 12,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": []
+  },
+  "instance": {
+    "name": "schneider_sample",
+    "problem_type": "EVRPTW",
+    "objective": {
+      "primary": "minimize_vehicle_count",
+      "secondary": "minimize_total_distance"
+    },
+    "distance": {
+      "metric": "euclidean",
+      "scale": 1
+    },
+    "duration": {
+      "metric": "euclidean",
+      "scale": 1.0
+    },
+    "solver": {
+      "name": "PyVRP",
+      "runtime_seconds": 1,
+      "seed": 1,
+      "display": false
+    },
+    "vehicles": {
+      "num_available": 2,
+      "capacity": 5,
+      "start_depot": "D0",
+      "end_depot": "D0",
+      "tw_early": 0,
+      "tw_late": 100,
+      "battery_capacity": 10,
+      "initial_battery": 10
+    },
+    "depot": {
+      "name": "D0",
+      "x": 0,
+      "y": 0,
+      "tw_early": 0,
+      "tw_late": 100
+    },
+    "energy": {
+      "consumption_per_distance": 1,
+      "minimum_battery": 0
+    },
+    "charging": {
+      "policy": "full_recharge",
+      "allow_partial_recharge": true,
+      "charging_rate": 1.0,
+      "fixed_service_duration": 0
+    },
+    "charging_stations": [
+      {
+        "name": "S1",
+        "x": 4,
+        "y": 0,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 100,
+        "charging_rate": 1.0
+      }
+    ],
+    "clients": [
+      {
+        "name": "C1",
+        "x": 2,
+        "y": 0,
+        "demand": 1,
+        "service_duration": 5,
+        "tw_early": 0,
+        "tw_late": 100
+      },
+      {
+        "name": "C2",
+        "x": 8,
+        "y": 0,
+        "demand": 1,
+        "service_duration": 5,
+        "tw_early": 0,
+        "tw_late": 100
+      }
+    ]
+  }
+}

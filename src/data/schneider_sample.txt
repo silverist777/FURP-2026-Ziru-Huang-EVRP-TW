@@ -1,0 +1,13 @@
+# Minimal Schneider-style EVRP-TW sample for parser/checker tests.
+# This is not a benchmark reproduction instance.
+StringID Type x y demand ready_time due_date service_time
+D0 d 0 0 0 0 100 0
+C1 c 2 0 1 0 100 5
+C2 c 8 0 1 0 100 5
+S1 f 4 0 0 0 100 0
+
+Q 10 / battery capacity
+C 5 / vehicle load capacity
+r 1 / fuel consumption rate
+g 1 / inverse refueling rate
+v 1 / average velocity

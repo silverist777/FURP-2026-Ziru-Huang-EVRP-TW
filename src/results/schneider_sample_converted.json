@@ -1,0 +1,80 @@
+{
+  "name": "schneider_sample",
+  "problem_type": "EVRPTW",
+  "objective": {
+    "primary": "minimize_vehicle_count",
+    "secondary": "minimize_total_distance"
+  },
+  "distance": {
+    "metric": "euclidean",
+    "scale": 1
+  },
+  "duration": {
+    "metric": "euclidean",
+    "scale": 1.0
+  },
+  "solver": {
+    "name": "PyVRP",
+    "runtime_seconds": 1,
+    "seed": 1,
+    "display": false
+  },
+  "vehicles": {
+    "num_available": 2,
+    "capacity": 5,
+    "start_depot": "D0",
+    "end_depot": "D0",
+    "tw_early": 0,
+    "tw_late": 100,
+    "battery_capacity": 10,
+    "initial_battery": 10
+  },
+  "depot": {
+    "name": "D0",
+    "x": 0,
+    "y": 0,
+    "tw_early": 0,
+    "tw_late": 100
+  },
+  "energy": {
+    "consumption_per_distance": 1,
+    "minimum_battery": 0
+  },
+  "charging": {
+    "policy": "full_recharge",
+    "allow_partial_recharge": true,
+    "charging_rate": 1.0,
+    "fixed_service_duration": 0
+  },
+  "charging_stations": [
+    {
+      "name": "S1",
+      "x": 4,
+      "y": 0,
+      "service_duration": 0,
+      "tw_early": 0,
+      "tw_late": 100,
+      "charging_rate": 1.0
+    }
+  ],
+  "clients": [
+    {
+      "name": "C1",
+      "x": 2,
+      "y": 0,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 0,
+      "tw_late": 100
+    },
+    {
+      "name": "C2",
+      "x": 8,
+      "y": 0,
+      "demand": 1,
+      "service_duration": 5,
+      "tw_early": 0,
+      "tw_late": 100
+    }
+  ]
+}

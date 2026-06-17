@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 .venv/
+.venv_pyvrp/
 venv/
 env/
 *.egg-info/
@@ -31,6 +32,9 @@ data/
 !src/data/
 !src/data/*.json
 !**/data/.gitkeep
+src/paper/
+src/results/*_solution.json
+!src/results/schneider_sample_solution.json
 
 # Secrets — NEVER commit credentials
 .env
