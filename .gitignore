@@ -1,8 +1,10 @@
-# Python
+﻿# Python
 __pycache__/
 *.py[cod]
+.cache/
 .venv/
 .venv_pyvrp/
+.venv_pomo_cuda/
 venv/
 env/
 *.egg-info/
@@ -36,10 +38,11 @@ src/paper/
 src/results/*_solution.json
 !src/results/schneider_sample_solution.json
 
-# Secrets — NEVER commit credentials
+# Secrets 鈥?NEVER commit credentials
 .env
 *.key
 secrets.*
 src/evrp_tw/paper/
 src/1803.08475v3.pdf
 src/evrp_tw
+

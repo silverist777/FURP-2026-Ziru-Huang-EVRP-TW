@@ -1,0 +1,9 @@
+numpy
+scipy
+pandas
+matplotlib
+tqdm
+tensorboard
+wandb
+gymnasium
+rl4co
