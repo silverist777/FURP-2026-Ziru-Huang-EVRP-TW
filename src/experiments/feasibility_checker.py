@@ -339,12 +339,21 @@ def check_route(route_idx, visits, depot, customer_by_index, config, visit_count
     )
 
 
-def check_explicit_routes(routes, depot, customers, charging_stations, config):
+def check_explicit_routes(
+    routes,
+    depot,
+    customers,
+    charging_stations,
+    config,
+    charging_plans=None,
+):
     """Checks EVRP-TW routes whose visits are named customers or stations.
 
     Each route may include the depot name at the start and end. Customer visits
     are checked for coverage, time windows, capacity, and battery use. Station
-    visits recharge the vehicle to full battery when charging data is present.
+    visits recharge the vehicle according to the optional v3 charging plan. If
+    no charging plan is supplied, stations recharge to full battery for
+    backwards compatibility.
     """
 
     customer_by_name = {customer.name: customer for customer in customers}
@@ -354,6 +363,10 @@ def check_explicit_routes(routes, depot, customers, charging_stations, config):
     violations = []
 
     for route_idx, route_names in enumerate(routes, start=1):
+        charging_plan = None
+        if charging_plans is not None and route_idx - 1 < len(charging_plans):
+            charging_plan = charging_plans[route_idx - 1]
+
         metrics, route_violations = check_explicit_route(
             route_idx=route_idx,
             visit_names=list(route_names),
@@ -362,6 +375,7 @@ def check_explicit_routes(routes, depot, customers, charging_stations, config):
             station_by_name=station_by_name,
             config=config,
             visit_counts=visit_counts,
+            charging_plan=charging_plan,
         )
         route_metrics.append(metrics)
         violations.extend(route_violations)
@@ -430,7 +444,6 @@ def check_explicit_routes(routes, depot, customers, charging_stations, config):
         violations=violations,
     )
 
-
 def check_explicit_route(
     route_idx,
     visit_names,
@@ -439,10 +452,16 @@ def check_explicit_route(
     station_by_name,
     config,
     visit_counts,
+    charging_plan=None,
 ):
     """Replays one named EVRP-TW route, including station recharge decisions."""
 
     route_names = normalize_explicit_route(visit_names, depot.name)
+    plan_by_visit = {
+        (entry.get("station"), entry.get("station_visit")): entry
+        for entry in charging_plan or []
+        if isinstance(entry, dict)
+    }
     current = depot
     current_time = 0
     load = 0
@@ -453,6 +472,7 @@ def check_explicit_route(
     energy_violations = 0
     charging_count = 0
     charging_time = 0
+    station_visit = 0
     remaining_energy = initial_route_energy(config)
     minimum_battery = 0 if config.minimum_battery is None else config.minimum_battery
     visited = []
@@ -521,11 +541,14 @@ def check_explicit_route(
             load += customer.demand
             current_time = start_service + customer.service_duration
         else:
+            station_visit += 1
+            charge_decision = plan_by_visit.get((station.name, station_visit))
             charge_time, remaining_energy, charge_violation = recharge_at_station(
                 station=station,
                 remaining_energy=remaining_energy,
                 config=config,
                 route_idx=route_idx,
+                decision=charge_decision,
             )
             if charge_violation is not None:
                 violations.append(charge_violation)
@@ -591,7 +614,6 @@ def check_explicit_route(
         violations,
     )
 
-
 def normalize_explicit_route(visit_names, depot_name):
     """Removes optional route-boundary depot markers."""
 
@@ -636,8 +658,8 @@ def consume_energy(
     )
 
 
-def recharge_at_station(station, remaining_energy, config, route_idx):
-    """Recharges to full battery at a station when charging data is available."""
+def recharge_at_station(station, remaining_energy, config, route_idx, decision=None):
+    """Recharges at a station using full recharge or a v3 partial decision."""
 
     if remaining_energy is None or config.battery_capacity is None:
         return 0, remaining_energy, None
@@ -646,7 +668,19 @@ def recharge_at_station(station, remaining_energy, config, route_idx):
     if charging_rate is None:
         charging_rate = config.charging_rate
 
-    energy_needed = max(0, config.battery_capacity - remaining_energy)
+    if decision is None:
+        target_energy = config.battery_capacity
+    else:
+        target_energy = decision.get("departure_battery")
+        if target_energy is None:
+            target_energy = decision.get("charge_to")
+        if target_energy is None and decision.get("charged_amount") is not None:
+            target_energy = remaining_energy + decision["charged_amount"]
+        if target_energy is None:
+            target_energy = config.battery_capacity
+        target_energy = min(config.battery_capacity, max(remaining_energy, target_energy))
+
+    energy_needed = max(0, target_energy - remaining_energy)
     if energy_needed == 0:
         return 0, remaining_energy, None
 
@@ -663,8 +697,7 @@ def recharge_at_station(station, remaining_energy, config, route_idx):
         )
 
     charge_time = ceil(energy_needed / charging_rate)
-    return charge_time, config.battery_capacity, None
-
+    return charge_time, target_energy, None
 
 def print_benchmark_report(report, runtime_seconds=None, seed=None, solver="PyVRP"):
     """Prints the feasibility report using the project's benchmark vocabulary."""

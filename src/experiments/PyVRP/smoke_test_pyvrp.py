@@ -8,7 +8,7 @@ from feasibility_checker import check_solution, print_benchmark_report
 from instance_loader import load_instance
 
 
-INSTANCE_PATH = Path(__file__).resolve().parents[1] / "data" / "smoke_test_instance.json"
+INSTANCE_PATH = Path(__file__).resolve().parents[2] / "data" / "smoke_test_instance.json"
 
 
 def add_clients(model, instance):

@@ -1,0 +1,16 @@
+# CVRP Method Comparison
+
+| algorithm | clients | runtime_seconds | objective_value |
+| --- | --- | --- | --- |
+| GA | 20 | 0.691 | 262.688 |
+| PyVRP | 20 | 1.002 | 258.208 |
+| yd-kwon/POMO | 20 | 0.33 | 376.399 |
+| GA | 50 | 1.266 | 735.08 |
+| PyVRP | 50 | 1.005 | 552.35 |
+| yd-kwon/POMO | 50 | 0.079 | 574.003 |
+| GA | 100 | 2.124 | 1516.738 |
+| PyVRP | 100 | 1.016 | 819.557 |
+| yd-kwon/POMO | 100 | 0.126 | 823.075 |
+| GA | 200 | 3.87 | 7112.083 |
+| PyVRP | 200 | 1.129 | 2589.381 |
+| yd-kwon/POMO | 200 | 0.258 | 2804.361 |

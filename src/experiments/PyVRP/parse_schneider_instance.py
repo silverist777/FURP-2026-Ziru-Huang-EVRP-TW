@@ -196,7 +196,7 @@ def convert_schneider_instance(
             "minimum_battery": 0,
         },
         "charging": {
-            "policy": "full_recharge",
+            "policy": "partial_recharge",
             "allow_partial_recharge": True,
             "charging_rate": charging_rate,
             "fixed_service_duration": 0,

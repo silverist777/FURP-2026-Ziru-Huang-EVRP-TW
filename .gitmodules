@@ -1,0 +1,6 @@
+[submodule "external/POMO"]
+	path = external/POMO
+	url = https://github.com/yd-kwon/POMO.git
+[submodule "py-ga-VRPTW"]
+	path = py-ga-VRPTW
+	url = https://github.com/silverist777/py-ga-VRPTW.git

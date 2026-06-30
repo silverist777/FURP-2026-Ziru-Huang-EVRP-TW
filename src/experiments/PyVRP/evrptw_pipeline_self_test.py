@@ -1,7 +1,12 @@
 import argparse
 
-from experiments.PyVRP.evrptw_repair import repair_customer_sequence, repair_routes_with_splitting
+from feasibility_checker import check_explicit_routes
 from instance_loader import load_instance_data
+from experiments.PyVRP.evrptw_v3_repair import (
+    charge_decisions_payload,
+    repair_customer_sequence,
+    repair_routes_with_splitting,
+)
 from experiments.PyVRP.parse_schneider_instance import convert_schneider_instance
 
 
@@ -37,7 +42,7 @@ def make_instance(
             "depot": {"name": "D0", "x": 0, "y": 0, "tw_early": 0, "tw_late": 100},
             "energy": {"consumption_per_distance": 1, "minimum_battery": 0},
             "charging": {
-                "policy": "full_recharge",
+                "policy": "partial_recharge",
                 "allow_partial_recharge": True,
                 "charging_rate": 1,
                 "fixed_service_duration": 0,
@@ -48,7 +53,7 @@ def make_instance(
     )
 
 
-def customer(name, x, y=0, demand=1):
+def customer(name, x, y=0, demand=1, tw_late=100):
     return {
         "name": name,
         "x": x,
@@ -56,7 +61,7 @@ def customer(name, x, y=0, demand=1):
         "demand": demand,
         "service_duration": 0,
         "tw_early": 0,
-        "tw_late": 100,
+        "tw_late": tw_late,
     }
 
 
@@ -80,6 +85,32 @@ def test_station_repair():
     result = repair_customer_sequence(["C1"], instance)
     assert_ok(result.feasible, "Station-assisted route should be repairable.")
     assert_ok("S1" in result.route, "Repair should insert charging station S1.")
+
+
+def test_partial_recharge_beats_full_recharge():
+    instance = make_instance(
+        clients=[customer("C1", 8, tw_late=10)],
+        stations=[station("S1", 4)],
+        battery_capacity=10,
+    )
+    result = repair_customer_sequence(["C1"], instance)
+    assert_ok(result.feasible, "Partial-recharge route should be repairable.")
+    assert_ok(result.charging_count == 2, "Expected two station charging visits.")
+    assert_ok(
+        result.charge_decisions[0].departure_battery < instance.vehicle.battery_capacity,
+        "First station visit should use partial recharge, not full recharge.",
+    )
+
+    report = check_explicit_routes(
+        routes=[result.route],
+        depot=instance.checker_depot_spec(),
+        customers=instance.checker_customer_specs(),
+        charging_stations=instance.checker_charging_station_specs(),
+        config=instance.checker_config(),
+        charging_plans=[charge_decisions_payload(result.charge_decisions)],
+    )
+    assert_ok(report.feasible, "Checker should accept v3 partial charging plan.")
+    assert_ok(report.time_window_violations == 0, "Partial charge should satisfy TW.")
 
 
 def test_split_repair():
@@ -123,6 +154,7 @@ def main():
     args = parser.parse_args()
 
     test_station_repair()
+    test_partial_recharge_beats_full_recharge()
     test_split_repair()
     test_unsolved_route()
     if args.schneider is not None:

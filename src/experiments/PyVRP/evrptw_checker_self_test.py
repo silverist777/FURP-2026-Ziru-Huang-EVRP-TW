@@ -11,7 +11,7 @@ from instance_loader import load_instance
 from experiments.PyVRP.parse_schneider_instance import convert_schneider_instance, write_instance_json
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 SAMPLE_TEXT = ROOT / "data" / "schneider_sample.txt"
 SAMPLE_JSON = ROOT / "results" / "schneider_sample_converted.json"
 

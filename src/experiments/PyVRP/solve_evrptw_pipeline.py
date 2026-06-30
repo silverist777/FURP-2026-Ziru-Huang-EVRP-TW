@@ -7,7 +7,7 @@ from pathlib import Path
 from pyvrp import Model
 from pyvrp.stop import MaxRuntime
 
-from experiments.PyVRP.evrptw_repair import repair_routes_with_splitting
+from experiments.PyVRP.evrptw_v3_repair import repair_routes_with_splitting
 from feasibility_checker import check_explicit_routes, print_benchmark_report
 from instance_loader import load_instance_data
 from experiments.PyVRP.parse_schneider_instance import convert_schneider_instance
@@ -127,6 +127,7 @@ def solve_pipeline(args):
         customers=instance.checker_customer_specs(),
         charging_stations=instance.checker_charging_station_specs(),
         config=instance.checker_config(),
+        charging_plans=repair_plan.charging_plans,
     )
     status = "solved" if repair_plan.feasible and report.feasible else "unsolved"
 
@@ -169,7 +170,7 @@ def build_solution_payload(
         },
         "solver": {
             "baseline": "PyVRP VRPTW",
-            "repair": "station_insertion_label_setting",
+            "repair": "v3_partial_recharge_label_setting",
             "pyvrp_version": version("pyvrp"),
             "runtime_seconds": instance.solver.runtime_seconds,
             "seed": instance.solver.seed,
@@ -178,6 +179,11 @@ def build_solution_payload(
             {
                 "route_index": idx,
                 "visits": route,
+                "charging_plan": (
+                    repair_plan.charging_plans[idx - 1]
+                    if idx - 1 < len(repair_plan.charging_plans)
+                    else []
+                ),
             }
             for idx, route in enumerate(repair_plan.routes, start=1)
         ],
@@ -205,6 +211,8 @@ def build_solution_payload(
             "feasible": repair_plan.feasible,
             "split_count": repair_plan.split_count,
             "station_insertions": repair_plan.station_insertions,
+            "charging_plans": repair_plan.charging_plans,
+            "policy": "partial_recharge",
             "attempts": repair_plan.attempts,
             "unsolved": repair_plan.unsolved,
         },
