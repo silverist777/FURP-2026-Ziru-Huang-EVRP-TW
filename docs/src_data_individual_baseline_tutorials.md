@@ -15,8 +15,6 @@ It does not use the three-method comparison script as the main workflow.
 | GA | `src\experiments\GA\ga_cvrp_baseline.py` | `Solomon\*.txt`, `Holmberger\*.txt` | CVRP only |
 | PyVRP | `src\experiments\PyVRP\evaluate_solomon_pyvrp.py` | `Solomon\*.txt`, `Holmberger\*.txt` | VRPTW, E disabled |
 | PyVRP EVRP-TW pipeline | `src\experiments\PyVRP\solve_evrptw_pipeline.py` | project JSON / Schneider sample | PyVRP VRPTW + charging repair/checker |
-| POMO RL4CO VRPTW | `src\experiments\POMO\pomo_solomon_eval.py` | `Solomon\*.txt`, `Holmberger\*.txt` | VRPTW, E disabled |
-| POMO CVRPLIB A | `src\experiments\POMO\pomo_cvrplib_a_eval.py` | `A\*.vrp` | CVRP |
 | yd-kwon/POMO checkpoint | `src\experiments\ydkwon_pomo_method_comparison.py` | `Solomon\*.txt`, `Holmberger\*.txt` | CVRP model, TW checked after rollout |
 
 ## 1. Environments
@@ -35,7 +33,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r src\requirements.txt
 ```
 
-POMO CPU:
+yd-kwon/POMO CPU:
 
 ```powershell
 python -m venv .venv_pomo
@@ -44,7 +42,7 @@ python -m venv .venv_pomo
 .\.venv_pomo\Scripts\python.exe -m pip install -r src\requirements-pomo-tools.txt
 ```
 
-POMO CUDA:
+yd-kwon/POMO CUDA:
 
 ```powershell
 python -m venv .venv_pomo_cuda
@@ -52,7 +50,7 @@ python -m venv .venv_pomo_cuda
 .\.venv_pomo_cuda\Scripts\python.exe -m pip install -r src\requirements-pomo-cuda.txt
 .\.venv_pomo_cuda\Scripts\python.exe -m pip install -r src\requirements.txt
 .\.venv_pomo_cuda\Scripts\python.exe -m pip install -r src\requirements-pomo-tools.txt
-.\.venv_pomo_cuda\Scripts\python.exe src\experiments\POMO\pomo_cuda_preflight.py
+.\.venv_pomo_cuda\Scripts\python.exe -c "import torch; print('torch=' + torch.__version__); print('cuda_available=' + str(torch.cuda.is_available())); print('cuda_device=' + (torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'none'))"
 ```
 
 For PyVRP pipeline/checker imports:
@@ -226,88 +224,7 @@ $env:PYTHONPATH = "src;src\experiments"
 
 Do not report `schneider_sample.txt` as a benchmark reproduction. It is only a parser/checker sample.
 
-## 5. POMO baseline only
-
-### 5.1 RL4CO POMO on Solomon
-
-Scope:
-
-```text
-POMO VRPTW experiment. EV constraints disabled.
-```
-
-Without training first:
-
-```powershell
-cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
-.\.venv_pomo\Scripts\python.exe src\experiments\POMO\pomo_solomon_eval.py `
-  --data-dir src\data\Solomon `
-  --instance C101 `
-  --device cpu `
-  --output-csv src\results\pomo_srcdata_C101.csv
-```
-
-With a short synthetic training phase:
-
-```powershell
-.\.venv_pomo\Scripts\python.exe src\experiments\POMO\pomo_solomon_eval.py `
-  --data-dir src\data\Solomon `
-  --limit 5 `
-  --device cpu `
-  --train-first `
-  --max-epochs 1 `
-  --train-data-size 256 `
-  --val-data-size 64 `
-  --batch-size 16 `
-  --output-csv src\results\pomo_srcdata_solomon_trained_limit5.csv
-```
-
-### 5.2 RL4CO POMO on Holmberger
-
-```powershell
-cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
-.\.venv_pomo\Scripts\python.exe src\experiments\POMO\pomo_solomon_eval.py `
-  --data-dir src\data\Holmberger `
-  --instance C1_2_1 `
-  --device cpu `
-  --output-csv src\results\pomo_srcdata_holmberger_C1_2_1.csv
-```
-
-### 5.3 POMO on CVRPLIB A
-
-Scope:
-
-```text
-CVRP.
-```
-
-First five A instances:
-
-```powershell
-cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
-.\.venv_pomo\Scripts\python.exe src\experiments\POMO\pomo_cvrplib_a_eval.py `
-  --data-dir src\data\A `
-  --limit 5 `
-  --device cpu `
-  --output-csv src\results\pomo_srcdata_A_limit5.csv
-```
-
-Optional short training:
-
-```powershell
-.\.venv_pomo\Scripts\python.exe src\experiments\POMO\pomo_cvrplib_a_eval.py `
-  --data-dir src\data\A `
-  --limit 5 `
-  --device cpu `
-  --train-first `
-  --max-epochs 1 `
-  --train-data-size 256 `
-  --val-data-size 64 `
-  --batch-size 16 `
-  --output-csv src\results\pomo_srcdata_A_trained_limit5.csv
-```
-
-### 5.4 yd-kwon/POMO pretrained checkpoint only
+## 5. yd-kwon/POMO pretrained checkpoint only
 
 Scope:
 

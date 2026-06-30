@@ -32,11 +32,15 @@ sys.path.insert(0, str(POMO_CVRP_CODE))
 sys.path.insert(0, str(POMO_CVRP_ROOT))
 sys.path.insert(0, str(POMO_ROOT))
 sys.path.insert(0, str(REPO_ROOT / "src" / "experiments"))
-sys.path.insert(0, str(REPO_ROOT / "src" / "experiments" / "POMO"))
 
 from CVRPEnv import CVRPEnv  # noqa: E402
 from CVRPModel import CVRPModel  # noqa: E402
 from CVRProblemDef import augment_xy_data_by_8_fold  # noqa: E402
+from experiment_record import (  # noqa: E402
+    CORE_RECORD_FIELDS,
+    build_experiment_record,
+    format_constraint_violations,
+)
 from method_comparison_table import DEFAULT_HOLMBERGER, DEFAULT_SOLOMON, build_cases  # noqa: E402
 
 
@@ -81,6 +85,38 @@ def route_distance(instance, routes: list[list[int]]) -> float:
             current = node
         total += euclidean(nodes[current], nodes[0])
     return total
+
+
+def cvrp_constraint_violations(instance, routes: list[list[int]]) -> dict[str, int]:
+    served = [customer_idx for route in routes for customer_idx in route]
+    expected = set(range(1, instance.num_clients + 1))
+    valid_served = [customer_idx for customer_idx in served if customer_idx in expected]
+
+    capacity_violations = 0
+    for route in routes:
+        load = sum(
+            instance.customers[customer_idx - 1].demand
+            for customer_idx in route
+            if customer_idx in expected
+        )
+        if load > instance.capacity + 1e-6:
+            capacity_violations += 1
+
+    return {
+        "missing_customers": len(expected - set(valid_served)),
+        "duplicate_customers": len(valid_served) - len(set(valid_served)),
+        "capacity_violations": capacity_violations,
+        "vehicle_limit_overage": max(0, len(routes) - instance.vehicles),
+        "invalid_customer_ids": len(served) - len(valid_served),
+    }
+
+
+def pyvrp_routes(solution, instance) -> list[list[int]]:
+    valid_indices = set(range(1, instance.num_clients + 1))
+    return [
+        [customer_idx for customer_idx in route.visits() if customer_idx in valid_indices]
+        for route in solution.routes()
+    ]
 
 
 def split_by_capacity(instance, individual: list[int]) -> list[list[int]]:
@@ -134,11 +170,19 @@ def run_ga(case, pop_size: int, generations: int, seed: int) -> dict[str, object
     rng = random.Random(seed + case.client_count)
     base = list(range(1, case.instance.num_clients + 1))
     population = [rng.sample(base, len(base)) for _ in range(pop_size)]
+    best_individual: list[int] | None = None
     best_score = float("inf")
+    convergence_curve: list[dict[str, float | int]] = []
 
-    for _ in range(generations):
+    for generation in range(1, generations + 1):
         scores = [evaluate_ga_individual(case.instance, ind) for ind in population]
-        best_score = min(best_score, min(scores))
+        current_best_idx = min(range(len(population)), key=lambda idx: scores[idx])
+        if scores[current_best_idx] < best_score:
+            best_score = scores[current_best_idx]
+            best_individual = list(population[current_best_idx])
+            convergence_curve.append(
+                {"generation": generation, "best_objective": round(best_score, 3)}
+            )
         elite = [list(population[idx]) for idx in sorted(range(len(population)), key=lambda i: scores[i])[:4]]
         next_population = elite
         while len(next_population) < pop_size:
@@ -151,8 +195,27 @@ def run_ga(case, pop_size: int, generations: int, seed: int) -> dict[str, object
         population = next_population
 
     scores = [evaluate_ga_individual(case.instance, ind) for ind in population]
-    best_score = min(best_score, min(scores))
-    return make_row("GA", case.client_count, time.perf_counter() - started, best_score)
+    current_best_idx = min(range(len(population)), key=lambda idx: scores[idx])
+    if scores[current_best_idx] < best_score or best_individual is None:
+        best_score = scores[current_best_idx]
+        best_individual = list(population[current_best_idx])
+        convergence_curve.append(
+            {"generation": generations, "best_objective": round(best_score, 3)}
+        )
+    routes = split_by_capacity(case.instance, best_individual)
+    return make_row(
+        algorithm="GA",
+        case=case,
+        runtime=time.perf_counter() - started,
+        objective=best_score,
+        seed=seed,
+        routes=routes,
+        details=f"pop_size={pop_size}; generations={generations}; mutation=reverse 0.2",
+        convergence_curve=convergence_curve,
+        improvement_over_time=convergence_curve,
+        generations=generations,
+        search_steps=pop_size * generations,
+    )
 
 
 def scaled(value: float) -> int:
@@ -189,7 +252,23 @@ def run_pyvrp(case, runtime_seconds: int, seed: int) -> dict[str, object]:
     result = model.solve(MaxRuntime(runtime_seconds), seed=seed, display=False)
     runtime = time.perf_counter() - started
     objective = result.best.distance() / SCALE
-    return make_row("PyVRP", case.client_count, runtime, objective)
+    solution = result.best
+    routes = pyvrp_routes(solution, case.instance)
+    return make_row(
+        algorithm="PyVRP",
+        case=case,
+        runtime=runtime,
+        objective=objective,
+        seed=seed,
+        routes=routes,
+        details=(
+            f"MaxRuntime={runtime_seconds}s; routes={solution.num_routes()}; "
+            f"excess_load={list(solution.excess_load())}"
+        ),
+        convergence_curve="not captured by PyVRP API",
+        improvement_over_time="not captured by PyVRP API",
+        search_steps=None,
+    )
 
 
 def normalize_case(case) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
@@ -275,22 +354,105 @@ def run_pomo(case, model: CVRPModel, device: torch.device, augmentation: bool) -
     aug_idx = int(flat_best // env.pomo_size)
     pomo_idx = int(flat_best % env.pomo_size)
     actions = env.selected_node_list[aug_idx, pomo_idx].detach().cpu().tolist()
-    objective = route_distance(case.instance, actions_to_routes(actions))
+    routes = actions_to_routes(actions)
+    objective = route_distance(case.instance, routes)
     runtime = time.perf_counter() - started
-    return make_row("yd-kwon/POMO", case.client_count, runtime, objective)
+    return make_row(
+        algorithm="yd-kwon/POMO",
+        case=case,
+        runtime=runtime,
+        objective=objective,
+        seed=args_seed(),
+        routes=routes,
+        details=(
+            f"checkpoint=CVRP100 epoch 30500; augmentation={augmentation}; "
+            f"actions={len(actions)}"
+        ),
+        convergence_curve="single inference rollout; no training curve",
+        improvement_over_time="not applicable during inference",
+        search_steps=len(actions),
+    )
 
 
-def make_row(algorithm: str, clients: int, runtime: float, objective: float) -> dict[str, object]:
-    return {
+_ARGS_SEED = 1234
+
+
+def args_seed() -> int:
+    return _ARGS_SEED
+
+
+def make_row(
+    algorithm: str,
+    case,
+    runtime: float,
+    objective: float,
+    seed: int,
+    routes: list[list[int]],
+    details: str,
+    convergence_curve: object = None,
+    improvement_over_time: object = None,
+    iterations: int | None = None,
+    generations: int | None = None,
+    search_steps: int | None = None,
+) -> dict[str, object]:
+    violations = cvrp_constraint_violations(case.instance, routes)
+    constraint_violations = format_constraint_violations(violations)
+    feasible = constraint_violations == "none"
+    feasibility_status = (
+        "feasible under CVRP check; TW/E disabled"
+        if feasible
+        else "infeasible under CVRP check; TW/E disabled"
+    )
+    selected = (
+        ",".join(str(num) for num in case.selected_cust_no)
+        if case.client_count < 100
+        else f"all customers 1-{case.client_count}"
+    )
+    row = build_experiment_record(
+        instance_name=case.label,
+        instance_size=case.client_count,
+        method_name=algorithm,
+        objective_value=objective,
+        runtime_seconds=runtime,
+        feasibility_status=feasibility_status,
+        vehicles_used=len(routes),
+        constraint_violations=constraint_violations,
+        random_seed=seed,
+        best_solution_found=routes,
+        reference_value=case.instance.known_cost,
+        convergence_curve=convergence_curve,
+        improvement_over_time=improvement_over_time,
+        iterations=iterations,
+        generations=generations,
+        search_steps=search_steps,
+    )
+    row.update({
         "algorithm": algorithm,
-        "clients": clients,
+        "method": algorithm,
+        "clients": case.client_count,
+        "instance": case.label,
+        "source": case.source,
+        "selected_cust_no": selected,
         "runtime_seconds": round(runtime, 3),
         "objective_value": round(objective, 3),
-    }
+        "feasibility_status_under_added_constraints": feasibility_status,
+        "routes_used": len(routes),
+        "constraint_scope": "CVRP only; time windows disabled; EV constraints disabled",
+        "convergence_details": details,
+        "seed": seed,
+    })
+    return row
 
 
 def write_markdown(rows: list[dict[str, object]], path: Path) -> None:
-    headers = ["algorithm", "clients", "runtime_seconds", "objective_value"]
+    headers = [
+        *CORE_RECORD_FIELDS,
+        "algorithm",
+        "source",
+        "selected_cust_no",
+        "constraint_scope",
+        "convergence_details",
+    ]
     with path.open("w", encoding="utf-8") as file:
         file.write("# CVRP Method Comparison\n\n")
         file.write("| " + " | ".join(headers) + " |\n")
@@ -300,7 +462,9 @@ def write_markdown(rows: list[dict[str, object]], path: Path) -> None:
 
 
 def main() -> None:
+    global _ARGS_SEED
     args = parse_args()
+    _ARGS_SEED = args.seed
     if args.device == "cuda" and not torch.cuda.is_available():
         raise RuntimeError("CUDA requested but torch.cuda.is_available() is false.")
     if not args.checkpoint.exists():
@@ -327,7 +491,7 @@ def main() -> None:
     csv_path = args.output_dir / "cvrp_method_comparison.csv"
     md_path = args.output_dir / "cvrp_method_comparison.md"
     with csv_path.open("w", newline="", encoding="utf-8") as file:
-        writer = csv.DictWriter(file, fieldnames=["algorithm", "clients", "runtime_seconds", "objective_value"])
+        writer = csv.DictWriter(file, fieldnames=list(rows[0].keys()))
         writer.writeheader()
         writer.writerows(rows)
     write_markdown(rows, md_path)

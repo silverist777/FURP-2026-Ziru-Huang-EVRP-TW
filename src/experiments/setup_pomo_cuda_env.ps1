@@ -31,9 +31,9 @@ if (-not $SkipTorchInstall) {
 }
 
 if (-not $SkipToolInstall) {
-    Write-Host "Installing POMO/RL utility packages"
+    Write-Host "Installing yd-kwon/POMO utility packages"
     & $VenvPython -m pip install -r (Join-Path $RepoRoot "src\requirements-pomo-tools.txt")
 }
 
-Write-Host "Running CUDA preflight"
-& $VenvPython (Join-Path $RepoRoot "src\experiments\pomo_cuda_preflight.py")
+Write-Host "Running CUDA/PyTorch preflight"
+& $VenvPython -c "import torch; print('torch=' + torch.__version__); print('cuda_available=' + str(torch.cuda.is_available())); print('cuda_device=' + (torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'none'))"

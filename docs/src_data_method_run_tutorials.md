@@ -1,4 +1,4 @@
-# GA / PyVRP / POMO tutorials for `src/data`
+# GA / PyVRP / yd-kwon POMO tutorials for `src/data`
 
 This tutorial is for running the datasets already stored under:
 
@@ -12,9 +12,9 @@ All commands are for you to run manually in PowerShell.
 
 | Data path | Format | What can use it now |
 |---|---|---|
-| `src\data\Solomon\*.txt` + `.sol` | Solomon VRPTW | PyVRP VRPTW eval, POMO VRPTW eval, GA/PyVRP/POMO pure-CVRP comparison |
-| `src\data\Holmberger\*.txt` + `.sol` | Solomon-like larger VRPTW | PyVRP/POMO Solomon-like eval, GA/PyVRP/POMO pure-CVRP comparison |
-| `src\data\A\*.vrp` + `.sol` | CVRPLIB Augerat A | POMO CVRP eval |
+| `src\data\Solomon\*.txt` + `.sol` | Solomon VRPTW | PyVRP VRPTW eval, yd-kwon/POMO checkpoint eval, GA/PyVRP/yd-kwon POMO pure-CVRP comparison |
+| `src\data\Holmberger\*.txt` + `.sol` | Solomon-like larger VRPTW | PyVRP eval, yd-kwon/POMO checkpoint eval, GA/PyVRP/yd-kwon POMO pure-CVRP comparison |
+| `src\data\A\*.vrp` + `.sol` | CVRPLIB Augerat A | not used by the retained yd-kwon checkpoint scripts |
 | `src\data\smoke_test_instance.json` | project JSON | PyVRP EVRP-TW pipeline |
 | `src\data\scale_up_instance.json` | project JSON | PyVRP EVRP-TW pipeline |
 | `src\data\schneider_sample.txt` | Schneider-style EVRP-TW sample | PyVRP parser / pipeline |
@@ -25,7 +25,8 @@ Important:
 - The GA that currently reads `src/data` directly is the GA inside `src\experiments\cvrp_method_comparison.py`.
 - That GA comparison is **CVRP only**: distance + capacity; time windows and EV constraints are disabled.
 - PyVRP is the main current path for VRPTW and EVRP-TW repair/checker runs on `src/data`.
-- POMO can run `src\data\Solomon`, `src\data\Holmberger`, and `src\data\A`.
+- The retained POMO path is the upstream yd-kwon/POMO CVRP checkpoint. The old
+  local RL4CO experiment folder has been removed.
 
 ## 1. Environment setup
 
@@ -43,7 +44,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r src\requirements.txt
 ```
 
-POMO / combined method environment, CPU:
+yd-kwon/POMO / combined method environment, CPU:
 
 ```powershell
 python -m venv .venv_pomo
@@ -52,7 +53,7 @@ python -m venv .venv_pomo
 .\.venv_pomo\Scripts\python.exe -m pip install -r src\requirements-pomo-tools.txt
 ```
 
-POMO / combined method environment, CUDA:
+yd-kwon/POMO / combined method environment, CUDA:
 
 ```powershell
 python -m venv .venv_pomo_cuda
@@ -65,7 +66,7 @@ python -m venv .venv_pomo_cuda
 CUDA check:
 
 ```powershell
-.\.venv_pomo_cuda\Scripts\python.exe src\experiments\POMO\pomo_cuda_preflight.py
+.\.venv_pomo_cuda\Scripts\python.exe -c "import torch; print('torch=' + torch.__version__); print('cuda_available=' + str(torch.cuda.is_available())); print('cuda_device=' + (torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'none'))"
 ```
 
 For scripts that import shared helpers, set:
@@ -74,7 +75,7 @@ For scripts that import shared helpers, set:
 $env:PYTHONPATH = "src;src\experiments"
 ```
 
-## 2. One command to compare GA / PyVRP / POMO on `src/data`
+## 2. One command to compare GA / PyVRP / yd-kwon POMO on `src/data`
 
 This is the current cleanest same-data comparison. It builds:
 
@@ -257,76 +258,7 @@ Check explicit routes:
 
 Do not report `schneider_sample.txt` as a benchmark reproduction; it is only a parser/checker sample.
 
-## 5. POMO on `src/data`
-
-### 5.1 `src\data\Solomon`
-
-Without training:
-
-```powershell
-cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
-.\.venv_pomo\Scripts\python.exe src\experiments\POMO\pomo_solomon_eval.py `
-  --data-dir src\data\Solomon `
-  --instance C101 `
-  --device cpu `
-  --output-csv src\results\pomo_srcdata_C101.csv
-```
-
-With a short synthetic training phase:
-
-```powershell
-.\.venv_pomo\Scripts\python.exe src\experiments\POMO\pomo_solomon_eval.py `
-  --data-dir src\data\Solomon `
-  --limit 5 `
-  --device cpu `
-  --train-first `
-  --max-epochs 1 `
-  --train-data-size 256 `
-  --val-data-size 64 `
-  --batch-size 16 `
-  --output-csv src\results\pomo_srcdata_solomon_trained_limit5.csv
-```
-
-### 5.2 `src\data\Holmberger`
-
-```powershell
-cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
-.\.venv_pomo\Scripts\python.exe src\experiments\POMO\pomo_solomon_eval.py `
-  --data-dir src\data\Holmberger `
-  --instance C1_2_1 `
-  --device cpu `
-  --output-csv src\results\pomo_srcdata_holmberger_C1_2_1.csv
-```
-
-### 5.3 `src\data\A`
-
-First five Augerat A instances:
-
-```powershell
-cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
-.\.venv_pomo\Scripts\python.exe src\experiments\POMO\pomo_cvrplib_a_eval.py `
-  --data-dir src\data\A `
-  --limit 5 `
-  --device cpu `
-  --output-csv src\results\pomo_srcdata_A_limit5.csv
-```
-
-Optional short training:
-
-```powershell
-.\.venv_pomo\Scripts\python.exe src\experiments\POMO\pomo_cvrplib_a_eval.py `
-  --data-dir src\data\A `
-  --limit 5 `
-  --device cpu `
-  --train-first `
-  --max-epochs 1 `
-  --train-data-size 256 `
-  --val-data-size 64 `
-  --batch-size 16 `
-  --output-csv src\results\pomo_srcdata_A_trained_limit5.csv
-```
-
-### 5.4 Upstream yd-kwon/POMO checkpoint on `src/data`
+## 5. yd-kwon/POMO checkpoint on `src/data`
 
 CPU:
 
@@ -393,9 +325,7 @@ $env:PYTHONPATH = "src;src\experiments"
 If CUDA fails:
 
 ```powershell
-.\.venv_pomo_cuda\Scripts\python.exe src\experiments\POMO\pomo_cuda_preflight.py
+.\.venv_pomo_cuda\Scripts\python.exe -c "import torch; print('torch=' + torch.__version__); print('cuda_available=' + str(torch.cuda.is_available())); print('cuda_device=' + (torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'none'))"
 ```
 
-If POMO on Solomon performs badly without training, that is expected. `pomo_solomon_eval.py` is random-initialized unless you add `--train-first`, and one epoch is only a smoke-level run.
-
-If you need a fair GA/PyVRP/POMO comparison, use `cvrp_method_comparison.py` and label it `CVRP only`.
+If you need a fair GA/PyVRP/yd-kwon POMO comparison, use `cvrp_method_comparison.py` and label it `CVRP only`.

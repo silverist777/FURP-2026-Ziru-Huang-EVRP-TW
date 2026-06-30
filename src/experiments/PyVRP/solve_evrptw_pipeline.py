@@ -1,5 +1,6 @@
 import argparse
 import json
+import time
 from dataclasses import asdict
 from importlib.metadata import version
 from pathlib import Path
@@ -10,6 +11,7 @@ from pyvrp.stop import MaxRuntime
 from experiments.PyVRP.evrptw_v3_repair import repair_routes_with_splitting
 from feasibility_checker import check_explicit_routes, print_benchmark_report
 from instance_loader import load_instance_data
+from experiments.experiment_record import build_experiment_record, format_constraint_violations
 from experiments.PyVRP.parse_schneider_instance import convert_schneider_instance
 
 
@@ -109,6 +111,7 @@ def apply_overrides(data, vehicles, runtime_seconds, seed, display):
 
 
 def solve_pipeline(args):
+    started = time.perf_counter()
     instance, source_path, instance_data = load_pipeline_instance(args)
     output_path = resolve_output_path(args.output, instance.name)
 
@@ -130,6 +133,7 @@ def solve_pipeline(args):
         charging_plans=repair_plan.charging_plans,
     )
     status = "solved" if repair_plan.feasible and report.feasible else "unsolved"
+    elapsed_runtime_seconds = time.perf_counter() - started
 
     payload = build_solution_payload(
         status=status,
@@ -140,6 +144,7 @@ def solve_pipeline(args):
         baseline_routes=baseline_routes,
         repair_plan=repair_plan,
         report=report,
+        elapsed_runtime_seconds=elapsed_runtime_seconds,
     )
     write_solution(payload, output_path)
     return status, output_path, payload, report
@@ -160,7 +165,17 @@ def build_solution_payload(
     baseline_routes,
     repair_plan,
     report,
+    elapsed_runtime_seconds,
 ):
+    constraint_violations = format_constraint_violations(
+        {
+            "missing_customers": len(report.missing_customers),
+            "duplicate_customers": len(report.duplicate_customers),
+            "time_window_violations": report.time_window_violations,
+            "capacity_violations": report.capacity_violations,
+            "energy_violations": report.energy_violations,
+        }
+    )
     return {
         "status": status,
         "source": {
@@ -168,11 +183,28 @@ def build_solution_payload(
             "instance": instance.name,
             "problem_type": instance.problem_type,
         },
+        "experiment_record": build_experiment_record(
+            instance_name=instance.name,
+            instance_size=len(instance.clients),
+            method_name="PyVRP VRPTW + EVRP-TW station repair",
+            objective_value=report.total_distance,
+            runtime_seconds=elapsed_runtime_seconds,
+            feasibility_status="feasible" if report.feasible else "infeasible",
+            vehicles_used=len(repair_plan.routes),
+            constraint_violations=constraint_violations,
+            random_seed=instance.solver.seed,
+            best_solution_found=repair_plan.routes,
+            reference_value=None,
+            convergence_curve="not captured; repair attempts are recorded in repair.attempts",
+            improvement_over_time="not captured",
+            search_steps=len(repair_plan.attempts),
+        ),
         "solver": {
             "baseline": "PyVRP VRPTW",
             "repair": "v3_partial_recharge_label_setting",
             "pyvrp_version": version("pyvrp"),
             "runtime_seconds": instance.solver.runtime_seconds,
+            "elapsed_runtime_seconds": round(elapsed_runtime_seconds, 3),
             "seed": instance.solver.seed,
         },
         "routes": [
@@ -235,6 +267,7 @@ def print_summary(status, output_path, payload, report):
     print(f"  instance={payload['source']['instance']}")
     print(f"  source={payload['source']['path']}")
     print(f"  vehicles={payload['metrics']['vehicle_count']}")
+    print(f"  runtime={payload['solver']['elapsed_runtime_seconds']}s")
     print(f"  station_insertions={payload['repair']['station_insertions']}")
     print(f"  split_count={payload['repair']['split_count']}")
     print_benchmark_report(report, solver="EVRPTWRepairPipeline")

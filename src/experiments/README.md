@@ -12,7 +12,7 @@ Current scope:
 
 This stage is CPU-only. It does not use CUDA, PyTorch, reinforcement learning, or neural training. PyVRP is used as a classical VRPTW baseline, while full EVRP-TW feasibility is checked by the independent route replay code.
 
-CUDA/POMO preparation is tracked separately in `docs/pomo_cuda_setup.md`. Use `pomo_cuda_preflight.py` only to check whether a Python environment can run PyTorch on the NVIDIA GPU; it is not part of the EVRP-TW CPU baseline.
+yd-kwon/POMO CUDA preparation is handled by `setup_pomo_cuda_env.ps1`. It checks whether the isolated Python environment can run PyTorch on the NVIDIA GPU; it is not part of the EVRP-TW CPU baseline.
 
 ## Scripts
 
@@ -26,7 +26,6 @@ CUDA/POMO preparation is tracked separately in `docs/pomo_cuda_setup.md`. Use `p
 - `solve_evrptw_pipeline.py`: solves EVRP-TW with PyVRP customer routes plus station repair.
 - `evrptw_checker_self_test.py`: parser and checker regression self-test.
 - `evrptw_pipeline_self_test.py`: parser, repair, split, and unsolved-route regression tests.
-- `pomo_cuda_preflight.py`: CUDA/PyTorch environment check for later POMO work.
 - `setup_pomo_cuda_env.ps1`: Windows helper for creating/checking the isolated POMO CUDA environment.
 
 ## Common Commands
@@ -79,12 +78,6 @@ Run the solver pipeline regression self-test:
 ```bash
 src/.venv_pyvrp/bin/python src/experiments/evrptw_pipeline_self_test.py \
   --schneider /Users/emt/Workspace/evrp_tw/data/schneider/c101C5.txt
-```
-
-Check CUDA readiness for POMO in a separate CUDA-enabled environment:
-
-```powershell
-.\.venv_pomo_cuda\Scripts\python.exe src\experiments\pomo_cuda_preflight.py
 ```
 
 Install and verify the POMO CUDA environment when network access is available:

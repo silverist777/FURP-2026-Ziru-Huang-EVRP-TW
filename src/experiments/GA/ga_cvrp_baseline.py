@@ -11,6 +11,7 @@ import argparse
 import csv
 import math
 import random
+import sys
 import time
 from dataclasses import dataclass
 from pathlib import Path
@@ -18,6 +19,10 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_OUTPUT = REPO_ROOT / "src" / "results" / "ga_cvrp_baseline.csv"
+
+sys.path.insert(0, str(REPO_ROOT / "src" / "experiments"))
+
+from experiment_record import build_experiment_record, format_constraint_violations  # noqa: E402
 
 
 @dataclass(frozen=True)
@@ -144,6 +149,30 @@ def route_distance(instance: Instance, routes: list[list[int]]) -> float:
     return total
 
 
+def cvrp_constraint_violations(instance: Instance, routes: list[list[int]]) -> dict[str, int]:
+    served = [customer_idx for route in routes for customer_idx in route]
+    expected = set(range(1, instance.num_clients + 1))
+    valid_served = [customer_idx for customer_idx in served if customer_idx in expected]
+
+    capacity_violations = 0
+    for route in routes:
+        load = sum(
+            instance.customers[customer_idx - 1].demand
+            for customer_idx in route
+            if customer_idx in expected
+        )
+        if load > instance.capacity + 1e-6:
+            capacity_violations += 1
+
+    return {
+        "missing_customers": len(expected - set(valid_served)),
+        "duplicate_customers": len(valid_served) - len(set(valid_served)),
+        "capacity_violations": capacity_violations,
+        "vehicle_limit_overage": max(0, len(routes) - instance.vehicles),
+        "invalid_customer_ids": len(served) - len(valid_served),
+    }
+
+
 def evaluate(instance: Instance, individual: list[int]) -> float:
     return route_distance(instance, split_by_capacity(instance, individual))
 
@@ -188,20 +217,24 @@ def run_ga(
     mutation_prob: float,
     elite_size: int,
     tournament_size: int,
-) -> tuple[float, list[list[int]], float]:
+) -> tuple[float, list[list[int]], float, list[dict[str, float | int]]]:
     started = time.perf_counter()
     rng = random.Random(seed + instance.num_clients)
     base = list(range(1, instance.num_clients + 1))
     population = [rng.sample(base, len(base)) for _ in range(pop_size)]
     best_individual: list[int] | None = None
     best_score = float("inf")
+    convergence_curve: list[dict[str, float | int]] = []
 
-    for _ in range(generations):
+    for generation in range(1, generations + 1):
         scores = [evaluate(instance, individual) for individual in population]
         current_best_idx = min(range(len(population)), key=lambda idx: scores[idx])
         if scores[current_best_idx] < best_score:
             best_score = scores[current_best_idx]
             best_individual = list(population[current_best_idx])
+            convergence_curve.append(
+                {"generation": generation, "best_objective": round(best_score, 3)}
+            )
 
         elite_count = min(elite_size, len(population))
         elites = [
@@ -223,10 +256,13 @@ def run_ga(
     if scores[current_best_idx] < best_score or best_individual is None:
         best_score = scores[current_best_idx]
         best_individual = list(population[current_best_idx])
+        convergence_curve.append(
+            {"generation": generations, "best_objective": round(best_score, 3)}
+        )
 
     runtime = time.perf_counter() - started
     routes = split_by_capacity(instance, best_individual)
-    return best_score, routes, runtime
+    return best_score, routes, runtime, convergence_curve
 
 
 def write_csv(row: dict[str, object], output_csv: Path) -> None:
@@ -255,7 +291,7 @@ def main() -> None:
     args = parse_args()
     base_instance = parse_solomon_like(args.instance)
     instance = select_customers(base_instance, args.client_count, args.seed)
-    objective, routes, runtime = run_ga(
+    objective, routes, runtime, convergence_curve = run_ga(
         instance=instance,
         pop_size=args.pop_size,
         generations=args.generations,
@@ -264,7 +300,32 @@ def main() -> None:
         elite_size=args.elite_size,
         tournament_size=args.tournament_size,
     )
-    row = {
+    constraint_violations = format_constraint_violations(
+        cvrp_constraint_violations(instance, routes)
+    )
+    feasibility_status = (
+        "feasible under CVRP check; TW/E disabled"
+        if constraint_violations == "none"
+        else "infeasible under CVRP check; TW/E disabled"
+    )
+    row = build_experiment_record(
+        instance_name=instance.name,
+        instance_size=instance.num_clients,
+        method_name="GA CVRP",
+        objective_value=objective,
+        runtime_seconds=runtime,
+        feasibility_status=feasibility_status,
+        vehicles_used=len(routes),
+        constraint_violations=constraint_violations,
+        random_seed=args.seed,
+        best_solution_found=routes,
+        reference_value=None,
+        convergence_curve=convergence_curve,
+        improvement_over_time=convergence_curve,
+        generations=args.generations,
+        search_steps=args.pop_size * args.generations,
+    )
+    row.update({
         "method": "GA",
         "instance": instance.name,
         "source": str(args.instance),
@@ -277,7 +338,7 @@ def main() -> None:
         "generations": args.generations,
         "mutation_prob": args.mutation_prob,
         "constraint_scope": "CVRP only; time windows disabled; EV constraints disabled",
-    }
+    })
     write_csv(row, args.output_csv)
 
     print("ga_cvrp_baseline_ok: True")

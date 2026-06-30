@@ -1,9 +1,8 @@
-﻿"""Build the PYVRP/POMO method comparison table requested for the report.
+"""Build a PyVRP VRPTW table and shared Solomon comparison cases.
 
-The table contains two methods (PYVRP and POMO) at four client counts:
-20, 50, 100, and 200. The 20/50/100-client cases are derived from Solomon
-C101; 20 and 50 are random customer subsets. The 200-client case uses the
-Holmberger C1_2_1 instance. Electric-vehicle constraints are not modelled.
+The retained POMO comparison path uses the upstream yd-kwon/POMO CVRP
+checkpoint in `cvrp_method_comparison.py` or `ydkwon_pomo_method_comparison.py`.
+This module no longer contains the old random-initialized RL4CO POMO baseline.
 """
 
 from __future__ import annotations
@@ -11,42 +10,23 @@ from __future__ import annotations
 import argparse
 import csv
 import math
-import os
 import random
-import sys
 import time
 from dataclasses import dataclass, replace
 from pathlib import Path
 
-
-REPO_ROOT = Path(__file__).resolve().parents[2]
-POMO_DIR = REPO_ROOT / "src" / "experiments" / "POMO"
-PYVRP_DIR = REPO_ROOT / "src" / "experiments" / "PyVRP"
-CACHE_ROOT = REPO_ROOT / ".cache" / "method_comparison"
-os.environ.setdefault("MPLCONFIGDIR", str(CACHE_ROOT / "matplotlib"))
-os.environ.setdefault("WANDB_DISABLED", "true")
-CACHE_ROOT.mkdir(parents=True, exist_ok=True)
-(CACHE_ROOT / "matplotlib").mkdir(parents=True, exist_ok=True)
-sys.path.insert(0, str(POMO_DIR))
-sys.path.insert(0, str(PYVRP_DIR))
-
-import torch
 from pyvrp import Model
 from pyvrp.stop import MaxRuntime
-from rl4co.models.zoo.pomo import POMO
-from rl4co.utils.ops import unbatchify
 
-from vrptw_support import (
-    SolomonCustomer,
-    SolomonInstance,
-    SolomonLikeVRPTWGenerator,
-    StrictCVRPTWEnv,
-    check_solomon_actions,
-    parse_solomon_instance,
-    solomon_to_tensordict,
+from experiment_record import (
+    CORE_RECORD_FIELDS,
+    build_experiment_record,
+    format_constraint_violations,
 )
+from vrptw_support import SolomonCustomer, SolomonInstance, parse_solomon_instance
 
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
 SCALE = 10
 DEFAULT_OUTPUT_DIR = REPO_ROOT / "src" / "results" / "method_comparison"
 DEFAULT_SOLOMON = REPO_ROOT / "py-ga-VRPTW" / "data" / "text" / "C101.txt"
@@ -121,8 +101,6 @@ def build_cases(solomon_path: Path, holmberger_path: Path, seed: int) -> list[Ex
 
 
 def write_case_instance(case: ExperimentCase, output_dir: Path) -> Path:
-    """Write the exact cropped benchmark instance used in a case."""
-
     path = output_dir / f"{case.label}.txt"
     instance = case.instance
     rows = [instance.depot, *instance.customers]
@@ -148,6 +126,8 @@ def write_case_instance(case: ExperimentCase, output_dir: Path) -> Path:
                 f"{row.service_time:11.0f}\n"
             )
     return path
+
+
 def build_pyvrp_model(instance: SolomonInstance) -> Model:
     model = Model()
     depot = model.add_depot(
@@ -189,112 +169,14 @@ def build_pyvrp_model(instance: SolomonInstance) -> Model:
     return model
 
 
-def evaluate_pyvrp(case: ExperimentCase, runtime_seconds: int, seed: int) -> dict[str, object]:
-    started = time.perf_counter()
-    model = build_pyvrp_model(case.instance)
-    result = model.solve(MaxRuntime(runtime_seconds), seed=seed, display=False)
-    elapsed = time.perf_counter() - started
-    solution = result.best
-    objective = solution.distance() / SCALE
-    feasible = solution.is_feasible()
-    details = (
-        f"MaxRuntime={runtime_seconds}s; routes={solution.num_routes()}; "
-        f"time_warp={solution.time_warp() / SCALE:.1f}; "
-        f"excess_load={list(solution.excess_load())}"
-    )
-    return make_row(
-        method="PYVRP",
-        case=case,
-        objective=objective,
-        feasible=feasible,
-        runtime=elapsed,
-        details=details,
-        seed=seed,
-        model_status="exact checkpoint not applicable",
-    )
-
-
-def make_pomo_env(num_loc: int, max_time: float, capacity: float) -> StrictCVRPTWEnv:
-    generator = SolomonLikeVRPTWGenerator(
-        num_loc=num_loc,
-        min_loc=0.0,
-        max_loc=max_time,
-        capacity=capacity,
-        min_demand=1,
-        max_demand=10,
-        max_time=max_time,
-        service_duration=90,
-        scale=True,
-    )
-    return StrictCVRPTWEnv(generator=generator)
-
-
-def make_pomo_model(num_loc: int, max_time: float, capacity: float) -> POMO:
-    env = make_pomo_env(num_loc, max_time, capacity)
-    return POMO(
-        env,
-        num_augment=1,
-        policy_kwargs={
-            "embed_dim": 64,
-            "num_encoder_layers": 2,
-            "num_heads": 4,
-            "feedforward_hidden": 128,
-        },
-        batch_size=1,
-        val_batch_size=1,
-        test_batch_size=1,
-        train_data_size=1,
-        val_data_size=1,
-        test_data_size=1,
-        optimizer_kwargs={"lr": 1e-4},
-        dataloader_num_workers=0,
-        log_on_step=False,
-    )
-
-
-def evaluate_pomo(
-    case: ExperimentCase,
-    model: POMO,
-    device: str,
-    seed: int,
-    model_status: str,
-) -> dict[str, object]:
-    torch.manual_seed(seed)
-    started = time.perf_counter()
-    env = make_pomo_env(
-        case.instance.num_clients,
-        max(case.instance.depot.due_time, 1.0),
-        case.instance.capacity,
-    )
-    td_input = solomon_to_tensordict(case.instance, device=device)
-    td = env.reset(td_input)
-    num_starts = env.get_num_starts(td)
-    with torch.inference_mode():
-        out = model.policy(td, env, phase="test", num_starts=num_starts, return_actions=True)
-    elapsed = time.perf_counter() - started
-
-    rewards = unbatchify(out["reward"], (1, num_starts)).squeeze(1)
-    actions = unbatchify(out["actions"], (1, num_starts)).squeeze(1)
-    best_idx = rewards[0].argmax()
-    best_actions = actions[0, best_idx].detach().cpu().tolist()
-    check = check_solomon_actions(case.instance, best_actions)
-    feasible = check.feasible
-    details = (
-        f"num_starts={num_starts}; missing={check.missing_customers}; "
-        f"tw_violations={check.time_window_violations}; "
-        f"capacity_violations={check.capacity_violations}; "
-        f"depot_return_violations={check.depot_return_violations}"
-    )
-    return make_row(
-        method="POMO",
-        case=case,
-        objective=check.predicted_cost,
-        feasible=feasible,
-        runtime=elapsed,
-        details=details,
-        seed=seed,
-        model_status=model_status,
-    )
+def pyvrp_routes(solution, instance: SolomonInstance) -> list[list[int]]:
+    customer_by_index = {
+        idx: customer.cust_no for idx, customer in enumerate(instance.customers, start=1)
+    }
+    return [
+        [customer_by_index.get(customer_idx, customer_idx) for customer_idx in route.visits()]
+        for route in solution.routes()
+    ]
 
 
 def make_row(
@@ -306,48 +188,111 @@ def make_row(
     details: str,
     seed: int,
     model_status: str,
+    vehicles_used: int | None,
+    constraint_violations: str,
+    best_solution_found: object,
+    convergence_curve: object = None,
+    improvement_over_time: object = None,
+    iterations: int | None = None,
+    generations: int | None = None,
+    search_steps: int | None = None,
 ) -> dict[str, object]:
     selected = (
         ",".join(str(num) for num in case.selected_cust_no)
         if case.client_count < 100
         else f"all customers 1-{case.client_count}"
     )
-    return {
+    feasibility_status = (
+        "feasible; E disabled; TW and capacity enforced"
+        if feasible
+        else "infeasible; E disabled; TW and capacity enforced"
+    )
+    row = build_experiment_record(
+        instance_name=case.label,
+        instance_size=case.client_count,
+        method_name=method,
+        objective_value=objective,
+        runtime_seconds=runtime,
+        feasibility_status=feasibility_status,
+        vehicles_used=vehicles_used,
+        constraint_violations=constraint_violations,
+        random_seed=seed,
+        best_solution_found=best_solution_found,
+        reference_value=case.instance.known_cost,
+        convergence_curve=convergence_curve,
+        improvement_over_time=improvement_over_time,
+        iterations=iterations,
+        generations=generations,
+        search_steps=search_steps,
+    )
+    row.update({
         "method": method,
         "clients": case.client_count,
         "instance": case.label,
         "source": case.source,
         "selected_cust_no": selected,
         "objective_value": round(objective, 3),
-        "feasibility_status_under_added_constraints": (
-            "feasible; E disabled; TW and capacity enforced"
-            if feasible
-            else "infeasible; E disabled; TW and capacity checked"
-        ),
+        "feasibility_status_under_added_constraints": feasibility_status,
         "runtime_seconds": round(runtime, 3),
         "convergence_details": details,
         "seed": seed,
         "model_status": model_status,
-    }
+    })
+    return row
+
+
+def evaluate_pyvrp(case: ExperimentCase, runtime_seconds: int, seed: int) -> dict[str, object]:
+    started = time.perf_counter()
+    model = build_pyvrp_model(case.instance)
+    result = model.solve(MaxRuntime(runtime_seconds), seed=seed, display=False)
+    elapsed = time.perf_counter() - started
+    solution = result.best
+    objective = solution.distance() / SCALE
+    feasible = solution.is_feasible()
+    routes = pyvrp_routes(solution, case.instance)
+    excess_load = list(solution.excess_load())
+    constraint_violations = format_constraint_violations(
+        {
+            "time_warp": round(solution.time_warp() / SCALE, 3),
+            "excess_load": excess_load,
+        }
+    )
+    details = (
+        f"MaxRuntime={runtime_seconds}s; routes={solution.num_routes()}; "
+        f"time_warp={solution.time_warp() / SCALE:.1f}; "
+        f"excess_load={excess_load}"
+    )
+    return make_row(
+        method="PYVRP",
+        case=case,
+        objective=objective,
+        feasible=feasible,
+        runtime=elapsed,
+        details=details,
+        seed=seed,
+        model_status="exact checkpoint not applicable",
+        vehicles_used=solution.num_routes(),
+        constraint_violations=constraint_violations,
+        best_solution_found=routes,
+        convergence_curve="not captured by PyVRP API",
+        improvement_over_time="not captured by PyVRP API",
+        search_steps=None,
+    )
 
 
 def write_markdown(rows: list[dict[str, object]], path: Path) -> None:
     headers = [
-        "method",
-        "clients",
+        *CORE_RECORD_FIELDS,
         "source",
         "selected_cust_no",
-        "objective_value",
-        "feasibility_status_under_added_constraints",
-        "runtime_seconds",
-        "convergence_details",
         "model_status",
+        "convergence_details",
     ]
     with path.open("w", encoding="utf-8") as file:
-        file.write("# Method Comparison and Record\n\n")
+        file.write("# PyVRP Method Comparison and Record\n\n")
         file.write(
-            "Electric-vehicle constraints are disabled for both methods. "
-            "Time windows and capacity are still enforced or checked.\n\n"
+            "Electric-vehicle constraints are disabled. Time windows and capacity "
+            "are enforced by PyVRP.\n\n"
         )
         file.write("| " + " | ".join(headers) + " |\n")
         file.write("| " + " | ".join("---" for _ in headers) + " |\n")
@@ -357,35 +302,23 @@ def write_markdown(rows: list[dict[str, object]], path: Path) -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Generate PYVRP/POMO comparison table.")
+    parser = argparse.ArgumentParser(description="Generate a PYVRP comparison table.")
     parser.add_argument("--solomon", type=Path, default=DEFAULT_SOLOMON)
     parser.add_argument("--holmberger", type=Path, default=DEFAULT_HOLMBERGER)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--seed", type=int, default=1234)
     parser.add_argument("--pyvrp-runtime-seconds", type=int, default=1)
-    parser.add_argument("--device", choices=("cpu", "cuda"), default="cpu")
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
-    if args.device == "cuda" and not torch.cuda.is_available():
-        raise RuntimeError("CUDA requested but torch.cuda.is_available() is false.")
-
-    torch.manual_seed(args.seed)
     cases = build_cases(args.solomon, args.holmberger, args.seed)
-    model_status = "no saved Solomon/Holmberger POMO checkpoint; random initialized eval"
-    max_clients = max(case.client_count for case in cases)
-    max_time = max(case.instance.depot.due_time for case in cases)
-    capacity = max(case.instance.capacity for case in cases)
-    pomo_model = make_pomo_model(max_clients, max_time, capacity)
-    pomo_model.eval()
-    pomo_model.to(args.device)
 
-    rows: list[dict[str, object]] = []
-    for case in cases:
-        rows.append(evaluate_pyvrp(case, args.pyvrp_runtime_seconds, args.seed))
-        rows.append(evaluate_pomo(case, pomo_model, args.device, args.seed, model_status))
+    rows = [
+        evaluate_pyvrp(case, args.pyvrp_runtime_seconds, args.seed)
+        for case in cases
+    ]
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
     instance_dir = args.output_dir / "instances"
@@ -413,5 +346,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-

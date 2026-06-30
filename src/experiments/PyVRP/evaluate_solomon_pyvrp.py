@@ -1,4 +1,4 @@
-﻿"""Evaluate PyVRP on the Solomon VRPTW test set used by POMO.
+﻿"""Evaluate PyVRP on Solomon-style VRPTW test sets.
 
 This benchmark intentionally ignores electric-vehicle constraints: there is no
 battery, charging station, charging time, or energy feasibility check. The model
@@ -10,6 +10,8 @@ from __future__ import annotations
 import argparse
 import csv
 import math
+import sys
+import time
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -23,6 +25,13 @@ DEFAULT_OUTPUT = (
     REPO_ROOT / "src" / "experiments" / "PyVRP" / "pyvrp_solomon_eval_results.csv"
 )
 SCALE = 10
+
+sys.path.insert(0, str(REPO_ROOT / "src" / "experiments"))
+
+from experiment_record import (  # noqa: E402
+    build_experiment_record,
+    format_constraint_violations,
+)
 
 
 @dataclass(frozen=True)
@@ -167,18 +176,54 @@ def build_model(instance: SolomonInstance) -> Model:
     return model
 
 
+def pyvrp_routes(solution, instance: SolomonInstance) -> list[list[int]]:
+    customer_by_index = {
+        idx: customer.cust_no for idx, customer in enumerate(instance.customers, start=1)
+    }
+    return [
+        [customer_by_index.get(customer_idx, customer_idx) for customer_idx in route.visits()]
+        for route in solution.routes()
+    ]
+
+
 def evaluate_instance(instance: SolomonInstance, runtime_seconds: int, seed: int) -> dict:
+    started = time.perf_counter()
     model = build_model(instance)
     result = model.solve(MaxRuntime(runtime_seconds), seed=seed, display=False)
+    elapsed = time.perf_counter() - started
     solution = result.best
     distance = solution.distance() / SCALE
+    routes = pyvrp_routes(solution, instance)
+    excess_load = list(solution.excess_load())
+    constraint_violations = format_constraint_violations(
+        {
+            "time_warp": round(solution.time_warp() / SCALE, 3),
+            "excess_load": excess_load,
+        }
+    )
     gap_pct = (
         None
         if instance.known_cost in (None, 0)
         else (distance - instance.known_cost) / instance.known_cost * 100.0
     )
 
-    return {
+    row = build_experiment_record(
+        instance_name=instance.name,
+        instance_size=len(instance.customers),
+        method_name="PyVRP VRPTW",
+        objective_value=distance,
+        runtime_seconds=elapsed,
+        feasibility_status="feasible" if solution.is_feasible() else "infeasible",
+        vehicles_used=solution.num_routes(),
+        constraint_violations=constraint_violations,
+        random_seed=seed,
+        best_solution_found=routes,
+        reference_value=instance.known_cost,
+        convergence_curve="not captured by PyVRP API",
+        improvement_over_time="not captured by PyVRP API",
+        search_steps=None,
+    )
+    row.update({
         "instance": instance.name,
         "clients": len(instance.customers),
         "vehicles_available": instance.vehicles,
@@ -188,11 +233,13 @@ def evaluate_instance(instance: SolomonInstance, runtime_seconds: int, seed: int
         "gap_pct": gap_pct,
         "is_feasible": solution.is_feasible(),
         "time_warp": solution.time_warp() / SCALE,
-        "excess_load": solution.excess_load(),
-        "runtime_seconds": runtime_seconds,
+        "excess_load": excess_load,
+        "runtime_seconds": round(elapsed, 3),
+        "runtime_limit_seconds": runtime_seconds,
         "seed": seed,
         "electric_constraints": "disabled",
-    }
+    })
+    return row
 
 
 def summarize(rows: list[dict]) -> dict[str, float | int | None]:
@@ -215,6 +262,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=1234)
     parser.add_argument("--output-csv", type=Path, default=DEFAULT_OUTPUT)
     return parser.parse_args()
+
+
+def format_optional_pct(value: float | None) -> str:
+    return "n/a" if value is None else f"{value:.2f}"
 
 
 def main() -> None:
@@ -253,12 +304,11 @@ def main() -> None:
     print(f"results_csv: {args.output_csv}")
     print(f"evaluated_instances: {summary['evaluated_instances']}")
     print(f"feasible_instances: {summary['feasible_instances']}")
-    print(f"mean_gap_pct: {summary['mean_gap_pct']:.2f}")
-    print(f"min_gap_pct: {summary['min_gap_pct']:.2f}")
-    print(f"max_gap_pct: {summary['max_gap_pct']:.2f}")
+    print(f"mean_gap_pct: {format_optional_pct(summary['mean_gap_pct'])}")
+    print(f"min_gap_pct: {format_optional_pct(summary['min_gap_pct'])}")
+    print(f"max_gap_pct: {format_optional_pct(summary['max_gap_pct'])}")
     print("evaluation_ok: True")
 
 
 if __name__ == "__main__":
     main()
-

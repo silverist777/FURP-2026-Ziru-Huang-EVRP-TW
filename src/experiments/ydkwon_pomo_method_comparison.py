@@ -31,11 +31,15 @@ sys.path.insert(0, str(POMO_CVRP_CODE))
 sys.path.insert(0, str(POMO_CVRP_ROOT))
 sys.path.insert(0, str(POMO_ROOT))
 sys.path.insert(0, str(REPO_ROOT / "src" / "experiments"))
-sys.path.insert(0, str(REPO_ROOT / "src" / "experiments" / "POMO"))
 
 from CVRPEnv import CVRPEnv  # noqa: E402
 from CVRPModel import CVRPModel  # noqa: E402
 from CVRProblemDef import augment_xy_data_by_8_fold  # noqa: E402
+from experiment_record import (  # noqa: E402
+    CORE_RECORD_FIELDS,
+    build_experiment_record,
+    format_constraint_violations,
+)
 from method_comparison_table import (  # noqa: E402
     DEFAULT_HOLMBERGER,
     DEFAULT_SOLOMON,
@@ -106,6 +110,26 @@ def load_model(checkpoint_path: Path, device: torch.device) -> CVRPModel:
     return model
 
 
+def actions_to_routes(actions: list[int]) -> list[list[int]]:
+    routes: list[list[int]] = []
+    current: list[int] = []
+    seen: set[int] = set()
+    for raw_action in actions:
+        action = int(raw_action)
+        if action == 0:
+            if current:
+                routes.append(current)
+                current = []
+            continue
+        if action in seen:
+            continue
+        current.append(action)
+        seen.add(action)
+    if current:
+        routes.append(current)
+    return routes
+
+
 def rollout_case(case, model: CVRPModel, device: torch.device, use_augmentation: bool) -> dict[str, object]:
     started = time.perf_counter()
     depot_xy, node_xy, node_demand = normalize_case(case)
@@ -142,6 +166,7 @@ def rollout_case(case, model: CVRPModel, device: torch.device, use_augmentation:
     aug_idx = int(flat_best // env.pomo_size)
     pomo_idx = int(flat_best % env.pomo_size)
     actions = env.selected_node_list[aug_idx, pomo_idx].detach().cpu().tolist()
+    routes = actions_to_routes(actions)
     check = check_solomon_actions(case.instance, actions)
     elapsed = time.perf_counter() - started
     selected = (
@@ -149,18 +174,46 @@ def rollout_case(case, model: CVRPModel, device: torch.device, use_augmentation:
         if case.client_count < 100
         else f"all customers 1-{case.client_count}"
     )
-    return {
+    feasibility_status = (
+        "feasible under TW/capacity check; E disabled"
+        if check.feasible
+        else "infeasible under TW/capacity check; E disabled"
+    )
+    constraint_violations = format_constraint_violations(
+        {
+            "missing_customers": check.missing_customers,
+            "duplicate_customers": check.duplicate_customers,
+            "time_window_violations": check.time_window_violations,
+            "capacity_violations": check.capacity_violations,
+            "depot_return_violations": check.depot_return_violations,
+        }
+    )
+    row = build_experiment_record(
+        instance_name=case.label,
+        instance_size=case.client_count,
+        method_name="yd-kwon/POMO CVRP",
+        objective_value=check.predicted_cost,
+        runtime_seconds=elapsed,
+        feasibility_status=feasibility_status,
+        vehicles_used=len(routes),
+        constraint_violations=constraint_violations,
+        random_seed=args_seed(),
+        best_solution_found=routes,
+        reference_value=case.instance.known_cost,
+        convergence_curve="single greedy/inference rollout; no training curve",
+        improvement_over_time="not applicable during inference",
+        iterations=None,
+        generations=None,
+        search_steps=len(actions),
+    )
+    row.update({
         "method": "yd-kwon/POMO CVRP",
         "clients": case.client_count,
         "instance": case.label,
         "source": case.source,
         "selected_cust_no": selected,
         "objective_value": round(check.predicted_cost, 3),
-        "feasibility_status_under_added_constraints": (
-            "feasible under TW/capacity check; E disabled"
-            if check.feasible
-            else "infeasible under TW/capacity check; E disabled"
-        ),
+        "feasibility_status_under_added_constraints": feasibility_status,
         "runtime_seconds": round(elapsed, 3),
         "convergence_details": (
             f"checkpoint=CVRP100 epoch 30500; aug_factor={aug_factor}; "
@@ -171,7 +224,8 @@ def rollout_case(case, model: CVRPModel, device: torch.device, use_augmentation:
         ),
         "seed": args_seed(),
         "model_status": "upstream yd-kwon/POMO CVRP100 pretrained checkpoint; no TW/E in model",
-    }
+    })
+    return row
 
 
 _ARGS_SEED = 1234
@@ -183,15 +237,11 @@ def args_seed() -> int:
 
 def write_markdown(rows: list[dict[str, object]], path: Path) -> None:
     headers = [
-        "method",
-        "clients",
+        *CORE_RECORD_FIELDS,
         "source",
         "selected_cust_no",
-        "objective_value",
-        "feasibility_status_under_added_constraints",
-        "runtime_seconds",
-        "convergence_details",
         "model_status",
+        "convergence_details",
     ]
     with path.open("w", encoding="utf-8") as file:
         file.write("# yd-kwon/POMO Method Comparison Run\n\n")
@@ -244,5 +294,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-
