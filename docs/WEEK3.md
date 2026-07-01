@@ -50,10 +50,10 @@ For every run, the experiment records:
 
 Raw and cleaned outputs:
 
-- Raw records: `/Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/src/results/week3/week3_raw_records.csv`
-- Aggregated table: `/Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/src/results/week3/week3_summary_by_method_size.csv`
-- Markdown summary: `/Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/src/results/week3/week3_summary.md`
-- Raw logs/py-ga curves: `/Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/src/results/week3/raw/`
+- Raw records: [week3_raw_records.csv](../src/results/week3/week3_raw_records.csv)
+- Aggregated table: [week3_summary_by_method_size.csv](../src/results/week3/week3_summary_by_method_size.csv)
+- Markdown summary: [week3_summary.md](../src/results/week3/week3_summary.md)
+- Raw logs/py-ga curves: [raw/](../src/results/week3/raw/)
 
 ## Step 4: Run Repeated Trials
 
@@ -126,17 +126,19 @@ Aggregated results:
 
 Figures:
 
-![[week3_objective_by_size.png]]
+![Objective by size](../src/results/week3/plots/objective_by_size.png)
 
-![[week3_runtime_by_size.png]]
+![Runtime by size](../src/results/week3/plots/runtime_by_size.png)
 
+
+![py-ga convergence for seed 1234](../src/results/week3/plots/pyga_convergence_seed1234.png)
 
 
 The convergence figure above plots the best-so-far objective, so it becomes flat
 after the GA finds no better historical best. The per-generation best objective
 is plotted separately below.
 
-![[week3_pyga_generation_best_seed1234.png]]
+![py-ga per-generation best objective for seed 1234](../src/results/week3/plots/pyga_generation_best_seed1234.png)
 
 
 
