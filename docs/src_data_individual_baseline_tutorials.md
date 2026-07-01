@@ -1,18 +1,86 @@
 # Individual baseline tutorials for `src/data`
 
-This guide is for running **one baseline at a time** on data under:
+This guide is for running **one baseline at a time**. Most commands use data under:
 
 ```text
 E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\data
 ```
 
 It does not use the three-method comparison script as the main workflow.
+The `py-ga-VRPTW` GA baseline is the exception: it uses the external submodule's
+own `py-ga-VRPTW/data/json` instances.
+
+The command blocks below are written for **Windows PowerShell**. If you run the
+same tutorial on **macOS zsh/bash**, replace the command style as follows.
+
+| Windows PowerShell | macOS zsh/bash |
+|---|---|
+| `cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW` | `cd /Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW` or your local repo path |
+| `src\data\Solomon\C101.txt` | `src/data/Solomon/C101.txt` |
+| `.\.venv\Scripts\python.exe` | `src/.venv_pyvrp/bin/python` in this repo, or `.venv/bin/python` only if you created a root `.venv` yourself |
+| `.\.venv_pomo\Scripts\python.exe` | `.venv_pomo/bin/python` |
+| `.\.venv_pomo_cuda\Scripts\python.exe` | `.venv_pomo_cuda/bin/python` |
+| PowerShell line continuation: `` ` `` | zsh/bash line continuation: `\` |
+| `$env:PYTHONPATH = "src;src\experiments"` | `export PYTHONPATH="src:src/experiments"` |
+
+macOS setup examples for this repo's existing PyVRP / py-ga-VRPTW environment:
+
+```bash
+cd /Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW
+src/.venv_pyvrp/bin/python -m pip install --upgrade pip
+src/.venv_pyvrp/bin/python -m pip install -r src/requirements.txt
+```
+
+If `src/.venv_pyvrp/bin/python` is missing, recreate it first:
+
+```bash
+/Users/emt/Workspace/CS/anaconda3/bin/python -m venv src/.venv_pyvrp
+src/.venv_pyvrp/bin/python -m pip install --upgrade pip
+src/.venv_pyvrp/bin/python -m pip install -r src/requirements.txt
+```
+
+```bash
+python3 -m venv .venv_pomo
+.venv_pomo/bin/python -m pip install --upgrade pip
+.venv_pomo/bin/python -m pip install -r src/requirements.txt
+.venv_pomo/bin/python -m pip install -r src/requirements-pomo-tools.txt
+```
+
+For EVRP-TW pipeline/checker scripts on macOS, set imports with:
+
+```bash
+export PYTHONPATH="src:src/experiments"
+```
+
+Then convert a multi-line PowerShell command like this:
+
+```powershell
+.\.venv\Scripts\python.exe src\experiments\GA\run_py_ga_vrptw.py `
+  --instance C101 `
+  --ind-size 100 `
+  --output-csv src\results\py_ga_vrptw_C101_100.csv `
+  --export-csv
+```
+
+to:
+
+```bash
+src/.venv_pyvrp/bin/python src/experiments/GA/run_py_ga_vrptw.py \
+  --instance C101 \
+  --ind-size 100 \
+  --output-csv src/results/py_ga_vrptw_C101_100.csv \
+  --export-csv
+```
+
+CUDA note for macOS: the `*_cuda` commands are for Windows machines with
+NVIDIA CUDA. On macOS, use the CPU commands unless you are deliberately running
+on a separate NVIDIA CUDA machine.
 
 ## 0. Baseline map
 
 | Baseline | Script | `src/data` input | Scope |
 |---|---|---|---|
-| GA | `src\experiments\GA\ga_cvrp_baseline.py` | `Solomon\*.txt`, `Holmberger\*.txt` | CVRP only |
+| py-ga-VRPTW GA | `src\experiments\GA\run_py_ga_vrptw.py` | `py-ga-VRPTW\data\json\*.json` | Solomon-style VRPTW, external submodule |
 | PyVRP | `src\experiments\PyVRP\evaluate_solomon_pyvrp.py` | `Solomon\*.txt`, `Holmberger\*.txt` | VRPTW, E disabled |
 | PyVRP EVRP-TW pipeline | `src\experiments\PyVRP\solve_evrptw_pipeline.py` | project JSON / Schneider sample | PyVRP VRPTW + charging repair/checker |
 | yd-kwon/POMO checkpoint | `src\experiments\ydkwon_pomo_method_comparison.py` | `Solomon\*.txt`, `Holmberger\*.txt` | CVRP model, TW checked after rollout |
@@ -25,12 +93,14 @@ From repo root:
 cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
 ```
 
-PyVRP / GA:
+PyVRP / py-ga-VRPTW:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 .\.venv\Scripts\python.exe -m pip install -r src\requirements.txt
+git submodule update --init py-ga-VRPTW
+.\.venv\Scripts\python.exe -m pip install -r py-ga-VRPTW\requirements.txt
 ```
 
 yd-kwon/POMO CPU:
@@ -59,62 +129,81 @@ For PyVRP pipeline/checker imports:
 $env:PYTHONPATH = "src;src\experiments"
 ```
 
-## 2. GA baseline only
+## 2. py-ga-VRPTW GA baseline only
 
-This is a standalone GA baseline over Solomon-like `.txt` files. It does not call PyVRP or POMO.
+This baseline uses the external `py-ga-VRPTW` submodule, not the local
+fallback GA script. Initialise the submodule first if the directory is empty:
+
+Windows PowerShell:
+
+```powershell
+git submodule update --init py-ga-VRPTW
+.\.venv\Scripts\python.exe -m pip install -r py-ga-VRPTW\requirements.txt
+```
+
+macOS zsh/bash:
+
+```bash
+git submodule update --init py-ga-VRPTW
+src/.venv_pyvrp/bin/python -m pip install -r py-ga-VRPTW/requirements.txt
+```
 
 Scope:
 
 ```text
-CVRP only: distance + capacity. Time windows and EV constraints disabled.
+VRPTW GA from py-ga-VRPTW. Uses py-ga-VRPTW/data/json instances.
 ```
 
 Run one Solomon instance with all 100 customers:
 
 ```powershell
 cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
-.\.venv\Scripts\python.exe src\experiments\GA\ga_cvrp_baseline.py `
-  --instance src\data\Solomon\C101.txt `
-  --output-csv src\results\ga_srcdata_C101_100.csv `
-  --seed 1234 `
+.\.venv\Scripts\python.exe src\experiments\GA\run_py_ga_vrptw.py `
+  --instance C101 `
+  --ind-size 100 `
+  --output-csv src\results\py_ga_vrptw_C101_100.csv `
   --pop-size 80 `
+  --generations 50 `
+  --export-csv
+```
+
+macOS zsh/bash:
+
+```bash
+src/.venv_pyvrp/bin/python src/experiments/GA/run_py_ga_vrptw.py \
+  --instance C101 \
+  --ind-size 100 \
+  --output-csv src/results/py_ga_vrptw_C101_100.csv \
+  --pop-size 80 \
+  --generations 50 \
+  --export-csv
+```
+
+Run only the first 25 customers of R101, matching the original sample style:
+
+```bash
+src/.venv_pyvrp/bin/python src/experiments/GA/run_py_ga_vrptw.py \
+  --instance R101 \
+  --ind-size 25 \
+  --output-csv src/results/py_ga_vrptw_R101_25.csv \
+  --pop-size 80 \
   --generations 50
 ```
 
-Run only a sampled 20-customer case from C101:
-
-```powershell
-.\.venv\Scripts\python.exe src\experiments\GA\ga_cvrp_baseline.py `
-  --instance src\data\Solomon\C101.txt `
-  --client-count 20 `
-  --output-csv src\results\ga_srcdata_C101_20.csv `
-  --seed 1234 `
-  --pop-size 80 `
-  --generations 50
-```
-
-Run Holmberger:
-
-```powershell
-.\.venv\Scripts\python.exe src\experiments\GA\ga_cvrp_baseline.py `
-  --instance src\data\Holmberger\C1_2_1.txt `
-  --output-csv src\results\ga_srcdata_holmberger_C1_2_1.csv `
-  --seed 1234 `
-  --pop-size 240 `
-  --generations 220
-```
+Do not report this as Holmberger or EVRP-TW. `py-ga-VRPTW` is a Solomon-style
+VRPTW GA baseline.
 
 Parameters to tune:
 
 | Argument | Meaning |
 |---|---|
-| `--client-count` | sample N customers from the instance; omit for all customers |
+| `--instance` | instance name from `py-ga-VRPTW/data/json`, e.g. `C101`, `R101` |
+| `--ind-size` | number of customers used by py-ga-VRPTW, e.g. `25`, `50`, `100` |
 | `--pop-size` | GA population size |
 | `--generations` | GA iteration count |
-| `--mutation-prob` | reverse-mutation probability |
-| `--elite-size` | number of best individuals kept each generation |
-| `--tournament-size` | tournament selection size |
-| `--seed` | reproducibility seed |
+| `--crossover-prob` | crossover probability |
+| `--mutation-prob` | inverse-mutation probability |
+| `--unit-cost`, `--init-cost`, `--wait-cost`, `--delay-cost` | py-ga-VRPTW cost weights |
 
 ## 3. PyVRP baseline only
 
@@ -278,4 +367,31 @@ Use these labels:
 - `CVRP only`
 - `VRPTW, E disabled`
 - `EVRP-TW via PyVRP baseline plus charging repair`
+- `py-ga-VRPTW Solomon-style VRPTW, E disabled`
 - `POMO CVRP checkpoint, TW checked after rollout, E disabled`
+
+## 7. Plot convergence / improvement curves
+
+For `py-ga-VRPTW` CSVs, the plotting helper reads the real per-generation
+`max_fitness` values and plots best cost as `1 / max_fitness`.
+
+Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe src\experiments\render_progress_plots.py `
+  --input-csv src\results\py_ga_vrptw_C101_100.csv `
+  --field convergence_curve `
+  --output-dir src\results\py_ga_vrptw_C101_100_progress_plots
+```
+
+macOS zsh/bash:
+
+```bash
+src/.venv_pyvrp/bin/python src/experiments/render_progress_plots.py \
+  --input-csv src/results/py_ga_vrptw_C101_100.csv \
+  --field convergence_curve \
+  --output-dir src/results/py_ga_vrptw_C101_100_progress_plots
+```
+
+Use `--field improvement_over_time` for the improvement curve. The script
+writes `.png` matplotlib line charts.

@@ -99,7 +99,7 @@ def record_value(value: Any) -> Any:
         return _round_float(value)
     if isinstance(value, Mapping):
         return json.dumps(value, ensure_ascii=False, sort_keys=True)
-    if isinstance(value, Sequence) and not isinstance(value, str | bytes | bytearray):
+    if isinstance(value, Sequence) and not isinstance(value, (str, bytes, bytearray)):
         return json.dumps(value, ensure_ascii=False)
     return value
 
@@ -115,6 +115,6 @@ def _is_zeroish(value: Any) -> bool:
         return True
     if isinstance(value, Mapping):
         return all(_is_zeroish(item) for item in value.values())
-    if isinstance(value, Sequence) and not isinstance(value, str | bytes | bytearray):
+    if isinstance(value, Sequence) and not isinstance(value, (str, bytes, bytearray)):
         return all(_is_zeroish(item) for item in value)
     return False

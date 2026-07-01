@@ -29,7 +29,7 @@ from vrptw_support import SolomonCustomer, SolomonInstance, parse_solomon_instan
 REPO_ROOT = Path(__file__).resolve().parents[2]
 SCALE = 10
 DEFAULT_OUTPUT_DIR = REPO_ROOT / "src" / "results" / "method_comparison"
-DEFAULT_SOLOMON = REPO_ROOT / "py-ga-VRPTW" / "data" / "text" / "C101.txt"
+DEFAULT_SOLOMON = REPO_ROOT / "src" / "data" / "Solomon" / "C101.txt"
 DEFAULT_HOLMBERGER = REPO_ROOT / "src" / "data" / "Holmberger" / "C1_2_1.txt"
 
 

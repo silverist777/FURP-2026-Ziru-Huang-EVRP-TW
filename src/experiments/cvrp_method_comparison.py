@@ -172,17 +172,30 @@ def run_ga(case, pop_size: int, generations: int, seed: int) -> dict[str, object
     population = [rng.sample(base, len(base)) for _ in range(pop_size)]
     best_individual: list[int] | None = None
     best_score = float("inf")
-    convergence_curve: list[dict[str, float | int]] = []
+    initial_best_score: float | None = None
+    previous_best_score: float | None = None
+    convergence_curve: list[dict[str, float | int | str]] = []
 
     for generation in range(1, generations + 1):
         scores = [evaluate_ga_individual(case.instance, ind) for ind in population]
         current_best_idx = min(range(len(population)), key=lambda idx: scores[idx])
-        if scores[current_best_idx] < best_score:
-            best_score = scores[current_best_idx]
+        generation_best = scores[current_best_idx]
+        if initial_best_score is None:
+            initial_best_score = generation_best
+        if generation_best < best_score:
+            best_score = generation_best
             best_individual = list(population[current_best_idx])
-            convergence_curve.append(
-                {"generation": generation, "best_objective": round(best_score, 3)}
+        convergence_curve.append(
+            progress_point(
+                generation=generation,
+                stage="generation",
+                generation_best=generation_best,
+                best_score=best_score,
+                initial_best_score=initial_best_score,
+                previous_best_score=previous_best_score,
             )
+        )
+        previous_best_score = best_score
         elite = [list(population[idx]) for idx in sorted(range(len(population)), key=lambda i: scores[i])[:4]]
         next_population = elite
         while len(next_population) < pop_size:
@@ -196,11 +209,21 @@ def run_ga(case, pop_size: int, generations: int, seed: int) -> dict[str, object
 
     scores = [evaluate_ga_individual(case.instance, ind) for ind in population]
     current_best_idx = min(range(len(population)), key=lambda idx: scores[idx])
-    if scores[current_best_idx] < best_score or best_individual is None:
-        best_score = scores[current_best_idx]
+    generation_best = scores[current_best_idx]
+    if initial_best_score is None:
+        initial_best_score = generation_best
+    if generation_best < best_score or best_individual is None:
+        best_score = generation_best
         best_individual = list(population[current_best_idx])
         convergence_curve.append(
-            {"generation": generations, "best_objective": round(best_score, 3)}
+            progress_point(
+                generation=generations + 1,
+                stage="final_population",
+                generation_best=generation_best,
+                best_score=best_score,
+                initial_best_score=initial_best_score,
+                previous_best_score=previous_best_score,
+            )
         )
     routes = split_by_capacity(case.instance, best_individual)
     return make_row(
@@ -216,6 +239,25 @@ def run_ga(case, pop_size: int, generations: int, seed: int) -> dict[str, object
         generations=generations,
         search_steps=pop_size * generations,
     )
+
+
+def progress_point(
+    generation: int,
+    stage: str,
+    generation_best: float,
+    best_score: float,
+    initial_best_score: float,
+    previous_best_score: float | None,
+) -> dict[str, float | int | str]:
+    previous = best_score if previous_best_score is None else previous_best_score
+    return {
+        "generation": generation,
+        "stage": stage,
+        "generation_best": round(generation_best, 3),
+        "best_objective": round(best_score, 3),
+        "improvement_from_start": round(initial_best_score - best_score, 3),
+        "improvement_from_previous": round(previous - best_score, 3),
+    }
 
 
 def scaled(value: float) -> int:

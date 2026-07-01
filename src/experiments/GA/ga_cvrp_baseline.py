@@ -217,24 +217,37 @@ def run_ga(
     mutation_prob: float,
     elite_size: int,
     tournament_size: int,
-) -> tuple[float, list[list[int]], float, list[dict[str, float | int]]]:
+) -> tuple[float, list[list[int]], float, list[dict[str, float | int | str]]]:
     started = time.perf_counter()
     rng = random.Random(seed + instance.num_clients)
     base = list(range(1, instance.num_clients + 1))
     population = [rng.sample(base, len(base)) for _ in range(pop_size)]
     best_individual: list[int] | None = None
     best_score = float("inf")
-    convergence_curve: list[dict[str, float | int]] = []
+    initial_best_score: float | None = None
+    previous_best_score: float | None = None
+    convergence_curve: list[dict[str, float | int | str]] = []
 
     for generation in range(1, generations + 1):
         scores = [evaluate(instance, individual) for individual in population]
         current_best_idx = min(range(len(population)), key=lambda idx: scores[idx])
-        if scores[current_best_idx] < best_score:
-            best_score = scores[current_best_idx]
+        generation_best = scores[current_best_idx]
+        if initial_best_score is None:
+            initial_best_score = generation_best
+        if generation_best < best_score:
+            best_score = generation_best
             best_individual = list(population[current_best_idx])
-            convergence_curve.append(
-                {"generation": generation, "best_objective": round(best_score, 3)}
+        convergence_curve.append(
+            progress_point(
+                generation=generation,
+                stage="generation",
+                generation_best=generation_best,
+                best_score=best_score,
+                initial_best_score=initial_best_score,
+                previous_best_score=previous_best_score,
             )
+        )
+        previous_best_score = best_score
 
         elite_count = min(elite_size, len(population))
         elites = [
@@ -253,16 +266,45 @@ def run_ga(
 
     scores = [evaluate(instance, individual) for individual in population]
     current_best_idx = min(range(len(population)), key=lambda idx: scores[idx])
-    if scores[current_best_idx] < best_score or best_individual is None:
-        best_score = scores[current_best_idx]
+    generation_best = scores[current_best_idx]
+    if initial_best_score is None:
+        initial_best_score = generation_best
+    if generation_best < best_score or best_individual is None:
+        best_score = generation_best
         best_individual = list(population[current_best_idx])
         convergence_curve.append(
-            {"generation": generations, "best_objective": round(best_score, 3)}
+            progress_point(
+                generation=generations + 1,
+                stage="final_population",
+                generation_best=generation_best,
+                best_score=best_score,
+                initial_best_score=initial_best_score,
+                previous_best_score=previous_best_score,
+            )
         )
 
     runtime = time.perf_counter() - started
     routes = split_by_capacity(instance, best_individual)
     return best_score, routes, runtime, convergence_curve
+
+
+def progress_point(
+    generation: int,
+    stage: str,
+    generation_best: float,
+    best_score: float,
+    initial_best_score: float,
+    previous_best_score: float | None,
+) -> dict[str, float | int | str]:
+    previous = best_score if previous_best_score is None else previous_best_score
+    return {
+        "generation": generation,
+        "stage": stage,
+        "generation_best": round(generation_best, 3),
+        "best_objective": round(best_score, 3),
+        "improvement_from_start": round(initial_best_score - best_score, 3),
+        "improvement_from_previous": round(previous - best_score, 3),
+    }
 
 
 def write_csv(row: dict[str, object], output_csv: Path) -> None:
