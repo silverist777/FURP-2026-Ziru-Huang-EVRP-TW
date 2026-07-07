@@ -32,6 +32,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--export-csv", action="store_true")
     parser.add_argument(
+        "--customize-data",
+        action="store_true",
+        help="Load py-ga-VRPTW/data/json_customize/<instance>.json.",
+    )
+    parser.add_argument(
         "--keep-generated-csv",
         action="store_true",
         help="Keep the CSV that py-ga-VRPTW writes under py-ga-VRPTW/results.",
@@ -75,6 +80,7 @@ def main() -> int:
         mut_pb=args.mutation_prob,
         n_gen=args.generations,
         export_csv=args.export_csv or args.output_csv is not None,
+        customize_data=args.customize_data,
     )
 
     generated_csv = expected_py_ga_csv(args)

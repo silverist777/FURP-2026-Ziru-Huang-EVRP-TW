@@ -1,9 +1,15 @@
 import argparse
 import json
+import sys
 import time
 from dataclasses import asdict
 from importlib.metadata import version
 from pathlib import Path
+
+SRC_ROOT = Path(__file__).resolve().parents[2]
+EXPERIMENTS_ROOT = SRC_ROOT / "experiments"
+sys.path.insert(0, str(SRC_ROOT))
+sys.path.insert(0, str(EXPERIMENTS_ROOT))
 
 from pyvrp import Model
 from pyvrp.stop import MaxRuntime
@@ -13,6 +19,7 @@ from feasibility_checker import check_explicit_routes, print_benchmark_report
 from instance_loader import load_instance_data
 from experiments.experiment_record import build_experiment_record, format_constraint_violations
 from experiments.PyVRP.parse_schneider_instance import convert_schneider_instance
+from experiments.solomon_to_project_instance import convert_solomon_instance
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,18 +33,18 @@ def build_pyvrp_model(instance):
     depot = model.add_depot(
         x=instance.depot.x,
         y=instance.depot.y,
-        tw_early=instance.depot.tw_early,
-        tw_late=instance.depot.tw_late,
+        tw_early=int(round(instance.depot.tw_early)),
+        tw_late=int(round(instance.depot.tw_late)),
         name=instance.depot.name,
     )
     clients = [
         model.add_client(
             x=client.x,
             y=client.y,
-            delivery=client.demand,
-            service_duration=client.service_duration,
-            tw_early=client.tw_early,
-            tw_late=client.tw_late,
+            delivery=int(round(client.demand)),
+            service_duration=int(round(client.service_duration)),
+            tw_early=int(round(client.tw_early)),
+            tw_late=int(round(client.tw_late)),
             name=client.name,
         )
         for client in instance.clients
@@ -45,11 +52,11 @@ def build_pyvrp_model(instance):
 
     model.add_vehicle_type(
         num_available=instance.num_vehicles,
-        capacity=instance.vehicle_capacity,
+        capacity=int(round(instance.vehicle_capacity)),
         start_depot=depot,
         end_depot=depot,
-        tw_early=instance.vehicle.tw_early,
-        tw_late=instance.vehicle.tw_late,
+        tw_early=int(round(instance.vehicle.tw_early)),
+        tw_late=int(round(instance.vehicle.tw_late)),
     )
 
     locations = [depot, *clients]
@@ -77,7 +84,16 @@ def baseline_routes_from_solution(solution, instance):
 
 
 def load_pipeline_instance(args):
-    if args.schneider is not None:
+    if args.solomon is not None:
+        data = convert_solomon_instance(
+            input_path=args.solomon,
+            num_vehicles=args.vehicles,
+            solver_runtime_seconds=args.runtime_seconds,
+            solver_seed=args.seed,
+            solver_display=args.display,
+        )
+        source_path = Path(args.solomon)
+    elif args.schneider is not None:
         data = convert_schneider_instance(
             input_path=args.schneider,
             num_vehicles=1 if args.vehicles is None else args.vehicles,
@@ -280,6 +296,7 @@ def parse_args():
     )
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--schneider", type=Path, help="External Schneider .txt file.")
+    source.add_argument("--solomon", type=Path, help="Solomon/Holmberger VRPTW .txt file.")
     source.add_argument("--instance", type=Path, help="Project JSON instance file.")
     parser.add_argument("--vehicles", type=int, default=None)
     parser.add_argument("--runtime-seconds", type=int, default=10)
