@@ -1,0 +1,313 @@
+File: /Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/py-ga-VRPTW/data/json/C101.json exists.
+Start of evolution
+  Evaluated 80 individuals
+-- Generation 0 --
+  Evaluated 72 individuals
+  Min 1.9516137310754294e-09
+  Max 3.327941277424526e-09
+  Avg 2.4804096247930717e-09
+  Std 3.0509926682794285e-10
+-- Generation 1 --
+  Evaluated 74 individuals
+  Min 2.0067706313706327e-09
+  Max 3.327941277424526e-09
+  Avg 2.541985191894743e-09
+  Std 3.24545588657008e-10
+-- Generation 2 --
+  Evaluated 72 individuals
+  Min 2.0067706313706327e-09
+  Max 3.215069006982551e-09
+  Avg 2.561994720715866e-09
+  Std 2.8029290163922187e-10
+-- Generation 3 --
+  Evaluated 68 individuals
+  Min 2.198378251491114e-09
+  Max 3.215069006982551e-09
+  Avg 2.567766506718373e-09
+  Std 2.885738983988409e-10
+-- Generation 4 --
+  Evaluated 69 individuals
+  Min 2.0819683663941025e-09
+  Max 3.215069006982551e-09
+  Avg 2.607966385393403e-09
+  Std 3.2783046161609464e-10
+-- Generation 5 --
+  Evaluated 52 individuals
+  Min 2.198378251491114e-09
+  Max 3.215069006982551e-09
+  Avg 2.6754418593802862e-09
+  Std 3.530212917016917e-10
+-- Generation 6 --
+  Evaluated 64 individuals
+  Min 2.198378251491114e-09
+  Max 3.215069006982551e-09
+  Avg 2.7522670108376616e-09
+  Std 3.7663157181039994e-10
+-- Generation 7 --
+  Evaluated 68 individuals
+  Min 2.0853506893498704e-09
+  Max 3.215069006982551e-09
+  Avg 2.7740897631232434e-09
+  Std 3.8602771510002047e-10
+-- Generation 8 --
+  Evaluated 66 individuals
+  Min 2.198378251491114e-09
+  Max 3.215069006982551e-09
+  Avg 2.8099007463390556e-09
+  Std 3.699138352505217e-10
+-- Generation 9 --
+  Evaluated 64 individuals
+  Min 2.198378251491114e-09
+  Max 3.215069006982551e-09
+  Avg 2.7914192576042065e-09
+  Std 3.6713339391441636e-10
+-- Generation 10 --
+  Evaluated 68 individuals
+  Min 2.198378251491114e-09
+  Max 3.215069006982551e-09
+  Avg 2.758606123528796e-09
+  Std 3.7178377325491944e-10
+-- Generation 11 --
+  Evaluated 72 individuals
+  Min 2.198378251491114e-09
+  Max 3.215069006982551e-09
+  Avg 2.8932591258830307e-09
+  Std 3.124808080309773e-10
+-- Generation 12 --
+  Evaluated 68 individuals
+  Min 2.198378251491114e-09
+  Max 3.215069006982551e-09
+  Avg 2.9206062647811856e-09
+  Std 2.8669939549718957e-10
+-- Generation 13 --
+  Evaluated 68 individuals
+  Min 2.198378251491114e-09
+  Max 3.215069006982551e-09
+  Avg 2.9837614716842127e-09
+  Std 2.3590361828197076e-10
+-- Generation 14 --
+  Evaluated 74 individuals
+  Min 2.198378251491114e-09
+  Max 3.215069006982551e-09
+  Avg 2.9695464373686613e-09
+  Std 2.4860620091475713e-10
+-- Generation 15 --
+  Evaluated 68 individuals
+  Min 2.198378251491114e-09
+  Max 3.215069006982551e-09
+  Avg 2.9540398263238432e-09
+  Std 2.6475472961943237e-10
+-- Generation 16 --
+  Evaluated 68 individuals
+  Min 2.198378251491114e-09
+  Max 3.215069006982551e-09
+  Avg 2.9827887984293877e-09
+  Std 2.46526456359867e-10
+-- Generation 17 --
+  Evaluated 68 individuals
+  Min 2.198378251491114e-09
+  Max 3.215069006982551e-09
+  Avg 3.0275034547520418e-09
+  Std 1.935556971383834e-10
+-- Generation 18 --
+  Evaluated 66 individuals
+  Min 2.198378251491114e-09
+  Max 3.215069006982551e-09
+  Avg 3.0440321112528444e-09
+  Std 1.8655349352294636e-10
+-- Generation 19 --
+  Evaluated 74 individuals
+  Min 2.198378251491114e-09
+  Max 3.2270450378241177e-09
+  Avg 3.0612037534093826e-09
+  Std 1.822646179880721e-10
+-- Generation 20 --
+  Evaluated 70 individuals
+  Min 2.477650382804239e-09
+  Max 3.215069006982551e-09
+  Avg 3.0885847802498386e-09
+  Std 1.1309043633449973e-10
+-- Generation 21 --
+  Evaluated 65 individuals
+  Min 2.477650382804239e-09
+  Max 3.215069006982551e-09
+  Avg 3.088811913607059e-09
+  Std 1.229638320104321e-10
+-- Generation 22 --
+  Evaluated 62 individuals
+  Min 2.4581228455721707e-09
+  Max 3.3712393740783717e-09
+  Avg 3.097216063336435e-09
+  Std 1.2975891431448878e-10
+-- Generation 23 --
+  Evaluated 75 individuals
+  Min 2.672868085278521e-09
+  Max 3.3712393740783717e-09
+  Avg 3.1200408428785885e-09
+  Std 1.0560653248909278e-10
+-- Generation 24 --
+  Evaluated 61 individuals
+  Min 2.259523123646125e-09
+  Max 3.3712393740783717e-09
+  Avg 3.102963865760654e-09
+  Std 1.4153300071480104e-10
+-- Generation 25 --
+  Evaluated 66 individuals
+  Min 2.672868085278521e-09
+  Max 3.3712393740783717e-09
+  Avg 3.1098412594948395e-09
+  Std 1.0925507572402994e-10
+-- Generation 26 --
+  Evaluated 73 individuals
+  Min 2.1951663659736055e-09
+  Max 3.3712393740783717e-09
+  Avg 3.088420377194185e-09
+  Std 1.4515850596400086e-10
+-- Generation 27 --
+  Evaluated 72 individuals
+  Min 2.672868085278521e-09
+  Max 3.3712393740783717e-09
+  Avg 3.112133699416503e-09
+  Std 1.2127490618964962e-10
+-- Generation 28 --
+  Evaluated 64 individuals
+  Min 2.269282671841166e-09
+  Max 3.3712393740783717e-09
+  Avg 3.117155464049804e-09
+  Std 1.570589207853397e-10
+-- Generation 29 --
+  Evaluated 64 individuals
+  Min 2.269282671841166e-09
+  Max 3.3712393740783717e-09
+  Avg 3.121703662546915e-09
+  Std 1.6285772565998608e-10
+-- Generation 30 --
+  Evaluated 65 individuals
+  Min 2.672868085278521e-09
+  Max 3.3712393740783717e-09
+  Avg 3.1154001351213702e-09
+  Std 1.3380819980012943e-10
+-- Generation 31 --
+  Evaluated 64 individuals
+  Min 2.7780480345516284e-09
+  Max 3.3712393740783717e-09
+  Avg 3.116114693181407e-09
+  Std 9.983938396304601e-11
+-- Generation 32 --
+  Evaluated 71 individuals
+  Min 2.185860188822014e-09
+  Max 3.3712393740783717e-09
+  Avg 3.0827358700727245e-09
+  Std 1.6288647890608091e-10
+-- Generation 33 --
+  Evaluated 70 individuals
+  Min 2.185860188822014e-09
+  Max 3.3712393740783717e-09
+  Avg 3.071668862581274e-09
+  Std 2.1895102443159495e-10
+-- Generation 34 --
+  Evaluated 74 individuals
+  Min 2.3557810639855664e-09
+  Max 3.3712393740783717e-09
+  Avg 3.0902835880627036e-09
+  Std 1.5030088487771293e-10
+-- Generation 35 --
+  Evaluated 72 individuals
+  Min 2.3557810639855664e-09
+  Max 3.3712393740783717e-09
+  Avg 3.0930832477758996e-09
+  Std 1.1581057681105547e-10
+-- Generation 36 --
+  Evaluated 64 individuals
+  Min 2.6701623665210155e-09
+  Max 3.3712393740783717e-09
+  Avg 3.1121906998606883e-09
+  Std 1.0139994561288166e-10
+-- Generation 37 --
+  Evaluated 72 individuals
+  Min 2.6701623665210155e-09
+  Max 3.3712393740783717e-09
+  Avg 3.1145465156660025e-09
+  Std 9.042710595613977e-11
+-- Generation 38 --
+  Evaluated 58 individuals
+  Min 2.9475817967204944e-09
+  Max 3.3712393740783717e-09
+  Avg 3.118884128515396e-09
+  Std 8.569201272199321e-11
+-- Generation 39 --
+  Evaluated 71 individuals
+  Min 2.4164342503884943e-09
+  Max 3.3712393740783717e-09
+  Avg 3.1129969550478728e-09
+  Std 1.2903677780110216e-10
+-- Generation 40 --
+  Evaluated 74 individuals
+  Min 2.178106540300058e-09
+  Max 3.3712393740783717e-09
+  Avg 3.122186087493112e-09
+  Std 1.471986887135811e-10
+-- Generation 41 --
+  Evaluated 66 individuals
+  Min 2.6164600019655407e-09
+  Max 3.3712393740783717e-09
+  Avg 3.1324385298335256e-09
+  Std 1.223254543615589e-10
+-- Generation 42 --
+  Evaluated 64 individuals
+  Min 2.6185908426441876e-09
+  Max 3.3712393740783717e-09
+  Avg 3.1232671540324286e-09
+  Std 1.2029932064990033e-10
+-- Generation 43 --
+  Evaluated 69 individuals
+  Min 2.444395216836318e-09
+  Max 3.4367389923152443e-09
+  Avg 3.1319444752125875e-09
+  Std 1.7013451763173123e-10
+-- Generation 44 --
+  Evaluated 62 individuals
+  Min 2.4052129858272317e-09
+  Max 3.4367389923152443e-09
+  Avg 3.12357020090157e-09
+  Std 1.818937010347071e-10
+-- Generation 45 --
+  Evaluated 57 individuals
+  Min 2.3864459148782136e-09
+  Max 3.4367389923152443e-09
+  Avg 3.1238951713996505e-09
+  Std 1.9691265807844181e-10
+-- Generation 46 --
+  Evaluated 64 individuals
+  Min 2.4052129858272317e-09
+  Max 3.4367389923152443e-09
+  Avg 3.153547176481131e-09
+  Std 1.90240879334117e-10
+-- Generation 47 --
+  Evaluated 63 individuals
+  Min 2.4052129858272317e-09
+  Max 3.4367389923152443e-09
+  Avg 3.168424560275283e-09
+  Std 1.9244515361787962e-10
+-- Generation 48 --
+  Evaluated 66 individuals
+  Min 2.276329710470244e-09
+  Max 3.4367389923152443e-09
+  Avg 3.1648360011587464e-09
+  Std 1.956330289364663e-10
+-- Generation 49 --
+  Evaluated 64 individuals
+  Min 2.276329710470244e-09
+  Max 3.625693634425792e-09
+  Avg 3.1853185805273874e-09
+  Std 2.0170507620368932e-10
+-- End of (successful) evolution --
+Best individual: [17, 13, 15, 10, 11, 2, 6, 20, 3, 4, 7, 5, 19, 14, 9, 12, 18, 16, 8, 1]
+Fitness: 3.625693634425792e-09
+  Vehicle 1's route: 0 - 17 - 13 - 15 - 10 - 11 - 2 - 6 - 20 - 3 - 4 - 0
+  Vehicle 2's route: 0 - 7 - 5 - 19 - 14 - 9 - 12 - 18 - 16 - 8 - 1 - 0
+Total cost: 275809293.56662863
+Write to file: /Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/py-ga-VRPTW/results/C101_uC1.0_iC0.0_wC1.0_dC100000.0_iS20_pS80_cP0.85_mP0.02_nG50.csv
+Path: /Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/py-ga-VRPTW/results/C101_uC1.0_iC0.0_wC1.0_dC100000.0_iS20_pS80_cP0.85_mP0.02_nG50.csv does not exist.
+copied_csv: src/results/week3_pyga_wait1_delay100000/raw/pyga_C101_20_seed1234_wait1_delay100000.csv
+run_py_ga_vrptw_ok: True

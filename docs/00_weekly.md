@@ -29,6 +29,38 @@
 ---
 
 <!-- =================  YOUR ENTRIES BELOW  ================= -->
+### Week 3 — 2026/7/1
+
+**Attended this week's meeting:** Yes
+
+**Progress this week**
+- Implemented and ran Week 3 comparison experiments for `PyVRP`, `py-ga-VRPTW`, and upstream `yd-kwon/POMO`.
+- Used Solomon `C101` subsets with 20, 50, and 100 customers, and tested each method with three random seeds.
+- Built the experiment script to record objective value, runtime, feasibility status, vehicles used, constraint violations, routes, and convergence data.
+- Generated result tables and plots for objective value, runtime, and GA convergence curves.
+- Finished the Week 3 report explaining the main result: POMO is very fast and close to PyVRP on the 100-customer distance objective, but it is infeasible under Solomon time-window checks because the checkpoint is CVRP-only.
+- Cleaned up the previous local RL4CO/POMO path and kept the retained upstream `yd-kwon/POMO` checkpoint workflow.
+
+**Challenges & blockers**
+- POMO does not model time windows or EVRP-TW constraints, so its routes fail the post-run feasibility checker even when the distance is good.
+- The external `py-ga-VRPTW` baseline was not feasible under the initial distance-only setting, and penalty tuning still needs more work.
+- A fair large-scale comparison with Holmberger instances is difficult because `py-ga-VRPTW` and the retained POMO checkpoint are mainly aligned with 100-customer Solomon/CVRP-style inputs.
+
+**Next steps**
+- Tune `py-ga-VRPTW` with stronger time-window penalties and/or more generations.
+- Add a repair or checking layer after POMO rollout, or look for a time-window-aware neural model.
+- Move from VRPTW comparison toward EVRP-TW-specific constraints such as battery, charging stations, and recharge time.
+- Keep PyVRP as the reliable feasible baseline for later EVRP-TW experiments.
+
+**Hours spent (optional):** 
+
+**Links (optional):**
+- Week 3 report: `docs/WEEK3.md`
+- Experiment script: `src/experiments/week3_pyga_pyvrp_pomo.py`
+- Summary results: `src/results/week3/week3_summary.md`
+- Plots: `src/results/week3/plots/`
+- Commits: `5ffe517`, `da5d4b8`, `8e015f7`, `a655fa6`
+
 ### Week 2 — 2026/6/24
 
 **Attended this week's meeting:** Yes 
