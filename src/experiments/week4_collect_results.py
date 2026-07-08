@@ -29,6 +29,7 @@ FIELDS = [
     "energy_violations",
     "charging_count",
     "charging_time",
+    "timeout_or_unsupported_reason",
     "source_file",
 ]
 
@@ -70,6 +71,11 @@ def row_from_solution(path: Path) -> dict:
         "energy_violations": metrics.get("energy_violations", ""),
         "charging_count": metrics.get("charging_count", ""),
         "charging_time": metrics.get("charging_time", ""),
+        "timeout_or_unsupported_reason": data.get("timeout_reason")
+        or data.get("unsupported_reason")
+        or solver.get("timeout_reason")
+        or solver.get("unsupported_reason")
+        or "",
         "source_file": str(path),
     }
 
@@ -100,14 +106,19 @@ def write_markdown(rows: list[dict], path: Path) -> None:
             file.write("No JSON result files found yet.\n")
             return
         file.write(
-            "| instance | clients | method | feasible | distance | vehicles | runtime_s | served | missing | duplicate |\n"
+            "| instance | clients | method | status | feasible | distance | vehicles | runtime_s | "
+            "served | missing | duplicate | tw_vio | cap_vio | energy_vio | charge_count | charge_time | reason |\n"
         )
-        file.write("|---|---:|---|---:|---:|---:|---:|---:|---:|---:|\n")
+        file.write(
+            "|---|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|\n"
+        )
         for row in rows:
             file.write(
-                "| {instance} | {clients} | {method} | {feasible} | {total_distance} | "
+                "| {instance} | {clients} | {method} | {status} | {feasible} | {total_distance} | "
                 "{vehicle_count} | {runtime_seconds} | {served_customers} | "
-                "{missing_customers} | {duplicate_customers} |\n".format(**row)
+                "{missing_customers} | {duplicate_customers} | {time_window_violations} | "
+                "{capacity_violations} | {energy_violations} | {charging_count} | "
+                "{charging_time} | {timeout_or_unsupported_reason} |\n".format(**row)
             )
 
 

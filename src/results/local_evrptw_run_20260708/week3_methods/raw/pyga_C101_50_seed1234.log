@@ -1,0 +1,156 @@
+File: /Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/py-ga-VRPTW/data/json/C101.json exists.
+Start of evolution
+  Evaluated 80 individuals
+-- Generation 0 --
+  Evaluated 62 individuals
+  Min 0.00046886151459181436
+  Max 0.0005813876365805383
+  Avg 0.0005235759394821446
+  Std 2.2776108122103776e-05
+-- Generation 1 --
+  Evaluated 68 individuals
+  Min 0.00046886151459181436
+  Max 0.0005813876365805383
+  Avg 0.0005281496597172792
+  Std 2.518567339553329e-05
+-- Generation 2 --
+  Evaluated 72 individuals
+  Min 0.0004907843933676202
+  Max 0.0005813876365805383
+  Avg 0.0005300549240152216
+  Std 2.4750526977519322e-05
+-- Generation 3 --
+  Evaluated 74 individuals
+  Min 0.0004911388662238996
+  Max 0.0005813876365805383
+  Avg 0.0005327140665030693
+  Std 2.6119889127911428e-05
+-- Generation 4 --
+  Evaluated 74 individuals
+  Min 0.0004911388662238996
+  Max 0.0005968504429671054
+  Avg 0.0005323365914912692
+  Std 2.8413385702330396e-05
+-- Generation 5 --
+  Evaluated 75 individuals
+  Min 0.0004911388662238996
+  Max 0.0005968504429671054
+  Avg 0.0005334074954968734
+  Std 2.6468496562456797e-05
+-- Generation 6 --
+  Evaluated 60 individuals
+  Min 0.0004929647966363639
+  Max 0.0005813876365805383
+  Avg 0.0005298584389098521
+  Std 2.6402516565667197e-05
+-- Generation 7 --
+  Evaluated 62 individuals
+  Min 0.0004929647966363639
+  Max 0.0005813876365805383
+  Avg 0.0005266509546169838
+  Std 2.7364498120237672e-05
+-- Generation 8 --
+  Evaluated 70 individuals
+  Min 0.0004929647966363639
+  Max 0.0005813876365805383
+  Avg 0.0005264261440324822
+  Std 2.9456478803915014e-05
+-- Generation 9 --
+  Evaluated 70 individuals
+  Min 0.0004929647966363639
+  Max 0.0005813876365805383
+  Avg 0.0005367808159282771
+  Std 2.5193807802796853e-05
+-- Generation 10 --
+  Evaluated 66 individuals
+  Min 0.0004929647966363639
+  Max 0.0005813876365805383
+  Avg 0.0005381135997179086
+  Std 2.3361805083951506e-05
+-- Generation 11 --
+  Evaluated 68 individuals
+  Min 0.0004929647966363639
+  Max 0.0005813876365805383
+  Avg 0.0005368210731022455
+  Std 2.0911188768316225e-05
+-- Generation 12 --
+  Evaluated 68 individuals
+  Min 0.0004929647966363639
+  Max 0.0005552601830771357
+  Avg 0.0005378640976627716
+  Std 2.041971801357035e-05
+-- Generation 13 --
+  Evaluated 70 individuals
+  Min 0.0004929647966363639
+  Max 0.0005552601830771357
+  Avg 0.0005385735403973461
+  Std 2.0740338094758588e-05
+-- Generation 14 --
+  Evaluated 74 individuals
+  Min 0.0004929647966363639
+  Max 0.0005552601830771357
+  Avg 0.0005378707303462388
+  Std 2.0687395193894157e-05
+-- Generation 15 --
+  Evaluated 68 individuals
+  Min 0.00047699352616830705
+  Max 0.0005617982447158034
+  Avg 0.0005406182066647312
+  Std 2.0186930935937783e-05
+-- Generation 16 --
+  Evaluated 66 individuals
+  Min 0.00047699352616830705
+  Max 0.0005617982447158034
+  Avg 0.0005409629331970986
+  Std 1.998677281236514e-05
+-- Generation 17 --
+  Evaluated 68 individuals
+  Min 0.00047699352616830705
+  Max 0.000574764091655112
+  Avg 0.0005431493060858089
+  Std 2.1029167458096792e-05
+-- Generation 18 --
+  Evaluated 70 individuals
+  Min 0.00047699352616830705
+  Max 0.0005693527983701764
+  Avg 0.0005419165336279185
+  Std 2.1199035697727663e-05
+-- Generation 19 --
+  Evaluated 66 individuals
+  Min 0.0004929647966363639
+  Max 0.0005617982447158034
+  Avg 0.0005426969444994687
+  Std 1.8995425805602614e-05
+-- End of (successful) evolution --
+Best individual: [40, 39, 45, 30, 7, 23, 33, 37, 2, 47, 16, 24, 41, 12, 34, 13, 5, 22, 42, 6, 20, 31, 27, 10, 3, 19, 14, 28, 26, 35, 44, 8, 11, 29, 43, 46, 48, 15, 1, 4, 50, 9, 49, 18, 32, 21, 25, 17, 38, 36]
+Fitness: 0.0005617982447158034
+  Vehicle 1's route: 0 - 40 - 39 - 0
+  Vehicle 2's route: 0 - 45 - 0
+  Vehicle 3's route: 0 - 30 - 0
+  Vehicle 4's route: 0 - 7 - 23 - 0
+  Vehicle 5's route: 0 - 33 - 37 - 2 - 47 - 0
+  Vehicle 6's route: 0 - 16 - 0
+  Vehicle 7's route: 0 - 24 - 41 - 12 - 34 - 0
+  Vehicle 8's route: 0 - 13 - 0
+  Vehicle 9's route: 0 - 5 - 22 - 0
+  Vehicle 10's route: 0 - 42 - 6 - 0
+  Vehicle 11's route: 0 - 20 - 31 - 27 - 0
+  Vehicle 12's route: 0 - 10 - 0
+  Vehicle 13's route: 0 - 3 - 19 - 14 - 0
+  Vehicle 14's route: 0 - 28 - 26 - 0
+  Vehicle 15's route: 0 - 35 - 44 - 0
+  Vehicle 16's route: 0 - 8 - 11 - 0
+  Vehicle 17's route: 0 - 29 - 0
+  Vehicle 18's route: 0 - 43 - 46 - 48 - 0
+  Vehicle 19's route: 0 - 15 - 1 - 0
+  Vehicle 20's route: 0 - 4 - 50 - 0
+  Vehicle 21's route: 0 - 9 - 49 - 0
+  Vehicle 22's route: 0 - 18 - 0
+  Vehicle 23's route: 0 - 32 - 21 - 0
+  Vehicle 24's route: 0 - 25 - 0
+  Vehicle 25's route: 0 - 17 - 38 - 36 - 0
+Total cost: 1779.9984414438134
+Write to file: /Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/py-ga-VRPTW/results/C101_uC1.0_iC0.0_wC0.0_dC0.0_iS50_pS80_cP0.85_mP0.02_nG20.csv
+Path: /Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/py-ga-VRPTW/results/C101_uC1.0_iC0.0_wC0.0_dC0.0_iS50_pS80_cP0.85_mP0.02_nG20.csv does not exist.
+copied_csv: src/results/local_evrptw_run_20260708/week3_methods/raw/pyga_C101_50_seed1234.csv
+run_py_ga_vrptw_ok: True

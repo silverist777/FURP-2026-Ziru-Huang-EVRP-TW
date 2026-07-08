@@ -1,0 +1,821 @@
+{
+  "status": "solved",
+  "source": {
+    "path": "/Users/emt/Workspace/evrp_tw/data/schneider/c101C5.txt",
+    "instance": "c101C5",
+    "problem_type": "EVRPTW"
+  },
+  "experiment_record": {
+    "record_schema": "week03_experiment_record_v1",
+    "instance_name": "c101C5",
+    "instance_size": 5,
+    "method_name": "Tabu-assisted VNS EVRP-TW",
+    "objective_value": 259.0,
+    "runtime_seconds": 1.124,
+    "feasibility_status": "feasible",
+    "vehicles_used": 2,
+    "constraint_violations": "none",
+    "random_seed": 1234,
+    "best_solution_found": "[[\"D0\", \"C12\", \"S5\", \"C100\", \"D0\"], [\"D0\", \"S15\", \"C64\", \"C30\", \"S0\", \"C85\", \"D0\"]]",
+    "reference_value": null,
+    "gap_to_reference_pct": null,
+    "convergence_curve": "[{\"iteration\": 0, \"event\": \"initial\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 264, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 1, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 264, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 2, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 264, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 3, \"event\": \"improved\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 4, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 5, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 6, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 7, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 8, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 9, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 10, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 11, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 12, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 13, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 14, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 15, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 16, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 17, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 18, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 19, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 20, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 21, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 22, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 23, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 24, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 25, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 26, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 27, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 28, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 29, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 30, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 31, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 32, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 33, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 34, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 35, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 36, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 37, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 38, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 39, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 40, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}]",
+    "improvement_over_time": "[{\"iteration\": 0, \"event\": \"initial\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 264, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 1, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 264, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 2, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 264, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 3, \"event\": \"improved\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 4, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 5, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 6, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 7, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 8, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 9, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 10, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 11, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 12, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 13, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 14, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 15, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 16, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 17, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 18, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 19, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 20, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 21, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 22, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 23, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 24, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 25, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 26, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 27, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 28, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 29, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 30, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 31, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 32, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 33, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 34, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 35, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 36, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 37, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 38, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 39, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}, {\"iteration\": 40, \"event\": \"accepted\", \"feasible\": true, \"vehicle_count\": 2, \"total_distance\": 259, \"served_customers\": 5, \"missing_customers\": 0, \"duplicate_customers\": 0, \"violation_count\": 0}]",
+    "iterations": 40,
+    "generations": null,
+    "search_steps": 400
+  },
+  "solver": {
+    "method_name": "Tabu-assisted VNS EVRP-TW",
+    "initial_order": "tw_sweep",
+    "iterations": 40,
+    "neighbors_per_iteration": 10,
+    "tabu_size": 80,
+    "elapsed_runtime_seconds": 1.124,
+    "seed": 1234,
+    "repair": "v3_partial_recharge_label_setting"
+  },
+  "candidate": {
+    "customer_routes": [
+      [
+        "C12",
+        "C100"
+      ],
+      [
+        "C64",
+        "C30",
+        "C85"
+      ]
+    ]
+  },
+  "routes": [
+    {
+      "route_index": 1,
+      "visits": [
+        "D0",
+        "C12",
+        "S5",
+        "C100",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S5",
+          "station_visit": 1,
+          "arrival_battery": 33.75,
+          "departure_battery": 62,
+          "charged_amount": 28.25,
+          "charge_time": 99,
+          "policy": "partial_recharge"
+        }
+      ]
+    },
+    {
+      "route_index": 2,
+      "visits": [
+        "D0",
+        "S15",
+        "C64",
+        "C30",
+        "S0",
+        "C85",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S15",
+          "station_visit": 1,
+          "arrival_battery": 53.75,
+          "departure_battery": 77.75,
+          "charged_amount": 24.0,
+          "charge_time": 84,
+          "policy": "partial_recharge"
+        },
+        {
+          "station": "S0",
+          "station_visit": 2,
+          "arrival_battery": 8.75,
+          "departure_battery": 60,
+          "charged_amount": 51.25,
+          "charge_time": 178,
+          "policy": "partial_recharge"
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "feasible": true,
+    "vehicle_count": 2,
+    "total_distance": 259,
+    "total_duration": 1729,
+    "makespan": 872,
+    "served_customers": 5,
+    "missing_customers": 0,
+    "duplicate_customers": 0,
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 3,
+    "charging_time": 361
+  },
+  "repair": {
+    "feasible": true,
+    "split_count": 0,
+    "station_insertions": 3,
+    "charging_plans": [
+      [
+        {
+          "station": "S5",
+          "station_visit": 1,
+          "arrival_battery": 33.75,
+          "departure_battery": 62,
+          "charged_amount": 28.25,
+          "charge_time": 99,
+          "policy": "partial_recharge"
+        }
+      ],
+      [
+        {
+          "station": "S15",
+          "station_visit": 1,
+          "arrival_battery": 53.75,
+          "departure_battery": 77.75,
+          "charged_amount": 24.0,
+          "charge_time": 84,
+          "policy": "partial_recharge"
+        },
+        {
+          "station": "S0",
+          "station_visit": 2,
+          "arrival_battery": 8.75,
+          "departure_battery": 60,
+          "charged_amount": 51.25,
+          "charge_time": 178,
+          "policy": "partial_recharge"
+        }
+      ]
+    ],
+    "policy": "partial_recharge",
+    "attempts": [
+      {
+        "customers": [
+          "C12",
+          "C100"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 1,
+        "charging_time": 99
+      },
+      {
+        "customers": [
+          "C64",
+          "C30",
+          "C85"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 2,
+        "charging_time": 262
+      }
+    ],
+    "unsolved": []
+  },
+  "search_history": [
+    {
+      "iteration": 0,
+      "event": "initial",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 264,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 1,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 264,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 2,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 264,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 3,
+      "event": "improved",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 4,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 5,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 6,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 7,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 8,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 9,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 10,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 11,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 12,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 13,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 14,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 15,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 16,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 17,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 18,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 19,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 20,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 21,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 22,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 23,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 24,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 25,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 26,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 27,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 28,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 29,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 30,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 31,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 32,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 33,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 34,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 35,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 36,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 37,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 38,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 39,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    },
+    {
+      "iteration": 40,
+      "event": "accepted",
+      "feasible": true,
+      "vehicle_count": 2,
+      "total_distance": 259,
+      "served_customers": 5,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "violation_count": 0
+    }
+  ],
+  "violations": [],
+  "report": {
+    "feasible": true,
+    "total_distance": 259,
+    "total_duration": 1729,
+    "makespan": 872,
+    "served_customers": 5,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 3,
+    "charging_time": 361,
+    "synchronization_violations": 0,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "C12",
+          "S5",
+          "C100"
+        ],
+        "load": 40,
+        "distance": 106,
+        "duration": 872,
+        "wait_time": 487,
+        "return_time": 872,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 99,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "S15",
+          "C64",
+          "C30",
+          "S0",
+          "C85"
+        ],
+        "load": 50,
+        "distance": 153,
+        "duration": 857,
+        "wait_time": 172,
+        "return_time": 857,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 2,
+        "charging_time": 262,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": []
+  },
+  "instance": {
+    "name": "c101C5",
+    "problem_type": "EVRPTW",
+    "objective": {
+      "primary": "minimize_vehicle_count",
+      "secondary": "minimize_total_distance"
+    },
+    "distance": {
+      "metric": "euclidean",
+      "scale": 1
+    },
+    "duration": {
+      "metric": "euclidean",
+      "scale": 1.0
+    },
+    "solver": {
+      "name": "PyVRP",
+      "runtime_seconds": 0,
+      "seed": 1234,
+      "display": false
+    },
+    "vehicles": {
+      "num_available": 2,
+      "capacity": 200,
+      "start_depot": "D0",
+      "end_depot": "D0",
+      "tw_early": 0,
+      "tw_late": 1236,
+      "battery_capacity": 77.75,
+      "initial_battery": 77.75
+    },
+    "depot": {
+      "name": "D0",
+      "x": 40,
+      "y": 50,
+      "tw_early": 0,
+      "tw_late": 1236
+    },
+    "energy": {
+      "consumption_per_distance": 1,
+      "minimum_battery": 0
+    },
+    "charging": {
+      "policy": "partial_recharge",
+      "allow_partial_recharge": true,
+      "charging_rate": 0.2881844380403458,
+      "fixed_service_duration": 0
+    },
+    "charging_stations": [
+      {
+        "name": "S0",
+        "x": 40,
+        "y": 50,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2881844380403458
+      },
+      {
+        "name": "S5",
+        "x": 31,
+        "y": 84,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2881844380403458
+      },
+      {
+        "name": "S15",
+        "x": 39,
+        "y": 26,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2881844380403458
+      }
+    ],
+    "clients": [
+      {
+        "name": "C30",
+        "x": 20,
+        "y": 55,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 355,
+        "tw_late": 407
+      },
+      {
+        "name": "C12",
+        "x": 25,
+        "y": 85,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 176,
+        "tw_late": 228
+      },
+      {
+        "name": "C100",
+        "x": 55,
+        "y": 85,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 744,
+        "tw_late": 798
+      },
+      {
+        "name": "C85",
+        "x": 68,
+        "y": 60,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 737,
+        "tw_late": 809
+      },
+      {
+        "name": "C64",
+        "x": 48,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 263,
+        "tw_late": 325
+      }
+    ]
+  }
+}

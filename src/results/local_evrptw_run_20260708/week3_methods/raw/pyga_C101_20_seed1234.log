@@ -1,0 +1,141 @@
+File: /Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/py-ga-VRPTW/data/json/C101.json exists.
+Start of evolution
+  Evaluated 80 individuals
+-- Generation 0 --
+  Evaluated 72 individuals
+  Min 0.0012211590424072878
+  Max 0.0018618273326650209
+  Avg 0.0014472577077641903
+  Std 0.000128499065462608
+-- Generation 1 --
+  Evaluated 74 individuals
+  Min 0.0012687396641445302
+  Max 0.0018618273326650209
+  Avg 0.0014649208213024694
+  Std 0.00014009257565655552
+-- Generation 2 --
+  Evaluated 72 individuals
+  Min 0.0012687396641445302
+  Max 0.001808891600185921
+  Avg 0.0014626454109518809
+  Std 0.0001129032162589137
+-- Generation 3 --
+  Evaluated 68 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.001459701344015673
+  Std 0.00011922306016470734
+-- Generation 4 --
+  Evaluated 69 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.001480282923678954
+  Std 0.00013670394963800726
+-- Generation 5 --
+  Evaluated 52 individuals
+  Min 0.0012562772782818308
+  Max 0.001808891600185921
+  Avg 0.0015026795301242761
+  Std 0.00014778825324779932
+-- Generation 6 --
+  Evaluated 64 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.0015339041357126787
+  Std 0.00016457696165940463
+-- Generation 7 --
+  Evaluated 68 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.0015451316561183237
+  Std 0.0001684006137079159
+-- Generation 8 --
+  Evaluated 66 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.001552599639521601
+  Std 0.00016934528312882147
+-- Generation 9 --
+  Evaluated 64 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.0015427917093944088
+  Std 0.00016775629660820964
+-- Generation 10 --
+  Evaluated 68 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.0015210814930922635
+  Std 0.00017269844541193224
+-- Generation 11 --
+  Evaluated 72 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.0015702447474769548
+  Std 0.00014961014830558873
+-- Generation 12 --
+  Evaluated 68 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.0015836508660518993
+  Std 0.00013917835564968586
+-- Generation 13 --
+  Evaluated 68 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.0016092604070048846
+  Std 0.0001250484155121075
+-- Generation 14 --
+  Evaluated 74 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.0016048816482548724
+  Std 0.0001256612309238155
+-- Generation 15 --
+  Evaluated 68 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.0015960065327256152
+  Std 0.00013326913128569996
+-- Generation 16 --
+  Evaluated 68 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.0016108040349498364
+  Std 0.00012204911474024948
+-- Generation 17 --
+  Evaluated 68 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.001635249936144248
+  Std 0.00011034926491428376
+-- Generation 18 --
+  Evaluated 66 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.001657622838597873
+  Std 0.00011136740055726831
+-- Generation 19 --
+  Evaluated 74 individuals
+  Min 0.0012905425174539952
+  Max 0.001808891600185921
+  Avg 0.0016751089306218819
+  Std 0.00011838402421961456
+-- End of (successful) evolution --
+Best individual: [6, 1, 10, 13, 19, 14, 12, 9, 18, 8, 2, 5, 3, 4, 11, 15, 16, 20, 17, 7]
+Fitness: 0.001808891600185921
+  Vehicle 1's route: 0 - 6 - 1 - 0
+  Vehicle 2's route: 0 - 10 - 0
+  Vehicle 3's route: 0 - 13 - 19 - 14 - 12 - 0
+  Vehicle 4's route: 0 - 9 - 0
+  Vehicle 5's route: 0 - 18 - 8 - 2 - 0
+  Vehicle 6's route: 0 - 5 - 3 - 4 - 0
+  Vehicle 7's route: 0 - 11 - 0
+  Vehicle 8's route: 0 - 15 - 16 - 0
+  Vehicle 9's route: 0 - 20 - 17 - 0
+  Vehicle 10's route: 0 - 7 - 0
+Total cost: 552.824724210792
+Write to file: /Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/py-ga-VRPTW/results/C101_uC1.0_iC0.0_wC0.0_dC0.0_iS20_pS80_cP0.85_mP0.02_nG20.csv
+Path: /Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/py-ga-VRPTW/results/C101_uC1.0_iC0.0_wC0.0_dC0.0_iS20_pS80_cP0.85_mP0.02_nG20.csv does not exist.
+copied_csv: src/results/local_evrptw_run_20260708/week3_methods/raw/pyga_C101_20_seed1234.csv
+run_py_ga_vrptw_ok: True
