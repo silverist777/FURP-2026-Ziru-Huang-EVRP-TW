@@ -1,0 +1,458 @@
+{
+  "status": "unsolved",
+  "source": {
+    "path": "src/data/evrptw_instances/c101C10.txt",
+    "instance": "c101C10",
+    "problem_type": "EVRPTW"
+  },
+  "experiment_record": {
+    "record_schema": "week03_experiment_record_v1",
+    "instance_name": "c101C10",
+    "instance_size": 10,
+    "method_name": "PyVRP VRPTW + EVRP-TW station repair",
+    "objective_value": 0.0,
+    "runtime_seconds": 10.023,
+    "feasibility_status": "infeasible",
+    "vehicles_used": 0,
+    "constraint_violations": "missing_customers=10",
+    "random_seed": 1,
+    "best_solution_found": "[]",
+    "reference_value": null,
+    "gap_to_reference_pct": null,
+    "convergence_curve": "not captured; repair attempts are recorded in repair.attempts",
+    "improvement_over_time": "not captured",
+    "iterations": null,
+    "generations": null,
+    "search_steps": 1
+  },
+  "solver": {
+    "baseline": "PyVRP VRPTW",
+    "repair": "v3_partial_recharge_label_setting",
+    "pyvrp_version": "0.13.4",
+    "runtime_seconds": 10,
+    "elapsed_runtime_seconds": 10.023,
+    "seed": 1
+  },
+  "routes": [],
+  "metrics": {
+    "feasible": false,
+    "vehicle_count": 0,
+    "total_distance": 0,
+    "total_duration": 0,
+    "makespan": 0,
+    "served_customers": 0,
+    "missing_customers": 10,
+    "duplicate_customers": 0,
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 0,
+    "charging_time": 0
+  },
+  "baseline": {
+    "pyvrp_solution_feasible": false,
+    "pyvrp_time_warp": 2,
+    "customer_routes": [
+      [
+        "C98",
+        "C27",
+        "C4",
+        "C100",
+        "C13"
+      ],
+      [
+        "C96",
+        "C95",
+        "C78",
+        "C54",
+        "C89"
+      ]
+    ]
+  },
+  "repair": {
+    "feasible": false,
+    "split_count": 1,
+    "station_insertions": 0,
+    "charging_plans": [],
+    "policy": "partial_recharge",
+    "attempts": [
+      {
+        "customers": [
+          "C98",
+          "C27",
+          "C4",
+          "C100",
+          "C13"
+        ],
+        "feasible": false,
+        "reason": "no_partial_recharge_route_found",
+        "charging_count": 0,
+        "charging_time": 0
+      }
+    ],
+    "unsolved": [
+      {
+        "reason": "vehicle_limit_exceeded",
+        "available": 2,
+        "needed_at_least": 3,
+        "pending_routes": [
+          [
+            "C98",
+            "C27"
+          ],
+          [
+            "C4",
+            "C100",
+            "C13"
+          ],
+          [
+            "C96",
+            "C95",
+            "C78",
+            "C54",
+            "C89"
+          ]
+        ]
+      }
+    ]
+  },
+  "violations": [
+    {
+      "constraint": "customer_coverage",
+      "route_index": null,
+      "location": "C98",
+      "detail": "Customer was not visited."
+    },
+    {
+      "constraint": "customer_coverage",
+      "route_index": null,
+      "location": "C78",
+      "detail": "Customer was not visited."
+    },
+    {
+      "constraint": "customer_coverage",
+      "route_index": null,
+      "location": "C4",
+      "detail": "Customer was not visited."
+    },
+    {
+      "constraint": "customer_coverage",
+      "route_index": null,
+      "location": "C13",
+      "detail": "Customer was not visited."
+    },
+    {
+      "constraint": "customer_coverage",
+      "route_index": null,
+      "location": "C95",
+      "detail": "Customer was not visited."
+    },
+    {
+      "constraint": "customer_coverage",
+      "route_index": null,
+      "location": "C100",
+      "detail": "Customer was not visited."
+    },
+    {
+      "constraint": "customer_coverage",
+      "route_index": null,
+      "location": "C54",
+      "detail": "Customer was not visited."
+    },
+    {
+      "constraint": "customer_coverage",
+      "route_index": null,
+      "location": "C27",
+      "detail": "Customer was not visited."
+    },
+    {
+      "constraint": "customer_coverage",
+      "route_index": null,
+      "location": "C89",
+      "detail": "Customer was not visited."
+    },
+    {
+      "constraint": "customer_coverage",
+      "route_index": null,
+      "location": "C96",
+      "detail": "Customer was not visited."
+    }
+  ],
+  "report": {
+    "feasible": false,
+    "total_distance": 0,
+    "total_duration": 0,
+    "makespan": 0,
+    "served_customers": 0,
+    "missing_customers": [
+      "C98",
+      "C78",
+      "C4",
+      "C13",
+      "C95",
+      "C100",
+      "C54",
+      "C27",
+      "C89",
+      "C96"
+    ],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 0,
+    "charging_time": 0,
+    "synchronization_violations": 0,
+    "route_metrics": [],
+    "violations": [
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C98",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C78",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C4",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C13",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C95",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C100",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C54",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C27",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C89",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C96",
+        "detail": "Customer was not visited."
+      }
+    ]
+  },
+  "instance": {
+    "name": "c101C10",
+    "problem_type": "EVRPTW",
+    "objective": {
+      "primary": "minimize_vehicle_count",
+      "secondary": "minimize_total_distance"
+    },
+    "distance": {
+      "metric": "euclidean",
+      "scale": 1
+    },
+    "duration": {
+      "metric": "euclidean",
+      "scale": 1.0
+    },
+    "solver": {
+      "name": "PyVRP",
+      "runtime_seconds": 10,
+      "seed": 1,
+      "display": false
+    },
+    "vehicles": {
+      "num_available": 2,
+      "capacity": 200,
+      "start_depot": "D0",
+      "end_depot": "D0",
+      "tw_early": 0,
+      "tw_late": 1236,
+      "battery_capacity": 77.75,
+      "initial_battery": 77.75
+    },
+    "depot": {
+      "name": "D0",
+      "x": 40,
+      "y": 50,
+      "tw_early": 0,
+      "tw_late": 1236
+    },
+    "energy": {
+      "consumption_per_distance": 1,
+      "minimum_battery": 0
+    },
+    "charging": {
+      "policy": "partial_recharge",
+      "allow_partial_recharge": true,
+      "charging_rate": 0.2881844380403458,
+      "fixed_service_duration": 0
+    },
+    "charging_stations": [
+      {
+        "name": "S0",
+        "x": 40,
+        "y": 50,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2881844380403458
+      },
+      {
+        "name": "S1",
+        "x": 77,
+        "y": 52,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2881844380403458
+      },
+      {
+        "name": "S3",
+        "x": 57,
+        "y": 82,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2881844380403458
+      },
+      {
+        "name": "S16",
+        "x": 48,
+        "y": 8,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2881844380403458
+      },
+      {
+        "name": "S20",
+        "x": 93,
+        "y": 43,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2881844380403458
+      }
+    ],
+    "clients": [
+      {
+        "name": "C98",
+        "x": 58,
+        "y": 75,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 181,
+        "tw_late": 247
+      },
+      {
+        "name": "C78",
+        "x": 88,
+        "y": 35,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 667,
+        "tw_late": 731
+      },
+      {
+        "name": "C4",
+        "x": 42,
+        "y": 68,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 584,
+        "tw_late": 656
+      },
+      {
+        "name": "C13",
+        "x": 22,
+        "y": 75,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 1042,
+        "tw_late": 1106
+      },
+      {
+        "name": "C95",
+        "x": 62,
+        "y": 80,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 274,
+        "tw_late": 330
+      },
+      {
+        "name": "C100",
+        "x": 55,
+        "y": 85,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 744,
+        "tw_late": 798
+      },
+      {
+        "name": "C54",
+        "x": 42,
+        "y": 10,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 810,
+        "tw_late": 868
+      },
+      {
+        "name": "C27",
+        "x": 23,
+        "y": 52,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 263,
+        "tw_late": 311
+      },
+      {
+        "name": "C89",
+        "x": 63,
+        "y": 58,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 929,
+        "tw_late": 989
+      },
+      {
+        "name": "C96",
+        "x": 60,
+        "y": 80,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 177,
+        "tw_late": 243
+      }
+    ]
+  }
+}

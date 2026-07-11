@@ -30,6 +30,7 @@ sys.path.insert(0, str(PY_GA_ROOT))
 from experiment_record import build_experiment_record, format_constraint_violations  # noqa: E402
 from feasibility_checker import check_explicit_routes, print_benchmark_report  # noqa: E402
 from instance_loader import load_instance_data  # noqa: E402
+from PyVRP.parse_schneider_instance import convert_schneider_instance  # noqa: E402
 from solomon_to_project_instance import convert_solomon_instance  # noqa: E402
 
 
@@ -37,7 +38,9 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Run external py-ga-VRPTW and emit a checked Week 4 JSON."
     )
-    parser.add_argument("--solomon", type=Path, required=True)
+    source = parser.add_mutually_exclusive_group(required=True)
+    source.add_argument("--solomon", type=Path)
+    source.add_argument("--schneider", type=Path)
     parser.add_argument("--instance", default=None)
     parser.add_argument("--ind-size", type=int, required=True)
     parser.add_argument("--pop-size", type=int, default=80)
@@ -117,6 +120,52 @@ def load_pyga_instance(instance_name: str, customize_data: bool) -> dict:
     if data is None:
         raise RuntimeError(f"Could not load py-ga instance JSON: {path}")
     return data
+
+
+def project_instance_to_pyga(instance_data: dict, instance_name: str) -> tuple[dict, list[str]]:
+    """Converts the shared project schema to py-ga's contiguous customer schema."""
+
+    depot = instance_data["depot"]
+    clients = instance_data["clients"]
+    customer_names = [client["name"] for client in clients]
+
+    def pyga_node(node: dict) -> dict:
+        return {
+            "coordinates": {"x": node["x"], "y": node["y"]},
+            "demand": node.get("demand", 0),
+            "ready_time": node.get("tw_early", 0),
+            "due_time": node.get("tw_late", 0),
+            "service_time": node.get("service_duration", 0),
+        }
+
+    ordered = [pyga_node(depot), *[pyga_node(client) for client in clients]]
+    data = {
+        "instance_name": instance_name,
+        "max_vehicle_number": instance_data["vehicles"]["num_available"],
+        "vehicle_capacity": instance_data["vehicles"]["capacity"],
+        "depart": ordered[0],
+    }
+    for idx, client in enumerate(ordered[1:], start=1):
+        data[f"customer_{idx}"] = client
+
+    data["distance_matrix"] = [
+        [
+            ((left["coordinates"]["x"] - right["coordinates"]["x"]) ** 2
+             + (left["coordinates"]["y"] - right["coordinates"]["y"]) ** 2) ** 0.5
+            for right in ordered
+        ]
+        for left in ordered
+    ]
+    return data, customer_names
+
+
+def write_pyga_instance(instance_name: str, data: dict) -> Path:
+    output = PY_GA_ROOT / "data" / "json_customize" / f"{instance_name}.json"
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with output.open("w", encoding="utf-8") as file:
+        json.dump(data, file, indent=2, ensure_ascii=False)
+        file.write("\n")
+    return output
 
 
 def copy_generated_csv(args: argparse.Namespace, instance_name: str) -> list[dict]:
@@ -232,18 +281,32 @@ def build_payload(
 
 def main() -> int:
     args = parse_args()
-    instance_name = args.instance or args.solomon.stem
+    source_path = args.schneider or args.solomon
+    instance_name = args.instance or source_path.stem
     output_json = args.output or (DEFAULT_RESULTS_DIR / f"{instance_name}_pyga_checked.json")
     output_log = args.output_log or (DEFAULT_RESULTS_DIR / f"{instance_name}_pyga.log")
 
-    instance_data = convert_solomon_instance(
-        input_path=args.solomon,
-        num_vehicles=args.vehicles,
-        solver_runtime_seconds=0,
-        solver_seed=args.seed,
-        solver_display=False,
-    )
-    instance = load_instance_data(instance_data, default_name=args.solomon.stem)
+    if args.schneider is not None:
+        instance_data = convert_schneider_instance(
+            input_path=args.schneider,
+            num_vehicles=1 if args.vehicles is None else args.vehicles,
+            solver_runtime_seconds=0,
+            solver_seed=args.seed,
+            solver_display=False,
+        )
+        pyga_data, customer_names = project_instance_to_pyga(instance_data, instance_name)
+        write_pyga_instance(instance_name, pyga_data)
+        args.customize_data = True
+    else:
+        instance_data = convert_solomon_instance(
+            input_path=args.solomon,
+            num_vehicles=args.vehicles,
+            solver_runtime_seconds=0,
+            solver_seed=args.seed,
+            solver_display=False,
+        )
+        customer_names = [client["name"] for client in instance_data["clients"]]
+    instance = load_instance_data(instance_data, default_name=source_path.stem)
 
     stdout, elapsed = run_pyga(args, instance_name)
     best_individual = parse_best_individual(stdout)
@@ -253,7 +316,10 @@ def main() -> int:
     from gavrptw.core import ind2route  # noqa: PLC0415
 
     raw_routes = ind2route(best_individual, pyga_instance)
-    customer_routes = [[f"C{customer_id}" for customer_id in route] for route in raw_routes]
+    customer_routes = [
+        [customer_names[customer_id - 1] for customer_id in route]
+        for route in raw_routes
+    ]
     report = check_explicit_routes(
         routes=customer_routes,
         depot=instance.checker_depot_spec(),
@@ -266,7 +332,7 @@ def main() -> int:
     payload = build_payload(
         args=args,
         instance_name=instance_name,
-        source_path=args.solomon,
+        source_path=source_path,
         instance=instance,
         instance_data=instance_data,
         customer_routes=customer_routes,
