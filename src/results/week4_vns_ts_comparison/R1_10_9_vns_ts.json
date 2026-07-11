@@ -1,7 +1,7 @@
 {
   "status": "solved",
   "source": {
-    "path": "src\\data\\Holmberger\\R1_10_9.txt",
+    "path": "src/data/Holmberger/R1_10_9.txt",
     "instance": "R1_10_9",
     "problem_type": "VRPTW"
   },
@@ -11,7 +11,7 @@
     "instance_size": 1000,
     "method_name": "Tabu-assisted VNS EVRP-TW",
     "objective_value": 83323.0,
-    "runtime_seconds": 11.599,
+    "runtime_seconds": 7.322,
     "feasibility_status": "feasible",
     "vehicles_used": 103,
     "constraint_violations": "none",
@@ -31,7 +31,7 @@
     "iterations": 40,
     "neighbors_per_iteration": 10,
     "tabu_size": 80,
-    "elapsed_runtime_seconds": 11.599,
+    "elapsed_runtime_seconds": 7.322,
     "seed": 1,
     "repair": "v3_partial_recharge_label_setting"
   },
@@ -18196,7 +18196,7 @@
     ],
     "source": {
       "format": "Solomon/Holmberger VRPTW",
-      "path": "src\\data\\Holmberger\\R1_10_9.txt",
+      "path": "src/data/Holmberger/R1_10_9.txt",
       "known_cost": 49162.8
     }
   }

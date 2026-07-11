@@ -29,6 +29,47 @@
 ---
 
 <!-- =================  YOUR ENTRIES BELOW  ================= -->
+
+### Week 4 — 2026/7/8
+
+**Attended this week's meeting:** Yes
+
+**Progress this week**
+- Completed the Week 4 EVRP-TW baseline comparison on two test cases: Solomon `C101` and Holmberger `R1_10_9`.
+- Fixed the Week 3 limitation where POMO and GA were mainly suitable for 100-customer inputs. This week first focused on making all baselines runnable on both 100-customer and 1000-customer cases, then compared them fairly with the shared checker.
+- Added and tested the `POMO100 cluster + EVRP-TW repair` pipeline, which decomposes the 1000-customer instance into 100-customer clusters, runs the retained CVRP100 POMO checkpoint, then repairs and validates the full solution.
+- Added custom Solomon/Holmberger input support for `py-ga-VRPTW`, plus a checked wrapper that replays the GA route with the shared project checker.
+- Ran four checked methods: `PyVRP VRPTW + EVRP-TW station repair`, `POMO100 cluster + EVRP-TW repair`, `Tabu-assisted VNS EVRP-TW`, and `py-ga-VRPTW custom + shared checker`.
+- Generated the Week 4 result directory and summary tables under `src/results/week4_vns_ts_comparison/`.
+- Finished the Week 4 report in `docs/WEEK4.md`. All eight final rows were feasible, served all customers, and had zero missing, duplicate, time-window, capacity, and energy violations.
+- Main result: PyVRP is still the best distance baseline; POMO100 + repair is the strongest speed/quality hybrid candidate; VNS/TS is feasible but needs stronger search; py-ga is runnable at 1000 customers but uses too many fragmented routes.
+
+**Challenges & blockers**
+- `C101` and `R1_10_9` are VRPTW benchmark files, not full EVRP-TW charging benchmarks, so charging count, charging time, and energy violations are all zero in this experiment.
+- The retained `yd-kwon/POMO` checkpoint is still CVRP100, so the large-case result must be reported as `POMO100 cluster + EVRP-TW repair`, not as a true POMO1000 or end-to-end EVRP-TW model.
+- `py-ga-VRPTW` can now run on `R1_10_9`, but it achieves feasibility mainly by splitting routes aggressively, leading to 620 vehicles on the 1000-customer case.
+- The current VNS/TS implementation is feasible, but its distance is still worse than PyVRP and POMO100 + repair under the current runtime/search budget.
+
+**Next steps**
+- Move from VRPTW-only inputs to true EVRP-TW charging instances, or add controlled charging stations and battery parameters to the current test cases.
+- Improve the VNS/TS neighborhoods and search budget so it can compete on distance, not only feasibility.
+- Improve the GA decoder or add local search/repair so feasibility does not require excessive route fragmentation.
+- Keep PyVRP as the reliable feasible baseline, and use POMO100 + repair as the main hybrid speed/quality comparison method.
+
+**Hours spent (optional):**
+
+**Links (optional):**
+**Links (optional):**
+- [Week 4 report](WEEK4.md)
+- [Summary CSV](../src/results/week4_vns_ts_comparison/week4_summary.csv)
+- [Summary Markdown](../src/results/week4_vns_ts_comparison/week4_summary.md)
+- [Result directory](../src/results/week4_vns_ts_comparison/)
+- [GA checked wrapper](../src/experiments/GA/run_py_ga_vrptw_checked.py)
+- [VNS/TS baseline](../src/experiments/vns_ts_evrptw_baseline.py)
+- [POMO decomposed pipeline](../src/experiments/pomo_decomposed_evrptw_pipeline.py)
+
+
+
 ### Week 3 — 2026/7/1
 
 **Attended this week's meeting:** Yes

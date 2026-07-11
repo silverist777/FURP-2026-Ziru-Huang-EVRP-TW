@@ -1,7 +1,7 @@
 {
   "status": "solved",
   "source": {
-    "path": "src\\data\\Holmberger\\R1_10_9.txt",
+    "path": "src/data/Holmberger/R1_10_9.txt",
     "instance": "R1_10_9",
     "problem_type": "VRPTW"
   },
@@ -11,7 +11,7 @@
     "instance_size": 1000,
     "method_name": "POMO100 cluster + EVRP-TW repair",
     "objective_value": 74795.0,
-    "runtime_seconds": 3.255,
+    "runtime_seconds": 3.793,
     "feasibility_status": "feasible",
     "vehicles_used": 94,
     "constraint_violations": "none",
@@ -28,11 +28,11 @@
   "solver": {
     "candidate_generator": "yd-kwon/POMO CVRP100 pretrained checkpoint",
     "method_name": "POMO100 cluster + EVRP-TW repair",
-    "checkpoint": "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\external\\POMO\\NEW_py_ver\\CVRP\\POMO\\result\\saved_CVRP100_model\\checkpoint-30500.pt",
+    "checkpoint": "/Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/external/POMO/NEW_py_ver/CVRP/POMO/result/saved_CVRP100_model/checkpoint-30500.pt",
     "device": "cpu",
     "augmentation": false,
     "max_candidates_per_cluster": 4,
-    "elapsed_runtime_seconds": 3.255,
+    "elapsed_runtime_seconds": 3.793,
     "seed": 1,
     "model_status": "CVRP100 checkpoint used only inside cluster-sized subproblems; full-instance feasibility is handled by repair/checker."
   },
@@ -24464,7 +24464,7 @@
     ],
     "source": {
       "format": "Solomon/Holmberger VRPTW",
-      "path": "src\\data\\Holmberger\\R1_10_9.txt",
+      "path": "src/data/Holmberger/R1_10_9.txt",
       "known_cost": 49162.8
     }
   }

@@ -1,68 +1,86 @@
-# Week 4 Lab Report: EVRPTW Baseline Comparison Plan and Implementation
+# Week 4 Lab Report: VNS/TS EVRP-TW Baseline Comparison
 
-## Goal
+## Step 1: Define the Comparison Target
 
-Week 4 extends the Week 3 comparison from 100-customer-only experiments to a fixed two-case setup:
+Week 4 compares runnable EVRP-TW/VRPTW baselines on two fixed test cases:
 
 - `src/data/Solomon/C101.txt`
 - `src/data/Holmberger/R1_10_9.txt`
 
-The main addition is a new method, `Tabu-assisted VNS EVRP-TW`, compared against:
+Compared methods:
 
-- `PyVRP VRPTW + EVRP-TW repair`
-- `py-ga-VRPTW + custom Solomon/Holmberger JSON`
+- `PyVRP VRPTW + EVRP-TW station repair`
+- `Tabu-assisted VNS EVRP-TW`
 - `POMO100 cluster + EVRP-TW repair`
+- `py-ga-VRPTW custom + shared checker`
 
-`C101` and `R1_10_9.txt` are Solomon/Holmberger VRPTW files. The project converts them into the shared project schema and runs them through the same route repair/checker interface. Since these files do not contain charging stations or battery parameters, energy constraints are disabled for these two cases.
+The key question is no longer only whether each method is theoretically suitable.
+Week 4 first makes every baseline runnable on both 100-client and 1000-client
+inputs, then compares the checked solution quality under the same validation
+interface.
 
-## Week 3 Limitation Addressed
+## Step 2: Address the Week 3 Limitation
 
-Week 3 left `R1_10_9.txt` as a failure/limitation case because:
+Week 3 deliberately did not include `R1_10_9` in the fair three-way table.
+The reason was a support mismatch:
 
-- `py-ga-VRPTW` only shipped 100-customer Solomon JSON files.
-- the retained `yd-kwon/POMO` checkpoint is CVRP100.
+- the retained `yd-kwon/POMO` checkpoint is a CVRP100 model, not a 1000-client model;
+- the external `py-ga-VRPTW` code originally shipped Solomon-style 100-client JSON inputs;
+- mixing a 1000-client Holmberger case into the Week 3 table would have compared
+  unsupported method behavior rather than algorithm quality.
 
-Week 4 addresses this before comparison:
+Week 4 resolves the runnability layer first:
 
-- GA now has a generic Solomon/Holmberger to `py-ga-VRPTW/data/json_customize` converter.
-- POMO now uses `1000-client instance -> sweep clusters of 100 -> POMO100 candidate order -> insertion greedy full pack -> EVRP-TW repair -> checker`.
-- PyVRP now accepts `--solomon` directly for both `C101` and `R1_10_9.txt`.
+- POMO is run as `1000-client instance -> 100-client sweep clusters -> POMO100 order -> greedy packing -> EVRP-TW repair -> checker`.
+- GA gets a Solomon/Holmberger-to-`json_customize` converter plus a checked wrapper that replays the final GA route with the shared checker.
+- PyVRP and VNS/TS read the same Solomon/Holmberger files through the shared project instance schema.
 
-## Implemented Scripts
+This is still not a perfect algorithmic apples-to-apples comparison: POMO is a
+decomposition baseline rather than a true POMO1000 model, and GA is a generic
+permutation GA with a hard time-window route splitter. It is, however, a fairer
+Week 4 comparison because all final rows are produced by the same route checker.
 
-- `src/experiments/solomon_to_project_instance.py`
-  - converts Solomon/Holmberger VRPTW text files into the project JSON schema.
-- `src/experiments/GA/solomon_to_pyga_json.py`
-  - converts any contiguous Solomon/Holmberger instance into py-ga custom JSON, including the full `1001 x 1001` matrix for `R1_10_9`.
-- `src/experiments/pomo_decomposed_evrptw_pipeline.py`
-  - decomposes large instances into CVRP100-sized clusters, runs POMO per cluster, then repairs/checks the merged full solution.
-- `src/experiments/vns_ts_evrptw_baseline.py`
-  - new Week 4 baseline: insertion construction plus tabu-assisted VNS neighborhoods, validated by the shared checker.
-- `src/experiments/week4_collect_results.py`
-  - collects JSON solver outputs into `week4_summary.csv` and `week4_summary.md`.
+## Step 3: Decide What to Record
 
-## Smoke Validation
+For every checked JSON result, the experiment records:
 
-Smoke tests run on July 7, 2026:
+| Field | Meaning |
+|---|---|
+| `feasible` | Shared checker feasibility result |
+| `total_distance` | Replayed route distance from the shared checker |
+| `vehicle_count` | Number of final routes |
+| `runtime_seconds` | Wall-clock runtime of the method wrapper |
+| `charging_count`, `charging_time` | Charging behavior after EVRP-TW repair |
+| `missing_customers`, `duplicate_customers` | Customer coverage errors |
+| `time_window_violations`, `capacity_violations`, `energy_violations` | Constraint violations |
+| `timeout_or_unsupported_reason` | Empty for successful runs; filled for failed/unsupported rows |
 
-| Case | Method | Setting | Feasible | Served | Vehicles | Distance |
-|---|---|---|---:|---:|---:|---:|
-| `C101` | PyVRP + repair | 1s | yes | 100 | 10 | 829 |
-| `C101` | VNS/TS EVRP-TW | 0 iterations | yes | 100 | 11 | 1049 |
-| `C101` | POMO100 cluster + repair | cluster 20, 1 candidate | yes | 100 | 12 | 1210 |
-| `R1_10_9` | PyVRP + repair | 1s | yes | 1000 | 107 | 56537 |
-| `R1_10_9` | VNS/TS EVRP-TW | 0 iterations | yes | 1000 | 103 | 83323 |
-| `R1_10_9` | POMO100 cluster + repair | cluster 100, 1 candidate | yes | 1000 | 93 | 76863 |
+Raw and cleaned outputs:
 
-GA custom-input smoke:
+- Summary CSV: [week4_summary.csv](../src/results/week4_vns_ts_comparison/week4_summary.csv)
+- Summary Markdown: [week4_summary.md](../src/results/week4_vns_ts_comparison/week4_summary.md)
+- Result directory: [week4_vns_ts_comparison](../src/results/week4_vns_ts_comparison/)
 
-- `C101` custom JSON generated with 100 customers and `101 x 101` distance matrix.
-- `R1_10_9` custom JSON generated with 1000 customers and `1001 x 1001` distance matrix.
-- `run_py_ga_vrptw.py --customize-data` successfully read the custom `C101` JSON in a 0-generation smoke test.
+Because `C101` and `R1_10_9` are VRPTW benchmark files without charging station
+or battery fields, the converted project instances disable energy constraints.
+Therefore `charging_count`, `charging_time`, and `energy_violations` are all
+zero in this run.
 
-## Formal Experiment Commands
+## Step 4: Run the Experiment
 
-Run from repository root.
+Run date: 2026-07-08.
+
+Environment:
+
+- macOS CPU run.
+- PyVRP / GA / VNS environment: `src/.venv_pyvrp`, Python `3.13.9`.
+- PyVRP version: `0.13.4`.
+- DEAP version used by `py-ga-VRPTW`: `1.4.4`.
+- POMO environment: system `python3`, Python `3.9.6`, torch `2.8.0`, CUDA unavailable.
+- `external/POMO` submodule commit: `d7c3d6e`.
+- `py-ga-VRPTW` submodule commit: `b5598e4`.
+
+Commands:
 
 ```bash
 mkdir -p src/results/week4_vns_ts_comparison
@@ -100,45 +118,122 @@ src/.venv_pyvrp/bin/python src/experiments/vns_ts_evrptw_baseline.py \
   --iterations 40 \
   --neighbors-per-iteration 10 \
   --output src/results/week4_vns_ts_comparison/R1_10_9_vns_ts.json
-```
 
-Prepare GA custom data:
-
-```bash
 python3 src/experiments/GA/solomon_to_pyga_json.py src/data/Solomon/C101.txt
 python3 src/experiments/GA/solomon_to_pyga_json.py src/data/Holmberger/R1_10_9.txt
-```
 
-Run GA with bounded budgets:
-
-```bash
-src/.venv_pyvrp/bin/python src/experiments/GA/run_py_ga_vrptw.py \
+src/.venv_pyvrp/bin/python src/experiments/GA/run_py_ga_vrptw_checked.py \
+  --solomon src/data/Solomon/C101.txt \
   --instance C101 \
   --ind-size 100 \
   --pop-size 80 \
   --generations 50 \
   --customize-data \
-  --output-csv src/results/week4_vns_ts_comparison/C101_pyga.csv
+  --output src/results/week4_vns_ts_comparison/C101_pyga_checked.json \
+  --output-csv src/results/week4_vns_ts_comparison/C101_pyga.csv \
+  --output-log src/results/week4_vns_ts_comparison/C101_pyga.log
 
-src/.venv_pyvrp/bin/python src/experiments/GA/run_py_ga_vrptw.py \
+src/.venv_pyvrp/bin/python src/experiments/GA/run_py_ga_vrptw_checked.py \
+  --solomon src/data/Holmberger/R1_10_9.txt \
   --instance R1_10_9 \
   --ind-size 1000 \
   --pop-size 40 \
   --generations 10 \
   --customize-data \
-  --output-csv src/results/week4_vns_ts_comparison/R1_10_9_pyga.csv
-```
+  --output src/results/week4_vns_ts_comparison/R1_10_9_pyga_checked.json \
+  --output-csv src/results/week4_vns_ts_comparison/R1_10_9_pyga.csv \
+  --output-log src/results/week4_vns_ts_comparison/R1_10_9_pyga.log
 
-Collect JSON result tables:
-
-```bash
 python3 src/experiments/week4_collect_results.py \
   --results-dir src/results/week4_vns_ts_comparison
 ```
 
-## Notes
+## Step 5: Organize Results Clearly
 
-- POMO is not retrained. The method name must remain `POMO100 cluster + EVRP-TW repair`.
-- `R1_10_9` POMO support is a decomposition baseline, not a true POMO1000 model.
-- GA support is input-scale support. Full `R1_10_9` GA runtime may still be poor and should be reported as timeout if it exceeds the chosen budget.
-- All final comparison rows should be based on shared checker outputs, not raw solver claims.
+| Instance | Clients | Method | Feasible | Distance | Vehicles | Runtime (s) | Charging count | Charging time | Missing | Duplicate | Timeout / unsupported |
+|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| `C101` | 100 | PyVRP VRPTW + EVRP-TW station repair | yes | 829 | 10 | 5.032 | 0 | 0 | 0 | 0 | none |
+| `C101` | 100 | POMO100 cluster + EVRP-TW repair | yes | 939 | 11 | 0.244 | 0 | 0 | 0 | 0 | none |
+| `C101` | 100 | Tabu-assisted VNS EVRP-TW | yes | 1049 | 11 | 0.629 | 0 | 0 | 0 | 0 | none |
+| `C101` | 100 | py-ga-VRPTW custom + shared checker | yes | 4697 | 53 | 0.437 | 0 | 0 | 0 | 0 | none |
+| `R1_10_9` | 1000 | PyVRP VRPTW + EVRP-TW station repair | yes | 52252 | 95 | 12.083 | 0 | 0 | 0 | 0 | none |
+| `R1_10_9` | 1000 | POMO100 cluster + EVRP-TW repair | yes | 74795 | 94 | 3.793 | 0 | 0 | 0 | 0 | none |
+| `R1_10_9` | 1000 | Tabu-assisted VNS EVRP-TW | yes | 83323 | 103 | 7.322 | 0 | 0 | 0 | 0 | none |
+| `R1_10_9` | 1000 | py-ga-VRPTW custom + shared checker | yes | 328681 | 620 | 1.540 | 0 | 0 | 0 | 0 | none |
+
+All eight checked rows are feasible, serve every customer exactly once, and have
+zero time-window, capacity, energy, missing-customer, and duplicate-customer
+violations.
+
+## Step 6: Analyze, Do Not Just Display
+
+Feasibility:
+
+- The main Week 4 improvement is runnability: every method now produces a checked
+  solution on both `C101` and `R1_10_9`.
+- There were no timeout or unsupported final rows in this bounded run.
+- GA and POMO should still be interpreted carefully: GA feasibility comes from
+  aggressive route splitting, while POMO100 support on `R1_10_9` comes from
+  decomposition into 100-client clusters.
+
+Distance:
+
+- PyVRP is the best distance baseline on both cases: `829` on `C101` and `52252`
+  on `R1_10_9`.
+- POMO100 + repair is second-best by distance in both cases. On `R1_10_9`, it is
+  feasible and uses one fewer vehicle than PyVRP, but its total distance is much
+  longer: `74795` vs `52252`.
+- VNS/TS is feasible but weaker than PyVRP in this budget: `1049` on `C101` and
+  `83323` on `R1_10_9`.
+- py-ga-VRPTW is feasible but not quality-competitive in this configuration:
+  `4697` with 53 vehicles on `C101`, and `328681` with 620 vehicles on
+  `R1_10_9`.
+
+Runtime:
+
+- POMO100 + repair is the fastest high-quality method in this run: `0.244s` on
+  `C101` and `3.793s` on `R1_10_9`.
+- PyVRP is slower because the run gives it fixed search budgets of 5s and 10s;
+  elapsed wrapper time is `5.032s` and `12.083s`.
+- VNS/TS is quick at these small search budgets, but the current neighborhood
+  search does not yet beat PyVRP or POMO100 + repair in distance.
+- GA appears fast here, but its very high vehicle count means the decoder is
+  satisfying time windows mostly by fragmenting routes.
+
+## Step 7: Discuss Failure Cases and Limitations
+
+Limitation 1: These are VRPTW inputs, not full EVRP-TW charging benchmarks.
+
+- `C101` and `R1_10_9` do not include charging stations or battery fields.
+- The EVRP-TW checker fields remain present, but energy and charging metrics are
+  disabled for this experiment.
+- A true EVRP-TW charging comparison still needs Schneider-style instances or a
+  controlled station/battery augmentation.
+
+Limitation 2: POMO is still not a native large-scale EVRP-TW model.
+
+- The retained checkpoint is `yd-kwon/POMO` CVRP100.
+- Week 4 makes it runnable on `R1_10_9` through decomposition and repair.
+- The result is useful as a hybrid baseline, but it should be named
+  `POMO100 cluster + EVRP-TW repair`, not POMO1000 or an end-to-end EVRP-TW solver.
+
+Limitation 3: GA is feasible but route-fragmented.
+
+- The custom GA input path now supports `R1_10_9`.
+- The checked GA output is feasible, but vehicle counts are very high.
+- This confirms that runnability is solved, while quality still needs a better
+  decoder, local search, or repair layer.
+
+## Conclusion
+
+Week 4 fixes the main Week 3 limitation by making all baselines runnable on both
+`C101` and `R1_10_9`, including the 1000-client Holmberger case. The fair checked
+comparison shows PyVRP remains the strongest distance baseline, POMO100 + repair
+is the best speed/quality hybrid candidate, VNS/TS is feasible but needs stronger
+search, and py-ga-VRPTW is now runnable at scale but currently achieves
+feasibility through excessive route fragmentation.
+
+The next experiment should move from VRPTW-only inputs to true EVRP-TW charging
+instances, or augment these two cases with controlled charging stations and
+battery parameters so `charging_count` and `charging_time` become meaningful
+comparison metrics.

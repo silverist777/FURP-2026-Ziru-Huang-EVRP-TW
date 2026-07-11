@@ -1,0 +1,689 @@
+File: /Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/py-ga-VRPTW/data/json_customize/R1_10_9.json exists.
+Start of evolution
+  Evaluated 40 individuals
+-- Generation 0 --
+  Evaluated 36 individuals
+  Min 3.0818954684395234e-07
+  Max 3.1792259931991887e-07
+  Avg 3.128323926189989e-07
+  Std 2.1335578460090785e-09
+-- Generation 1 --
+  Evaluated 36 individuals
+  Min 3.0818954684395234e-07
+  Max 3.1515757553185894e-07
+  Avg 3.127470042441827e-07
+  Std 2.265448649543744e-09
+-- Generation 2 --
+  Evaluated 30 individuals
+  Min 3.0818954684395234e-07
+  Max 3.1515757553185894e-07
+  Avg 3.126065670793361e-07
+  Std 2.134745589469829e-09
+-- Generation 3 --
+  Evaluated 35 individuals
+  Min 3.0818954684395234e-07
+  Max 3.1515757553185894e-07
+  Avg 3.1243877619823204e-07
+  Std 2.0792263577340094e-09
+-- Generation 4 --
+  Evaluated 34 individuals
+  Min 3.0818954684395234e-07
+  Max 3.1515757553185894e-07
+  Avg 3.123809258233421e-07
+  Std 1.8722245149040135e-09
+-- Generation 5 --
+  Evaluated 32 individuals
+  Min 3.0818954684395234e-07
+  Max 3.1515757553185894e-07
+  Avg 3.1233034463079573e-07
+  Std 2.1675751325920227e-09
+-- Generation 6 --
+  Evaluated 32 individuals
+  Min 3.0818954684395234e-07
+  Max 3.1515757553185894e-07
+  Avg 3.1218752093509266e-07
+  Std 2.1472088245099887e-09
+-- Generation 7 --
+  Evaluated 38 individuals
+  Min 3.0818954684395234e-07
+  Max 3.1515757553185894e-07
+  Avg 3.1171755225250587e-07
+  Std 2.2332685288624446e-09
+-- Generation 8 --
+  Evaluated 36 individuals
+  Min 3.0818954684395234e-07
+  Max 3.1515757553185894e-07
+  Avg 3.116246939805233e-07
+  Std 2.23127638525497e-09
+-- Generation 9 --
+  Evaluated 35 individuals
+  Min 3.0818954684395234e-07
+  Max 3.1613787704000605e-07
+  Avg 3.11901313222224e-07
+  Std 2.4108888755392e-09
+-- End of (successful) evolution --
+Best individual: [138, 583, 868, 822, 783, 65, 262, 121, 508, 780, 461, 484, 668, 363, 698, 731, 544, 26, 290, 198, 12, 989, 629, 234, 735, 656, 243, 277, 78, 917, 699, 445, 595, 68, 90, 394, 155, 674, 418, 300, 727, 200, 511, 40, 207, 531, 944, 447, 483, 526, 769, 636, 268, 371, 916, 679, 838, 968, 560, 843, 569, 294, 879, 110, 149, 100, 382, 346, 135, 545, 245, 136, 591, 159, 460, 369, 839, 885, 367, 406, 947, 426, 928, 912, 866, 942, 51, 344, 187, 816, 785, 530, 185, 643, 479, 339, 255, 818, 286, 678, 778, 830, 551, 876, 825, 983, 180, 750, 227, 929, 1, 634, 358, 258, 224, 494, 538, 411, 696, 70, 973, 907, 7, 661, 667, 56, 701, 381, 351, 632, 63, 216, 535, 183, 488, 654, 743, 361, 877, 140, 709, 452, 76, 146, 420, 700, 707, 125, 16, 884, 475, 631, 413, 98, 974, 395, 498, 128, 143, 152, 870, 210, 614, 308, 455, 62, 109, 528, 319, 496, 826, 167, 378, 423, 908, 196, 925, 949, 655, 871, 782, 540, 653, 52, 322, 131, 955, 269, 734, 279, 613, 477, 197, 179, 327, 202, 641, 402, 961, 292, 758, 649, 453, 80, 456, 194, 886, 659, 536, 64, 44, 305, 854, 841, 360, 85, 930, 283, 811, 922, 153, 160, 966, 386, 82, 189, 677, 644, 746, 771, 787, 438, 141, 335, 373, 313, 287, 777, 212, 738, 728, 596, 408, 254, 776, 123, 116, 375, 572, 900, 451, 333, 845, 589, 271, 91, 4, 441, 120, 46, 716, 946, 672, 675, 650, 142, 820, 794, 430, 902, 684, 71, 937, 814, 819, 792, 958, 293, 214, 331, 889, 603, 901, 836, 88, 652, 429, 203, 842, 543, 468, 436, 940, 278, 625, 282, 662, 898, 732, 844, 33, 399, 130, 127, 342, 442, 821, 765, 81, 788, 954, 154, 507, 490, 943, 383, 431, 607, 465, 345, 852, 764, 463, 503, 162, 542, 17, 550, 999, 775, 504, 882, 458, 945, 626, 309, 848, 428, 264, 364, 55, 157, 939, 689, 421, 524, 755, 398, 547, 887, 723, 487, 261, 620, 539, 514, 533, 158, 559, 506, 368, 948, 574, 936, 77, 715, 648, 813, 724, 250, 21, 745, 251, 95, 104, 343, 252, 913, 633, 192, 671, 43, 980, 683, 860, 988, 93, 459, 92, 934, 736, 370, 253, 204, 315, 611, 959, 188, 266, 365, 873, 637, 221, 257, 115, 467, 325, 66, 995, 409, 321, 401, 990, 328, 905, 11, 28, 598, 964, 213, 931, 323, 489, 757, 618, 772, 556, 753, 446, 106, 711, 248, 976, 733, 119, 166, 965, 246, 760, 998, 609, 823, 802, 793, 859, 612, 47, 883, 284, 469, 977, 660, 578, 303, 828, 274, 84, 580, 230, 805, 585, 714, 740, 911, 118, 350, 719, 151, 390, 75, 417, 41, 725, 685, 801, 594, 669, 501, 619, 657, 299, 766, 349, 347, 377, 779, 741, 810, 923, 275, 960, 899, 171, 174, 137, 87, 42, 67, 241, 546, 969, 548, 784, 561, 987, 99, 971, 219, 440, 348, 139, 577, 336, 941, 161, 749, 289, 412, 627, 334, 891, 909, 824, 926, 979, 682, 107, 505, 199, 967, 978, 588, 832, 102, 356, 206, 388, 704, 522, 638, 176, 472, 827, 223, 605, 39, 833, 9, 134, 259, 579, 935, 163, 770, 318, 79, 834, 314, 49, 218, 129, 306, 61, 921, 647, 846, 329, 590, 692, 405, 963, 665, 537, 229, 462, 529, 712, 646, 226, 558, 831, 695, 519, 722, 972, 165, 737, 37, 150, 407, 19, 231, 22, 443, 621, 985, 523, 748, 260, 112, 265, 193, 432, 352, 396, 320, 25, 117, 486, 509, 330, 892, 466, 302, 920, 664, 280, 673, 862, 950, 800, 164, 172, 72, 298, 851, 190, 640, 113, 847, 256, 288, 774, 773, 15, 464, 18, 86, 73, 690, 34, 994, 565, 94, 186, 599, 564, 182, 651, 236, 29, 615, 470, 340, 628, 806, 639, 554, 552, 2, 355, 897, 366, 497, 424, 517, 857, 568, 584, 374, 493, 58, 437, 211, 575, 797, 532, 133, 829, 525, 759, 803, 393, 6, 747, 624, 855, 676, 276, 938, 362, 592, 353, 527, 415, 238, 893, 553, 205, 790, 13, 233, 515, 173, 175, 663, 404, 593, 608, 630, 869, 721, 316, 45, 481, 31, 751, 502, 380, 906, 861, 534, 168, 798, 111, 521, 680, 450, 89, 384, 756, 691, 795, 720, 562, 376, 178, 681, 425, 414, 817, 762, 249, 492, 36, 874, 604, 403, 518, 867, 512, 904, 602, 291, 311, 195, 687, 850, 520, 953, 513, 729, 970, 918, 341, 761, 124, 304, 881, 742, 645, 191, 103, 658, 570, 858, 427, 962, 297, 471, 991, 225, 694, 237, 354, 239, 567, 992, 449, 996, 228, 541, 982, 744, 433, 222, 703, 391, 903, 10, 555, 666, 27, 23, 32, 326, 924, 105, 606, 235, 997, 739, 273, 457, 713, 3, 786, 781, 623, 444, 400, 856, 915, 30, 500, 97, 215, 808, 389, 763, 169, 114, 482, 812, 571, 337, 24, 815, 710, 914, 247, 54, 617, 232, 454, 796, 69, 807, 20, 767, 835, 181, 177, 317, 894, 397, 686, 147, 895, 495, 60, 101, 201, 872, 392, 184, 385, 57, 267, 422, 8, 616, 474, 332, 476, 702, 312, 434, 635, 35, 586, 435, 510, 601, 875, 359, 208, 240, 170, 975, 272, 372, 799, 59, 754, 642, 379, 730, 296, 956, 864, 478, 473, 984, 896, 910, 622, 122, 357, 752, 516, 706, 14, 951, 295, 952, 890, 285, 480, 927, 270, 144, 708, 705, 5, 549, 416, 1000, 145, 957, 307, 697, 83, 809, 96, 220, 563, 132, 244, 717, 880, 688, 600, 53, 410, 439, 587, 38, 324, 557, 148, 419, 485, 448, 865, 581, 849, 878, 804, 310, 670, 597, 718, 263, 566, 126, 74, 888, 217, 50, 919, 491, 387, 301, 932, 840, 768, 108, 499, 981, 789, 993, 242, 573, 791, 863, 693, 156, 582, 338, 986, 48, 726, 933, 610, 209, 576, 281, 837, 853]
+Fitness: 3.1613787704000605e-07
+  Vehicle 1's route: 0 - 138 - 583 - 868 - 0
+  Vehicle 2's route: 0 - 822 - 0
+  Vehicle 3's route: 0 - 783 - 65 - 0
+  Vehicle 4's route: 0 - 262 - 121 - 0
+  Vehicle 5's route: 0 - 508 - 780 - 0
+  Vehicle 6's route: 0 - 461 - 0
+  Vehicle 7's route: 0 - 484 - 0
+  Vehicle 8's route: 0 - 668 - 0
+  Vehicle 9's route: 0 - 363 - 698 - 0
+  Vehicle 10's route: 0 - 731 - 0
+  Vehicle 11's route: 0 - 544 - 0
+  Vehicle 12's route: 0 - 26 - 290 - 0
+  Vehicle 13's route: 0 - 198 - 12 - 989 - 0
+  Vehicle 14's route: 0 - 629 - 0
+  Vehicle 15's route: 0 - 234 - 735 - 0
+  Vehicle 16's route: 0 - 656 - 243 - 277 - 0
+  Vehicle 17's route: 0 - 78 - 0
+  Vehicle 18's route: 0 - 917 - 699 - 0
+  Vehicle 19's route: 0 - 445 - 0
+  Vehicle 20's route: 0 - 595 - 0
+  Vehicle 21's route: 0 - 68 - 90 - 0
+  Vehicle 22's route: 0 - 394 - 155 - 674 - 0
+  Vehicle 23's route: 0 - 418 - 0
+  Vehicle 24's route: 0 - 300 - 0
+  Vehicle 25's route: 0 - 727 - 200 - 0
+  Vehicle 26's route: 0 - 511 - 40 - 0
+  Vehicle 27's route: 0 - 207 - 531 - 0
+  Vehicle 28's route: 0 - 944 - 0
+  Vehicle 29's route: 0 - 447 - 483 - 0
+  Vehicle 30's route: 0 - 526 - 769 - 0
+  Vehicle 31's route: 0 - 636 - 0
+  Vehicle 32's route: 0 - 268 - 371 - 916 - 0
+  Vehicle 33's route: 0 - 679 - 0
+  Vehicle 34's route: 0 - 838 - 968 - 0
+  Vehicle 35's route: 0 - 560 - 0
+  Vehicle 36's route: 0 - 843 - 569 - 0
+  Vehicle 37's route: 0 - 294 - 0
+  Vehicle 38's route: 0 - 879 - 0
+  Vehicle 39's route: 0 - 110 - 149 - 0
+  Vehicle 40's route: 0 - 100 - 382 - 0
+  Vehicle 41's route: 0 - 346 - 0
+  Vehicle 42's route: 0 - 135 - 0
+  Vehicle 43's route: 0 - 545 - 0
+  Vehicle 44's route: 0 - 245 - 0
+  Vehicle 45's route: 0 - 136 - 591 - 0
+  Vehicle 46's route: 0 - 159 - 0
+  Vehicle 47's route: 0 - 460 - 369 - 0
+  Vehicle 48's route: 0 - 839 - 0
+  Vehicle 49's route: 0 - 885 - 367 - 406 - 0
+  Vehicle 50's route: 0 - 947 - 426 - 0
+  Vehicle 51's route: 0 - 928 - 912 - 866 - 0
+  Vehicle 52's route: 0 - 942 - 51 - 0
+  Vehicle 53's route: 0 - 344 - 0
+  Vehicle 54's route: 0 - 187 - 0
+  Vehicle 55's route: 0 - 816 - 785 - 530 - 0
+  Vehicle 56's route: 0 - 185 - 643 - 0
+  Vehicle 57's route: 0 - 479 - 0
+  Vehicle 58's route: 0 - 339 - 255 - 0
+  Vehicle 59's route: 0 - 818 - 286 - 0
+  Vehicle 60's route: 0 - 678 - 0
+  Vehicle 61's route: 0 - 778 - 0
+  Vehicle 62's route: 0 - 830 - 551 - 0
+  Vehicle 63's route: 0 - 876 - 0
+  Vehicle 64's route: 0 - 825 - 0
+  Vehicle 65's route: 0 - 983 - 180 - 750 - 0
+  Vehicle 66's route: 0 - 227 - 0
+  Vehicle 67's route: 0 - 929 - 1 - 0
+  Vehicle 68's route: 0 - 634 - 0
+  Vehicle 69's route: 0 - 358 - 258 - 224 - 0
+  Vehicle 70's route: 0 - 494 - 0
+  Vehicle 71's route: 0 - 538 - 0
+  Vehicle 72's route: 0 - 411 - 0
+  Vehicle 73's route: 0 - 696 - 70 - 0
+  Vehicle 74's route: 0 - 973 - 0
+  Vehicle 75's route: 0 - 907 - 7 - 0
+  Vehicle 76's route: 0 - 661 - 0
+  Vehicle 77's route: 0 - 667 - 56 - 0
+  Vehicle 78's route: 0 - 701 - 0
+  Vehicle 79's route: 0 - 381 - 0
+  Vehicle 80's route: 0 - 351 - 632 - 0
+  Vehicle 81's route: 0 - 63 - 0
+  Vehicle 82's route: 0 - 216 - 535 - 0
+  Vehicle 83's route: 0 - 183 - 0
+  Vehicle 84's route: 0 - 488 - 0
+  Vehicle 85's route: 0 - 654 - 743 - 0
+  Vehicle 86's route: 0 - 361 - 877 - 0
+  Vehicle 87's route: 0 - 140 - 709 - 0
+  Vehicle 88's route: 0 - 452 - 0
+  Vehicle 89's route: 0 - 76 - 0
+  Vehicle 90's route: 0 - 146 - 420 - 0
+  Vehicle 91's route: 0 - 700 - 707 - 0
+  Vehicle 92's route: 0 - 125 - 16 - 0
+  Vehicle 93's route: 0 - 884 - 0
+  Vehicle 94's route: 0 - 475 - 0
+  Vehicle 95's route: 0 - 631 - 413 - 0
+  Vehicle 96's route: 0 - 98 - 0
+  Vehicle 97's route: 0 - 974 - 0
+  Vehicle 98's route: 0 - 395 - 0
+  Vehicle 99's route: 0 - 498 - 0
+  Vehicle 100's route: 0 - 128 - 143 - 0
+  Vehicle 101's route: 0 - 152 - 870 - 0
+  Vehicle 102's route: 0 - 210 - 614 - 0
+  Vehicle 103's route: 0 - 308 - 455 - 0
+  Vehicle 104's route: 0 - 62 - 0
+  Vehicle 105's route: 0 - 109 - 528 - 0
+  Vehicle 106's route: 0 - 319 - 0
+  Vehicle 107's route: 0 - 496 - 826 - 0
+  Vehicle 108's route: 0 - 167 - 0
+  Vehicle 109's route: 0 - 378 - 0
+  Vehicle 110's route: 0 - 423 - 0
+  Vehicle 111's route: 0 - 908 - 196 - 925 - 0
+  Vehicle 112's route: 0 - 949 - 0
+  Vehicle 113's route: 0 - 655 - 871 - 782 - 0
+  Vehicle 114's route: 0 - 540 - 653 - 0
+  Vehicle 115's route: 0 - 52 - 0
+  Vehicle 116's route: 0 - 322 - 131 - 0
+  Vehicle 117's route: 0 - 955 - 0
+  Vehicle 118's route: 0 - 269 - 734 - 0
+  Vehicle 119's route: 0 - 279 - 613 - 0
+  Vehicle 120's route: 0 - 477 - 197 - 0
+  Vehicle 121's route: 0 - 179 - 0
+  Vehicle 122's route: 0 - 327 - 0
+  Vehicle 123's route: 0 - 202 - 0
+  Vehicle 124's route: 0 - 641 - 0
+  Vehicle 125's route: 0 - 402 - 961 - 0
+  Vehicle 126's route: 0 - 292 - 0
+  Vehicle 127's route: 0 - 758 - 649 - 0
+  Vehicle 128's route: 0 - 453 - 80 - 456 - 0
+  Vehicle 129's route: 0 - 194 - 0
+  Vehicle 130's route: 0 - 886 - 659 - 0
+  Vehicle 131's route: 0 - 536 - 0
+  Vehicle 132's route: 0 - 64 - 44 - 0
+  Vehicle 133's route: 0 - 305 - 0
+  Vehicle 134's route: 0 - 854 - 841 - 360 - 85 - 0
+  Vehicle 135's route: 0 - 930 - 283 - 0
+  Vehicle 136's route: 0 - 811 - 0
+  Vehicle 137's route: 0 - 922 - 153 - 0
+  Vehicle 138's route: 0 - 160 - 966 - 0
+  Vehicle 139's route: 0 - 386 - 82 - 0
+  Vehicle 140's route: 0 - 189 - 0
+  Vehicle 141's route: 0 - 677 - 0
+  Vehicle 142's route: 0 - 644 - 0
+  Vehicle 143's route: 0 - 746 - 771 - 0
+  Vehicle 144's route: 0 - 787 - 0
+  Vehicle 145's route: 0 - 438 - 0
+  Vehicle 146's route: 0 - 141 - 335 - 373 - 0
+  Vehicle 147's route: 0 - 313 - 287 - 0
+  Vehicle 148's route: 0 - 777 - 0
+  Vehicle 149's route: 0 - 212 - 0
+  Vehicle 150's route: 0 - 738 - 728 - 0
+  Vehicle 151's route: 0 - 596 - 408 - 0
+  Vehicle 152's route: 0 - 254 - 0
+  Vehicle 153's route: 0 - 776 - 0
+  Vehicle 154's route: 0 - 123 - 116 - 0
+  Vehicle 155's route: 0 - 375 - 572 - 0
+  Vehicle 156's route: 0 - 900 - 451 - 0
+  Vehicle 157's route: 0 - 333 - 845 - 0
+  Vehicle 158's route: 0 - 589 - 0
+  Vehicle 159's route: 0 - 271 - 0
+  Vehicle 160's route: 0 - 91 - 4 - 0
+  Vehicle 161's route: 0 - 441 - 0
+  Vehicle 162's route: 0 - 120 - 0
+  Vehicle 163's route: 0 - 46 - 716 - 0
+  Vehicle 164's route: 0 - 946 - 0
+  Vehicle 165's route: 0 - 672 - 0
+  Vehicle 166's route: 0 - 675 - 0
+  Vehicle 167's route: 0 - 650 - 142 - 0
+  Vehicle 168's route: 0 - 820 - 794 - 0
+  Vehicle 169's route: 0 - 430 - 0
+  Vehicle 170's route: 0 - 902 - 0
+  Vehicle 171's route: 0 - 684 - 0
+  Vehicle 172's route: 0 - 71 - 0
+  Vehicle 173's route: 0 - 937 - 0
+  Vehicle 174's route: 0 - 814 - 0
+  Vehicle 175's route: 0 - 819 - 792 - 0
+  Vehicle 176's route: 0 - 958 - 293 - 214 - 0
+  Vehicle 177's route: 0 - 331 - 0
+  Vehicle 178's route: 0 - 889 - 0
+  Vehicle 179's route: 0 - 603 - 0
+  Vehicle 180's route: 0 - 901 - 836 - 88 - 0
+  Vehicle 181's route: 0 - 652 - 429 - 0
+  Vehicle 182's route: 0 - 203 - 842 - 0
+  Vehicle 183's route: 0 - 543 - 468 - 436 - 0
+  Vehicle 184's route: 0 - 940 - 0
+  Vehicle 185's route: 0 - 278 - 0
+  Vehicle 186's route: 0 - 625 - 0
+  Vehicle 187's route: 0 - 282 - 662 - 0
+  Vehicle 188's route: 0 - 898 - 0
+  Vehicle 189's route: 0 - 732 - 844 - 0
+  Vehicle 190's route: 0 - 33 - 0
+  Vehicle 191's route: 0 - 399 - 0
+  Vehicle 192's route: 0 - 130 - 0
+  Vehicle 193's route: 0 - 127 - 342 - 0
+  Vehicle 194's route: 0 - 442 - 821 - 0
+  Vehicle 195's route: 0 - 765 - 81 - 0
+  Vehicle 196's route: 0 - 788 - 0
+  Vehicle 197's route: 0 - 954 - 0
+  Vehicle 198's route: 0 - 154 - 0
+  Vehicle 199's route: 0 - 507 - 0
+  Vehicle 200's route: 0 - 490 - 0
+  Vehicle 201's route: 0 - 943 - 383 - 0
+  Vehicle 202's route: 0 - 431 - 0
+  Vehicle 203's route: 0 - 607 - 465 - 0
+  Vehicle 204's route: 0 - 345 - 852 - 0
+  Vehicle 205's route: 0 - 764 - 0
+  Vehicle 206's route: 0 - 463 - 503 - 162 - 0
+  Vehicle 207's route: 0 - 542 - 0
+  Vehicle 208's route: 0 - 17 - 0
+  Vehicle 209's route: 0 - 550 - 0
+  Vehicle 210's route: 0 - 999 - 0
+  Vehicle 211's route: 0 - 775 - 504 - 882 - 0
+  Vehicle 212's route: 0 - 458 - 945 - 626 - 0
+  Vehicle 213's route: 0 - 309 - 0
+  Vehicle 214's route: 0 - 848 - 428 - 264 - 0
+  Vehicle 215's route: 0 - 364 - 55 - 0
+  Vehicle 216's route: 0 - 157 - 0
+  Vehicle 217's route: 0 - 939 - 0
+  Vehicle 218's route: 0 - 689 - 421 - 0
+  Vehicle 219's route: 0 - 524 - 0
+  Vehicle 220's route: 0 - 755 - 398 - 0
+  Vehicle 221's route: 0 - 547 - 0
+  Vehicle 222's route: 0 - 887 - 0
+  Vehicle 223's route: 0 - 723 - 0
+  Vehicle 224's route: 0 - 487 - 261 - 0
+  Vehicle 225's route: 0 - 620 - 539 - 0
+  Vehicle 226's route: 0 - 514 - 0
+  Vehicle 227's route: 0 - 533 - 158 - 559 - 0
+  Vehicle 228's route: 0 - 506 - 0
+  Vehicle 229's route: 0 - 368 - 948 - 0
+  Vehicle 230's route: 0 - 574 - 0
+  Vehicle 231's route: 0 - 936 - 0
+  Vehicle 232's route: 0 - 77 - 715 - 0
+  Vehicle 233's route: 0 - 648 - 0
+  Vehicle 234's route: 0 - 813 - 0
+  Vehicle 235's route: 0 - 724 - 0
+  Vehicle 236's route: 0 - 250 - 0
+  Vehicle 237's route: 0 - 21 - 745 - 0
+  Vehicle 238's route: 0 - 251 - 0
+  Vehicle 239's route: 0 - 95 - 104 - 0
+  Vehicle 240's route: 0 - 343 - 0
+  Vehicle 241's route: 0 - 252 - 0
+  Vehicle 242's route: 0 - 913 - 633 - 0
+  Vehicle 243's route: 0 - 192 - 671 - 0
+  Vehicle 244's route: 0 - 43 - 980 - 0
+  Vehicle 245's route: 0 - 683 - 860 - 0
+  Vehicle 246's route: 0 - 988 - 93 - 0
+  Vehicle 247's route: 0 - 459 - 92 - 0
+  Vehicle 248's route: 0 - 934 - 0
+  Vehicle 249's route: 0 - 736 - 370 - 0
+  Vehicle 250's route: 0 - 253 - 0
+  Vehicle 251's route: 0 - 204 - 0
+  Vehicle 252's route: 0 - 315 - 0
+  Vehicle 253's route: 0 - 611 - 0
+  Vehicle 254's route: 0 - 959 - 0
+  Vehicle 255's route: 0 - 188 - 266 - 0
+  Vehicle 256's route: 0 - 365 - 0
+  Vehicle 257's route: 0 - 873 - 0
+  Vehicle 258's route: 0 - 637 - 221 - 257 - 0
+  Vehicle 259's route: 0 - 115 - 467 - 0
+  Vehicle 260's route: 0 - 325 - 0
+  Vehicle 261's route: 0 - 66 - 0
+  Vehicle 262's route: 0 - 995 - 0
+  Vehicle 263's route: 0 - 409 - 321 - 0
+  Vehicle 264's route: 0 - 401 - 990 - 0
+  Vehicle 265's route: 0 - 328 - 0
+  Vehicle 266's route: 0 - 905 - 11 - 0
+  Vehicle 267's route: 0 - 28 - 598 - 0
+  Vehicle 268's route: 0 - 964 - 0
+  Vehicle 269's route: 0 - 213 - 0
+  Vehicle 270's route: 0 - 931 - 323 - 0
+  Vehicle 271's route: 0 - 489 - 757 - 618 - 772 - 0
+  Vehicle 272's route: 0 - 556 - 753 - 0
+  Vehicle 273's route: 0 - 446 - 106 - 0
+  Vehicle 274's route: 0 - 711 - 0
+  Vehicle 275's route: 0 - 248 - 976 - 0
+  Vehicle 276's route: 0 - 733 - 0
+  Vehicle 277's route: 0 - 119 - 0
+  Vehicle 278's route: 0 - 166 - 0
+  Vehicle 279's route: 0 - 965 - 0
+  Vehicle 280's route: 0 - 246 - 0
+  Vehicle 281's route: 0 - 760 - 998 - 0
+  Vehicle 282's route: 0 - 609 - 823 - 0
+  Vehicle 283's route: 0 - 802 - 793 - 859 - 0
+  Vehicle 284's route: 0 - 612 - 0
+  Vehicle 285's route: 0 - 47 - 883 - 0
+  Vehicle 286's route: 0 - 284 - 0
+  Vehicle 287's route: 0 - 469 - 0
+  Vehicle 288's route: 0 - 977 - 0
+  Vehicle 289's route: 0 - 660 - 0
+  Vehicle 290's route: 0 - 578 - 0
+  Vehicle 291's route: 0 - 303 - 828 - 0
+  Vehicle 292's route: 0 - 274 - 84 - 0
+  Vehicle 293's route: 0 - 580 - 0
+  Vehicle 294's route: 0 - 230 - 805 - 0
+  Vehicle 295's route: 0 - 585 - 0
+  Vehicle 296's route: 0 - 714 - 0
+  Vehicle 297's route: 0 - 740 - 0
+  Vehicle 298's route: 0 - 911 - 118 - 0
+  Vehicle 299's route: 0 - 350 - 0
+  Vehicle 300's route: 0 - 719 - 151 - 0
+  Vehicle 301's route: 0 - 390 - 75 - 0
+  Vehicle 302's route: 0 - 417 - 41 - 0
+  Vehicle 303's route: 0 - 725 - 685 - 801 - 0
+  Vehicle 304's route: 0 - 594 - 0
+  Vehicle 305's route: 0 - 669 - 501 - 0
+  Vehicle 306's route: 0 - 619 - 0
+  Vehicle 307's route: 0 - 657 - 0
+  Vehicle 308's route: 0 - 299 - 766 - 349 - 0
+  Vehicle 309's route: 0 - 347 - 0
+  Vehicle 310's route: 0 - 377 - 779 - 741 - 810 - 0
+  Vehicle 311's route: 0 - 923 - 0
+  Vehicle 312's route: 0 - 275 - 0
+  Vehicle 313's route: 0 - 960 - 0
+  Vehicle 314's route: 0 - 899 - 171 - 0
+  Vehicle 315's route: 0 - 174 - 0
+  Vehicle 316's route: 0 - 137 - 87 - 0
+  Vehicle 317's route: 0 - 42 - 0
+  Vehicle 318's route: 0 - 67 - 0
+  Vehicle 319's route: 0 - 241 - 546 - 0
+  Vehicle 320's route: 0 - 969 - 0
+  Vehicle 321's route: 0 - 548 - 0
+  Vehicle 322's route: 0 - 784 - 561 - 0
+  Vehicle 323's route: 0 - 987 - 0
+  Vehicle 324's route: 0 - 99 - 0
+  Vehicle 325's route: 0 - 971 - 219 - 0
+  Vehicle 326's route: 0 - 440 - 348 - 0
+  Vehicle 327's route: 0 - 139 - 577 - 336 - 0
+  Vehicle 328's route: 0 - 941 - 0
+  Vehicle 329's route: 0 - 161 - 749 - 0
+  Vehicle 330's route: 0 - 289 - 412 - 0
+  Vehicle 331's route: 0 - 627 - 0
+  Vehicle 332's route: 0 - 334 - 0
+  Vehicle 333's route: 0 - 891 - 909 - 0
+  Vehicle 334's route: 0 - 824 - 926 - 0
+  Vehicle 335's route: 0 - 979 - 682 - 0
+  Vehicle 336's route: 0 - 107 - 505 - 0
+  Vehicle 337's route: 0 - 199 - 0
+  Vehicle 338's route: 0 - 967 - 978 - 0
+  Vehicle 339's route: 0 - 588 - 832 - 0
+  Vehicle 340's route: 0 - 102 - 356 - 0
+  Vehicle 341's route: 0 - 206 - 0
+  Vehicle 342's route: 0 - 388 - 0
+  Vehicle 343's route: 0 - 704 - 522 - 0
+  Vehicle 344's route: 0 - 638 - 0
+  Vehicle 345's route: 0 - 176 - 472 - 0
+  Vehicle 346's route: 0 - 827 - 0
+  Vehicle 347's route: 0 - 223 - 605 - 39 - 0
+  Vehicle 348's route: 0 - 833 - 0
+  Vehicle 349's route: 0 - 9 - 0
+  Vehicle 350's route: 0 - 134 - 259 - 0
+  Vehicle 351's route: 0 - 579 - 935 - 163 - 0
+  Vehicle 352's route: 0 - 770 - 318 - 0
+  Vehicle 353's route: 0 - 79 - 834 - 0
+  Vehicle 354's route: 0 - 314 - 0
+  Vehicle 355's route: 0 - 49 - 218 - 129 - 0
+  Vehicle 356's route: 0 - 306 - 61 - 0
+  Vehicle 357's route: 0 - 921 - 0
+  Vehicle 358's route: 0 - 647 - 0
+  Vehicle 359's route: 0 - 846 - 329 - 0
+  Vehicle 360's route: 0 - 590 - 0
+  Vehicle 361's route: 0 - 692 - 405 - 0
+  Vehicle 362's route: 0 - 963 - 665 - 0
+  Vehicle 363's route: 0 - 537 - 0
+  Vehicle 364's route: 0 - 229 - 0
+  Vehicle 365's route: 0 - 462 - 529 - 0
+  Vehicle 366's route: 0 - 712 - 646 - 0
+  Vehicle 367's route: 0 - 226 - 0
+  Vehicle 368's route: 0 - 558 - 831 - 0
+  Vehicle 369's route: 0 - 695 - 519 - 0
+  Vehicle 370's route: 0 - 722 - 0
+  Vehicle 371's route: 0 - 972 - 0
+  Vehicle 372's route: 0 - 165 - 0
+  Vehicle 373's route: 0 - 737 - 0
+  Vehicle 374's route: 0 - 37 - 0
+  Vehicle 375's route: 0 - 150 - 407 - 19 - 0
+  Vehicle 376's route: 0 - 231 - 0
+  Vehicle 377's route: 0 - 22 - 0
+  Vehicle 378's route: 0 - 443 - 0
+  Vehicle 379's route: 0 - 621 - 985 - 0
+  Vehicle 380's route: 0 - 523 - 0
+  Vehicle 381's route: 0 - 748 - 0
+  Vehicle 382's route: 0 - 260 - 112 - 0
+  Vehicle 383's route: 0 - 265 - 0
+  Vehicle 384's route: 0 - 193 - 0
+  Vehicle 385's route: 0 - 432 - 352 - 0
+  Vehicle 386's route: 0 - 396 - 320 - 0
+  Vehicle 387's route: 0 - 25 - 0
+  Vehicle 388's route: 0 - 117 - 0
+  Vehicle 389's route: 0 - 486 - 509 - 0
+  Vehicle 390's route: 0 - 330 - 0
+  Vehicle 391's route: 0 - 892 - 466 - 0
+  Vehicle 392's route: 0 - 302 - 0
+  Vehicle 393's route: 0 - 920 - 664 - 0
+  Vehicle 394's route: 0 - 280 - 0
+  Vehicle 395's route: 0 - 673 - 862 - 0
+  Vehicle 396's route: 0 - 950 - 800 - 0
+  Vehicle 397's route: 0 - 164 - 172 - 0
+  Vehicle 398's route: 0 - 72 - 0
+  Vehicle 399's route: 0 - 298 - 851 - 0
+  Vehicle 400's route: 0 - 190 - 0
+  Vehicle 401's route: 0 - 640 - 113 - 847 - 0
+  Vehicle 402's route: 0 - 256 - 288 - 0
+  Vehicle 403's route: 0 - 774 - 773 - 15 - 0
+  Vehicle 404's route: 0 - 464 - 0
+  Vehicle 405's route: 0 - 18 - 0
+  Vehicle 406's route: 0 - 86 - 0
+  Vehicle 407's route: 0 - 73 - 690 - 0
+  Vehicle 408's route: 0 - 34 - 0
+  Vehicle 409's route: 0 - 994 - 565 - 0
+  Vehicle 410's route: 0 - 94 - 186 - 0
+  Vehicle 411's route: 0 - 599 - 564 - 0
+  Vehicle 412's route: 0 - 182 - 0
+  Vehicle 413's route: 0 - 651 - 236 - 0
+  Vehicle 414's route: 0 - 29 - 615 - 0
+  Vehicle 415's route: 0 - 470 - 340 - 0
+  Vehicle 416's route: 0 - 628 - 806 - 639 - 0
+  Vehicle 417's route: 0 - 554 - 0
+  Vehicle 418's route: 0 - 552 - 2 - 0
+  Vehicle 419's route: 0 - 355 - 0
+  Vehicle 420's route: 0 - 897 - 366 - 0
+  Vehicle 421's route: 0 - 497 - 0
+  Vehicle 422's route: 0 - 424 - 0
+  Vehicle 423's route: 0 - 517 - 857 - 0
+  Vehicle 424's route: 0 - 568 - 584 - 0
+  Vehicle 425's route: 0 - 374 - 0
+  Vehicle 426's route: 0 - 493 - 0
+  Vehicle 427's route: 0 - 58 - 437 - 0
+  Vehicle 428's route: 0 - 211 - 0
+  Vehicle 429's route: 0 - 575 - 797 - 532 - 0
+  Vehicle 430's route: 0 - 133 - 0
+  Vehicle 431's route: 0 - 829 - 525 - 0
+  Vehicle 432's route: 0 - 759 - 0
+  Vehicle 433's route: 0 - 803 - 393 - 0
+  Vehicle 434's route: 0 - 6 - 0
+  Vehicle 435's route: 0 - 747 - 0
+  Vehicle 436's route: 0 - 624 - 855 - 0
+  Vehicle 437's route: 0 - 676 - 0
+  Vehicle 438's route: 0 - 276 - 938 - 0
+  Vehicle 439's route: 0 - 362 - 0
+  Vehicle 440's route: 0 - 592 - 0
+  Vehicle 441's route: 0 - 353 - 527 - 0
+  Vehicle 442's route: 0 - 415 - 238 - 0
+  Vehicle 443's route: 0 - 893 - 553 - 205 - 0
+  Vehicle 444's route: 0 - 790 - 13 - 0
+  Vehicle 445's route: 0 - 233 - 0
+  Vehicle 446's route: 0 - 515 - 173 - 0
+  Vehicle 447's route: 0 - 175 - 0
+  Vehicle 448's route: 0 - 663 - 404 - 0
+  Vehicle 449's route: 0 - 593 - 608 - 630 - 869 - 721 - 0
+  Vehicle 450's route: 0 - 316 - 0
+  Vehicle 451's route: 0 - 45 - 481 - 0
+  Vehicle 452's route: 0 - 31 - 751 - 0
+  Vehicle 453's route: 0 - 502 - 380 - 0
+  Vehicle 454's route: 0 - 906 - 861 - 0
+  Vehicle 455's route: 0 - 534 - 168 - 0
+  Vehicle 456's route: 0 - 798 - 0
+  Vehicle 457's route: 0 - 111 - 521 - 0
+  Vehicle 458's route: 0 - 680 - 450 - 0
+  Vehicle 459's route: 0 - 89 - 384 - 0
+  Vehicle 460's route: 0 - 756 - 0
+  Vehicle 461's route: 0 - 691 - 795 - 0
+  Vehicle 462's route: 0 - 720 - 562 - 376 - 0
+  Vehicle 463's route: 0 - 178 - 0
+  Vehicle 464's route: 0 - 681 - 0
+  Vehicle 465's route: 0 - 425 - 414 - 0
+  Vehicle 466's route: 0 - 817 - 762 - 0
+  Vehicle 467's route: 0 - 249 - 492 - 0
+  Vehicle 468's route: 0 - 36 - 0
+  Vehicle 469's route: 0 - 874 - 0
+  Vehicle 470's route: 0 - 604 - 0
+  Vehicle 471's route: 0 - 403 - 518 - 0
+  Vehicle 472's route: 0 - 867 - 0
+  Vehicle 473's route: 0 - 512 - 0
+  Vehicle 474's route: 0 - 904 - 602 - 0
+  Vehicle 475's route: 0 - 291 - 311 - 0
+  Vehicle 476's route: 0 - 195 - 687 - 0
+  Vehicle 477's route: 0 - 850 - 0
+  Vehicle 478's route: 0 - 520 - 0
+  Vehicle 479's route: 0 - 953 - 513 - 729 - 970 - 0
+  Vehicle 480's route: 0 - 918 - 0
+  Vehicle 481's route: 0 - 341 - 761 - 0
+  Vehicle 482's route: 0 - 124 - 0
+  Vehicle 483's route: 0 - 304 - 0
+  Vehicle 484's route: 0 - 881 - 742 - 0
+  Vehicle 485's route: 0 - 645 - 191 - 0
+  Vehicle 486's route: 0 - 103 - 658 - 570 - 0
+  Vehicle 487's route: 0 - 858 - 427 - 0
+  Vehicle 488's route: 0 - 962 - 297 - 0
+  Vehicle 489's route: 0 - 471 - 0
+  Vehicle 490's route: 0 - 991 - 0
+  Vehicle 491's route: 0 - 225 - 694 - 237 - 0
+  Vehicle 492's route: 0 - 354 - 0
+  Vehicle 493's route: 0 - 239 - 0
+  Vehicle 494's route: 0 - 567 - 0
+  Vehicle 495's route: 0 - 992 - 449 - 996 - 0
+  Vehicle 496's route: 0 - 228 - 541 - 0
+  Vehicle 497's route: 0 - 982 - 0
+  Vehicle 498's route: 0 - 744 - 0
+  Vehicle 499's route: 0 - 433 - 222 - 0
+  Vehicle 500's route: 0 - 703 - 391 - 0
+  Vehicle 501's route: 0 - 903 - 10 - 0
+  Vehicle 502's route: 0 - 555 - 666 - 27 - 0
+  Vehicle 503's route: 0 - 23 - 0
+  Vehicle 504's route: 0 - 32 - 0
+  Vehicle 505's route: 0 - 326 - 0
+  Vehicle 506's route: 0 - 924 - 105 - 0
+  Vehicle 507's route: 0 - 606 - 0
+  Vehicle 508's route: 0 - 235 - 997 - 0
+  Vehicle 509's route: 0 - 739 - 0
+  Vehicle 510's route: 0 - 273 - 0
+  Vehicle 511's route: 0 - 457 - 713 - 3 - 0
+  Vehicle 512's route: 0 - 786 - 781 - 623 - 0
+  Vehicle 513's route: 0 - 444 - 0
+  Vehicle 514's route: 0 - 400 - 0
+  Vehicle 515's route: 0 - 856 - 915 - 0
+  Vehicle 516's route: 0 - 30 - 0
+  Vehicle 517's route: 0 - 500 - 97 - 0
+  Vehicle 518's route: 0 - 215 - 0
+  Vehicle 519's route: 0 - 808 - 389 - 0
+  Vehicle 520's route: 0 - 763 - 169 - 114 - 0
+  Vehicle 521's route: 0 - 482 - 0
+  Vehicle 522's route: 0 - 812 - 0
+  Vehicle 523's route: 0 - 571 - 0
+  Vehicle 524's route: 0 - 337 - 24 - 0
+  Vehicle 525's route: 0 - 815 - 0
+  Vehicle 526's route: 0 - 710 - 914 - 0
+  Vehicle 527's route: 0 - 247 - 54 - 0
+  Vehicle 528's route: 0 - 617 - 232 - 0
+  Vehicle 529's route: 0 - 454 - 796 - 0
+  Vehicle 530's route: 0 - 69 - 0
+  Vehicle 531's route: 0 - 807 - 20 - 0
+  Vehicle 532's route: 0 - 767 - 0
+  Vehicle 533's route: 0 - 835 - 181 - 177 - 0
+  Vehicle 534's route: 0 - 317 - 894 - 0
+  Vehicle 535's route: 0 - 397 - 0
+  Vehicle 536's route: 0 - 686 - 147 - 895 - 0
+  Vehicle 537's route: 0 - 495 - 60 - 101 - 0
+  Vehicle 538's route: 0 - 201 - 872 - 392 - 0
+  Vehicle 539's route: 0 - 184 - 385 - 0
+  Vehicle 540's route: 0 - 57 - 267 - 0
+  Vehicle 541's route: 0 - 422 - 0
+  Vehicle 542's route: 0 - 8 - 0
+  Vehicle 543's route: 0 - 616 - 474 - 0
+  Vehicle 544's route: 0 - 332 - 0
+  Vehicle 545's route: 0 - 476 - 0
+  Vehicle 546's route: 0 - 702 - 0
+  Vehicle 547's route: 0 - 312 - 0
+  Vehicle 548's route: 0 - 434 - 635 - 0
+  Vehicle 549's route: 0 - 35 - 586 - 0
+  Vehicle 550's route: 0 - 435 - 510 - 601 - 0
+  Vehicle 551's route: 0 - 875 - 359 - 0
+  Vehicle 552's route: 0 - 208 - 240 - 0
+  Vehicle 553's route: 0 - 170 - 975 - 0
+  Vehicle 554's route: 0 - 272 - 0
+  Vehicle 555's route: 0 - 372 - 0
+  Vehicle 556's route: 0 - 799 - 59 - 0
+  Vehicle 557's route: 0 - 754 - 0
+  Vehicle 558's route: 0 - 642 - 0
+  Vehicle 559's route: 0 - 379 - 730 - 0
+  Vehicle 560's route: 0 - 296 - 0
+  Vehicle 561's route: 0 - 956 - 864 - 478 - 0
+  Vehicle 562's route: 0 - 473 - 0
+  Vehicle 563's route: 0 - 984 - 896 - 0
+  Vehicle 564's route: 0 - 910 - 622 - 0
+  Vehicle 565's route: 0 - 122 - 357 - 0
+  Vehicle 566's route: 0 - 752 - 516 - 0
+  Vehicle 567's route: 0 - 706 - 14 - 951 - 0
+  Vehicle 568's route: 0 - 295 - 0
+  Vehicle 569's route: 0 - 952 - 0
+  Vehicle 570's route: 0 - 890 - 285 - 0
+  Vehicle 571's route: 0 - 480 - 0
+  Vehicle 572's route: 0 - 927 - 270 - 0
+  Vehicle 573's route: 0 - 144 - 0
+  Vehicle 574's route: 0 - 708 - 705 - 5 - 549 - 0
+  Vehicle 575's route: 0 - 416 - 0
+  Vehicle 576's route: 0 - 1000 - 145 - 0
+  Vehicle 577's route: 0 - 957 - 0
+  Vehicle 578's route: 0 - 307 - 0
+  Vehicle 579's route: 0 - 697 - 83 - 0
+  Vehicle 580's route: 0 - 809 - 0
+  Vehicle 581's route: 0 - 96 - 220 - 0
+  Vehicle 582's route: 0 - 563 - 132 - 244 - 0
+  Vehicle 583's route: 0 - 717 - 880 - 688 - 0
+  Vehicle 584's route: 0 - 600 - 0
+  Vehicle 585's route: 0 - 53 - 410 - 0
+  Vehicle 586's route: 0 - 439 - 0
+  Vehicle 587's route: 0 - 587 - 0
+  Vehicle 588's route: 0 - 38 - 0
+  Vehicle 589's route: 0 - 324 - 0
+  Vehicle 590's route: 0 - 557 - 0
+  Vehicle 591's route: 0 - 148 - 419 - 485 - 0
+  Vehicle 592's route: 0 - 448 - 865 - 0
+  Vehicle 593's route: 0 - 581 - 0
+  Vehicle 594's route: 0 - 849 - 878 - 0
+  Vehicle 595's route: 0 - 804 - 310 - 0
+  Vehicle 596's route: 0 - 670 - 0
+  Vehicle 597's route: 0 - 597 - 0
+  Vehicle 598's route: 0 - 718 - 263 - 566 - 0
+  Vehicle 599's route: 0 - 126 - 0
+  Vehicle 600's route: 0 - 74 - 888 - 0
+  Vehicle 601's route: 0 - 217 - 0
+  Vehicle 602's route: 0 - 50 - 919 - 0
+  Vehicle 603's route: 0 - 491 - 387 - 0
+  Vehicle 604's route: 0 - 301 - 0
+  Vehicle 605's route: 0 - 932 - 840 - 0
+  Vehicle 606's route: 0 - 768 - 0
+  Vehicle 607's route: 0 - 108 - 0
+  Vehicle 608's route: 0 - 499 - 981 - 0
+  Vehicle 609's route: 0 - 789 - 0
+  Vehicle 610's route: 0 - 993 - 0
+  Vehicle 611's route: 0 - 242 - 0
+  Vehicle 612's route: 0 - 573 - 791 - 0
+  Vehicle 613's route: 0 - 863 - 693 - 0
+  Vehicle 614's route: 0 - 156 - 0
+  Vehicle 615's route: 0 - 582 - 338 - 0
+  Vehicle 616's route: 0 - 986 - 48 - 0
+  Vehicle 617's route: 0 - 726 - 933 - 610 - 0
+  Vehicle 618's route: 0 - 209 - 576 - 0
+  Vehicle 619's route: 0 - 281 - 837 - 0
+  Vehicle 620's route: 0 - 853 - 0
+Total cost: 3163176.8055222747
+Write to file: /Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/py-ga-VRPTW/results/R1_10_9_uC8.0_iC100.0_wC1.0_dC1.5_iS1000_pS40_cP0.85_mP0.02_nG10.csv
+Path: /Users/emt/Workspace/FURP-2026-Ziru-Huang-EVRP-TW/py-ga-VRPTW/results/R1_10_9_uC8.0_iC100.0_wC1.0_dC1.5_iS1000_pS40_cP0.85_mP0.02_nG10.csv does not exist.
