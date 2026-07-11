@@ -1,0 +1,2732 @@
+{
+  "status": "infeasible",
+  "source": {
+    "path": "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\data\\Solomon\\C101.txt",
+    "instance": "C101",
+    "problem_type": "VRPTW"
+  },
+  "experiment_record": {
+    "record_schema": "week03_experiment_record_v1",
+    "instance_name": "C101",
+    "instance_size": 100,
+    "method_name": "py-ga-VRPTW + checker",
+    "objective_value": 4046.0,
+    "runtime_seconds": 0.782,
+    "feasibility_status": "infeasible under shared checker",
+    "vehicles_used": 12,
+    "constraint_violations": "time_window_violations=85",
+    "random_seed": null,
+    "best_solution_found": "[[\"C23\", \"C30\", \"C37\", \"C17\", \"C100\", \"C85\", \"C83\", \"C36\", \"C72\"], [\"C33\", \"C50\", \"C81\", \"C24\", \"C91\", \"C47\", \"C32\", \"C22\", \"C49\"], [\"C5\", \"C21\", \"C26\", \"C57\", \"C7\", \"C15\", \"C1\", \"C2\", \"C34\"], [\"C76\", \"C18\", \"C95\", \"C96\", \"C43\", \"C28\", \"C48\", \"C88\"], [\"C16\", \"C56\", \"C44\", \"C82\", \"C86\", \"C53\", \"C80\", \"C84\"], [\"C77\", \"C40\", \"C52\", \"C31\", \"C19\", \"C79\", \"C75\", \"C54\"], [\"C93\", \"C46\", \"C59\", \"C62\", \"C58\", \"C12\", \"C99\", \"C11\", \"C39\"], [\"C35\", \"C9\", \"C60\", \"C92\", \"C38\", \"C14\", \"C73\"], [\"C13\", \"C71\", \"C64\", \"C97\", \"C6\", \"C3\", \"C94\", \"C63\", \"C45\"], [\"C78\", \"C98\", \"C70\", \"C66\", \"C25\", \"C27\", \"C41\", \"C65\", \"C8\"], [\"C90\", \"C55\", \"C51\", \"C87\", \"C61\", \"C29\", \"C68\", \"C10\", \"C4\", \"C89\"], [\"C42\", \"C20\", \"C67\", \"C74\", \"C69\"]]",
+    "reference_value": 827.3,
+    "gap_to_reference_pct": 389.061,
+    "convergence_curve": "[{\"generation\": 1, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 70831.156, \"evaluated_individuals\": 74}, {\"generation\": 2, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 70831.156, \"evaluated_individuals\": 62}, {\"generation\": 3, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 70831.156, \"evaluated_individuals\": 74}, {\"generation\": 4, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 70831.156, \"evaluated_individuals\": 66}, {\"generation\": 5, \"generation_best_raw_cost\": 68466.987, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 69}, {\"generation\": 6, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 69}, {\"generation\": 7, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 68}, {\"generation\": 8, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 78}, {\"generation\": 9, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 60}, {\"generation\": 10, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 58}, {\"generation\": 11, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 66}, {\"generation\": 12, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 69}, {\"generation\": 13, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 72}, {\"generation\": 14, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 70}, {\"generation\": 15, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 71}, {\"generation\": 16, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 67}, {\"generation\": 17, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 74}, {\"generation\": 18, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 64}, {\"generation\": 19, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 72}, {\"generation\": 20, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 72}, {\"generation\": 21, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 70}, {\"generation\": 22, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 75}, {\"generation\": 23, \"generation_best_raw_cost\": 69462.287, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 60}, {\"generation\": 24, \"generation_best_raw_cost\": 69462.287, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 67}, {\"generation\": 25, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 68}, {\"generation\": 26, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 72}, {\"generation\": 27, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 68}, {\"generation\": 28, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 74}, {\"generation\": 29, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 72}, {\"generation\": 30, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 64}, {\"generation\": 31, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 71}, {\"generation\": 32, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 64}, {\"generation\": 33, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 74}, {\"generation\": 34, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 74}, {\"generation\": 35, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 70}, {\"generation\": 36, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 76}, {\"generation\": 37, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 68}, {\"generation\": 38, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 66}, {\"generation\": 39, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 68}, {\"generation\": 40, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 62}, {\"generation\": 41, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 66}, {\"generation\": 42, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 68}, {\"generation\": 43, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 72}, {\"generation\": 44, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 72}, {\"generation\": 45, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 70}, {\"generation\": 46, \"generation_best_raw_cost\": 67293.005, \"best_raw_cost_so_far\": 67293.005, \"evaluated_individuals\": 68}, {\"generation\": 47, \"generation_best_raw_cost\": 67293.005, \"best_raw_cost_so_far\": 67293.005, \"evaluated_individuals\": 71}, {\"generation\": 48, \"generation_best_raw_cost\": 67293.005, \"best_raw_cost_so_far\": 67293.005, \"evaluated_individuals\": 62}, {\"generation\": 49, \"generation_best_raw_cost\": 67293.005, \"best_raw_cost_so_far\": 67293.005, \"evaluated_individuals\": 72}, {\"generation\": 50, \"generation_best_raw_cost\": 67293.005, \"best_raw_cost_so_far\": 67293.005, \"evaluated_individuals\": 71}]",
+    "improvement_over_time": "[{\"generation\": 1, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 70831.156, \"evaluated_individuals\": 74}, {\"generation\": 2, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 70831.156, \"evaluated_individuals\": 62}, {\"generation\": 3, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 70831.156, \"evaluated_individuals\": 74}, {\"generation\": 4, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 70831.156, \"evaluated_individuals\": 66}, {\"generation\": 5, \"generation_best_raw_cost\": 68466.987, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 69}, {\"generation\": 6, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 69}, {\"generation\": 7, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 68}, {\"generation\": 8, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 78}, {\"generation\": 9, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 60}, {\"generation\": 10, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 58}, {\"generation\": 11, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 66}, {\"generation\": 12, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 69}, {\"generation\": 13, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 72}, {\"generation\": 14, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 70}, {\"generation\": 15, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 71}, {\"generation\": 16, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 67}, {\"generation\": 17, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 74}, {\"generation\": 18, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 64}, {\"generation\": 19, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 72}, {\"generation\": 20, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 72}, {\"generation\": 21, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 70}, {\"generation\": 22, \"generation_best_raw_cost\": 70831.156, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 75}, {\"generation\": 23, \"generation_best_raw_cost\": 69462.287, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 60}, {\"generation\": 24, \"generation_best_raw_cost\": 69462.287, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 67}, {\"generation\": 25, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 68}, {\"generation\": 26, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 72}, {\"generation\": 27, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 68}, {\"generation\": 28, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 74}, {\"generation\": 29, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 72}, {\"generation\": 30, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 64}, {\"generation\": 31, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 71}, {\"generation\": 32, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 64}, {\"generation\": 33, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 74}, {\"generation\": 34, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 74}, {\"generation\": 35, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 70}, {\"generation\": 36, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 76}, {\"generation\": 37, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 68}, {\"generation\": 38, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 66}, {\"generation\": 39, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 68}, {\"generation\": 40, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 62}, {\"generation\": 41, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 66}, {\"generation\": 42, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 68}, {\"generation\": 43, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 72}, {\"generation\": 44, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 72}, {\"generation\": 45, \"generation_best_raw_cost\": 68784.486, \"best_raw_cost_so_far\": 68466.987, \"evaluated_individuals\": 70}, {\"generation\": 46, \"generation_best_raw_cost\": 67293.005, \"best_raw_cost_so_far\": 67293.005, \"evaluated_individuals\": 68}, {\"generation\": 47, \"generation_best_raw_cost\": 67293.005, \"best_raw_cost_so_far\": 67293.005, \"evaluated_individuals\": 71}, {\"generation\": 48, \"generation_best_raw_cost\": 67293.005, \"best_raw_cost_so_far\": 67293.005, \"evaluated_individuals\": 62}, {\"generation\": 49, \"generation_best_raw_cost\": 67293.005, \"best_raw_cost_so_far\": 67293.005, \"evaluated_individuals\": 72}, {\"generation\": 50, \"generation_best_raw_cost\": 67293.005, \"best_raw_cost_so_far\": 67293.005, \"evaluated_individuals\": 71}]",
+    "iterations": null,
+    "generations": 50,
+    "search_steps": 4000
+  },
+  "solver": {
+    "method_name": "py-ga-VRPTW + checker",
+    "raw_method_name": "py-ga-VRPTW",
+    "ind_size": 100,
+    "pop_size": 80,
+    "generations": 50,
+    "elapsed_runtime_seconds": 0.782,
+    "raw_total_cost": 67293.00525487376,
+    "note": "Routes parsed from py-ga stdout and replayed by the shared Week 4 checker."
+  },
+  "candidate": {
+    "customer_routes": [
+      [
+        "C23",
+        "C30",
+        "C37",
+        "C17",
+        "C100",
+        "C85",
+        "C83",
+        "C36",
+        "C72"
+      ],
+      [
+        "C33",
+        "C50",
+        "C81",
+        "C24",
+        "C91",
+        "C47",
+        "C32",
+        "C22",
+        "C49"
+      ],
+      [
+        "C5",
+        "C21",
+        "C26",
+        "C57",
+        "C7",
+        "C15",
+        "C1",
+        "C2",
+        "C34"
+      ],
+      [
+        "C76",
+        "C18",
+        "C95",
+        "C96",
+        "C43",
+        "C28",
+        "C48",
+        "C88"
+      ],
+      [
+        "C16",
+        "C56",
+        "C44",
+        "C82",
+        "C86",
+        "C53",
+        "C80",
+        "C84"
+      ],
+      [
+        "C77",
+        "C40",
+        "C52",
+        "C31",
+        "C19",
+        "C79",
+        "C75",
+        "C54"
+      ],
+      [
+        "C93",
+        "C46",
+        "C59",
+        "C62",
+        "C58",
+        "C12",
+        "C99",
+        "C11",
+        "C39"
+      ],
+      [
+        "C35",
+        "C9",
+        "C60",
+        "C92",
+        "C38",
+        "C14",
+        "C73"
+      ],
+      [
+        "C13",
+        "C71",
+        "C64",
+        "C97",
+        "C6",
+        "C3",
+        "C94",
+        "C63",
+        "C45"
+      ],
+      [
+        "C78",
+        "C98",
+        "C70",
+        "C66",
+        "C25",
+        "C27",
+        "C41",
+        "C65",
+        "C8"
+      ],
+      [
+        "C90",
+        "C55",
+        "C51",
+        "C87",
+        "C61",
+        "C29",
+        "C68",
+        "C10",
+        "C4",
+        "C89"
+      ],
+      [
+        "C42",
+        "C20",
+        "C67",
+        "C74",
+        "C69"
+      ]
+    ]
+  },
+  "routes": [
+    {
+      "route_index": 1,
+      "visits": [
+        "C23",
+        "C30",
+        "C37",
+        "C17",
+        "C100",
+        "C85",
+        "C83",
+        "C36",
+        "C72"
+      ]
+    },
+    {
+      "route_index": 2,
+      "visits": [
+        "C33",
+        "C50",
+        "C81",
+        "C24",
+        "C91",
+        "C47",
+        "C32",
+        "C22",
+        "C49"
+      ]
+    },
+    {
+      "route_index": 3,
+      "visits": [
+        "C5",
+        "C21",
+        "C26",
+        "C57",
+        "C7",
+        "C15",
+        "C1",
+        "C2",
+        "C34"
+      ]
+    },
+    {
+      "route_index": 4,
+      "visits": [
+        "C76",
+        "C18",
+        "C95",
+        "C96",
+        "C43",
+        "C28",
+        "C48",
+        "C88"
+      ]
+    },
+    {
+      "route_index": 5,
+      "visits": [
+        "C16",
+        "C56",
+        "C44",
+        "C82",
+        "C86",
+        "C53",
+        "C80",
+        "C84"
+      ]
+    },
+    {
+      "route_index": 6,
+      "visits": [
+        "C77",
+        "C40",
+        "C52",
+        "C31",
+        "C19",
+        "C79",
+        "C75",
+        "C54"
+      ]
+    },
+    {
+      "route_index": 7,
+      "visits": [
+        "C93",
+        "C46",
+        "C59",
+        "C62",
+        "C58",
+        "C12",
+        "C99",
+        "C11",
+        "C39"
+      ]
+    },
+    {
+      "route_index": 8,
+      "visits": [
+        "C35",
+        "C9",
+        "C60",
+        "C92",
+        "C38",
+        "C14",
+        "C73"
+      ]
+    },
+    {
+      "route_index": 9,
+      "visits": [
+        "C13",
+        "C71",
+        "C64",
+        "C97",
+        "C6",
+        "C3",
+        "C94",
+        "C63",
+        "C45"
+      ]
+    },
+    {
+      "route_index": 10,
+      "visits": [
+        "C78",
+        "C98",
+        "C70",
+        "C66",
+        "C25",
+        "C27",
+        "C41",
+        "C65",
+        "C8"
+      ]
+    },
+    {
+      "route_index": 11,
+      "visits": [
+        "C90",
+        "C55",
+        "C51",
+        "C87",
+        "C61",
+        "C29",
+        "C68",
+        "C10",
+        "C4",
+        "C89"
+      ]
+    },
+    {
+      "route_index": 12,
+      "visits": [
+        "C42",
+        "C20",
+        "C67",
+        "C74",
+        "C69"
+      ]
+    }
+  ],
+  "metrics": {
+    "feasible": false,
+    "vehicle_count": 12,
+    "total_distance": 4046,
+    "total_duration": 18800.0,
+    "makespan": 1865.0,
+    "served_customers": 100,
+    "missing_customers": 0,
+    "duplicate_customers": 0,
+    "time_window_violations": 85,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 0,
+    "charging_time": 0
+  },
+  "violations": [
+    {
+      "constraint": "time_window",
+      "route_index": 1,
+      "location": "C30",
+      "detail": "arrival=830.0, start_service=830.0, latest=504.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 1,
+      "location": "C37",
+      "detail": "arrival=943.0, start_service=943.0, latest=434.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 1,
+      "location": "C17",
+      "detail": "arrival=1071.0, start_service=1071.0, latest=148.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 1,
+      "location": "C100",
+      "detail": "arrival=1199.0, start_service=1199.0, latest=726.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 1,
+      "location": "C85",
+      "detail": "arrival=1317.0, start_service=1317.0, latest=612.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 1,
+      "location": "C83",
+      "detail": "arrival=1413.0, start_service=1413.0, latest=338.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 1,
+      "location": "C36",
+      "detail": "arrival=1571.0, start_service=1571.0, latest=716.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 1,
+      "location": "C72",
+      "detail": "arrival=1711.0, start_service=1711.0, latest=505.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 1,
+      "location": "D0",
+      "detail": "return_time=1825.0, latest=1236.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 2,
+      "location": "C81",
+      "detail": "arrival=964.0, start_service=964.0, latest=124.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 2,
+      "location": "C24",
+      "detail": "arrival=1116.0, start_service=1116.0, latest=144.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 2,
+      "location": "C91",
+      "detail": "arrival=1242.0, start_service=1242.0, latest=889.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 2,
+      "location": "C47",
+      "detail": "arrival=1371.0, start_service=1371.0, latest=1127.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 2,
+      "location": "C32",
+      "detail": "arrival=1482.0, start_service=1482.0, latest=100.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 2,
+      "location": "C22",
+      "detail": "arrival=1594.0, start_service=1594.0, latest=883.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 2,
+      "location": "C49",
+      "detail": "arrival=1701.0, start_service=1701.0, latest=1066.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 2,
+      "location": "D0",
+      "detail": "return_time=1810.0, latest=1236.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 3,
+      "location": "C26",
+      "detail": "arrival=1010.0, start_service=1010.0, latest=701.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 3,
+      "location": "C57",
+      "detail": "arrival=1143.0, start_service=1143.0, latest=87.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 3,
+      "location": "C7",
+      "detail": "arrival=1284.0, start_service=1284.0, latest=225.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 3,
+      "location": "C15",
+      "detail": "arrival=1398.0, start_service=1398.0, latest=429.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 3,
+      "location": "C1",
+      "detail": "arrival=1516.0, start_service=1516.0, latest=967.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 3,
+      "location": "C2",
+      "detail": "arrival=1608.0, start_service=1608.0, latest=870.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 3,
+      "location": "C34",
+      "detail": "arrival=1743.0, start_service=1743.0, latest=816.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 3,
+      "location": "D0",
+      "detail": "return_time=1865.0, latest=1236.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 4,
+      "location": "C18",
+      "detail": "arrival=378.0, start_service=378.0, latest=254.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 4,
+      "location": "C95",
+      "detail": "arrival=515.0, start_service=515.0, latest=239.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 4,
+      "location": "C96",
+      "detail": "arrival=607.0, start_service=607.0, latest=156.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 4,
+      "location": "C43",
+      "detail": "arrival=749.0, start_service=749.0, latest=80.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 4,
+      "location": "C28",
+      "detail": "arrival=861.0, start_service=861.0, latest=593.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 4,
+      "location": "C48",
+      "detail": "arrival=976.0, start_service=976.0, latest=693.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 4,
+      "location": "C88",
+      "detail": "arrival=1114.0, start_service=1114.0, latest=708.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 5,
+      "location": "C56",
+      "detail": "arrival=647.0, start_service=647.0, latest=436.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 5,
+      "location": "C44",
+      "detail": "arrival=763.0, start_service=763.0, latest=412.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 5,
+      "location": "C82",
+      "detail": "arrival=903.0, start_service=903.0, latest=420.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 5,
+      "location": "C86",
+      "detail": "arrival=1002.0, start_service=1002.0, latest=238.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 5,
+      "location": "C53",
+      "detail": "arrival=1147.0, start_service=1147.0, latest=347.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 5,
+      "location": "C80",
+      "detail": "arrival=1283.0, start_service=1283.0, latest=820.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 5,
+      "location": "C84",
+      "detail": "arrival=1409.0, start_service=1409.0, latest=523.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 5,
+      "location": "D0",
+      "detail": "return_time=1530.0, latest=1236.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 6,
+      "location": "C40",
+      "detail": "arrival=717.0, start_service=717.0, latest=321.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 6,
+      "location": "C31",
+      "detail": "arrival=1017.0, start_service=1017.0, latest=237.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 6,
+      "location": "C19",
+      "detail": "arrival=1152.0, start_service=1152.0, latest=345.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 6,
+      "location": "C79",
+      "detail": "arrival=1330.0, start_service=1330.0, latest=731.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 6,
+      "location": "C75",
+      "detail": "arrival=1475.0, start_service=1475.0, latest=1068.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 6,
+      "location": "C54",
+      "detail": "arrival=1620.0, start_service=1620.0, latest=257.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 6,
+      "location": "D0",
+      "detail": "return_time=1750.0, latest=1236.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 7,
+      "location": "C46",
+      "detail": "arrival=629.0, start_service=629.0, latest=509.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 7,
+      "location": "C62",
+      "detail": "arrival=851.0, start_service=851.0, latest=317.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 7,
+      "location": "C58",
+      "detail": "arrival=973.0, start_service=973.0, latest=534.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 7,
+      "location": "C12",
+      "detail": "arrival=1144.0, start_service=1144.0, latest=721.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 7,
+      "location": "C99",
+      "detail": "arrival=1264.0, start_service=1264.0, latest=820.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 7,
+      "location": "C11",
+      "detail": "arrival=1377.0, start_service=1377.0, latest=505.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 7,
+      "location": "C39",
+      "detail": "arrival=1509.0, start_service=1509.0, latest=624.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 7,
+      "location": "D0",
+      "detail": "return_time=1639.0, latest=1236.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 8,
+      "location": "C60",
+      "detail": "arrival=689.0, start_service=689.0, latest=629.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 8,
+      "location": "C92",
+      "detail": "arrival=865.0, start_service=865.0, latest=441.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 8,
+      "location": "C38",
+      "detail": "arrival=1036.0, start_service=1036.0, latest=522.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 8,
+      "location": "C14",
+      "detail": "arrival=1176.0, start_service=1176.0, latest=620.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 8,
+      "location": "C73",
+      "detail": "arrival=1355.0, start_service=1355.0, latest=551.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 8,
+      "location": "D0",
+      "detail": "return_time=1501.0, latest=1236.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 9,
+      "location": "C97",
+      "detail": "arrival=778.0, start_service=778.0, latest=622.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 9,
+      "location": "C6",
+      "detail": "arrival=894.0, start_service=894.0, latest=702.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 9,
+      "location": "C3",
+      "detail": "arrival=988.0, start_service=988.0, latest=146.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 9,
+      "location": "C94",
+      "detail": "arrival=1106.0, start_service=1106.0, latest=336.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 9,
+      "location": "C63",
+      "detail": "arrival=1241.0, start_service=1241.0, latest=218.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 9,
+      "location": "C45",
+      "detail": "arrival=1353.0, start_service=1353.0, latest=600.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 9,
+      "location": "D0",
+      "detail": "return_time=1465.0, latest=1236.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 10,
+      "location": "C98",
+      "detail": "arrival=249.0, start_service=249.0, latest=84.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 10,
+      "location": "C25",
+      "detail": "arrival=944.0, start_service=944.0, latest=224.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 10,
+      "location": "C27",
+      "detail": "arrival=1036.0, start_service=1036.0, latest=316.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 10,
+      "location": "C41",
+      "detail": "arrival=1149.0, start_service=1149.0, latest=235.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 10,
+      "location": "C65",
+      "detail": "arrival=1254.0, start_service=1254.0, latest=129.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 10,
+      "location": "C8",
+      "detail": "arrival=1374.0, start_service=1374.0, latest=324.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 10,
+      "location": "D0",
+      "detail": "return_time=1482.0, latest=1236.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 11,
+      "location": "C87",
+      "detail": "arrival=862.0, start_service=862.0, latest=144.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 11,
+      "location": "C61",
+      "detail": "arrival=981.0, start_service=981.0, latest=610.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 11,
+      "location": "C29",
+      "detail": "arrival=1107.0, start_service=1107.0, latest=405.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 11,
+      "location": "C68",
+      "detail": "arrival=1229.0, start_service=1229.0, latest=777.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 11,
+      "location": "C10",
+      "detail": "arrival=1356.0, start_service=1356.0, latest=410.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 11,
+      "location": "C4",
+      "detail": "arrival=1453.0, start_service=1453.0, latest=782.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 11,
+      "location": "C89",
+      "detail": "arrival=1566.0, start_service=1566.0, latest=802.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 11,
+      "location": "D0",
+      "detail": "return_time=1680.0, latest=1236.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 12,
+      "location": "C20",
+      "detail": "arrival=176.0, start_service=176.0, latest=73.0"
+    },
+    {
+      "constraint": "time_window",
+      "route_index": 12,
+      "location": "C67",
+      "detail": "arrival=286.0, start_service=286.0, latest=77.0"
+    }
+  ],
+  "report": {
+    "feasible": false,
+    "total_distance": 4046,
+    "total_duration": 18800.0,
+    "makespan": 1865.0,
+    "served_customers": 100,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 85,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 0,
+    "charging_time": 0,
+    "synchronization_violations": 0,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "C23",
+          "C30",
+          "C37",
+          "C17",
+          "C100",
+          "C85",
+          "C83",
+          "C36",
+          "C72"
+        ],
+        "load": 140.0,
+        "distance": 296,
+        "duration": 1825.0,
+        "wait_time": 719.0,
+        "return_time": 1825.0,
+        "time_window_violations": 9,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "C33",
+          "C50",
+          "C81",
+          "C24",
+          "C91",
+          "C47",
+          "C32",
+          "C22",
+          "C49"
+        ],
+        "load": 170.0,
+        "distance": 329,
+        "duration": 1810.0,
+        "wait_time": 671.0,
+        "return_time": 1810.0,
+        "time_window_violations": 8,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 3,
+        "visits": [
+          "C5",
+          "C21",
+          "C26",
+          "C57",
+          "C7",
+          "C15",
+          "C1",
+          "C2",
+          "C34"
+        ],
+        "load": 200.0,
+        "distance": 264,
+        "duration": 1865.0,
+        "wait_time": 791.0,
+        "return_time": 1865.0,
+        "time_window_violations": 8,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 4,
+        "visits": [
+          "C76",
+          "C18",
+          "C95",
+          "C96",
+          "C43",
+          "C28",
+          "C48",
+          "C88"
+        ],
+        "load": 140.0,
+        "distance": 360,
+        "duration": 1231.0,
+        "wait_time": 151.0,
+        "return_time": 1231.0,
+        "time_window_violations": 7,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 5,
+        "visits": [
+          "C16",
+          "C56",
+          "C44",
+          "C82",
+          "C86",
+          "C53",
+          "C80",
+          "C84"
+        ],
+        "load": 160.0,
+        "distance": 375,
+        "duration": 1530.0,
+        "wait_time": 435.0,
+        "return_time": 1530.0,
+        "time_window_violations": 8,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 6,
+        "visits": [
+          "C77",
+          "C40",
+          "C52",
+          "C31",
+          "C19",
+          "C79",
+          "C75",
+          "C54"
+        ],
+        "load": 130.0,
+        "distance": 414,
+        "duration": 1750.0,
+        "wait_time": 616.0,
+        "return_time": 1750.0,
+        "time_window_violations": 7,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 7,
+        "visits": [
+          "C93",
+          "C46",
+          "C59",
+          "C62",
+          "C58",
+          "C12",
+          "C99",
+          "C11",
+          "C39"
+        ],
+        "load": 190.0,
+        "distance": 397,
+        "duration": 1639.0,
+        "wait_time": 432.0,
+        "return_time": 1639.0,
+        "time_window_violations": 8,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 8,
+        "visits": [
+          "C35",
+          "C9",
+          "C60",
+          "C92",
+          "C38",
+          "C14",
+          "C73"
+        ],
+        "load": 110.0,
+        "distance": 513,
+        "duration": 1501.0,
+        "wait_time": 358.0,
+        "return_time": 1501.0,
+        "time_window_violations": 6,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 9,
+        "visits": [
+          "C13",
+          "C71",
+          "C64",
+          "C97",
+          "C6",
+          "C3",
+          "C94",
+          "C63",
+          "C45"
+        ],
+        "load": 190.0,
+        "distance": 364,
+        "duration": 1465.0,
+        "wait_time": 291.0,
+        "return_time": 1465.0,
+        "time_window_violations": 7,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 10,
+        "visits": [
+          "C78",
+          "C98",
+          "C70",
+          "C66",
+          "C25",
+          "C27",
+          "C41",
+          "C65",
+          "C8"
+        ],
+        "load": 170.0,
+        "distance": 322,
+        "duration": 1482.0,
+        "wait_time": 350.0,
+        "return_time": 1482.0,
+        "time_window_violations": 7,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 11,
+        "visits": [
+          "C90",
+          "C55",
+          "C51",
+          "C87",
+          "C61",
+          "C29",
+          "C68",
+          "C10",
+          "C4",
+          "C89"
+        ],
+        "load": 110.0,
+        "distance": 323,
+        "duration": 1680.0,
+        "wait_time": 457.0,
+        "return_time": 1680.0,
+        "time_window_violations": 8,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 12,
+        "visits": [
+          "C42",
+          "C20",
+          "C67",
+          "C74",
+          "C69"
+        ],
+        "load": 100.0,
+        "distance": 89,
+        "duration": 1022.0,
+        "wait_time": 483.0,
+        "return_time": 1022.0,
+        "time_window_violations": 2,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": [
+      {
+        "constraint": "time_window",
+        "route_index": 1,
+        "location": "C30",
+        "detail": "arrival=830.0, start_service=830.0, latest=504.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 1,
+        "location": "C37",
+        "detail": "arrival=943.0, start_service=943.0, latest=434.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 1,
+        "location": "C17",
+        "detail": "arrival=1071.0, start_service=1071.0, latest=148.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 1,
+        "location": "C100",
+        "detail": "arrival=1199.0, start_service=1199.0, latest=726.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 1,
+        "location": "C85",
+        "detail": "arrival=1317.0, start_service=1317.0, latest=612.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 1,
+        "location": "C83",
+        "detail": "arrival=1413.0, start_service=1413.0, latest=338.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 1,
+        "location": "C36",
+        "detail": "arrival=1571.0, start_service=1571.0, latest=716.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 1,
+        "location": "C72",
+        "detail": "arrival=1711.0, start_service=1711.0, latest=505.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 1,
+        "location": "D0",
+        "detail": "return_time=1825.0, latest=1236.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 2,
+        "location": "C81",
+        "detail": "arrival=964.0, start_service=964.0, latest=124.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 2,
+        "location": "C24",
+        "detail": "arrival=1116.0, start_service=1116.0, latest=144.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 2,
+        "location": "C91",
+        "detail": "arrival=1242.0, start_service=1242.0, latest=889.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 2,
+        "location": "C47",
+        "detail": "arrival=1371.0, start_service=1371.0, latest=1127.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 2,
+        "location": "C32",
+        "detail": "arrival=1482.0, start_service=1482.0, latest=100.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 2,
+        "location": "C22",
+        "detail": "arrival=1594.0, start_service=1594.0, latest=883.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 2,
+        "location": "C49",
+        "detail": "arrival=1701.0, start_service=1701.0, latest=1066.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 2,
+        "location": "D0",
+        "detail": "return_time=1810.0, latest=1236.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 3,
+        "location": "C26",
+        "detail": "arrival=1010.0, start_service=1010.0, latest=701.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 3,
+        "location": "C57",
+        "detail": "arrival=1143.0, start_service=1143.0, latest=87.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 3,
+        "location": "C7",
+        "detail": "arrival=1284.0, start_service=1284.0, latest=225.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 3,
+        "location": "C15",
+        "detail": "arrival=1398.0, start_service=1398.0, latest=429.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 3,
+        "location": "C1",
+        "detail": "arrival=1516.0, start_service=1516.0, latest=967.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 3,
+        "location": "C2",
+        "detail": "arrival=1608.0, start_service=1608.0, latest=870.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 3,
+        "location": "C34",
+        "detail": "arrival=1743.0, start_service=1743.0, latest=816.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 3,
+        "location": "D0",
+        "detail": "return_time=1865.0, latest=1236.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 4,
+        "location": "C18",
+        "detail": "arrival=378.0, start_service=378.0, latest=254.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 4,
+        "location": "C95",
+        "detail": "arrival=515.0, start_service=515.0, latest=239.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 4,
+        "location": "C96",
+        "detail": "arrival=607.0, start_service=607.0, latest=156.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 4,
+        "location": "C43",
+        "detail": "arrival=749.0, start_service=749.0, latest=80.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 4,
+        "location": "C28",
+        "detail": "arrival=861.0, start_service=861.0, latest=593.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 4,
+        "location": "C48",
+        "detail": "arrival=976.0, start_service=976.0, latest=693.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 4,
+        "location": "C88",
+        "detail": "arrival=1114.0, start_service=1114.0, latest=708.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 5,
+        "location": "C56",
+        "detail": "arrival=647.0, start_service=647.0, latest=436.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 5,
+        "location": "C44",
+        "detail": "arrival=763.0, start_service=763.0, latest=412.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 5,
+        "location": "C82",
+        "detail": "arrival=903.0, start_service=903.0, latest=420.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 5,
+        "location": "C86",
+        "detail": "arrival=1002.0, start_service=1002.0, latest=238.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 5,
+        "location": "C53",
+        "detail": "arrival=1147.0, start_service=1147.0, latest=347.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 5,
+        "location": "C80",
+        "detail": "arrival=1283.0, start_service=1283.0, latest=820.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 5,
+        "location": "C84",
+        "detail": "arrival=1409.0, start_service=1409.0, latest=523.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 5,
+        "location": "D0",
+        "detail": "return_time=1530.0, latest=1236.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 6,
+        "location": "C40",
+        "detail": "arrival=717.0, start_service=717.0, latest=321.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 6,
+        "location": "C31",
+        "detail": "arrival=1017.0, start_service=1017.0, latest=237.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 6,
+        "location": "C19",
+        "detail": "arrival=1152.0, start_service=1152.0, latest=345.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 6,
+        "location": "C79",
+        "detail": "arrival=1330.0, start_service=1330.0, latest=731.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 6,
+        "location": "C75",
+        "detail": "arrival=1475.0, start_service=1475.0, latest=1068.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 6,
+        "location": "C54",
+        "detail": "arrival=1620.0, start_service=1620.0, latest=257.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 6,
+        "location": "D0",
+        "detail": "return_time=1750.0, latest=1236.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 7,
+        "location": "C46",
+        "detail": "arrival=629.0, start_service=629.0, latest=509.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 7,
+        "location": "C62",
+        "detail": "arrival=851.0, start_service=851.0, latest=317.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 7,
+        "location": "C58",
+        "detail": "arrival=973.0, start_service=973.0, latest=534.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 7,
+        "location": "C12",
+        "detail": "arrival=1144.0, start_service=1144.0, latest=721.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 7,
+        "location": "C99",
+        "detail": "arrival=1264.0, start_service=1264.0, latest=820.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 7,
+        "location": "C11",
+        "detail": "arrival=1377.0, start_service=1377.0, latest=505.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 7,
+        "location": "C39",
+        "detail": "arrival=1509.0, start_service=1509.0, latest=624.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 7,
+        "location": "D0",
+        "detail": "return_time=1639.0, latest=1236.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 8,
+        "location": "C60",
+        "detail": "arrival=689.0, start_service=689.0, latest=629.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 8,
+        "location": "C92",
+        "detail": "arrival=865.0, start_service=865.0, latest=441.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 8,
+        "location": "C38",
+        "detail": "arrival=1036.0, start_service=1036.0, latest=522.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 8,
+        "location": "C14",
+        "detail": "arrival=1176.0, start_service=1176.0, latest=620.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 8,
+        "location": "C73",
+        "detail": "arrival=1355.0, start_service=1355.0, latest=551.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 8,
+        "location": "D0",
+        "detail": "return_time=1501.0, latest=1236.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 9,
+        "location": "C97",
+        "detail": "arrival=778.0, start_service=778.0, latest=622.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 9,
+        "location": "C6",
+        "detail": "arrival=894.0, start_service=894.0, latest=702.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 9,
+        "location": "C3",
+        "detail": "arrival=988.0, start_service=988.0, latest=146.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 9,
+        "location": "C94",
+        "detail": "arrival=1106.0, start_service=1106.0, latest=336.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 9,
+        "location": "C63",
+        "detail": "arrival=1241.0, start_service=1241.0, latest=218.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 9,
+        "location": "C45",
+        "detail": "arrival=1353.0, start_service=1353.0, latest=600.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 9,
+        "location": "D0",
+        "detail": "return_time=1465.0, latest=1236.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 10,
+        "location": "C98",
+        "detail": "arrival=249.0, start_service=249.0, latest=84.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 10,
+        "location": "C25",
+        "detail": "arrival=944.0, start_service=944.0, latest=224.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 10,
+        "location": "C27",
+        "detail": "arrival=1036.0, start_service=1036.0, latest=316.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 10,
+        "location": "C41",
+        "detail": "arrival=1149.0, start_service=1149.0, latest=235.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 10,
+        "location": "C65",
+        "detail": "arrival=1254.0, start_service=1254.0, latest=129.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 10,
+        "location": "C8",
+        "detail": "arrival=1374.0, start_service=1374.0, latest=324.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 10,
+        "location": "D0",
+        "detail": "return_time=1482.0, latest=1236.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 11,
+        "location": "C87",
+        "detail": "arrival=862.0, start_service=862.0, latest=144.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 11,
+        "location": "C61",
+        "detail": "arrival=981.0, start_service=981.0, latest=610.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 11,
+        "location": "C29",
+        "detail": "arrival=1107.0, start_service=1107.0, latest=405.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 11,
+        "location": "C68",
+        "detail": "arrival=1229.0, start_service=1229.0, latest=777.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 11,
+        "location": "C10",
+        "detail": "arrival=1356.0, start_service=1356.0, latest=410.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 11,
+        "location": "C4",
+        "detail": "arrival=1453.0, start_service=1453.0, latest=782.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 11,
+        "location": "C89",
+        "detail": "arrival=1566.0, start_service=1566.0, latest=802.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 11,
+        "location": "D0",
+        "detail": "return_time=1680.0, latest=1236.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 12,
+        "location": "C20",
+        "detail": "arrival=176.0, start_service=176.0, latest=73.0"
+      },
+      {
+        "constraint": "time_window",
+        "route_index": 12,
+        "location": "C67",
+        "detail": "arrival=286.0, start_service=286.0, latest=77.0"
+      }
+    ]
+  },
+  "instance": {
+    "name": "C101",
+    "problem_type": "VRPTW",
+    "objective": {
+      "primary": "minimize_vehicle_count",
+      "secondary": "minimize_total_distance"
+    },
+    "distance": {
+      "metric": "euclidean",
+      "scale": 1
+    },
+    "duration": {
+      "metric": "euclidean",
+      "scale": 1
+    },
+    "solver": {
+      "runtime_seconds": 0,
+      "seed": null,
+      "display": false
+    },
+    "vehicles": {
+      "num_available": 25,
+      "capacity": 200.0,
+      "start_depot": "D0",
+      "end_depot": "D0",
+      "tw_early": 0.0,
+      "tw_late": 1236.0,
+      "battery_capacity": null,
+      "initial_battery": null
+    },
+    "depot": {
+      "name": "D0",
+      "x": 40.0,
+      "y": 50.0,
+      "tw_early": 0.0,
+      "tw_late": 1236.0
+    },
+    "energy": {
+      "consumption_per_distance": null,
+      "minimum_battery": null
+    },
+    "charging": {
+      "policy": "none",
+      "allow_partial_recharge": false,
+      "charging_rate": null,
+      "fixed_service_duration": 0
+    },
+    "charging_stations": [],
+    "clients": [
+      {
+        "name": "C1",
+        "x": 45.0,
+        "y": 68.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 912.0,
+        "tw_late": 967.0,
+        "source_customer_id": 1
+      },
+      {
+        "name": "C2",
+        "x": 45.0,
+        "y": 70.0,
+        "demand": 30.0,
+        "service_duration": 90.0,
+        "tw_early": 825.0,
+        "tw_late": 870.0,
+        "source_customer_id": 2
+      },
+      {
+        "name": "C3",
+        "x": 42.0,
+        "y": 66.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 65.0,
+        "tw_late": 146.0,
+        "source_customer_id": 3
+      },
+      {
+        "name": "C4",
+        "x": 42.0,
+        "y": 68.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 727.0,
+        "tw_late": 782.0,
+        "source_customer_id": 4
+      },
+      {
+        "name": "C5",
+        "x": 42.0,
+        "y": 65.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 15.0,
+        "tw_late": 67.0,
+        "source_customer_id": 5
+      },
+      {
+        "name": "C6",
+        "x": 40.0,
+        "y": 69.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 621.0,
+        "tw_late": 702.0,
+        "source_customer_id": 6
+      },
+      {
+        "name": "C7",
+        "x": 40.0,
+        "y": 66.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 170.0,
+        "tw_late": 225.0,
+        "source_customer_id": 7
+      },
+      {
+        "name": "C8",
+        "x": 38.0,
+        "y": 68.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 255.0,
+        "tw_late": 324.0,
+        "source_customer_id": 8
+      },
+      {
+        "name": "C9",
+        "x": 38.0,
+        "y": 70.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 534.0,
+        "tw_late": 605.0,
+        "source_customer_id": 9
+      },
+      {
+        "name": "C10",
+        "x": 35.0,
+        "y": 66.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 357.0,
+        "tw_late": 410.0,
+        "source_customer_id": 10
+      },
+      {
+        "name": "C11",
+        "x": 35.0,
+        "y": 69.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 448.0,
+        "tw_late": 505.0,
+        "source_customer_id": 11
+      },
+      {
+        "name": "C12",
+        "x": 25.0,
+        "y": 85.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 652.0,
+        "tw_late": 721.0,
+        "source_customer_id": 12
+      },
+      {
+        "name": "C13",
+        "x": 22.0,
+        "y": 75.0,
+        "demand": 30.0,
+        "service_duration": 90.0,
+        "tw_early": 30.0,
+        "tw_late": 92.0,
+        "source_customer_id": 13
+      },
+      {
+        "name": "C14",
+        "x": 22.0,
+        "y": 85.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 567.0,
+        "tw_late": 620.0,
+        "source_customer_id": 14
+      },
+      {
+        "name": "C15",
+        "x": 20.0,
+        "y": 80.0,
+        "demand": 40.0,
+        "service_duration": 90.0,
+        "tw_early": 384.0,
+        "tw_late": 429.0,
+        "source_customer_id": 15
+      },
+      {
+        "name": "C16",
+        "x": 20.0,
+        "y": 85.0,
+        "demand": 40.0,
+        "service_duration": 90.0,
+        "tw_early": 475.0,
+        "tw_late": 528.0,
+        "source_customer_id": 16
+      },
+      {
+        "name": "C17",
+        "x": 18.0,
+        "y": 75.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 99.0,
+        "tw_late": 148.0,
+        "source_customer_id": 17
+      },
+      {
+        "name": "C18",
+        "x": 15.0,
+        "y": 75.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 179.0,
+        "tw_late": 254.0,
+        "source_customer_id": 18
+      },
+      {
+        "name": "C19",
+        "x": 15.0,
+        "y": 80.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 278.0,
+        "tw_late": 345.0,
+        "source_customer_id": 19
+      },
+      {
+        "name": "C20",
+        "x": 30.0,
+        "y": 50.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 10.0,
+        "tw_late": 73.0,
+        "source_customer_id": 20
+      },
+      {
+        "name": "C21",
+        "x": 30.0,
+        "y": 52.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 914.0,
+        "tw_late": 965.0,
+        "source_customer_id": 21
+      },
+      {
+        "name": "C22",
+        "x": 28.0,
+        "y": 52.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 812.0,
+        "tw_late": 883.0,
+        "source_customer_id": 22
+      },
+      {
+        "name": "C23",
+        "x": 28.0,
+        "y": 55.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 732.0,
+        "tw_late": 777.0,
+        "source_customer_id": 23
+      },
+      {
+        "name": "C24",
+        "x": 25.0,
+        "y": 50.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 65.0,
+        "tw_late": 144.0,
+        "source_customer_id": 24
+      },
+      {
+        "name": "C25",
+        "x": 25.0,
+        "y": 52.0,
+        "demand": 40.0,
+        "service_duration": 90.0,
+        "tw_early": 169.0,
+        "tw_late": 224.0,
+        "source_customer_id": 25
+      },
+      {
+        "name": "C26",
+        "x": 25.0,
+        "y": 55.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 622.0,
+        "tw_late": 701.0,
+        "source_customer_id": 26
+      },
+      {
+        "name": "C27",
+        "x": 23.0,
+        "y": 52.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 261.0,
+        "tw_late": 316.0,
+        "source_customer_id": 27
+      },
+      {
+        "name": "C28",
+        "x": 23.0,
+        "y": 55.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 546.0,
+        "tw_late": 593.0,
+        "source_customer_id": 28
+      },
+      {
+        "name": "C29",
+        "x": 20.0,
+        "y": 50.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 358.0,
+        "tw_late": 405.0,
+        "source_customer_id": 29
+      },
+      {
+        "name": "C30",
+        "x": 20.0,
+        "y": 55.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 449.0,
+        "tw_late": 504.0,
+        "source_customer_id": 30
+      },
+      {
+        "name": "C31",
+        "x": 10.0,
+        "y": 35.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 200.0,
+        "tw_late": 237.0,
+        "source_customer_id": 31
+      },
+      {
+        "name": "C32",
+        "x": 10.0,
+        "y": 40.0,
+        "demand": 30.0,
+        "service_duration": 90.0,
+        "tw_early": 31.0,
+        "tw_late": 100.0,
+        "source_customer_id": 32
+      },
+      {
+        "name": "C33",
+        "x": 8.0,
+        "y": 40.0,
+        "demand": 40.0,
+        "service_duration": 90.0,
+        "tw_early": 87.0,
+        "tw_late": 158.0,
+        "source_customer_id": 33
+      },
+      {
+        "name": "C34",
+        "x": 8.0,
+        "y": 45.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 751.0,
+        "tw_late": 816.0,
+        "source_customer_id": 34
+      },
+      {
+        "name": "C35",
+        "x": 5.0,
+        "y": 35.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 283.0,
+        "tw_late": 344.0,
+        "source_customer_id": 35
+      },
+      {
+        "name": "C36",
+        "x": 5.0,
+        "y": 45.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 665.0,
+        "tw_late": 716.0,
+        "source_customer_id": 36
+      },
+      {
+        "name": "C37",
+        "x": 2.0,
+        "y": 40.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 383.0,
+        "tw_late": 434.0,
+        "source_customer_id": 37
+      },
+      {
+        "name": "C38",
+        "x": 0.0,
+        "y": 40.0,
+        "demand": 30.0,
+        "service_duration": 90.0,
+        "tw_early": 479.0,
+        "tw_late": 522.0,
+        "source_customer_id": 38
+      },
+      {
+        "name": "C39",
+        "x": 0.0,
+        "y": 45.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 567.0,
+        "tw_late": 624.0,
+        "source_customer_id": 39
+      },
+      {
+        "name": "C40",
+        "x": 35.0,
+        "y": 30.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 264.0,
+        "tw_late": 321.0,
+        "source_customer_id": 40
+      },
+      {
+        "name": "C41",
+        "x": 35.0,
+        "y": 32.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 166.0,
+        "tw_late": 235.0,
+        "source_customer_id": 41
+      },
+      {
+        "name": "C42",
+        "x": 33.0,
+        "y": 32.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 68.0,
+        "tw_late": 149.0,
+        "source_customer_id": 42
+      },
+      {
+        "name": "C43",
+        "x": 33.0,
+        "y": 35.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 16.0,
+        "tw_late": 80.0,
+        "source_customer_id": 43
+      },
+      {
+        "name": "C44",
+        "x": 32.0,
+        "y": 30.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 359.0,
+        "tw_late": 412.0,
+        "source_customer_id": 44
+      },
+      {
+        "name": "C45",
+        "x": 30.0,
+        "y": 30.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 541.0,
+        "tw_late": 600.0,
+        "source_customer_id": 45
+      },
+      {
+        "name": "C46",
+        "x": 30.0,
+        "y": 32.0,
+        "demand": 30.0,
+        "service_duration": 90.0,
+        "tw_early": 448.0,
+        "tw_late": 509.0,
+        "source_customer_id": 46
+      },
+      {
+        "name": "C47",
+        "x": 30.0,
+        "y": 35.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 1054.0,
+        "tw_late": 1127.0,
+        "source_customer_id": 47
+      },
+      {
+        "name": "C48",
+        "x": 28.0,
+        "y": 30.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 632.0,
+        "tw_late": 693.0,
+        "source_customer_id": 48
+      },
+      {
+        "name": "C49",
+        "x": 28.0,
+        "y": 35.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 1001.0,
+        "tw_late": 1066.0,
+        "source_customer_id": 49
+      },
+      {
+        "name": "C50",
+        "x": 26.0,
+        "y": 32.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 815.0,
+        "tw_late": 880.0,
+        "source_customer_id": 50
+      },
+      {
+        "name": "C51",
+        "x": 25.0,
+        "y": 30.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 725.0,
+        "tw_late": 786.0,
+        "source_customer_id": 51
+      },
+      {
+        "name": "C52",
+        "x": 25.0,
+        "y": 35.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 912.0,
+        "tw_late": 969.0,
+        "source_customer_id": 52
+      },
+      {
+        "name": "C53",
+        "x": 44.0,
+        "y": 5.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 286.0,
+        "tw_late": 347.0,
+        "source_customer_id": 53
+      },
+      {
+        "name": "C54",
+        "x": 42.0,
+        "y": 10.0,
+        "demand": 40.0,
+        "service_duration": 90.0,
+        "tw_early": 186.0,
+        "tw_late": 257.0,
+        "source_customer_id": 54
+      },
+      {
+        "name": "C55",
+        "x": 42.0,
+        "y": 15.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 95.0,
+        "tw_late": 158.0,
+        "source_customer_id": 55
+      },
+      {
+        "name": "C56",
+        "x": 40.0,
+        "y": 5.0,
+        "demand": 30.0,
+        "service_duration": 90.0,
+        "tw_early": 385.0,
+        "tw_late": 436.0,
+        "source_customer_id": 56
+      },
+      {
+        "name": "C57",
+        "x": 40.0,
+        "y": 15.0,
+        "demand": 40.0,
+        "service_duration": 90.0,
+        "tw_early": 35.0,
+        "tw_late": 87.0,
+        "source_customer_id": 57
+      },
+      {
+        "name": "C58",
+        "x": 38.0,
+        "y": 5.0,
+        "demand": 30.0,
+        "service_duration": 90.0,
+        "tw_early": 471.0,
+        "tw_late": 534.0,
+        "source_customer_id": 58
+      },
+      {
+        "name": "C59",
+        "x": 38.0,
+        "y": 15.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 651.0,
+        "tw_late": 740.0,
+        "source_customer_id": 59
+      },
+      {
+        "name": "C60",
+        "x": 35.0,
+        "y": 5.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 562.0,
+        "tw_late": 629.0,
+        "source_customer_id": 60
+      },
+      {
+        "name": "C61",
+        "x": 50.0,
+        "y": 30.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 531.0,
+        "tw_late": 610.0,
+        "source_customer_id": 61
+      },
+      {
+        "name": "C62",
+        "x": 50.0,
+        "y": 35.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 262.0,
+        "tw_late": 317.0,
+        "source_customer_id": 62
+      },
+      {
+        "name": "C63",
+        "x": 50.0,
+        "y": 40.0,
+        "demand": 50.0,
+        "service_duration": 90.0,
+        "tw_early": 171.0,
+        "tw_late": 218.0,
+        "source_customer_id": 63
+      },
+      {
+        "name": "C64",
+        "x": 48.0,
+        "y": 30.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 632.0,
+        "tw_late": 693.0,
+        "source_customer_id": 64
+      },
+      {
+        "name": "C65",
+        "x": 48.0,
+        "y": 40.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 76.0,
+        "tw_late": 129.0,
+        "source_customer_id": 65
+      },
+      {
+        "name": "C66",
+        "x": 47.0,
+        "y": 35.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 826.0,
+        "tw_late": 875.0,
+        "source_customer_id": 66
+      },
+      {
+        "name": "C67",
+        "x": 47.0,
+        "y": 40.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 12.0,
+        "tw_late": 77.0,
+        "source_customer_id": 67
+      },
+      {
+        "name": "C68",
+        "x": 45.0,
+        "y": 30.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 734.0,
+        "tw_late": 777.0,
+        "source_customer_id": 68
+      },
+      {
+        "name": "C69",
+        "x": 45.0,
+        "y": 35.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 916.0,
+        "tw_late": 969.0,
+        "source_customer_id": 69
+      },
+      {
+        "name": "C70",
+        "x": 95.0,
+        "y": 30.0,
+        "demand": 30.0,
+        "service_duration": 90.0,
+        "tw_early": 387.0,
+        "tw_late": 456.0,
+        "source_customer_id": 70
+      },
+      {
+        "name": "C71",
+        "x": 95.0,
+        "y": 35.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 293.0,
+        "tw_late": 360.0,
+        "source_customer_id": 71
+      },
+      {
+        "name": "C72",
+        "x": 53.0,
+        "y": 30.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 450.0,
+        "tw_late": 505.0,
+        "source_customer_id": 72
+      },
+      {
+        "name": "C73",
+        "x": 92.0,
+        "y": 30.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 478.0,
+        "tw_late": 551.0,
+        "source_customer_id": 73
+      },
+      {
+        "name": "C74",
+        "x": 53.0,
+        "y": 35.0,
+        "demand": 50.0,
+        "service_duration": 90.0,
+        "tw_early": 353.0,
+        "tw_late": 412.0,
+        "source_customer_id": 74
+      },
+      {
+        "name": "C75",
+        "x": 45.0,
+        "y": 65.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 997.0,
+        "tw_late": 1068.0,
+        "source_customer_id": 75
+      },
+      {
+        "name": "C76",
+        "x": 90.0,
+        "y": 35.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 203.0,
+        "tw_late": 260.0,
+        "source_customer_id": 76
+      },
+      {
+        "name": "C77",
+        "x": 88.0,
+        "y": 30.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 574.0,
+        "tw_late": 643.0,
+        "source_customer_id": 77
+      },
+      {
+        "name": "C78",
+        "x": 88.0,
+        "y": 35.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 109.0,
+        "tw_late": 170.0,
+        "source_customer_id": 78
+      },
+      {
+        "name": "C79",
+        "x": 87.0,
+        "y": 30.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 668.0,
+        "tw_late": 731.0,
+        "source_customer_id": 79
+      },
+      {
+        "name": "C80",
+        "x": 85.0,
+        "y": 25.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 769.0,
+        "tw_late": 820.0,
+        "source_customer_id": 80
+      },
+      {
+        "name": "C81",
+        "x": 85.0,
+        "y": 35.0,
+        "demand": 30.0,
+        "service_duration": 90.0,
+        "tw_early": 47.0,
+        "tw_late": 124.0,
+        "source_customer_id": 81
+      },
+      {
+        "name": "C82",
+        "x": 75.0,
+        "y": 55.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 369.0,
+        "tw_late": 420.0,
+        "source_customer_id": 82
+      },
+      {
+        "name": "C83",
+        "x": 72.0,
+        "y": 55.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 265.0,
+        "tw_late": 338.0,
+        "source_customer_id": 83
+      },
+      {
+        "name": "C84",
+        "x": 70.0,
+        "y": 58.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 458.0,
+        "tw_late": 523.0,
+        "source_customer_id": 84
+      },
+      {
+        "name": "C85",
+        "x": 68.0,
+        "y": 60.0,
+        "demand": 30.0,
+        "service_duration": 90.0,
+        "tw_early": 555.0,
+        "tw_late": 612.0,
+        "source_customer_id": 85
+      },
+      {
+        "name": "C86",
+        "x": 66.0,
+        "y": 55.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 173.0,
+        "tw_late": 238.0,
+        "source_customer_id": 86
+      },
+      {
+        "name": "C87",
+        "x": 65.0,
+        "y": 55.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 85.0,
+        "tw_late": 144.0,
+        "source_customer_id": 87
+      },
+      {
+        "name": "C88",
+        "x": 65.0,
+        "y": 60.0,
+        "demand": 30.0,
+        "service_duration": 90.0,
+        "tw_early": 645.0,
+        "tw_late": 708.0,
+        "source_customer_id": 88
+      },
+      {
+        "name": "C89",
+        "x": 63.0,
+        "y": 58.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 737.0,
+        "tw_late": 802.0,
+        "source_customer_id": 89
+      },
+      {
+        "name": "C90",
+        "x": 60.0,
+        "y": 55.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 20.0,
+        "tw_late": 84.0,
+        "source_customer_id": 90
+      },
+      {
+        "name": "C91",
+        "x": 60.0,
+        "y": 60.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 836.0,
+        "tw_late": 889.0,
+        "source_customer_id": 91
+      },
+      {
+        "name": "C92",
+        "x": 67.0,
+        "y": 85.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 368.0,
+        "tw_late": 441.0,
+        "source_customer_id": 92
+      },
+      {
+        "name": "C93",
+        "x": 65.0,
+        "y": 85.0,
+        "demand": 40.0,
+        "service_duration": 90.0,
+        "tw_early": 475.0,
+        "tw_late": 518.0,
+        "source_customer_id": 93
+      },
+      {
+        "name": "C94",
+        "x": 65.0,
+        "y": 82.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 285.0,
+        "tw_late": 336.0,
+        "source_customer_id": 94
+      },
+      {
+        "name": "C95",
+        "x": 62.0,
+        "y": 80.0,
+        "demand": 30.0,
+        "service_duration": 90.0,
+        "tw_early": 196.0,
+        "tw_late": 239.0,
+        "source_customer_id": 95
+      },
+      {
+        "name": "C96",
+        "x": 60.0,
+        "y": 80.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 95.0,
+        "tw_late": 156.0,
+        "source_customer_id": 96
+      },
+      {
+        "name": "C97",
+        "x": 60.0,
+        "y": 85.0,
+        "demand": 30.0,
+        "service_duration": 90.0,
+        "tw_early": 561.0,
+        "tw_late": 622.0,
+        "source_customer_id": 97
+      },
+      {
+        "name": "C98",
+        "x": 58.0,
+        "y": 75.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 30.0,
+        "tw_late": 84.0,
+        "source_customer_id": 98
+      },
+      {
+        "name": "C99",
+        "x": 55.0,
+        "y": 80.0,
+        "demand": 10.0,
+        "service_duration": 90.0,
+        "tw_early": 743.0,
+        "tw_late": 820.0,
+        "source_customer_id": 99
+      },
+      {
+        "name": "C100",
+        "x": 55.0,
+        "y": 85.0,
+        "demand": 20.0,
+        "service_duration": 90.0,
+        "tw_early": 647.0,
+        "tw_late": 726.0,
+        "source_customer_id": 100
+      }
+    ],
+    "source": {
+      "format": "Solomon/Holmberger VRPTW",
+      "path": "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\data\\Solomon\\C101.txt",
+      "known_cost": 827.3
+    }
+  }
+}
