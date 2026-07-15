@@ -6,10 +6,10 @@ Run the following four methods on the same four Schneider EVRPTW instances, for 
 
 | Method | Entry point |
 | --- | --- |
-| PyVRP + EVRP-TW repair | `src/experiments/PyVRP/solve_evrptw_pipeline.py` |
-| POMO + EVRP-TW repair | `src/experiments/pomo_evrptw_repair_pipeline.py` |
-| Tabu-assisted VNS/TS | `src/experiments/vns_ts_evrptw_baseline.py` |
-| py-ga-VRPTW + shared checker | `src/experiments/GA/run_py_ga_vrptw_checked.py` |
+| PyVRP + EVRP-TW repair | `src/experiments/methods/pyvrp/solve_evrptw_pipeline.py` |
+| POMO + EVRP-TW repair | `src/experiments/methods/pomo/pomo_evrptw_repair_pipeline.py` |
+| Tabu-assisted VNS/TS | `src/experiments/methods/vns_ts/vns_ts_evrptw_baseline.py` |
+| py-ga-VRPTW + shared checker | `src/experiments/methods/ga/run_py_ga_vrptw_checked.py` |
 
 Instances:
 
@@ -60,10 +60,10 @@ Not completed:
 Current completed PyVRP files:
 
 ```text
-src/results/evrptw_four_methods_unlimited/c101_21_pyvrp_repair.json
-src/results/evrptw_four_methods_unlimited/c101C5_pyvrp_repair.json
-src/results/evrptw_four_methods_unlimited/c101C10_pyvrp_repair.json
-src/results/evrptw_four_methods_unlimited/c103C15_pyvrp_repair.json
+src/log/week5/four-methods-unlimited/c101_21_pyvrp_repair.json
+src/log/week5/four-methods-unlimited/c101C5_pyvrp_repair.json
+src/log/week5/four-methods-unlimited/c101C10_pyvrp_repair.json
+src/log/week5/four-methods-unlimited/c103C15_pyvrp_repair.json
 ```
 
 Current PyVRP snapshot:
@@ -85,16 +85,16 @@ Required uncommitted/untracked content includes:
 
 ```text
 src/data/evrptw_instances/
-src/experiments/GA/run_py_ga_vrptw_checked.py
+src/experiments/methods/ga/run_py_ga_vrptw_checked.py
 docs/EVRPTW_FOUR_METHODS_HANDOFF.md
 ```
 
-Copy `src/results/evrptw_four_methods_unlimited/` as well if retaining the four completed PyVRP results.
+Copy `src/log/week5/four-methods-unlimited/` as well if retaining the four completed PyVRP results.
 
 The GA wrapper must include Schneider support. Verify on the target computer:
 
 ```powershell
-.\src\.venv_pyvrp\Scripts\python.exe src\experiments\GA\run_py_ga_vrptw_checked.py --help
+.\src\.venv_pyvrp\Scripts\python.exe src\experiments\methods\ga\run_py_ga_vrptw_checked.py --help
 ```
 
 The help output must contain `--schneider`. If it does not, the target computer has the old wrapper and cannot run the GA portion of this experiment correctly.
@@ -169,15 +169,15 @@ Do not use `--device cuda` unless `torch.cuda.is_available()` prints `True`.
 ```powershell
 $env:PYTHONPATH = "src;src\experiments"
 
-.\src\.venv_pyvrp\Scripts\python.exe -m py_compile src\experiments\GA\run_py_ga_vrptw_checked.py
-.\src\.venv_pyvrp\Scripts\python.exe src\experiments\PyVRP\evrptw_checker_self_test.py
-.\src\.venv_pyvrp\Scripts\python.exe src\experiments\PyVRP\evrptw_pipeline_self_test.py --schneider src\data\evrptw_instances\c101C5.txt
+.\src\.venv_pyvrp\Scripts\python.exe -m py_compile src\experiments\methods\ga\run_py_ga_vrptw_checked.py
+.\src\.venv_pyvrp\Scripts\python.exe src\experiments\tests\evrptw_checker_self_test.py
+.\src\.venv_pyvrp\Scripts\python.exe src\experiments\tests\evrptw_pipeline_self_test.py --schneider src\data\evrptw_instances\c101C5.txt
 ```
 
 Create the result directory:
 
 ```powershell
-$ResultDir = "src\results\evrptw_four_methods_unlimited"
+$ResultDir = "src\log\week5\four-methods-unlimited"
 New-Item -ItemType Directory -Force $ResultDir | Out-Null
 ```
 
@@ -193,7 +193,7 @@ $Cases = @(
     @{ Name = "c103C15"; Clients = 15 }
 )
 
-$ResultDir = "src\results\evrptw_four_methods_unlimited"
+$ResultDir = "src\log\week5\four-methods-unlimited"
 $Py = ".\src\.venv_pyvrp\Scripts\python.exe"
 $PomoPy = ".\.venv_pomo_cuda\Scripts\python.exe"
 $env:PYTHONPATH = "src;src\experiments"
@@ -209,7 +209,7 @@ Skip this section only if retaining the four transferred PyVRP JSON files and no
 
 ```powershell
 foreach ($Case in $Cases) {
-    & $Py src\experiments\PyVRP\solve_evrptw_pipeline.py `
+    & $Py src\experiments\methods\pyvrp\solve_evrptw_pipeline.py `
         --schneider "src\data\evrptw_instances\$($Case.Name).txt" `
         --vehicles $Case.Clients `
         --runtime-seconds 10 `
@@ -222,7 +222,7 @@ foreach ($Case in $Cases) {
 
 ```powershell
 foreach ($Case in $Cases) {
-    & $PomoPy src\experiments\pomo_evrptw_repair_pipeline.py `
+    & $PomoPy src\experiments\methods\pomo\pomo_evrptw_repair_pipeline.py `
         --schneider "src\data\evrptw_instances\$($Case.Name).txt" `
         --vehicles $Case.Clients `
         --seed 1 `
@@ -238,7 +238,7 @@ If CUDA is unavailable, replace `--device cuda` with `--device cpu`. The CPU run
 
 ```powershell
 foreach ($Case in $Cases) {
-    & $Py src\experiments\vns_ts_evrptw_baseline.py `
+    & $Py src\experiments\methods\vns_ts\vns_ts_evrptw_baseline.py `
         --schneider "src\data\evrptw_instances\$($Case.Name).txt" `
         --vehicles $Case.Clients `
         --seed 1 `
@@ -254,7 +254,7 @@ The updated wrapper automatically converts Schneider customers to py-ga's contig
 
 ```powershell
 foreach ($Case in $Cases) {
-    & $Py src\experiments\GA\run_py_ga_vrptw_checked.py `
+    & $Py src\experiments\methods\ga\run_py_ga_vrptw_checked.py `
         --schneider "src\data\evrptw_instances\$($Case.Name).txt" `
         --instance $Case.Name `
         --ind-size $Case.Clients `
@@ -285,7 +285,7 @@ Method boundary: GA does not insert charging stations. Its routes are checked ag
 After all runs:
 
 ```powershell
-& $Py src\experiments\week4_collect_results.py `
+& $Py src\experiments\tools\week4_collect_results.py `
     --results-dir $ResultDir `
     --output-csv "$ResultDir\four_methods_summary.csv" `
     --output-md "$ResultDir\four_methods_summary.md"

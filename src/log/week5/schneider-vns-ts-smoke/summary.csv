@@ -1,0 +1,4 @@
+instance,clients,method,status,feasible,total_distance,vehicle_count,runtime_seconds,served_customers,missing_customers,duplicate_customers,time_window_violations,capacity_violations,energy_violations,charging_count,charging_time,timeout_or_unsupported_reason,source_file
+c101C10,10,Schneider-2014 hybrid VNS/TS E-VRPTW,solved,True,400,3,1.733,10,0,0,0,0,0,5,776,,src\results\schneider_vns_ts_smoke\c101C10_vns_ts_schneider2014_smoke.json
+c101C5,5,Schneider-2014 hybrid VNS/TS E-VRPTW,solved,True,259,2,0.213,5,0,0,0,0,0,3,477,,src\results\schneider_vns_ts_smoke\c101C5_vns_ts_schneider2014_smoke.json
+c103C15,15,Schneider-2014 hybrid VNS/TS E-VRPTW,solved,True,405,3,3.116,15,0,0,0,0,0,4,863,,src\results\schneider_vns_ts_smoke\c103C15_vns_ts_schneider2014_smoke.json

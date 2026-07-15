@@ -1,0 +1,30 @@
+﻿2026-07-11 20:28:44	RUNNER_START	pid=12088
+2026-07-11 20:28:44	SKIP_BY_USER	POMO c101_21 was interrupted and skipped by user request.
+2026-07-11 20:28:44	START	pomo_c101C5
+2026-07-11 20:28:44	COMMAND	E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\.venv\Scripts\python.exe src\experiments\pomo_evrptw_repair_pipeline.py --schneider src\data\evrptw_instances\c101C5.txt --vehicles 5 --seed 1 --device cuda --max-candidates 4 --output E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c101C5_pomo_repair.json
+2026-07-11 20:28:47	DONE	pomo_c101C5	exit=0	elapsed_s=2.6
+2026-07-11 20:28:47	START	pomo_c101C10
+2026-07-11 20:28:47	COMMAND	E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\.venv\Scripts\python.exe src\experiments\pomo_evrptw_repair_pipeline.py --schneider src\data\evrptw_instances\c101C10.txt --vehicles 10 --seed 1 --device cuda --max-candidates 4 --output E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c101C10_pomo_repair.json
+2026-07-11 20:28:51	DONE	pomo_c101C10	exit=0	elapsed_s=4.3
+2026-07-11 20:28:51	START	pomo_c103C15
+2026-07-11 20:28:51	COMMAND	E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\.venv\Scripts\python.exe src\experiments\pomo_evrptw_repair_pipeline.py --schneider src\data\evrptw_instances\c103C15.txt --vehicles 15 --seed 1 --device cuda --max-candidates 4 --output E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c103C15_pomo_repair.json
+2026-07-11 20:28:57	DONE	pomo_c103C15	exit=0	elapsed_s=5.9
+2026-07-11 20:28:57	START	vns_ts_c101C5
+2026-07-11 20:28:57	COMMAND	E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\.venv\Scripts\python.exe src\experiments\vns_ts_evrptw_baseline.py --schneider src\data\evrptw_instances\c101C5.txt --vehicles 5 --seed 1 --iterations 80 --neighbors-per-iteration 20 --output E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c101C5_vns_ts.json
+2026-07-11 20:29:08	DONE	vns_ts_c101C5	exit=0	elapsed_s=11.4
+2026-07-11 20:29:08	START	vns_ts_c101C10
+2026-07-11 20:29:08	COMMAND	E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\.venv\Scripts\python.exe src\experiments\vns_ts_evrptw_baseline.py --schneider src\data\evrptw_instances\c101C10.txt --vehicles 10 --seed 1 --iterations 80 --neighbors-per-iteration 20 --output E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c101C10_vns_ts.json
+2026-07-11 20:34:06	DONE	vns_ts_c101C10	exit=0	elapsed_s=297.4
+2026-07-11 20:34:06	START	vns_ts_c103C15
+2026-07-11 20:34:06	COMMAND	E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\.venv\Scripts\python.exe src\experiments\vns_ts_evrptw_baseline.py --schneider src\data\evrptw_instances\c103C15.txt --vehicles 15 --seed 1 --iterations 80 --neighbors-per-iteration 20 --output E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c103C15_vns_ts.json
+2026-07-11 20:41:58	DONE	vns_ts_c103C15	exit=0	elapsed_s=472.8
+2026-07-11 20:41:58	START	pyga_c101C5
+2026-07-11 20:41:58	COMMAND	E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\.venv\Scripts\python.exe src\experiments\GA\run_py_ga_vrptw_checked.py --schneider src\data\evrptw_instances\c101C5.txt --instance c101C5 --ind-size 5 --vehicles 5 --pop-size 80 --generations 50 --seed 1 --customize-data --output E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c101C5_pyga_checked.json --output-csv E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c101C5_pyga.csv --output-log E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c101C5_pyga.log
+2026-07-11 20:41:59	DONE	pyga_c101C5	exit=0	elapsed_s=0.3
+2026-07-11 20:41:59	START	pyga_c101C10
+2026-07-11 20:41:59	COMMAND	E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\.venv\Scripts\python.exe src\experiments\GA\run_py_ga_vrptw_checked.py --schneider src\data\evrptw_instances\c101C10.txt --instance c101C10 --ind-size 10 --vehicles 10 --pop-size 80 --generations 50 --seed 1 --customize-data --output E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c101C10_pyga_checked.json --output-csv E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c101C10_pyga.csv --output-log E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c101C10_pyga.log
+2026-07-11 20:41:59	DONE	pyga_c101C10	exit=0	elapsed_s=0.3
+2026-07-11 20:41:59	START	pyga_c103C15
+2026-07-11 20:41:59	COMMAND	E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\.venv\Scripts\python.exe src\experiments\GA\run_py_ga_vrptw_checked.py --schneider src\data\evrptw_instances\c103C15.txt --instance c103C15 --ind-size 15 --vehicles 15 --pop-size 80 --generations 50 --seed 1 --customize-data --output E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c103C15_pyga_checked.json --output-csv E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c103C15_pyga.csv --output-log E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c103C15_pyga.log
+2026-07-11 20:41:59	DONE	pyga_c103C15	exit=0	elapsed_s=0.3
+2026-07-11 20:41:59	RUNNER_DONE

@@ -1,0 +1,17 @@
+instance,clients,method,status,feasible,total_distance,vehicle_count,runtime_seconds,served_customers,missing_customers,duplicate_customers,time_window_violations,capacity_violations,energy_violations,vehicle_limit_violations,charging_count,charging_time,timeout_or_unsupported_reason,source_file
+c101C10,10,PyVRP VRPTW + EVRP-TW station repair,solved,True,387,3,10.151,10,0,0,0,0,0,0,5,536,,src\log\week5\four-methods-vehicle-limit\c101C10_pyvrp_repair.json
+c101C10,10,Schneider-2014 hybrid VNS/TS E-VRPTW,solved,True,392,3,64.957,10,0,0,0,0,0,0,5,776,,src\log\week5\four-methods-vehicle-limit\c101C10_vns_ts.json
+c101C10,10,py-ga-VRPTW custom + shared checker,unsolved,False,470,5,0.118,10,0,0,0,0,5,1,0,0,,src\log\week5\four-methods-vehicle-limit\c101C10_pyga_checked.json
+c101C10,10,yd-kwon/POMO CVRP + EVRP-TW repair,unsolved,False,151,1,1.696,2,8,0,0,0,0,0,2,255,,src\log\week5\four-methods-vehicle-limit\c101C10_pomo_repair.json
+c101C5,5,PyVRP VRPTW + EVRP-TW station repair,solved,True,264,2,10.014,5,0,0,0,0,0,0,3,378,,src\log\week5\four-methods-vehicle-limit\c101C5_pyvrp_repair.json
+c101C5,5,Schneider-2014 hybrid VNS/TS E-VRPTW,solved,True,259,2,10.708,5,0,0,0,0,0,0,3,477,,src\log\week5\four-methods-vehicle-limit\c101C5_vns_ts.json
+c101C5,5,py-ga-VRPTW custom + shared checker,unsolved,False,240,2,0.094,5,0,0,0,0,3,0,0,0,,src\log\week5\four-methods-vehicle-limit\c101C5_pyga_checked.json
+c101C5,5,yd-kwon/POMO CVRP + EVRP-TW repair,solved,True,264,2,1.017,5,0,0,0,0,0,0,3,378,,src\log\week5\four-methods-vehicle-limit\c101C5_pomo_repair.json
+c101_21,100,PyVRP VRPTW + EVRP-TW station repair,solved,True,1055,12,263.78,100,0,0,0,0,0,0,7,613,,src\log\week5\four-methods-vehicle-limit\c101_21_pyvrp_repair.json
+c101_21,100,Schneider-2014 hybrid VNS/TS E-VRPTW,solved,True,1085,13,4674.126,100,0,0,0,0,0,0,8,1074,,src\log\week5\four-methods-vehicle-limit\c101_21_vns_ts.json
+c101_21,100,py-ga-VRPTW custom + shared checker,unsolved,False,4644,51,0.615,100,0,0,0,0,52,1,0,0,,src\log\week5\four-methods-vehicle-limit\c101_21_pyga_checked.json
+c101_21,100,yd-kwon/POMO CVRP + EVRP-TW repair,unsolved,False,1749,24,4235.942,33,67,0,0,0,0,0,7,170,,src\log\week5\four-methods-vehicle-limit\c101_21_pomo_repair.json
+c103C15,15,PyVRP VRPTW + EVRP-TW station repair,solved,True,410,4,10.318,15,0,0,0,0,0,0,5,362,,src\log\week5\four-methods-vehicle-limit\c103C15_pyvrp_repair.json
+c103C15,15,Schneider-2014 hybrid VNS/TS E-VRPTW,solved,True,384,3,114.764,15,0,0,0,0,0,0,5,873,,src\log\week5\four-methods-vehicle-limit\c103C15_vns_ts.json
+c103C15,15,py-ga-VRPTW custom + shared checker,unsolved,False,558,4,0.139,15,0,0,0,0,12,0,0,0,,src\log\week5\four-methods-vehicle-limit\c103C15_pyga_checked.json
+c103C15,15,yd-kwon/POMO CVRP + EVRP-TW repair,unsolved,False,348,3,2.977,11,4,0,0,0,0,0,4,399,,src\log\week5\four-methods-vehicle-limit\c103C15_pomo_repair.json
