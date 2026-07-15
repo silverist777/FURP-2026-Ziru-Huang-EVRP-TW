@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import re
+from dataclasses import dataclass
 from pathlib import Path
 
 import matplotlib
@@ -30,6 +31,17 @@ COLORS = {
     "py-ga": "#FF9900",
     "GA": "#FF9900",
 }
+
+ROUTE_COLORS = list(plt.get_cmap("tab20").colors)
+ROUTE_LINESTYLES = ["-", "--", "-.", ":"]
+
+
+@dataclass(frozen=True)
+class Location:
+    name: str
+    kind: str
+    x: float
+    y: float
 
 
 def configure_style() -> None:
@@ -72,6 +84,153 @@ def short_method(value: str) -> str:
 
 def read_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def read_evrptw_locations(path: Path) -> dict[str, Location]:
+    """Read the location table at the start of a Schneider EVRP-TW file."""
+    locations: dict[str, Location] = {}
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line:
+            if locations:
+                break
+            continue
+        fields = line.split()
+        if fields[0].lower() == "stringid":
+            continue
+        if len(fields) < 4 or fields[1].lower() not in {"d", "f", "c"}:
+            if locations:
+                break
+            continue
+        locations[fields[0]] = Location(fields[0], fields[1].lower(), float(fields[2]), float(fields[3]))
+    if not locations:
+        raise ValueError(f"No EVRP-TW locations found in {path}")
+    return locations
+
+
+def route_visits(route: object, depot_name: str) -> list[str]:
+    """Normalize the route formats used by the four method wrappers."""
+    if isinstance(route, dict):
+        visits = route.get("visits") or route.get("route") or route.get("nodes") or []
+    else:
+        visits = route
+    normalized = [str(value) for value in visits]
+    if not normalized or normalized[0] != depot_name:
+        normalized.insert(0, depot_name)
+    if normalized[-1] != depot_name:
+        normalized.append(depot_name)
+    return normalized
+
+
+def best_feasible_records(summary_path: Path) -> pd.DataFrame:
+    """Select one minimum-distance checker-feasible result per instance."""
+    frame = pd.read_csv(summary_path)
+    frame["feasible_bool"] = frame["feasible"].astype(str).str.lower().eq("true")
+    frame = frame[frame["feasible_bool"] & frame["total_distance"].notna()].copy()
+    if frame.empty:
+        raise ValueError(f"No feasible results in {summary_path}")
+    # Stable sorting makes ties reproducible and preserves the summary's method order.
+    frame["_row_order"] = np.arange(len(frame))
+    frame = frame.sort_values(["instance", "total_distance", "_row_order"], kind="stable")
+    return frame.drop_duplicates("instance", keep="first")
+
+
+def plot_best_route_petals(summary_path: Path, output: Path, title: str) -> None:
+    """Plot the best feasible route set for every instance as depot-centred petals."""
+    selected = best_feasible_records(summary_path)
+    instance_order = ["c101C5", "c101C10", "c103C15", "c101_21"]
+    selected["_instance_order"] = selected["instance"].map(
+        {name: index for index, name in enumerate(instance_order)}
+    ).fillna(len(instance_order))
+    selected = selected.sort_values(["_instance_order", "instance"], kind="stable")
+
+    columns = 2
+    rows = int(np.ceil(len(selected) / columns))
+    fig, axes = plt.subplots(rows, columns, figsize=(14, 6.2 * rows), squeeze=False)
+    for ax, (_, record) in zip(axes.flat, selected.iterrows()):
+        instance_name = str(record["instance"])
+        source_path = ROOT / Path(str(record["source_file"]))
+        data = read_json(source_path)
+        instance_path = ROOT / "src" / "data" / "evrptw_instances" / f"{instance_name}.txt"
+        locations = read_evrptw_locations(instance_path)
+        depots = [location for location in locations.values() if location.kind == "d"]
+        if not depots:
+            raise ValueError(f"No depot in {instance_path}")
+        depot = depots[0]
+        routes = data.get("routes") or []
+
+        for route_index, route in enumerate(routes):
+            visits = route_visits(route, depot.name)
+            unknown = [name for name in visits if name not in locations]
+            if unknown:
+                raise ValueError(f"Unknown locations in {source_path}: {unknown}")
+            xs = [locations[name].x for name in visits]
+            ys = [locations[name].y for name in visits]
+            color = ROUTE_COLORS[route_index % len(ROUTE_COLORS)]
+            linestyle = ROUTE_LINESTYLES[(route_index // len(ROUTE_COLORS)) % len(ROUTE_LINESTYLES)]
+            ax.plot(xs, ys, color=color, linestyle=linestyle, linewidth=1.5, alpha=0.82, zorder=1)
+
+        customers = [location for location in locations.values() if location.kind == "c"]
+        stations = [location for location in locations.values() if location.kind == "f"]
+        ax.scatter(
+            [location.x for location in customers],
+            [location.y for location in customers],
+            s=25,
+            marker="o",
+            facecolor="white",
+            edgecolor="#222222",
+            linewidth=0.7,
+            zorder=3,
+            label="Customer",
+        )
+        ax.scatter(
+            [location.x for location in stations],
+            [location.y for location in stations],
+            s=38,
+            marker="s",
+            facecolor="#FFD966",
+            edgecolor="#7F6000",
+            linewidth=0.8,
+            zorder=4,
+            label="Charging station",
+        )
+        ax.scatter(
+            [depot.x],
+            [depot.y],
+            s=90,
+            marker="D",
+            facecolor="#CC0000",
+            edgecolor="white",
+            linewidth=1.0,
+            zorder=5,
+            label="Depot",
+        )
+        if len(customers) <= 15:
+            for location in customers:
+                ax.annotate(location.name, (location.x, location.y), xytext=(4, 3), textcoords="offset points", fontsize=7)
+            for location in stations:
+                ax.annotate(location.name, (location.x, location.y), xytext=(4, 3), textcoords="offset points", fontsize=7)
+
+        method = short_method(str(record["method"]))
+        ax.set_title(
+            f"{instance_name} · {method}\n"
+            f"distance={float(record['total_distance']):,.0f} · routes={int(record['vehicle_count'])}"
+        )
+        ax.set_xlabel("x coordinate")
+        ax.set_ylabel("y coordinate")
+        ax.set_aspect("equal", adjustable="datalim")
+        ax.margins(0.08)
+
+    for ax in axes.flat[len(selected):]:
+        ax.set_visible(False)
+    handles, labels = axes.flat[0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc="lower center", ncol=3, frameon=False)
+    fig.suptitle(title + "\nminimum distance among checker-feasible solutions", fontsize=14)
+    fig.subplots_adjust(bottom=0.07, top=0.91, hspace=0.28, wspace=0.18)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(output, dpi=180, bbox_inches="tight")
+    plt.close(fig)
+    print(output.relative_to(ROOT))
 
 
 def metric_record(path: Path) -> dict | None:
@@ -393,10 +552,20 @@ def main() -> None:
         RESULTS / "week5" / "four-methods-unlimited" / "overview.png",
         "Week 5 comparison before shared fleet cap",
     )
+    plot_best_route_petals(
+        LOG / "week5" / "four-methods-unlimited" / "four_methods_summary.csv",
+        RESULTS / "week5" / "four-methods-unlimited" / "best-route-petals.png",
+        "Week 5 unlimited-fleet best routes",
+    )
     plot_summary_csv(
         LOG / "week5" / "four-methods-vehicle-limit" / "four_methods_summary.csv",
         RESULTS / "week5" / "four-methods-vehicle-limit" / "overview.png",
         "Week 5 shared-fleet comparison",
+    )
+    plot_best_route_petals(
+        LOG / "week5" / "four-methods-vehicle-limit" / "four_methods_summary.csv",
+        RESULTS / "week5" / "four-methods-vehicle-limit" / "best-route-petals.png",
+        "Week 5 vehicle-limited best routes",
     )
     plot_summary_csv(
         LOG / "week5" / "schneider-vns-ts-smoke" / "summary.csv",

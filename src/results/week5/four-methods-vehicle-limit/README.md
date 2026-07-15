@@ -24,6 +24,8 @@ Numbers in the method cells are total distance and vehicles used. Only feasible 
 
 The machine-readable table and individual JSON records are in [`../../../log/week5/four-methods-vehicle-limit/`](../../../log/week5/four-methods-vehicle-limit/). The readable full table is [`summary.md`](summary.md), and [`overview.png`](overview.png) visualizes distance, runtime, vehicles, and infeasibility. The `reason` column is reserved for timeout or unsupported-condition text; blank values mean that the detailed failure is already represented by the numeric violation columns.
 
+[`best-route-petals.png`](best-route-petals.png) shows the minimum-distance checker-feasible route set for each instance. Customers are circles, charging stations are squares, the depot is a diamond, and every depot-to-depot vehicle route forms one petal. The selected methods are VNS/TS for c101C5 and c103C15, and PyVRP for c101C10 and c101_21.
+
 ## Reproduction
 
 From the repository root:
