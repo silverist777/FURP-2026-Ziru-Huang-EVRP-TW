@@ -40,7 +40,7 @@
 - Added and tested the `POMO100 cluster + EVRP-TW repair` pipeline, which decomposes the 1000-customer instance into 100-customer clusters, runs the retained CVRP100 POMO checkpoint, then repairs and validates the full solution.
 - Added custom Solomon/Holmberger input support for `py-ga-VRPTW`, plus a checked wrapper that replays the GA route with the shared project checker.
 - Ran four checked methods: `PyVRP VRPTW + EVRP-TW station repair`, `POMO100 cluster + EVRP-TW repair`, `Tabu-assisted VNS EVRP-TW`, and `py-ga-VRPTW custom + shared checker`.
-- Generated the Week 4 result directory and summary tables under `src/results/week4_vns_ts_comparison/`.
+- Stored Week 4 raw records under `src/log/week4/vns-ts-comparison/` and reader-facing summaries/plots under `src/results/week4/vns-ts-comparison/`.
 - Finished the Week 4 report in `docs/WEEK4.md`. All eight final rows were feasible, served all customers, and had zero missing, duplicate, time-window, capacity, and energy violations.
 - Main result: PyVRP is still the best distance baseline; POMO100 + repair is the strongest speed/quality hybrid candidate; VNS/TS is feasible but needs stronger search; py-ga is runnable at 1000 customers but uses too many fragmented routes.
 
@@ -61,12 +61,12 @@
 **Links (optional):**
 **Links (optional):**
 - [Week 4 report](WEEK4.md)
-- [Summary CSV](../src/results/week4_vns_ts_comparison/week4_summary.csv)
-- [Summary Markdown](../src/results/week4_vns_ts_comparison/week4_summary.md)
-- [Result directory](../src/results/week4_vns_ts_comparison/)
-- [GA checked wrapper](../src/experiments/GA/run_py_ga_vrptw_checked.py)
-- [VNS/TS baseline](../src/experiments/vns_ts_evrptw_baseline.py)
-- [POMO decomposed pipeline](../src/experiments/pomo_decomposed_evrptw_pipeline.py)
+- [Raw records and summary CSV](../src/log/week4/vns-ts-comparison/)
+- [Summary Markdown](../src/results/week4/vns-ts-comparison/summary.md)
+- [Visualization](../src/results/week4/vns-ts-comparison/overview.png)
+- [GA checked wrapper](../src/experiments/methods/ga/run_py_ga_vrptw_checked.py)
+- [VNS/TS baseline](../src/experiments/methods/vns_ts/vns_ts_evrptw_baseline.py)
+- [POMO decomposed pipeline](../src/experiments/methods/pomo/pomo_decomposed_evrptw_pipeline.py)
 
 
 
@@ -97,9 +97,9 @@
 
 **Links (optional):**
 - Week 3 report: `docs/WEEK3.md`
-- Experiment script: `src/experiments/week3_pyga_pyvrp_pomo.py`
-- Summary results: `src/results/week3/week3_summary.md`
-- Plots: `src/results/week3/plots/`
+- Archived experiment script: `src/experiments/legacy/cvrp/week3_pyga_pyvrp_pomo.py`
+- Summary results: `src/results/week3/baseline-comparison/summary.md`
+- Plots: `src/results/week3/baseline-comparison/plots/`
 - Commits: `5ffe517`, `da5d4b8`, `8e015f7`, `a655fa6`
 
 ### Week 2 — 2026/6/24

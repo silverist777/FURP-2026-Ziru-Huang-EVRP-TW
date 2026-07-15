@@ -50,10 +50,9 @@ For every run, the experiment records:
 
 Raw and cleaned outputs:
 
-- Raw records: [week3_raw_records.csv](../src/results/week3_ind2route_hard_tw/week3_raw_records.csv)
-- Aggregated table: [week3_summary_by_method_size.csv](../src/results/week3_ind2route_hard_tw/week3_summary_by_method_size.csv)
-- Markdown summary: [week3_summary.md](../src/results/week3_ind2route_hard_tw/week3_summary.md)
-- Raw logs/py-ga curves: [raw/](../src/results/week3_ind2route_hard_tw/raw/)
+- Raw records and py-ga logs: [`src/log/week3/hard-tw-comparison/`](../src/log/week3/hard-tw-comparison/)
+- Markdown summary: [`summary.md`](../src/results/week3/hard-tw-comparison/summary.md)
+- Visualizations: [`plots/`](../src/results/week3/hard-tw-comparison/plots/)
 
 ## Step 4: Run Repeated Trials
 
@@ -72,7 +71,7 @@ git submodule update --init external/POMO
 
 src/.venv_pyvrp/bin/python src/experiments/week3_pyga_pyvrp_pomo.py \
   --method pyga \
-  --output-dir src/results/week3_ind2route_hard_tw \
+  --output-dir src/log/week3/hard-tw-comparison \
   --sizes 20 50 100 \
   --seeds 1234 2026 114514 \
   --pyga-pop-size 80 \
@@ -80,7 +79,7 @@ src/.venv_pyvrp/bin/python src/experiments/week3_pyga_pyvrp_pomo.py \
 
 src/.venv_pyvrp/bin/python src/experiments/week3_pyga_pyvrp_pomo.py \
   --method pyvrp \
-  --output-dir src/results/week3_ind2route_hard_tw \
+  --output-dir src/log/week3/hard-tw-comparison \
   --sizes 20 50 100 \
   --seeds 1234 2026 114514 \
   --pyvrp-runtime-seconds 1
@@ -88,14 +87,15 @@ src/.venv_pyvrp/bin/python src/experiments/week3_pyga_pyvrp_pomo.py \
 PYTHONPYCACHEPREFIX=/tmp/furp_week3_pycache python3 \
   src/experiments/week3_pyga_pyvrp_pomo.py \
   --method pomo \
-  --output-dir src/results/week3_ind2route_hard_tw \
+  --output-dir src/log/week3/hard-tw-comparison \
   --sizes 20 50 100 \
   --seeds 1234 2026 114514 \
   --device cpu
 
 src/.venv_pyvrp/bin/python src/experiments/week3_pyga_pyvrp_pomo.py \
   --method aggregate \
-  --output-dir src/results/week3_ind2route_hard_tw
+  --output-dir src/log/week3/hard-tw-comparison \
+  --result-dir src/results/week3/hard-tw-comparison
 ```
 
 Environment:
@@ -127,19 +127,19 @@ Aggregated results:
 
 Figures:
 
-![Objective by size](../src/results/week3_ind2route_hard_tw/plots/objective_by_size.png)
+![Objective by size](../src/results/week3/hard-tw-comparison/plots/objective_by_size.png)
 
-![Runtime by size](../src/results/week3_ind2route_hard_tw/plots/runtime_by_size.png)
+![Runtime by size](../src/results/week3/hard-tw-comparison/plots/runtime_by_size.png)
 
 
-![py-ga convergence for seed 1234](../src/results/week3_ind2route_hard_tw/plots/pyga_convergence_seed1234.png)
+![py-ga convergence for seed 1234](../src/results/week3/hard-tw-comparison/plots/pyga_convergence_seed1234.png)
 
 
 The convergence figure above plots the best-so-far objective, so it becomes flat
 after the GA finds no better historical best. The per-generation best objective
 is plotted separately below.
 
-![py-ga per-generation best objective for seed 1234](../src/results/week3_ind2route_hard_tw/plots/pyga_generation_best_seed1234.png)
+![py-ga per-generation best objective for seed 1234](../src/results/week3/hard-tw-comparison/plots/pyga_generation_best_seed1234.png)
 
 
 

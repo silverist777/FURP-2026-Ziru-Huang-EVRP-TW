@@ -57,9 +57,9 @@ For every checked JSON result, the experiment records:
 
 Raw and cleaned outputs:
 
-- Summary CSV: [week4_summary.csv](../src/results/week4_vns_ts_comparison/week4_summary.csv)
-- Summary Markdown: [week4_summary.md](../src/results/week4_vns_ts_comparison/week4_summary.md)
-- Result directory: [week4_vns_ts_comparison](../src/results/week4_vns_ts_comparison/)
+- Machine CSV and solver records: [`src/log/week4/vns-ts-comparison/`](../src/log/week4/vns-ts-comparison/)
+- Summary Markdown: [`summary.md`](../src/results/week4/vns-ts-comparison/summary.md)
+- Visualization: [`overview.png`](../src/results/week4/vns-ts-comparison/overview.png)
 
 Because `C101` and `R1_10_9` are VRPTW benchmark files without charging station
 or battery fields, the converted project instances disable energy constraints.
@@ -83,69 +83,71 @@ Environment:
 Commands:
 
 ```bash
-mkdir -p src/results/week4_vns_ts_comparison
+mkdir -p src/log/week4/vns-ts-comparison src/results/week4/vns-ts-comparison
 
-src/.venv_pyvrp/bin/python src/experiments/PyVRP/solve_evrptw_pipeline.py \
+src/.venv_pyvrp/bin/python src/experiments/methods/pyvrp/solve_evrptw_pipeline.py \
   --solomon src/data/Solomon/C101.txt \
   --runtime-seconds 5 \
-  --output src/results/week4_vns_ts_comparison/C101_pyvrp_repair.json
+  --output src/log/week4/vns-ts-comparison/C101_pyvrp_repair.json
 
-src/.venv_pyvrp/bin/python src/experiments/PyVRP/solve_evrptw_pipeline.py \
+src/.venv_pyvrp/bin/python src/experiments/methods/pyvrp/solve_evrptw_pipeline.py \
   --solomon src/data/Holmberger/R1_10_9.txt \
   --runtime-seconds 10 \
-  --output src/results/week4_vns_ts_comparison/R1_10_9_pyvrp_repair.json
+  --output src/log/week4/vns-ts-comparison/R1_10_9_pyvrp_repair.json
 
-python3 src/experiments/pomo_decomposed_evrptw_pipeline.py \
+python3 src/experiments/methods/pomo/pomo_decomposed_evrptw_pipeline.py \
   --solomon src/data/Solomon/C101.txt \
   --cluster-size 100 \
   --max-candidates 4 \
-  --output src/results/week4_vns_ts_comparison/C101_pomo100_cluster_repair.json
+  --output src/log/week4/vns-ts-comparison/C101_pomo100_cluster_repair.json
 
-python3 src/experiments/pomo_decomposed_evrptw_pipeline.py \
+python3 src/experiments/methods/pomo/pomo_decomposed_evrptw_pipeline.py \
   --solomon src/data/Holmberger/R1_10_9.txt \
   --cluster-size 100 \
   --max-candidates 4 \
-  --output src/results/week4_vns_ts_comparison/R1_10_9_pomo100_cluster_repair.json
+  --output src/log/week4/vns-ts-comparison/R1_10_9_pomo100_cluster_repair.json
 
-src/.venv_pyvrp/bin/python src/experiments/vns_ts_evrptw_baseline.py \
+src/.venv_pyvrp/bin/python src/experiments/methods/vns_ts/vns_ts_evrptw_baseline.py \
   --solomon src/data/Solomon/C101.txt \
   --iterations 80 \
   --neighbors-per-iteration 20 \
-  --output src/results/week4_vns_ts_comparison/C101_vns_ts.json
+  --output src/log/week4/vns-ts-comparison/C101_vns_ts.json
 
-src/.venv_pyvrp/bin/python src/experiments/vns_ts_evrptw_baseline.py \
+src/.venv_pyvrp/bin/python src/experiments/methods/vns_ts/vns_ts_evrptw_baseline.py \
   --solomon src/data/Holmberger/R1_10_9.txt \
   --iterations 40 \
   --neighbors-per-iteration 10 \
-  --output src/results/week4_vns_ts_comparison/R1_10_9_vns_ts.json
+  --output src/log/week4/vns-ts-comparison/R1_10_9_vns_ts.json
 
-python3 src/experiments/GA/solomon_to_pyga_json.py src/data/Solomon/C101.txt
-python3 src/experiments/GA/solomon_to_pyga_json.py src/data/Holmberger/R1_10_9.txt
+python3 src/experiments/tools/solomon_to_pyga_json.py src/data/Solomon/C101.txt
+python3 src/experiments/tools/solomon_to_pyga_json.py src/data/Holmberger/R1_10_9.txt
 
-src/.venv_pyvrp/bin/python src/experiments/GA/run_py_ga_vrptw_checked.py \
+src/.venv_pyvrp/bin/python src/experiments/methods/ga/run_py_ga_vrptw_checked.py \
   --solomon src/data/Solomon/C101.txt \
   --instance C101 \
   --ind-size 100 \
   --pop-size 80 \
   --generations 50 \
   --customize-data \
-  --output src/results/week4_vns_ts_comparison/C101_pyga_checked.json \
-  --output-csv src/results/week4_vns_ts_comparison/C101_pyga.csv \
-  --output-log src/results/week4_vns_ts_comparison/C101_pyga.log
+  --output src/log/week4/vns-ts-comparison/C101_pyga_checked.json \
+  --output-csv src/log/week4/vns-ts-comparison/C101_pyga.csv \
+  --output-log src/log/week4/vns-ts-comparison/C101_pyga.log
 
-src/.venv_pyvrp/bin/python src/experiments/GA/run_py_ga_vrptw_checked.py \
+src/.venv_pyvrp/bin/python src/experiments/methods/ga/run_py_ga_vrptw_checked.py \
   --solomon src/data/Holmberger/R1_10_9.txt \
   --instance R1_10_9 \
   --ind-size 1000 \
   --pop-size 40 \
   --generations 10 \
   --customize-data \
-  --output src/results/week4_vns_ts_comparison/R1_10_9_pyga_checked.json \
-  --output-csv src/results/week4_vns_ts_comparison/R1_10_9_pyga.csv \
-  --output-log src/results/week4_vns_ts_comparison/R1_10_9_pyga.log
+  --output src/log/week4/vns-ts-comparison/R1_10_9_pyga_checked.json \
+  --output-csv src/log/week4/vns-ts-comparison/R1_10_9_pyga.csv \
+  --output-log src/log/week4/vns-ts-comparison/R1_10_9_pyga.log
 
-python3 src/experiments/week4_collect_results.py \
-  --results-dir src/results/week4_vns_ts_comparison
+python3 src/experiments/tools/week4_collect_results.py \
+  --results-dir src/log/week4/vns-ts-comparison \
+  --output-csv src/log/week4/vns-ts-comparison/week4_summary.csv \
+  --output-md src/results/week4/vns-ts-comparison/summary.md
 ```
 
 ## Step 5: Organize Results Clearly

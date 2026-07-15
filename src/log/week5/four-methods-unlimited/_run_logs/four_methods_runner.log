@@ -1,0 +1,15 @@
+﻿2026-07-11 20:01:12	RUNNER_START	pid=14864
+2026-07-11 20:01:12	START	pyvrp_c101_21
+2026-07-11 20:01:12	COMMAND	E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\.venv\Scripts\python.exe src\experiments\PyVRP\solve_evrptw_pipeline.py --schneider src\data\evrptw_instances\c101_21.txt --vehicles 100 --runtime-seconds 10 --seed 1 --output E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c101_21_pyvrp_repair.json
+2026-07-11 20:04:51	DONE	pyvrp_c101_21	exit=0	elapsed_s=219.6
+2026-07-11 20:04:51	START	pyvrp_c101C5
+2026-07-11 20:04:51	COMMAND	E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\.venv\Scripts\python.exe src\experiments\PyVRP\solve_evrptw_pipeline.py --schneider src\data\evrptw_instances\c101C5.txt --vehicles 5 --runtime-seconds 10 --seed 1 --output E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c101C5_pyvrp_repair.json
+2026-07-11 20:05:02	DONE	pyvrp_c101C5	exit=0	elapsed_s=10.2
+2026-07-11 20:05:02	START	pyvrp_c101C10
+2026-07-11 20:05:02	COMMAND	E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\.venv\Scripts\python.exe src\experiments\PyVRP\solve_evrptw_pipeline.py --schneider src\data\evrptw_instances\c101C10.txt --vehicles 10 --runtime-seconds 10 --seed 1 --output E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c101C10_pyvrp_repair.json
+2026-07-11 20:05:12	DONE	pyvrp_c101C10	exit=0	elapsed_s=10.4
+2026-07-11 20:05:12	START	pyvrp_c103C15
+2026-07-11 20:05:12	COMMAND	E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\.venv\Scripts\python.exe src\experiments\PyVRP\solve_evrptw_pipeline.py --schneider src\data\evrptw_instances\c103C15.txt --vehicles 15 --runtime-seconds 10 --seed 1 --output E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c103C15_pyvrp_repair.json
+2026-07-11 20:05:22	DONE	pyvrp_c103C15	exit=0	elapsed_s=10.5
+2026-07-11 20:05:22	START	pomo_c101_21
+2026-07-11 20:05:22	COMMAND	E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\.venv\Scripts\python.exe src\experiments\pomo_evrptw_repair_pipeline.py --schneider src\data\evrptw_instances\c101_21.txt --vehicles 100 --seed 1 --device cuda --max-candidates 4 --output E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c101_21_pomo_repair.json

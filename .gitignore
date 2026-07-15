@@ -21,10 +21,13 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+_tmp_*.ps1
 
 # Data & large files (link to sources instead of committing)
 *.csv
 *.tsv
+!src/log/**/*.csv
+!src/log/**/*.tsv
 *.zip
 *.tar.gz
 *.h5
@@ -38,7 +41,7 @@ src/paper/
 src/results/*_solution.json
 !src/results/schneider_sample_solution.json
 
-# Secrets 鈥?NEVER commit credentials
+# Secrets — NEVER commit credentials
 .env
 *.key
 secrets.*

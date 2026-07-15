@@ -1,0 +1,3598 @@
+{
+  "status": "unsolved",
+  "source": {
+    "path": "src\\data\\evrptw_instances\\c101_21.txt",
+    "instance": "c101_21",
+    "problem_type": "EVRPTW"
+  },
+  "experiment_record": {
+    "record_schema": "week03_experiment_record_v1",
+    "instance_name": "c101_21",
+    "instance_size": 100,
+    "method_name": "py-ga-VRPTW custom + shared checker",
+    "objective_value": 4644.0,
+    "runtime_seconds": 0.615,
+    "feasibility_status": "infeasible",
+    "vehicles_used": 51,
+    "constraint_violations": "energy_violations=52; vehicle_limit_violations=1",
+    "random_seed": 1,
+    "best_solution_found": "[[\"C83\"], [\"C18\", \"C10\"], [\"C82\", \"C51\"], [\"C21\", \"C24\", \"C29\", \"C37\"], [\"C14\", \"C7\"], [\"C78\"], [\"C28\"], [\"C1\", \"C77\", \"C88\"], [\"C2\", \"C97\", \"C57\"], [\"C25\", \"C79\", \"C49\"], [\"C39\"], [\"C20\", \"C44\", \"C48\", \"C80\", \"C91\"], [\"C81\"], [\"C76\", \"C84\", \"C55\"], [\"C58\", \"C72\"], [\"C22\", \"C3\"], [\"C34\", \"C30\", \"C15\"], [\"C100\", \"C52\"], [\"C6\", \"C5\"], [\"C73\", \"C89\"], [\"C47\", \"C9\"], [\"C16\"], [\"C96\", \"C53\", \"C46\", \"C35\"], [\"C94\"], [\"C64\", \"C69\"], [\"C70\"], [\"C92\"], [\"C33\", \"C13\"], [\"C93\"], [\"C65\"], [\"C90\", \"C12\", \"C27\", \"C54\"], [\"C32\", \"C43\"], [\"C62\"], [\"C60\", \"C45\"], [\"C38\"], [\"C59\", \"C85\"], [\"C26\", \"C99\", \"C66\"], [\"C41\", \"C61\"], [\"C71\", \"C8\"], [\"C36\"], [\"C63\"], [\"C67\", \"C56\"], [\"C98\"], [\"C74\", \"C4\"], [\"C31\"], [\"C86\"], [\"C87\"], [\"C75\", \"C68\"], [\"C40\", \"C50\"], [\"C42\"], [\"C23\", \"C95\", \"C19\", \"C17\", \"C11\"]]",
+    "reference_value": null,
+    "gap_to_reference_pct": null,
+    "convergence_curve": "[{\"generation\": \"0\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"1.1455604957972639e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.1963567778003013e-05\", \"std_fitness\": \"2.713659316401644e-07\"}, {\"generation\": \"1\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"1.1455604957972639e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.1992099018497206e-05\", \"std_fitness\": \"2.889457660346661e-07\"}, {\"generation\": \"2\", \"evaluated_individuals\": \"66\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2037673828866636e-05\", \"std_fitness\": \"3.1607399308335104e-07\"}, {\"generation\": \"3\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2094399063683548e-05\", \"std_fitness\": \"3.703800387991648e-07\"}, {\"generation\": \"4\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"1.1495623176550716e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2086810964937384e-05\", \"std_fitness\": \"3.93726098938615e-07\"}, {\"generation\": \"5\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2165472626065188e-05\", \"std_fitness\": \"4.123795770558194e-07\"}, {\"generation\": \"6\", \"evaluated_individuals\": \"62\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2239346874299127e-05\", \"std_fitness\": \"4.2001233591660004e-07\"}, {\"generation\": \"7\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.230677076343225e-05\", \"std_fitness\": \"4.1450788035862857e-07\"}, {\"generation\": \"8\", \"evaluated_individuals\": \"62\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.234951540638292e-05\", \"std_fitness\": \"4.3302746540168083e-07\"}, {\"generation\": \"9\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"1.1506311821482871e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2385710227414456e-05\", \"std_fitness\": \"4.2265566101672407e-07\"}, {\"generation\": \"10\", \"evaluated_individuals\": \"69\", \"min_fitness\": \"1.1506311821482871e-05\", \"max_fitness\": \"1.2753980489794376e-05\", \"avg_fitness\": \"1.2328197854317117e-05\", \"std_fitness\": \"4.642958801530744e-07\"}, {\"generation\": \"11\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2753980489794376e-05\", \"avg_fitness\": \"1.2346266545573728e-05\", \"std_fitness\": \"4.645801302814601e-07\"}, {\"generation\": \"12\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2402042418064367e-05\", \"std_fitness\": \"4.192736073087091e-07\"}, {\"generation\": \"13\", \"evaluated_individuals\": \"66\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2527043922457103e-05\", \"std_fitness\": \"3.343177020083998e-07\"}, {\"generation\": \"14\", \"evaluated_individuals\": \"69\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2552249911639256e-05\", \"std_fitness\": \"3.2176060611390107e-07\"}, {\"generation\": \"15\", \"evaluated_individuals\": \"60\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2532977555353554e-05\", \"std_fitness\": \"3.451132500619578e-07\"}, {\"generation\": \"16\", \"evaluated_individuals\": \"74\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2557424266568207e-05\", \"std_fitness\": \"3.363851010821396e-07\"}, {\"generation\": \"17\", \"evaluated_individuals\": \"60\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2645920253960156e-05\", \"std_fitness\": \"1.9767261419576136e-07\"}, {\"generation\": \"18\", \"evaluated_individuals\": \"62\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2759204904744631e-05\", \"avg_fitness\": \"1.2614270806775823e-05\", \"std_fitness\": \"2.448929954413729e-07\"}, {\"generation\": \"19\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.262983135925821e-05\", \"std_fitness\": \"2.2804668791092065e-07\"}, {\"generation\": \"20\", \"evaluated_individuals\": \"62\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2665548620545303e-05\", \"std_fitness\": \"1.5176449164155106e-07\"}, {\"generation\": \"21\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"1.188651409026034e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.26731289411638e-05\", \"std_fitness\": \"9.749657138759121e-08\"}, {\"generation\": \"22\", \"evaluated_individuals\": \"78\", \"min_fitness\": \"1.2351879252436124e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2685175224616045e-05\", \"std_fitness\": \"7.725675729051219e-08\"}, {\"generation\": \"23\", \"evaluated_individuals\": \"75\", \"min_fitness\": \"1.2351879252436124e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2687833985515563e-05\", \"std_fitness\": \"6.82488919800912e-08\"}, {\"generation\": \"24\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"1.1991473664264845e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2670961957716097e-05\", \"std_fitness\": \"1.4487670462687388e-07\"}, {\"generation\": \"25\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.1991473664264845e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2669921643310866e-05\", \"std_fitness\": \"1.8203924550908096e-07\"}, {\"generation\": \"26\", \"evaluated_individuals\": \"74\", \"min_fitness\": \"1.1991473664264845e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2666243065147987e-05\", \"std_fitness\": \"1.7634717427046679e-07\"}, {\"generation\": \"27\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"1.1991473664264845e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2706776956207216e-05\", \"std_fitness\": \"1.7688111611820205e-07\"}, {\"generation\": \"28\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2155000162413046e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2722012897573601e-05\", \"std_fitness\": \"1.7138675568615684e-07\"}, {\"generation\": \"29\", \"evaluated_individuals\": \"67\", \"min_fitness\": \"1.2155000162413046e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2693818119774466e-05\", \"std_fitness\": \"2.0648717872296726e-07\"}, {\"generation\": \"30\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2155000162413046e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2728684090274864e-05\", \"std_fitness\": \"2.0339169835894267e-07\"}, {\"generation\": \"31\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2055116730718996e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2715905200812133e-05\", \"std_fitness\": \"2.171485882000864e-07\"}, {\"generation\": \"32\", \"evaluated_individuals\": \"69\", \"min_fitness\": \"1.2351879252436124e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2710546280319464e-05\", \"std_fitness\": \"1.7174828153268097e-07\"}, {\"generation\": \"33\", \"evaluated_individuals\": \"67\", \"min_fitness\": \"1.2046517221348737e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2698624548055667e-05\", \"std_fitness\": \"1.8540189258748473e-07\"}, {\"generation\": \"34\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"1.2207231041720962e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2707400506111098e-05\", \"std_fitness\": \"1.7297394629728886e-07\"}, {\"generation\": \"35\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2207231041720962e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2725524274481685e-05\", \"std_fitness\": \"2.0785376599496892e-07\"}, {\"generation\": \"36\", \"evaluated_individuals\": \"74\", \"min_fitness\": \"1.1941167097054865e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2713330086554134e-05\", \"std_fitness\": \"2.1999684778390886e-07\"}, {\"generation\": \"37\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"1.2209115975965827e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.279727442663682e-05\", \"std_fitness\": \"2.156651399077961e-07\"}, {\"generation\": \"38\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2370353002839443e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2792304853565452e-05\", \"std_fitness\": \"2.0466204223864947e-07\"}, {\"generation\": \"39\", \"evaluated_individuals\": \"74\", \"min_fitness\": \"1.2308503540169886e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2793753430668568e-05\", \"std_fitness\": \"2.1060419837569284e-07\"}, {\"generation\": \"40\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"1.2308503540169886e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2791063509286422e-05\", \"std_fitness\": \"2.1325129881367446e-07\"}, {\"generation\": \"41\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2343549768526812e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.276211349542712e-05\", \"std_fitness\": \"1.8742520432564695e-07\"}, {\"generation\": \"42\", \"evaluated_individuals\": \"69\", \"min_fitness\": \"1.2343549768526812e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2764245481103635e-05\", \"std_fitness\": \"2.0745305511709342e-07\"}, {\"generation\": \"43\", \"evaluated_individuals\": \"60\", \"min_fitness\": \"1.2156529939886675e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2752843548836249e-05\", \"std_fitness\": \"2.3332031886089593e-07\"}, {\"generation\": \"44\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2156529939886675e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2675268962836098e-05\", \"std_fitness\": \"1.7998337191115588e-07\"}, {\"generation\": \"45\", \"evaluated_individuals\": \"66\", \"min_fitness\": \"1.2156529939886675e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2667799003797113e-05\", \"std_fitness\": \"1.9939757852842333e-07\"}, {\"generation\": \"46\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2156529939886675e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2653626203995393e-05\", \"std_fitness\": \"1.5012714033911569e-07\"}, {\"generation\": \"47\", \"evaluated_individuals\": \"65\", \"min_fitness\": \"1.202030613225674e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2636047001164476e-05\", \"std_fitness\": \"1.4721618724871063e-07\"}, {\"generation\": \"48\", \"evaluated_individuals\": \"69\", \"min_fitness\": \"1.1861497221463886e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2592622463111382e-05\", \"std_fitness\": \"2.0131278956680388e-07\"}, {\"generation\": \"49\", \"evaluated_individuals\": \"61\", \"min_fitness\": \"1.1861497221463886e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2612030295900407e-05\", \"std_fitness\": \"1.770922590630381e-07\"}]",
+    "improvement_over_time": "[{\"generation\": \"0\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"1.1455604957972639e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.1963567778003013e-05\", \"std_fitness\": \"2.713659316401644e-07\"}, {\"generation\": \"1\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"1.1455604957972639e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.1992099018497206e-05\", \"std_fitness\": \"2.889457660346661e-07\"}, {\"generation\": \"2\", \"evaluated_individuals\": \"66\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2037673828866636e-05\", \"std_fitness\": \"3.1607399308335104e-07\"}, {\"generation\": \"3\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2094399063683548e-05\", \"std_fitness\": \"3.703800387991648e-07\"}, {\"generation\": \"4\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"1.1495623176550716e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2086810964937384e-05\", \"std_fitness\": \"3.93726098938615e-07\"}, {\"generation\": \"5\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2165472626065188e-05\", \"std_fitness\": \"4.123795770558194e-07\"}, {\"generation\": \"6\", \"evaluated_individuals\": \"62\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2239346874299127e-05\", \"std_fitness\": \"4.2001233591660004e-07\"}, {\"generation\": \"7\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.230677076343225e-05\", \"std_fitness\": \"4.1450788035862857e-07\"}, {\"generation\": \"8\", \"evaluated_individuals\": \"62\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.234951540638292e-05\", \"std_fitness\": \"4.3302746540168083e-07\"}, {\"generation\": \"9\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"1.1506311821482871e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2385710227414456e-05\", \"std_fitness\": \"4.2265566101672407e-07\"}, {\"generation\": \"10\", \"evaluated_individuals\": \"69\", \"min_fitness\": \"1.1506311821482871e-05\", \"max_fitness\": \"1.2753980489794376e-05\", \"avg_fitness\": \"1.2328197854317117e-05\", \"std_fitness\": \"4.642958801530744e-07\"}, {\"generation\": \"11\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2753980489794376e-05\", \"avg_fitness\": \"1.2346266545573728e-05\", \"std_fitness\": \"4.645801302814601e-07\"}, {\"generation\": \"12\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2402042418064367e-05\", \"std_fitness\": \"4.192736073087091e-07\"}, {\"generation\": \"13\", \"evaluated_individuals\": \"66\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2527043922457103e-05\", \"std_fitness\": \"3.343177020083998e-07\"}, {\"generation\": \"14\", \"evaluated_individuals\": \"69\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2552249911639256e-05\", \"std_fitness\": \"3.2176060611390107e-07\"}, {\"generation\": \"15\", \"evaluated_individuals\": \"60\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2532977555353554e-05\", \"std_fitness\": \"3.451132500619578e-07\"}, {\"generation\": \"16\", \"evaluated_individuals\": \"74\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2557424266568207e-05\", \"std_fitness\": \"3.363851010821396e-07\"}, {\"generation\": \"17\", \"evaluated_individuals\": \"60\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2645920253960156e-05\", \"std_fitness\": \"1.9767261419576136e-07\"}, {\"generation\": \"18\", \"evaluated_individuals\": \"62\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2759204904744631e-05\", \"avg_fitness\": \"1.2614270806775823e-05\", \"std_fitness\": \"2.448929954413729e-07\"}, {\"generation\": \"19\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.262983135925821e-05\", \"std_fitness\": \"2.2804668791092065e-07\"}, {\"generation\": \"20\", \"evaluated_individuals\": \"62\", \"min_fitness\": \"1.1577676248124311e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2665548620545303e-05\", \"std_fitness\": \"1.5176449164155106e-07\"}, {\"generation\": \"21\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"1.188651409026034e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.26731289411638e-05\", \"std_fitness\": \"9.749657138759121e-08\"}, {\"generation\": \"22\", \"evaluated_individuals\": \"78\", \"min_fitness\": \"1.2351879252436124e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2685175224616045e-05\", \"std_fitness\": \"7.725675729051219e-08\"}, {\"generation\": \"23\", \"evaluated_individuals\": \"75\", \"min_fitness\": \"1.2351879252436124e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2687833985515563e-05\", \"std_fitness\": \"6.82488919800912e-08\"}, {\"generation\": \"24\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"1.1991473664264845e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2670961957716097e-05\", \"std_fitness\": \"1.4487670462687388e-07\"}, {\"generation\": \"25\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.1991473664264845e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2669921643310866e-05\", \"std_fitness\": \"1.8203924550908096e-07\"}, {\"generation\": \"26\", \"evaluated_individuals\": \"74\", \"min_fitness\": \"1.1991473664264845e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2666243065147987e-05\", \"std_fitness\": \"1.7634717427046679e-07\"}, {\"generation\": \"27\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"1.1991473664264845e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2706776956207216e-05\", \"std_fitness\": \"1.7688111611820205e-07\"}, {\"generation\": \"28\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2155000162413046e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2722012897573601e-05\", \"std_fitness\": \"1.7138675568615684e-07\"}, {\"generation\": \"29\", \"evaluated_individuals\": \"67\", \"min_fitness\": \"1.2155000162413046e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2693818119774466e-05\", \"std_fitness\": \"2.0648717872296726e-07\"}, {\"generation\": \"30\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2155000162413046e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2728684090274864e-05\", \"std_fitness\": \"2.0339169835894267e-07\"}, {\"generation\": \"31\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2055116730718996e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2715905200812133e-05\", \"std_fitness\": \"2.171485882000864e-07\"}, {\"generation\": \"32\", \"evaluated_individuals\": \"69\", \"min_fitness\": \"1.2351879252436124e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2710546280319464e-05\", \"std_fitness\": \"1.7174828153268097e-07\"}, {\"generation\": \"33\", \"evaluated_individuals\": \"67\", \"min_fitness\": \"1.2046517221348737e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2698624548055667e-05\", \"std_fitness\": \"1.8540189258748473e-07\"}, {\"generation\": \"34\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"1.2207231041720962e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2707400506111098e-05\", \"std_fitness\": \"1.7297394629728886e-07\"}, {\"generation\": \"35\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2207231041720962e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2725524274481685e-05\", \"std_fitness\": \"2.0785376599496892e-07\"}, {\"generation\": \"36\", \"evaluated_individuals\": \"74\", \"min_fitness\": \"1.1941167097054865e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2713330086554134e-05\", \"std_fitness\": \"2.1999684778390886e-07\"}, {\"generation\": \"37\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"1.2209115975965827e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.279727442663682e-05\", \"std_fitness\": \"2.156651399077961e-07\"}, {\"generation\": \"38\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2370353002839443e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2792304853565452e-05\", \"std_fitness\": \"2.0466204223864947e-07\"}, {\"generation\": \"39\", \"evaluated_individuals\": \"74\", \"min_fitness\": \"1.2308503540169886e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2793753430668568e-05\", \"std_fitness\": \"2.1060419837569284e-07\"}, {\"generation\": \"40\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"1.2308503540169886e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2791063509286422e-05\", \"std_fitness\": \"2.1325129881367446e-07\"}, {\"generation\": \"41\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2343549768526812e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.276211349542712e-05\", \"std_fitness\": \"1.8742520432564695e-07\"}, {\"generation\": \"42\", \"evaluated_individuals\": \"69\", \"min_fitness\": \"1.2343549768526812e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2764245481103635e-05\", \"std_fitness\": \"2.0745305511709342e-07\"}, {\"generation\": \"43\", \"evaluated_individuals\": \"60\", \"min_fitness\": \"1.2156529939886675e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2752843548836249e-05\", \"std_fitness\": \"2.3332031886089593e-07\"}, {\"generation\": \"44\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2156529939886675e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2675268962836098e-05\", \"std_fitness\": \"1.7998337191115588e-07\"}, {\"generation\": \"45\", \"evaluated_individuals\": \"66\", \"min_fitness\": \"1.2156529939886675e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2667799003797113e-05\", \"std_fitness\": \"1.9939757852842333e-07\"}, {\"generation\": \"46\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"1.2156529939886675e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2653626203995393e-05\", \"std_fitness\": \"1.5012714033911569e-07\"}, {\"generation\": \"47\", \"evaluated_individuals\": \"65\", \"min_fitness\": \"1.202030613225674e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2636047001164476e-05\", \"std_fitness\": \"1.4721618724871063e-07\"}, {\"generation\": \"48\", \"evaluated_individuals\": \"69\", \"min_fitness\": \"1.1861497221463886e-05\", \"max_fitness\": \"1.317551049265258e-05\", \"avg_fitness\": \"1.2592622463111382e-05\", \"std_fitness\": \"2.0131278956680388e-07\"}, {\"generation\": \"49\", \"evaluated_individuals\": \"61\", \"min_fitness\": \"1.1861497221463886e-05\", \"max_fitness\": \"1.2691451261249626e-05\", \"avg_fitness\": \"1.2612030295900407e-05\", \"std_fitness\": \"1.770922590630381e-07\"}]",
+    "iterations": null,
+    "generations": 50,
+    "search_steps": 4000
+  },
+  "solver": {
+    "method_name": "py-ga-VRPTW custom + shared checker",
+    "baseline": "py-ga-VRPTW",
+    "customize_data": true,
+    "ind_size": 100,
+    "pop_size": 80,
+    "generations": 50,
+    "unit_cost": 8.0,
+    "init_cost": 100.0,
+    "wait_cost": 1.0,
+    "delay_cost": 1.5,
+    "crossover_prob": 0.85,
+    "mutation_prob": 0.02,
+    "seed": 1,
+    "elapsed_runtime_seconds": 0.615,
+    "pyga_total_cost": 78793.195,
+    "unsupported_reason": ""
+  },
+  "routes": [
+    {
+      "route_index": 1,
+      "visits": [
+        "C83"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 2,
+      "visits": [
+        "C18",
+        "C10"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 3,
+      "visits": [
+        "C82",
+        "C51"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 4,
+      "visits": [
+        "C21",
+        "C24",
+        "C29",
+        "C37"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 5,
+      "visits": [
+        "C14",
+        "C7"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 6,
+      "visits": [
+        "C78"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 7,
+      "visits": [
+        "C28"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 8,
+      "visits": [
+        "C1",
+        "C77",
+        "C88"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 9,
+      "visits": [
+        "C2",
+        "C97",
+        "C57"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 10,
+      "visits": [
+        "C25",
+        "C79",
+        "C49"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 11,
+      "visits": [
+        "C39"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 12,
+      "visits": [
+        "C20",
+        "C44",
+        "C48",
+        "C80",
+        "C91"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 13,
+      "visits": [
+        "C81"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 14,
+      "visits": [
+        "C76",
+        "C84",
+        "C55"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 15,
+      "visits": [
+        "C58",
+        "C72"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 16,
+      "visits": [
+        "C22",
+        "C3"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 17,
+      "visits": [
+        "C34",
+        "C30",
+        "C15"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 18,
+      "visits": [
+        "C100",
+        "C52"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 19,
+      "visits": [
+        "C6",
+        "C5"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 20,
+      "visits": [
+        "C73",
+        "C89"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 21,
+      "visits": [
+        "C47",
+        "C9"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 22,
+      "visits": [
+        "C16"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 23,
+      "visits": [
+        "C96",
+        "C53",
+        "C46",
+        "C35"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 24,
+      "visits": [
+        "C94"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 25,
+      "visits": [
+        "C64",
+        "C69"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 26,
+      "visits": [
+        "C70"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 27,
+      "visits": [
+        "C92"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 28,
+      "visits": [
+        "C33",
+        "C13"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 29,
+      "visits": [
+        "C93"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 30,
+      "visits": [
+        "C65"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 31,
+      "visits": [
+        "C90",
+        "C12",
+        "C27",
+        "C54"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 32,
+      "visits": [
+        "C32",
+        "C43"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 33,
+      "visits": [
+        "C62"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 34,
+      "visits": [
+        "C60",
+        "C45"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 35,
+      "visits": [
+        "C38"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 36,
+      "visits": [
+        "C59",
+        "C85"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 37,
+      "visits": [
+        "C26",
+        "C99",
+        "C66"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 38,
+      "visits": [
+        "C41",
+        "C61"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 39,
+      "visits": [
+        "C71",
+        "C8"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 40,
+      "visits": [
+        "C36"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 41,
+      "visits": [
+        "C63"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 42,
+      "visits": [
+        "C67",
+        "C56"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 43,
+      "visits": [
+        "C98"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 44,
+      "visits": [
+        "C74",
+        "C4"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 45,
+      "visits": [
+        "C31"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 46,
+      "visits": [
+        "C86"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 47,
+      "visits": [
+        "C87"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 48,
+      "visits": [
+        "C75",
+        "C68"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 49,
+      "visits": [
+        "C40",
+        "C50"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 50,
+      "visits": [
+        "C42"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 51,
+      "visits": [
+        "C23",
+        "C95",
+        "C19",
+        "C17",
+        "C11"
+      ],
+      "charging_plan": []
+    }
+  ],
+  "metrics": {
+    "feasible": false,
+    "vehicle_count": 51,
+    "total_distance": 4644,
+    "total_duration": 38329,
+    "makespan": 1175,
+    "served_customers": 100,
+    "missing_customers": 0,
+    "duplicate_customers": 0,
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 52,
+    "vehicle_limit_violations": 1,
+    "charging_count": 0,
+    "charging_time": 0
+  },
+  "pyga": {
+    "stdout": "File: E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\py-ga-VRPTW\\data\\json_customize\\c101_21.json exists.\nStart of evolution\n  Evaluated 80 individuals\n-- Generation 0 --\n  Evaluated 72 individuals\n  Min 1.1455604957972639e-05\n  Max 1.2691451261249626e-05\n  Avg 1.1963567778003013e-05\n  Std 2.713659316401644e-07\n-- Generation 1 --\n  Evaluated 64 individuals\n  Min 1.1455604957972639e-05\n  Max 1.2691451261249626e-05\n  Avg 1.1992099018497206e-05\n  Std 2.889457660346661e-07\n-- Generation 2 --\n  Evaluated 66 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2691451261249626e-05\n  Avg 1.2037673828866636e-05\n  Std 3.1607399308335104e-07\n-- Generation 3 --\n  Evaluated 70 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2691451261249626e-05\n  Avg 1.2094399063683548e-05\n  Std 3.703800387991648e-07\n-- Generation 4 --\n  Evaluated 76 individuals\n  Min 1.1495623176550716e-05\n  Max 1.2691451261249626e-05\n  Avg 1.2086810964937384e-05\n  Std 3.93726098938615e-07\n-- Generation 5 --\n  Evaluated 76 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2691451261249626e-05\n  Avg 1.2165472626065188e-05\n  Std 4.123795770558194e-07\n-- Generation 6 --\n  Evaluated 62 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2691451261249626e-05\n  Avg 1.2239346874299127e-05\n  Std 4.2001233591660004e-07\n-- Generation 7 --\n  Evaluated 64 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2691451261249626e-05\n  Avg 1.230677076343225e-05\n  Std 4.1450788035862857e-07\n-- Generation 8 --\n  Evaluated 62 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2691451261249626e-05\n  Avg 1.234951540638292e-05\n  Std 4.3302746540168083e-07\n-- Generation 9 --\n  Evaluated 72 individuals\n  Min 1.1506311821482871e-05\n  Max 1.2691451261249626e-05\n  Avg 1.2385710227414456e-05\n  Std 4.2265566101672407e-07\n-- Generation 10 --\n  Evaluated 69 individuals\n  Min 1.1506311821482871e-05\n  Max 1.2753980489794376e-05\n  Avg 1.2328197854317117e-05\n  Std 4.642958801530744e-07\n-- Generation 11 --\n  Evaluated 68 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2753980489794376e-05\n  Avg 1.2346266545573728e-05\n  Std 4.645801302814601e-07\n-- Generation 12 --\n  Evaluated 70 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2691451261249626e-05\n  Avg 1.2402042418064367e-05\n  Std 4.192736073087091e-07\n-- Generation 13 --\n  Evaluated 66 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2691451261249626e-05\n  Avg 1.2527043922457103e-05\n  Std 3.343177020083998e-07\n-- Generation 14 --\n  Evaluated 69 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2691451261249626e-05\n  Avg 1.2552249911639256e-05\n  Std 3.2176060611390107e-07\n-- Generation 15 --\n  Evaluated 60 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2691451261249626e-05\n  Avg 1.2532977555353554e-05\n  Std 3.451132500619578e-07\n-- Generation 16 --\n  Evaluated 74 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2691451261249626e-05\n  Avg 1.2557424266568207e-05\n  Std 3.363851010821396e-07\n-- Generation 17 --\n  Evaluated 60 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2691451261249626e-05\n  Avg 1.2645920253960156e-05\n  Std 1.9767261419576136e-07\n-- Generation 18 --\n  Evaluated 62 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2759204904744631e-05\n  Avg 1.2614270806775823e-05\n  Std 2.448929954413729e-07\n-- Generation 19 --\n  Evaluated 70 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2691451261249626e-05\n  Avg 1.262983135925821e-05\n  Std 2.2804668791092065e-07\n-- Generation 20 --\n  Evaluated 62 individuals\n  Min 1.1577676248124311e-05\n  Max 1.2691451261249626e-05\n  Avg 1.2665548620545303e-05\n  Std 1.5176449164155106e-07\n-- Generation 21 --\n  Evaluated 70 individuals\n  Min 1.188651409026034e-05\n  Max 1.2691451261249626e-05\n  Avg 1.26731289411638e-05\n  Std 9.749657138759121e-08\n-- Generation 22 --\n  Evaluated 78 individuals\n  Min 1.2351879252436124e-05\n  Max 1.317551049265258e-05\n  Avg 1.2685175224616045e-05\n  Std 7.725675729051219e-08\n-- Generation 23 --\n  Evaluated 75 individuals\n  Min 1.2351879252436124e-05\n  Max 1.317551049265258e-05\n  Avg 1.2687833985515563e-05\n  Std 6.82488919800912e-08\n-- Generation 24 --\n  Evaluated 64 individuals\n  Min 1.1991473664264845e-05\n  Max 1.317551049265258e-05\n  Avg 1.2670961957716097e-05\n  Std 1.4487670462687388e-07\n-- Generation 25 --\n  Evaluated 68 individuals\n  Min 1.1991473664264845e-05\n  Max 1.317551049265258e-05\n  Avg 1.2669921643310866e-05\n  Std 1.8203924550908096e-07\n-- Generation 26 --\n  Evaluated 74 individuals\n  Min 1.1991473664264845e-05\n  Max 1.317551049265258e-05\n  Avg 1.2666243065147987e-05\n  Std 1.7634717427046679e-07\n-- Generation 27 --\n  Evaluated 64 individuals\n  Min 1.1991473664264845e-05\n  Max 1.317551049265258e-05\n  Avg 1.2706776956207216e-05\n  Std 1.7688111611820205e-07\n-- Generation 28 --\n  Evaluated 68 individuals\n  Min 1.2155000162413046e-05\n  Max 1.317551049265258e-05\n  Avg 1.2722012897573601e-05\n  Std 1.7138675568615684e-07\n-- Generation 29 --\n  Evaluated 67 individuals\n  Min 1.2155000162413046e-05\n  Max 1.317551049265258e-05\n  Avg 1.2693818119774466e-05\n  Std 2.0648717872296726e-07\n-- Generation 30 --\n  Evaluated 68 individuals\n  Min 1.2155000162413046e-05\n  Max 1.317551049265258e-05\n  Avg 1.2728684090274864e-05\n  Std 2.0339169835894267e-07\n-- Generation 31 --\n  Evaluated 68 individuals\n  Min 1.2055116730718996e-05\n  Max 1.317551049265258e-05\n  Avg 1.2715905200812133e-05\n  Std 2.171485882000864e-07\n-- Generation 32 --\n  Evaluated 69 individuals\n  Min 1.2351879252436124e-05\n  Max 1.317551049265258e-05\n  Avg 1.2710546280319464e-05\n  Std 1.7174828153268097e-07\n-- Generation 33 --\n  Evaluated 67 individuals\n  Min 1.2046517221348737e-05\n  Max 1.317551049265258e-05\n  Avg 1.2698624548055667e-05\n  Std 1.8540189258748473e-07\n-- Generation 34 --\n  Evaluated 64 individuals\n  Min 1.2207231041720962e-05\n  Max 1.317551049265258e-05\n  Avg 1.2707400506111098e-05\n  Std 1.7297394629728886e-07\n-- Generation 35 --\n  Evaluated 68 individuals\n  Min 1.2207231041720962e-05\n  Max 1.317551049265258e-05\n  Avg 1.2725524274481685e-05\n  Std 2.0785376599496892e-07\n-- Generation 36 --\n  Evaluated 74 individuals\n  Min 1.1941167097054865e-05\n  Max 1.317551049265258e-05\n  Avg 1.2713330086554134e-05\n  Std 2.1999684778390886e-07\n-- Generation 37 --\n  Evaluated 64 individuals\n  Min 1.2209115975965827e-05\n  Max 1.317551049265258e-05\n  Avg 1.279727442663682e-05\n  Std 2.156651399077961e-07\n-- Generation 38 --\n  Evaluated 68 individuals\n  Min 1.2370353002839443e-05\n  Max 1.317551049265258e-05\n  Avg 1.2792304853565452e-05\n  Std 2.0466204223864947e-07\n-- Generation 39 --\n  Evaluated 74 individuals\n  Min 1.2308503540169886e-05\n  Max 1.317551049265258e-05\n  Avg 1.2793753430668568e-05\n  Std 2.1060419837569284e-07\n-- Generation 40 --\n  Evaluated 72 individuals\n  Min 1.2308503540169886e-05\n  Max 1.317551049265258e-05\n  Avg 1.2791063509286422e-05\n  Std 2.1325129881367446e-07\n-- Generation 41 --\n  Evaluated 68 individuals\n  Min 1.2343549768526812e-05\n  Max 1.317551049265258e-05\n  Avg 1.276211349542712e-05\n  Std 1.8742520432564695e-07\n-- Generation 42 --\n  Evaluated 69 individuals\n  Min 1.2343549768526812e-05\n  Max 1.317551049265258e-05\n  Avg 1.2764245481103635e-05\n  Std 2.0745305511709342e-07\n-- Generation 43 --\n  Evaluated 60 individuals\n  Min 1.2156529939886675e-05\n  Max 1.317551049265258e-05\n  Avg 1.2752843548836249e-05\n  Std 2.3332031886089593e-07\n-- Generation 44 --\n  Evaluated 68 individuals\n  Min 1.2156529939886675e-05\n  Max 1.317551049265258e-05\n  Avg 1.2675268962836098e-05\n  Std 1.7998337191115588e-07\n-- Generation 45 --\n  Evaluated 66 individuals\n  Min 1.2156529939886675e-05\n  Max 1.317551049265258e-05\n  Avg 1.2667799003797113e-05\n  Std 1.9939757852842333e-07\n-- Generation 46 --\n  Evaluated 68 individuals\n  Min 1.2156529939886675e-05\n  Max 1.317551049265258e-05\n  Avg 1.2653626203995393e-05\n  Std 1.5012714033911569e-07\n-- Generation 47 --\n  Evaluated 65 individuals\n  Min 1.202030613225674e-05\n  Max 1.317551049265258e-05\n  Avg 1.2636047001164476e-05\n  Std 1.4721618724871063e-07\n-- Generation 48 --\n  Evaluated 69 individuals\n  Min 1.1861497221463886e-05\n  Max 1.317551049265258e-05\n  Avg 1.2592622463111382e-05\n  Std 2.0131278956680388e-07\n-- Generation 49 --\n  Evaluated 61 individuals\n  Min 1.1861497221463886e-05\n  Max 1.2691451261249626e-05\n  Avg 1.2612030295900407e-05\n  Std 1.770922590630381e-07\n-- End of (successful) evolution --\nBest individual: [83, 18, 10, 82, 51, 21, 24, 29, 37, 14, 7, 78, 28, 1, 77, 88, 2, 97, 57, 25, 79, 49, 39, 20, 44, 48, 80, 91, 81, 76, 84, 55, 58, 72, 22, 3, 34, 30, 15, 100, 52, 6, 5, 73, 89, 47, 9, 16, 96, 53, 46, 35, 94, 64, 69, 70, 92, 33, 13, 93, 65, 90, 12, 27, 54, 32, 43, 62, 60, 45, 38, 59, 85, 26, 99, 66, 41, 61, 71, 8, 36, 63, 67, 56, 98, 74, 4, 31, 86, 87, 75, 68, 40, 50, 42, 23, 95, 19, 17, 11]\nFitness: 1.2691451261249626e-05\n  Vehicle 1's route: 0 - 83 - 0\n  Vehicle 2's route: 0 - 18 - 10 - 0\n  Vehicle 3's route: 0 - 82 - 51 - 0\n  Vehicle 4's route: 0 - 21 - 24 - 29 - 37 - 0\n  Vehicle 5's route: 0 - 14 - 7 - 0\n  Vehicle 6's route: 0 - 78 - 0\n  Vehicle 7's route: 0 - 28 - 0\n  Vehicle 8's route: 0 - 1 - 77 - 88 - 0\n  Vehicle 9's route: 0 - 2 - 97 - 57 - 0\n  Vehicle 10's route: 0 - 25 - 79 - 49 - 0\n  Vehicle 11's route: 0 - 39 - 0\n  Vehicle 12's route: 0 - 20 - 44 - 48 - 80 - 91 - 0\n  Vehicle 13's route: 0 - 81 - 0\n  Vehicle 14's route: 0 - 76 - 84 - 55 - 0\n  Vehicle 15's route: 0 - 58 - 72 - 0\n  Vehicle 16's route: 0 - 22 - 3 - 0\n  Vehicle 17's route: 0 - 34 - 30 - 15 - 0\n  Vehicle 18's route: 0 - 100 - 52 - 0\n  Vehicle 19's route: 0 - 6 - 5 - 0\n  Vehicle 20's route: 0 - 73 - 89 - 0\n  Vehicle 21's route: 0 - 47 - 9 - 0\n  Vehicle 22's route: 0 - 16 - 0\n  Vehicle 23's route: 0 - 96 - 53 - 46 - 35 - 0\n  Vehicle 24's route: 0 - 94 - 0\n  Vehicle 25's route: 0 - 64 - 69 - 0\n  Vehicle 26's route: 0 - 70 - 0\n  Vehicle 27's route: 0 - 92 - 0\n  Vehicle 28's route: 0 - 33 - 13 - 0\n  Vehicle 29's route: 0 - 93 - 0\n  Vehicle 30's route: 0 - 65 - 0\n  Vehicle 31's route: 0 - 90 - 12 - 27 - 54 - 0\n  Vehicle 32's route: 0 - 32 - 43 - 0\n  Vehicle 33's route: 0 - 62 - 0\n  Vehicle 34's route: 0 - 60 - 45 - 0\n  Vehicle 35's route: 0 - 38 - 0\n  Vehicle 36's route: 0 - 59 - 85 - 0\n  Vehicle 37's route: 0 - 26 - 99 - 66 - 0\n  Vehicle 38's route: 0 - 41 - 61 - 0\n  Vehicle 39's route: 0 - 71 - 8 - 0\n  Vehicle 40's route: 0 - 36 - 0\n  Vehicle 41's route: 0 - 63 - 0\n  Vehicle 42's route: 0 - 67 - 56 - 0\n  Vehicle 43's route: 0 - 98 - 0\n  Vehicle 44's route: 0 - 74 - 4 - 0\n  Vehicle 45's route: 0 - 31 - 0\n  Vehicle 46's route: 0 - 86 - 0\n  Vehicle 47's route: 0 - 87 - 0\n  Vehicle 48's route: 0 - 75 - 68 - 0\n  Vehicle 49's route: 0 - 40 - 50 - 0\n  Vehicle 50's route: 0 - 42 - 0\n  Vehicle 51's route: 0 - 23 - 95 - 19 - 17 - 11 - 0\nTotal cost: 78793.19546798134\nWrite to file: E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\py-ga-VRPTW\\results\\c101_21_uC8.0_iC100.0_wC1.0_dC1.5_iS100_pS80_cP0.85_mP0.02_nG50.csv\nPath: E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\py-ga-VRPTW\\results\\c101_21_uC8.0_iC100.0_wC1.0_dC1.5_iS100_pS80_cP0.85_mP0.02_nG50.csv does not exist.\n",
+    "csv_rows": [
+      {
+        "generation": "0",
+        "evaluated_individuals": "72",
+        "min_fitness": "1.1455604957972639e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.1963567778003013e-05",
+        "std_fitness": "2.713659316401644e-07"
+      },
+      {
+        "generation": "1",
+        "evaluated_individuals": "64",
+        "min_fitness": "1.1455604957972639e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.1992099018497206e-05",
+        "std_fitness": "2.889457660346661e-07"
+      },
+      {
+        "generation": "2",
+        "evaluated_individuals": "66",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.2037673828866636e-05",
+        "std_fitness": "3.1607399308335104e-07"
+      },
+      {
+        "generation": "3",
+        "evaluated_individuals": "70",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.2094399063683548e-05",
+        "std_fitness": "3.703800387991648e-07"
+      },
+      {
+        "generation": "4",
+        "evaluated_individuals": "76",
+        "min_fitness": "1.1495623176550716e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.2086810964937384e-05",
+        "std_fitness": "3.93726098938615e-07"
+      },
+      {
+        "generation": "5",
+        "evaluated_individuals": "76",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.2165472626065188e-05",
+        "std_fitness": "4.123795770558194e-07"
+      },
+      {
+        "generation": "6",
+        "evaluated_individuals": "62",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.2239346874299127e-05",
+        "std_fitness": "4.2001233591660004e-07"
+      },
+      {
+        "generation": "7",
+        "evaluated_individuals": "64",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.230677076343225e-05",
+        "std_fitness": "4.1450788035862857e-07"
+      },
+      {
+        "generation": "8",
+        "evaluated_individuals": "62",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.234951540638292e-05",
+        "std_fitness": "4.3302746540168083e-07"
+      },
+      {
+        "generation": "9",
+        "evaluated_individuals": "72",
+        "min_fitness": "1.1506311821482871e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.2385710227414456e-05",
+        "std_fitness": "4.2265566101672407e-07"
+      },
+      {
+        "generation": "10",
+        "evaluated_individuals": "69",
+        "min_fitness": "1.1506311821482871e-05",
+        "max_fitness": "1.2753980489794376e-05",
+        "avg_fitness": "1.2328197854317117e-05",
+        "std_fitness": "4.642958801530744e-07"
+      },
+      {
+        "generation": "11",
+        "evaluated_individuals": "68",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2753980489794376e-05",
+        "avg_fitness": "1.2346266545573728e-05",
+        "std_fitness": "4.645801302814601e-07"
+      },
+      {
+        "generation": "12",
+        "evaluated_individuals": "70",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.2402042418064367e-05",
+        "std_fitness": "4.192736073087091e-07"
+      },
+      {
+        "generation": "13",
+        "evaluated_individuals": "66",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.2527043922457103e-05",
+        "std_fitness": "3.343177020083998e-07"
+      },
+      {
+        "generation": "14",
+        "evaluated_individuals": "69",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.2552249911639256e-05",
+        "std_fitness": "3.2176060611390107e-07"
+      },
+      {
+        "generation": "15",
+        "evaluated_individuals": "60",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.2532977555353554e-05",
+        "std_fitness": "3.451132500619578e-07"
+      },
+      {
+        "generation": "16",
+        "evaluated_individuals": "74",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.2557424266568207e-05",
+        "std_fitness": "3.363851010821396e-07"
+      },
+      {
+        "generation": "17",
+        "evaluated_individuals": "60",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.2645920253960156e-05",
+        "std_fitness": "1.9767261419576136e-07"
+      },
+      {
+        "generation": "18",
+        "evaluated_individuals": "62",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2759204904744631e-05",
+        "avg_fitness": "1.2614270806775823e-05",
+        "std_fitness": "2.448929954413729e-07"
+      },
+      {
+        "generation": "19",
+        "evaluated_individuals": "70",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.262983135925821e-05",
+        "std_fitness": "2.2804668791092065e-07"
+      },
+      {
+        "generation": "20",
+        "evaluated_individuals": "62",
+        "min_fitness": "1.1577676248124311e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.2665548620545303e-05",
+        "std_fitness": "1.5176449164155106e-07"
+      },
+      {
+        "generation": "21",
+        "evaluated_individuals": "70",
+        "min_fitness": "1.188651409026034e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.26731289411638e-05",
+        "std_fitness": "9.749657138759121e-08"
+      },
+      {
+        "generation": "22",
+        "evaluated_individuals": "78",
+        "min_fitness": "1.2351879252436124e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2685175224616045e-05",
+        "std_fitness": "7.725675729051219e-08"
+      },
+      {
+        "generation": "23",
+        "evaluated_individuals": "75",
+        "min_fitness": "1.2351879252436124e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2687833985515563e-05",
+        "std_fitness": "6.82488919800912e-08"
+      },
+      {
+        "generation": "24",
+        "evaluated_individuals": "64",
+        "min_fitness": "1.1991473664264845e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2670961957716097e-05",
+        "std_fitness": "1.4487670462687388e-07"
+      },
+      {
+        "generation": "25",
+        "evaluated_individuals": "68",
+        "min_fitness": "1.1991473664264845e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2669921643310866e-05",
+        "std_fitness": "1.8203924550908096e-07"
+      },
+      {
+        "generation": "26",
+        "evaluated_individuals": "74",
+        "min_fitness": "1.1991473664264845e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2666243065147987e-05",
+        "std_fitness": "1.7634717427046679e-07"
+      },
+      {
+        "generation": "27",
+        "evaluated_individuals": "64",
+        "min_fitness": "1.1991473664264845e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2706776956207216e-05",
+        "std_fitness": "1.7688111611820205e-07"
+      },
+      {
+        "generation": "28",
+        "evaluated_individuals": "68",
+        "min_fitness": "1.2155000162413046e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2722012897573601e-05",
+        "std_fitness": "1.7138675568615684e-07"
+      },
+      {
+        "generation": "29",
+        "evaluated_individuals": "67",
+        "min_fitness": "1.2155000162413046e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2693818119774466e-05",
+        "std_fitness": "2.0648717872296726e-07"
+      },
+      {
+        "generation": "30",
+        "evaluated_individuals": "68",
+        "min_fitness": "1.2155000162413046e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2728684090274864e-05",
+        "std_fitness": "2.0339169835894267e-07"
+      },
+      {
+        "generation": "31",
+        "evaluated_individuals": "68",
+        "min_fitness": "1.2055116730718996e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2715905200812133e-05",
+        "std_fitness": "2.171485882000864e-07"
+      },
+      {
+        "generation": "32",
+        "evaluated_individuals": "69",
+        "min_fitness": "1.2351879252436124e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2710546280319464e-05",
+        "std_fitness": "1.7174828153268097e-07"
+      },
+      {
+        "generation": "33",
+        "evaluated_individuals": "67",
+        "min_fitness": "1.2046517221348737e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2698624548055667e-05",
+        "std_fitness": "1.8540189258748473e-07"
+      },
+      {
+        "generation": "34",
+        "evaluated_individuals": "64",
+        "min_fitness": "1.2207231041720962e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2707400506111098e-05",
+        "std_fitness": "1.7297394629728886e-07"
+      },
+      {
+        "generation": "35",
+        "evaluated_individuals": "68",
+        "min_fitness": "1.2207231041720962e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2725524274481685e-05",
+        "std_fitness": "2.0785376599496892e-07"
+      },
+      {
+        "generation": "36",
+        "evaluated_individuals": "74",
+        "min_fitness": "1.1941167097054865e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2713330086554134e-05",
+        "std_fitness": "2.1999684778390886e-07"
+      },
+      {
+        "generation": "37",
+        "evaluated_individuals": "64",
+        "min_fitness": "1.2209115975965827e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.279727442663682e-05",
+        "std_fitness": "2.156651399077961e-07"
+      },
+      {
+        "generation": "38",
+        "evaluated_individuals": "68",
+        "min_fitness": "1.2370353002839443e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2792304853565452e-05",
+        "std_fitness": "2.0466204223864947e-07"
+      },
+      {
+        "generation": "39",
+        "evaluated_individuals": "74",
+        "min_fitness": "1.2308503540169886e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2793753430668568e-05",
+        "std_fitness": "2.1060419837569284e-07"
+      },
+      {
+        "generation": "40",
+        "evaluated_individuals": "72",
+        "min_fitness": "1.2308503540169886e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2791063509286422e-05",
+        "std_fitness": "2.1325129881367446e-07"
+      },
+      {
+        "generation": "41",
+        "evaluated_individuals": "68",
+        "min_fitness": "1.2343549768526812e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.276211349542712e-05",
+        "std_fitness": "1.8742520432564695e-07"
+      },
+      {
+        "generation": "42",
+        "evaluated_individuals": "69",
+        "min_fitness": "1.2343549768526812e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2764245481103635e-05",
+        "std_fitness": "2.0745305511709342e-07"
+      },
+      {
+        "generation": "43",
+        "evaluated_individuals": "60",
+        "min_fitness": "1.2156529939886675e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2752843548836249e-05",
+        "std_fitness": "2.3332031886089593e-07"
+      },
+      {
+        "generation": "44",
+        "evaluated_individuals": "68",
+        "min_fitness": "1.2156529939886675e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2675268962836098e-05",
+        "std_fitness": "1.7998337191115588e-07"
+      },
+      {
+        "generation": "45",
+        "evaluated_individuals": "66",
+        "min_fitness": "1.2156529939886675e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2667799003797113e-05",
+        "std_fitness": "1.9939757852842333e-07"
+      },
+      {
+        "generation": "46",
+        "evaluated_individuals": "68",
+        "min_fitness": "1.2156529939886675e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2653626203995393e-05",
+        "std_fitness": "1.5012714033911569e-07"
+      },
+      {
+        "generation": "47",
+        "evaluated_individuals": "65",
+        "min_fitness": "1.202030613225674e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2636047001164476e-05",
+        "std_fitness": "1.4721618724871063e-07"
+      },
+      {
+        "generation": "48",
+        "evaluated_individuals": "69",
+        "min_fitness": "1.1861497221463886e-05",
+        "max_fitness": "1.317551049265258e-05",
+        "avg_fitness": "1.2592622463111382e-05",
+        "std_fitness": "2.0131278956680388e-07"
+      },
+      {
+        "generation": "49",
+        "evaluated_individuals": "61",
+        "min_fitness": "1.1861497221463886e-05",
+        "max_fitness": "1.2691451261249626e-05",
+        "avg_fitness": "1.2612030295900407e-05",
+        "std_fitness": "1.770922590630381e-07"
+      }
+    ]
+  },
+  "violations": [
+    {
+      "constraint": "energy",
+      "route_index": 3,
+      "location": "C51",
+      "detail": "remaining_energy=-11.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 3,
+      "location": "D0",
+      "detail": "remaining_energy=-36.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 4,
+      "location": "D0",
+      "detail": "remaining_energy=-0.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 5,
+      "location": "D0",
+      "detail": "remaining_energy=-1.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 6,
+      "location": "D0",
+      "detail": "remaining_energy=-20.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 8,
+      "location": "C88",
+      "detail": "remaining_energy=-34.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 8,
+      "location": "D0",
+      "detail": "remaining_energy=-61.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 9,
+      "location": "C57",
+      "detail": "remaining_energy=-35.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 9,
+      "location": "D0",
+      "detail": "remaining_energy=-70.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 10,
+      "location": "C79",
+      "detail": "remaining_energy=-1.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 10,
+      "location": "C49",
+      "detail": "remaining_energy=-60.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 10,
+      "location": "D0",
+      "detail": "remaining_energy=-79.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 11,
+      "location": "D0",
+      "detail": "remaining_energy=-0.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 12,
+      "location": "C80",
+      "detail": "remaining_energy=-11.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 12,
+      "location": "C91",
+      "detail": "remaining_energy=-54.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 12,
+      "location": "D0",
+      "detail": "remaining_energy=-76.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 13,
+      "location": "D0",
+      "detail": "remaining_energy=-14.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 14,
+      "location": "C84",
+      "detail": "remaining_energy=-2.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 14,
+      "location": "C55",
+      "detail": "remaining_energy=-53.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 14,
+      "location": "D0",
+      "detail": "remaining_energy=-88.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 15,
+      "location": "D0",
+      "detail": "remaining_energy=-18.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 17,
+      "location": "D0",
+      "detail": "remaining_energy=-29.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 18,
+      "location": "C52",
+      "detail": "remaining_energy=-16.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 18,
+      "location": "D0",
+      "detail": "remaining_energy=-37.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 20,
+      "location": "C89",
+      "detail": "remaining_energy=-16.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 20,
+      "location": "D0",
+      "detail": "remaining_energy=-40.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 22,
+      "location": "D0",
+      "detail": "remaining_energy=-0.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 23,
+      "location": "C53",
+      "detail": "remaining_energy=-33.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 23,
+      "location": "C46",
+      "detail": "remaining_energy=-63.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 23,
+      "location": "C35",
+      "detail": "remaining_energy=-88.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 23,
+      "location": "D0",
+      "detail": "remaining_energy=-126.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 24,
+      "location": "D0",
+      "detail": "remaining_energy=-2.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 26,
+      "location": "D0",
+      "detail": "remaining_energy=-38.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 27,
+      "location": "D0",
+      "detail": "remaining_energy=-8.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 28,
+      "location": "D0",
+      "detail": "remaining_energy=-23.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 29,
+      "location": "D0",
+      "detail": "remaining_energy=-6.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 31,
+      "location": "C27",
+      "detail": "remaining_energy=-20.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 31,
+      "location": "C54",
+      "detail": "remaining_energy=-66.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 31,
+      "location": "D0",
+      "detail": "remaining_energy=-106.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 34,
+      "location": "D0",
+      "detail": "remaining_energy=-12.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 35,
+      "location": "D0",
+      "detail": "remaining_energy=-2.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 36,
+      "location": "C85",
+      "detail": "remaining_energy=-9.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 36,
+      "location": "D0",
+      "detail": "remaining_energy=-39.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 37,
+      "location": "C66",
+      "detail": "remaining_energy=-21.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 37,
+      "location": "D0",
+      "detail": "remaining_energy=-38.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 39,
+      "location": "C8",
+      "detail": "remaining_energy=-43.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 39,
+      "location": "D0",
+      "detail": "remaining_energy=-61.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 42,
+      "location": "D0",
+      "detail": "remaining_energy=-13.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 51,
+      "location": "C19",
+      "detail": "remaining_energy=-22.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 51,
+      "location": "C17",
+      "detail": "remaining_energy=-28.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 51,
+      "location": "C11",
+      "detail": "remaining_energy=-46.31, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 51,
+      "location": "D0",
+      "detail": "remaining_energy=-66.31, minimum_battery=0"
+    },
+    {
+      "constraint": "vehicle_limit",
+      "route_index": null,
+      "location": "fleet",
+      "detail": "vehicles_used=51, maximum=31"
+    }
+  ],
+  "report": {
+    "feasible": false,
+    "total_distance": 4644,
+    "total_duration": 38329,
+    "makespan": 1175,
+    "served_customers": 100,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 52,
+    "charging_count": 0,
+    "charging_time": 0,
+    "synchronization_violations": 0,
+    "vehicle_limit_violations": 1,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "C83"
+        ],
+        "load": 10,
+        "distance": 64,
+        "duration": 678,
+        "wait_time": 524,
+        "return_time": 678,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "C18",
+          "C10"
+        ],
+        "load": 30,
+        "distance": 74,
+        "duration": 886,
+        "wait_time": 632,
+        "return_time": 886,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 3,
+        "visits": [
+          "C82",
+          "C51"
+        ],
+        "load": 30,
+        "distance": 116,
+        "duration": 938,
+        "wait_time": 642,
+        "return_time": 938,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 4,
+        "visits": [
+          "C21",
+          "C24",
+          "C29",
+          "C37"
+        ],
+        "load": 60,
+        "distance": 80,
+        "duration": 698,
+        "wait_time": 258,
+        "return_time": 698,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 5,
+        "visits": [
+          "C14",
+          "C7"
+        ],
+        "load": 30,
+        "distance": 81,
+        "duration": 880,
+        "wait_time": 619,
+        "return_time": 880,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 6,
+        "visits": [
+          "C78"
+        ],
+        "load": 20,
+        "distance": 100,
+        "duration": 807,
+        "wait_time": 617,
+        "return_time": 807,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 7,
+        "visits": [
+          "C28"
+        ],
+        "load": 20,
+        "distance": 36,
+        "duration": 546,
+        "wait_time": 420,
+        "return_time": 546,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 8,
+        "visits": [
+          "C1",
+          "C77",
+          "C88"
+        ],
+        "load": 50,
+        "distance": 141,
+        "duration": 954,
+        "wait_time": 543,
+        "return_time": 954,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 9,
+        "visits": [
+          "C2",
+          "C97",
+          "C57"
+        ],
+        "load": 100,
+        "distance": 150,
+        "duration": 1114,
+        "wait_time": 694,
+        "return_time": 1114,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 10,
+        "visits": [
+          "C25",
+          "C79",
+          "C49"
+        ],
+        "load": 60,
+        "distance": 159,
+        "duration": 1120,
+        "wait_time": 691,
+        "return_time": 1120,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 3,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 11,
+        "visits": [
+          "C39"
+        ],
+        "load": 20,
+        "distance": 80,
+        "duration": 504,
+        "wait_time": 334,
+        "return_time": 504,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 12,
+        "visits": [
+          "C20",
+          "C44",
+          "C48",
+          "C80",
+          "C91"
+        ],
+        "load": 50,
+        "distance": 156,
+        "duration": 1122,
+        "wait_time": 516,
+        "return_time": 1122,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 3,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 13,
+        "visits": [
+          "C81"
+        ],
+        "load": 30,
+        "distance": 94,
+        "duration": 898,
+        "wait_time": 714,
+        "return_time": 898,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 14,
+        "visits": [
+          "C76",
+          "C84",
+          "C55"
+        ],
+        "load": 40,
+        "distance": 168,
+        "duration": 1030,
+        "wait_time": 592,
+        "return_time": 1030,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 3,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 15,
+        "visits": [
+          "C58",
+          "C72"
+        ],
+        "load": 40,
+        "distance": 98,
+        "duration": 1018,
+        "wait_time": 740,
+        "return_time": 1018,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 16,
+        "visits": [
+          "C22",
+          "C3"
+        ],
+        "load": 30,
+        "distance": 48,
+        "duration": 969,
+        "wait_time": 741,
+        "return_time": 969,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 17,
+        "visits": [
+          "C34",
+          "C30",
+          "C15"
+        ],
+        "load": 70,
+        "distance": 109,
+        "duration": 871,
+        "wait_time": 492,
+        "return_time": 871,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 18,
+        "visits": [
+          "C100",
+          "C52"
+        ],
+        "load": 30,
+        "distance": 117,
+        "duration": 1153,
+        "wait_time": 856,
+        "return_time": 1153,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 19,
+        "visits": [
+          "C6",
+          "C5"
+        ],
+        "load": 30,
+        "distance": 38,
+        "duration": 1055,
+        "wait_time": 837,
+        "return_time": 1055,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 20,
+        "visits": [
+          "C73",
+          "C89"
+        ],
+        "load": 20,
+        "distance": 120,
+        "duration": 1043,
+        "wait_time": 743,
+        "return_time": 1043,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 21,
+        "visits": [
+          "C47",
+          "C9"
+        ],
+        "load": 20,
+        "distance": 74,
+        "duration": 1068,
+        "wait_time": 814,
+        "return_time": 1068,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 22,
+        "visits": [
+          "C16"
+        ],
+        "load": 40,
+        "distance": 80,
+        "duration": 488,
+        "wait_time": 318,
+        "return_time": 488,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 23,
+        "visits": [
+          "C96",
+          "C53",
+          "C46",
+          "C35"
+        ],
+        "load": 70,
+        "distance": 206,
+        "duration": 844,
+        "wait_time": 278,
+        "return_time": 844,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 4,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 24,
+        "visits": [
+          "C94"
+        ],
+        "load": 10,
+        "distance": 82,
+        "duration": 498,
+        "wait_time": 326,
+        "return_time": 498,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 25,
+        "visits": [
+          "C64",
+          "C69"
+        ],
+        "load": 20,
+        "distance": 44,
+        "duration": 554,
+        "wait_time": 330,
+        "return_time": 554,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 26,
+        "visits": [
+          "C70"
+        ],
+        "load": 30,
+        "distance": 118,
+        "duration": 539,
+        "wait_time": 331,
+        "return_time": 539,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 27,
+        "visits": [
+          "C92"
+        ],
+        "load": 20,
+        "distance": 88,
+        "duration": 593,
+        "wait_time": 415,
+        "return_time": 593,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 28,
+        "visits": [
+          "C33",
+          "C13"
+        ],
+        "load": 70,
+        "distance": 103,
+        "duration": 1163,
+        "wait_time": 880,
+        "return_time": 1163,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 29,
+        "visits": [
+          "C93"
+        ],
+        "load": 40,
+        "distance": 86,
+        "duration": 679,
+        "wait_time": 503,
+        "return_time": 679,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 30,
+        "visits": [
+          "C65"
+        ],
+        "load": 10,
+        "distance": 26,
+        "duration": 170,
+        "wait_time": 54,
+        "return_time": 170,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 31,
+        "visits": [
+          "C90",
+          "C12",
+          "C27",
+          "C54"
+        ],
+        "load": 80,
+        "distance": 186,
+        "duration": 940,
+        "wait_time": 394,
+        "return_time": 940,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 3,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 32,
+        "visits": [
+          "C32",
+          "C43"
+        ],
+        "load": 40,
+        "distance": 73,
+        "duration": 896,
+        "wait_time": 643,
+        "return_time": 896,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 33,
+        "visits": [
+          "C62"
+        ],
+        "load": 20,
+        "distance": 36,
+        "duration": 277,
+        "wait_time": 151,
+        "return_time": 277,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 34,
+        "visits": [
+          "C60",
+          "C45"
+        ],
+        "load": 30,
+        "distance": 92,
+        "duration": 533,
+        "wait_time": 261,
+        "return_time": 533,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 35,
+        "visits": [
+          "C38"
+        ],
+        "load": 30,
+        "distance": 82,
+        "duration": 603,
+        "wait_time": 431,
+        "return_time": 603,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 36,
+        "visits": [
+          "C59",
+          "C85"
+        ],
+        "load": 40,
+        "distance": 119,
+        "duration": 857,
+        "wait_time": 558,
+        "return_time": 857,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 37,
+        "visits": [
+          "C26",
+          "C99",
+          "C66"
+        ],
+        "load": 30,
+        "distance": 118,
+        "duration": 1175,
+        "wait_time": 787,
+        "return_time": 1175,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 38,
+        "visits": [
+          "C41",
+          "C61"
+        ],
+        "load": 20,
+        "distance": 56,
+        "duration": 1092,
+        "wait_time": 856,
+        "return_time": 1092,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 39,
+        "visits": [
+          "C71",
+          "C8"
+        ],
+        "load": 40,
+        "distance": 141,
+        "duration": 1165,
+        "wait_time": 844,
+        "return_time": 1165,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 40,
+        "visits": [
+          "C36"
+        ],
+        "load": 10,
+        "distance": 70,
+        "duration": 403,
+        "wait_time": 243,
+        "return_time": 403,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 41,
+        "visits": [
+          "C63"
+        ],
+        "load": 50,
+        "distance": 28,
+        "duration": 119,
+        "wait_time": 1,
+        "return_time": 119,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 42,
+        "visits": [
+          "C67",
+          "C56"
+        ],
+        "load": 40,
+        "distance": 93,
+        "duration": 485,
+        "wait_time": 212,
+        "return_time": 485,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 43,
+        "visits": [
+          "C98"
+        ],
+        "load": 20,
+        "distance": 62,
+        "duration": 302,
+        "wait_time": 150,
+        "return_time": 302,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 44,
+        "visits": [
+          "C74",
+          "C4"
+        ],
+        "load": 60,
+        "distance": 73,
+        "duration": 692,
+        "wait_time": 439,
+        "return_time": 692,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 45,
+        "visits": [
+          "C31"
+        ],
+        "load": 20,
+        "distance": 68,
+        "duration": 591,
+        "wait_time": 433,
+        "return_time": 591,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 46,
+        "visits": [
+          "C86"
+        ],
+        "load": 10,
+        "distance": 52,
+        "duration": 289,
+        "wait_time": 147,
+        "return_time": 289,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 47,
+        "visits": [
+          "C87"
+        ],
+        "load": 20,
+        "distance": 50,
+        "duration": 202,
+        "wait_time": 62,
+        "return_time": 202,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 48,
+        "visits": [
+          "C75",
+          "C68"
+        ],
+        "load": 30,
+        "distance": 72,
+        "duration": 465,
+        "wait_time": 213,
+        "return_time": 465,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 49,
+        "visits": [
+          "C40",
+          "C50"
+        ],
+        "load": 20,
+        "distance": 53,
+        "duration": 1036,
+        "wait_time": 803,
+        "return_time": 1036,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 50,
+        "visits": [
+          "C42"
+        ],
+        "load": 20,
+        "distance": 38,
+        "duration": 348,
+        "wait_time": 220,
+        "return_time": 348,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 51,
+        "visits": [
+          "C23",
+          "C95",
+          "C19",
+          "C17",
+          "C11"
+        ],
+        "load": 80,
+        "distance": 146,
+        "duration": 979,
+        "wait_time": 383,
+        "return_time": 979,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 4,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": [
+      {
+        "constraint": "energy",
+        "route_index": 3,
+        "location": "C51",
+        "detail": "remaining_energy=-11.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 3,
+        "location": "D0",
+        "detail": "remaining_energy=-36.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 4,
+        "location": "D0",
+        "detail": "remaining_energy=-0.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 5,
+        "location": "D0",
+        "detail": "remaining_energy=-1.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 6,
+        "location": "D0",
+        "detail": "remaining_energy=-20.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 8,
+        "location": "C88",
+        "detail": "remaining_energy=-34.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 8,
+        "location": "D0",
+        "detail": "remaining_energy=-61.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 9,
+        "location": "C57",
+        "detail": "remaining_energy=-35.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 9,
+        "location": "D0",
+        "detail": "remaining_energy=-70.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 10,
+        "location": "C79",
+        "detail": "remaining_energy=-1.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 10,
+        "location": "C49",
+        "detail": "remaining_energy=-60.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 10,
+        "location": "D0",
+        "detail": "remaining_energy=-79.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 11,
+        "location": "D0",
+        "detail": "remaining_energy=-0.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 12,
+        "location": "C80",
+        "detail": "remaining_energy=-11.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 12,
+        "location": "C91",
+        "detail": "remaining_energy=-54.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 12,
+        "location": "D0",
+        "detail": "remaining_energy=-76.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 13,
+        "location": "D0",
+        "detail": "remaining_energy=-14.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 14,
+        "location": "C84",
+        "detail": "remaining_energy=-2.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 14,
+        "location": "C55",
+        "detail": "remaining_energy=-53.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 14,
+        "location": "D0",
+        "detail": "remaining_energy=-88.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 15,
+        "location": "D0",
+        "detail": "remaining_energy=-18.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 17,
+        "location": "D0",
+        "detail": "remaining_energy=-29.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 18,
+        "location": "C52",
+        "detail": "remaining_energy=-16.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 18,
+        "location": "D0",
+        "detail": "remaining_energy=-37.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 20,
+        "location": "C89",
+        "detail": "remaining_energy=-16.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 20,
+        "location": "D0",
+        "detail": "remaining_energy=-40.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 22,
+        "location": "D0",
+        "detail": "remaining_energy=-0.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 23,
+        "location": "C53",
+        "detail": "remaining_energy=-33.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 23,
+        "location": "C46",
+        "detail": "remaining_energy=-63.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 23,
+        "location": "C35",
+        "detail": "remaining_energy=-88.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 23,
+        "location": "D0",
+        "detail": "remaining_energy=-126.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 24,
+        "location": "D0",
+        "detail": "remaining_energy=-2.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 26,
+        "location": "D0",
+        "detail": "remaining_energy=-38.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 27,
+        "location": "D0",
+        "detail": "remaining_energy=-8.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 28,
+        "location": "D0",
+        "detail": "remaining_energy=-23.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 29,
+        "location": "D0",
+        "detail": "remaining_energy=-6.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 31,
+        "location": "C27",
+        "detail": "remaining_energy=-20.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 31,
+        "location": "C54",
+        "detail": "remaining_energy=-66.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 31,
+        "location": "D0",
+        "detail": "remaining_energy=-106.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 34,
+        "location": "D0",
+        "detail": "remaining_energy=-12.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 35,
+        "location": "D0",
+        "detail": "remaining_energy=-2.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 36,
+        "location": "C85",
+        "detail": "remaining_energy=-9.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 36,
+        "location": "D0",
+        "detail": "remaining_energy=-39.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 37,
+        "location": "C66",
+        "detail": "remaining_energy=-21.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 37,
+        "location": "D0",
+        "detail": "remaining_energy=-38.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 39,
+        "location": "C8",
+        "detail": "remaining_energy=-43.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 39,
+        "location": "D0",
+        "detail": "remaining_energy=-61.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 42,
+        "location": "D0",
+        "detail": "remaining_energy=-13.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 51,
+        "location": "C19",
+        "detail": "remaining_energy=-22.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 51,
+        "location": "C17",
+        "detail": "remaining_energy=-28.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 51,
+        "location": "C11",
+        "detail": "remaining_energy=-46.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 51,
+        "location": "D0",
+        "detail": "remaining_energy=-66.31, minimum_battery=0"
+      },
+      {
+        "constraint": "vehicle_limit",
+        "route_index": null,
+        "location": "fleet",
+        "detail": "vehicles_used=51, maximum=31"
+      }
+    ]
+  },
+  "instance": {
+    "name": "c101_21",
+    "problem_type": "EVRPTW",
+    "objective": {
+      "primary": "minimize_vehicle_count",
+      "secondary": "minimize_total_distance"
+    },
+    "distance": {
+      "metric": "euclidean",
+      "scale": 1
+    },
+    "duration": {
+      "metric": "euclidean",
+      "scale": 1.0
+    },
+    "solver": {
+      "name": "PyVRP",
+      "runtime_seconds": 0,
+      "seed": 1,
+      "display": false
+    },
+    "vehicles": {
+      "num_available": 31,
+      "capacity": 200,
+      "start_depot": "D0",
+      "end_depot": "D0",
+      "tw_early": 0,
+      "tw_late": 1236,
+      "battery_capacity": 79.69,
+      "initial_battery": 79.69
+    },
+    "depot": {
+      "name": "D0",
+      "x": 40,
+      "y": 50,
+      "tw_early": 0,
+      "tw_late": 1236
+    },
+    "energy": {
+      "consumption_per_distance": 1,
+      "minimum_battery": 0
+    },
+    "charging": {
+      "policy": "partial_recharge",
+      "allow_partial_recharge": true,
+      "charging_rate": 0.2949852507374631,
+      "fixed_service_duration": 0
+    },
+    "charging_stations": [
+      {
+        "name": "S0",
+        "x": 40,
+        "y": 50,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S1",
+        "x": 73,
+        "y": 52,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S2",
+        "x": 90,
+        "y": 55,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S3",
+        "x": 55,
+        "y": 79,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S4",
+        "x": 69,
+        "y": 89,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S5",
+        "x": 32,
+        "y": 80,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S6",
+        "x": 39,
+        "y": 96,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S7",
+        "x": 23,
+        "y": 80,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S8",
+        "x": 4,
+        "y": 83,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S9",
+        "x": 18,
+        "y": 58,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S10",
+        "x": 1,
+        "y": 56,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S11",
+        "x": 13,
+        "y": 31,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S12",
+        "x": -5,
+        "y": 38,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S13",
+        "x": 26,
+        "y": 37,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S14",
+        "x": 28,
+        "y": 13,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S15",
+        "x": 39,
+        "y": 31,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S16",
+        "x": 48,
+        "y": 11,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S17",
+        "x": 59,
+        "y": 17,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S18",
+        "x": 73,
+        "y": 23,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S19",
+        "x": 74,
+        "y": 32,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S20",
+        "x": 90,
+        "y": 44,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      }
+    ],
+    "clients": [
+      {
+        "name": "C1",
+        "x": 45,
+        "y": 68,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 78,
+        "tw_late": 140
+      },
+      {
+        "name": "C2",
+        "x": 45,
+        "y": 70,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 499,
+        "tw_late": 553
+      },
+      {
+        "name": "C3",
+        "x": 42,
+        "y": 66,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 863,
+        "tw_late": 931
+      },
+      {
+        "name": "C4",
+        "x": 42,
+        "y": 68,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 584,
+        "tw_late": 656
+      },
+      {
+        "name": "C5",
+        "x": 42,
+        "y": 65,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 950,
+        "tw_late": 1026
+      },
+      {
+        "name": "C6",
+        "x": 40,
+        "y": 69,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 683,
+        "tw_late": 741
+      },
+      {
+        "name": "C7",
+        "x": 40,
+        "y": 66,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 774,
+        "tw_late": 836
+      },
+      {
+        "name": "C8",
+        "x": 38,
+        "y": 68,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 1057,
+        "tw_late": 1125
+      },
+      {
+        "name": "C9",
+        "x": 38,
+        "y": 70,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 958,
+        "tw_late": 1040
+      },
+      {
+        "name": "C10",
+        "x": 35,
+        "y": 66,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 779,
+        "tw_late": 845
+      },
+      {
+        "name": "C11",
+        "x": 35,
+        "y": 69,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 869,
+        "tw_late": 941
+      },
+      {
+        "name": "C12",
+        "x": 25,
+        "y": 85,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 176,
+        "tw_late": 228
+      },
+      {
+        "name": "C13",
+        "x": 22,
+        "y": 75,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 1042,
+        "tw_late": 1106
+      },
+      {
+        "name": "C14",
+        "x": 22,
+        "y": 85,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 263,
+        "tw_late": 327
+      },
+      {
+        "name": "C15",
+        "x": 20,
+        "y": 80,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 745,
+        "tw_late": 789
+      },
+      {
+        "name": "C16",
+        "x": 20,
+        "y": 85,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 358,
+        "tw_late": 416
+      },
+      {
+        "name": "C17",
+        "x": 18,
+        "y": 75,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 633,
+        "tw_late": 711
+      },
+      {
+        "name": "C18",
+        "x": 15,
+        "y": 75,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 557,
+        "tw_late": 601
+      },
+      {
+        "name": "C19",
+        "x": 15,
+        "y": 80,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 455,
+        "tw_late": 513
+      },
+      {
+        "name": "C20",
+        "x": 30,
+        "y": 50,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 10,
+        "tw_late": 70
+      },
+      {
+        "name": "C21",
+        "x": 30,
+        "y": 52,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 11,
+        "tw_late": 73
+      },
+      {
+        "name": "C22",
+        "x": 28,
+        "y": 52,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 73,
+        "tw_late": 131
+      },
+      {
+        "name": "C23",
+        "x": 28,
+        "y": 55,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 13,
+        "tw_late": 70
+      },
+      {
+        "name": "C24",
+        "x": 25,
+        "y": 50,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 72,
+        "tw_late": 138
+      },
+      {
+        "name": "C25",
+        "x": 25,
+        "y": 52,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 158,
+        "tw_late": 232
+      },
+      {
+        "name": "C26",
+        "x": 25,
+        "y": 55,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 672,
+        "tw_late": 744
+      },
+      {
+        "name": "C27",
+        "x": 23,
+        "y": 52,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 263,
+        "tw_late": 311
+      },
+      {
+        "name": "C28",
+        "x": 23,
+        "y": 55,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 438,
+        "tw_late": 510
+      },
+      {
+        "name": "C29",
+        "x": 20,
+        "y": 50,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 174,
+        "tw_late": 226
+      },
+      {
+        "name": "C30",
+        "x": 20,
+        "y": 55,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 355,
+        "tw_late": 407
+      },
+      {
+        "name": "C31",
+        "x": 10,
+        "y": 35,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 467,
+        "tw_late": 517
+      },
+      {
+        "name": "C32",
+        "x": 10,
+        "y": 40,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 271,
+        "tw_late": 337
+      },
+      {
+        "name": "C33",
+        "x": 8,
+        "y": 40,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 355,
+        "tw_late": 437
+      },
+      {
+        "name": "C34",
+        "x": 8,
+        "y": 45,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 194,
+        "tw_late": 244
+      },
+      {
+        "name": "C35",
+        "x": 5,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 655,
+        "tw_late": 725
+      },
+      {
+        "name": "C36",
+        "x": 5,
+        "y": 45,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 278,
+        "tw_late": 346
+      },
+      {
+        "name": "C37",
+        "x": 2,
+        "y": 40,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 569,
+        "tw_late": 619
+      },
+      {
+        "name": "C38",
+        "x": 0,
+        "y": 40,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 472,
+        "tw_late": 532
+      },
+      {
+        "name": "C39",
+        "x": 0,
+        "y": 45,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 374,
+        "tw_late": 440
+      },
+      {
+        "name": "C40",
+        "x": 35,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 143,
+        "tw_late": 199
+      },
+      {
+        "name": "C41",
+        "x": 35,
+        "y": 32,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 49,
+        "tw_late": 109
+      },
+      {
+        "name": "C42",
+        "x": 33,
+        "y": 32,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 239,
+        "tw_late": 289
+      },
+      {
+        "name": "C43",
+        "x": 33,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 789,
+        "tw_late": 849
+      },
+      {
+        "name": "C44",
+        "x": 32,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 325,
+        "tw_late": 387
+      },
+      {
+        "name": "C45",
+        "x": 30,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 421,
+        "tw_late": 475
+      },
+      {
+        "name": "C46",
+        "x": 30,
+        "y": 32,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 601,
+        "tw_late": 665
+      },
+      {
+        "name": "C47",
+        "x": 30,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 698,
+        "tw_late": 754
+      },
+      {
+        "name": "C48",
+        "x": 28,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 511,
+        "tw_late": 569
+      },
+      {
+        "name": "C49",
+        "x": 28,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 1011,
+        "tw_late": 1073
+      },
+      {
+        "name": "C50",
+        "x": 26,
+        "y": 32,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 923,
+        "tw_late": 975
+      },
+      {
+        "name": "C51",
+        "x": 25,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 823,
+        "tw_late": 889
+      },
+      {
+        "name": "C52",
+        "x": 25,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 1042,
+        "tw_late": 1102
+      },
+      {
+        "name": "C53",
+        "x": 44,
+        "y": 5,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 437,
+        "tw_late": 511
+      },
+      {
+        "name": "C54",
+        "x": 42,
+        "y": 10,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 810,
+        "tw_late": 868
+      },
+      {
+        "name": "C55",
+        "x": 42,
+        "y": 15,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 905,
+        "tw_late": 963
+      },
+      {
+        "name": "C56",
+        "x": 40,
+        "y": 5,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 350,
+        "tw_late": 410
+      },
+      {
+        "name": "C57",
+        "x": 40,
+        "y": 15,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 989,
+        "tw_late": 1063
+      },
+      {
+        "name": "C58",
+        "x": 38,
+        "y": 5,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 256,
+        "tw_late": 320
+      },
+      {
+        "name": "C59",
+        "x": 38,
+        "y": 15,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 66,
+        "tw_late": 124
+      },
+      {
+        "name": "C60",
+        "x": 35,
+        "y": 5,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 167,
+        "tw_late": 223
+      },
+      {
+        "name": "C61",
+        "x": 50,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 980,
+        "tw_late": 1064
+      },
+      {
+        "name": "C62",
+        "x": 50,
+        "y": 35,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 169,
+        "tw_late": 229
+      },
+      {
+        "name": "C63",
+        "x": 50,
+        "y": 40,
+        "demand": 50,
+        "service_duration": 90,
+        "tw_early": 15,
+        "tw_late": 85
+      },
+      {
+        "name": "C64",
+        "x": 48,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 263,
+        "tw_late": 325
+      },
+      {
+        "name": "C65",
+        "x": 48,
+        "y": 40,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 67,
+        "tw_late": 139
+      },
+      {
+        "name": "C66",
+        "x": 47,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 1068,
+        "tw_late": 1129
+      },
+      {
+        "name": "C67",
+        "x": 47,
+        "y": 40,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 13,
+        "tw_late": 88
+      },
+      {
+        "name": "C68",
+        "x": 45,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 354,
+        "tw_late": 420
+      },
+      {
+        "name": "C69",
+        "x": 45,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 448,
+        "tw_late": 516
+      },
+      {
+        "name": "C70",
+        "x": 95,
+        "y": 30,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 390,
+        "tw_late": 444
+      },
+      {
+        "name": "C71",
+        "x": 95,
+        "y": 35,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 481,
+        "tw_late": 543
+      },
+      {
+        "name": "C72",
+        "x": 53,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 904,
+        "tw_late": 954
+      },
+      {
+        "name": "C73",
+        "x": 92,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 287,
+        "tw_late": 361
+      },
+      {
+        "name": "C74",
+        "x": 53,
+        "y": 35,
+        "demand": 50,
+        "service_duration": 90,
+        "tw_early": 78,
+        "tw_late": 142
+      },
+      {
+        "name": "C75",
+        "x": 45,
+        "y": 65,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 16,
+        "tw_late": 91
+      },
+      {
+        "name": "C76",
+        "x": 90,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 575,
+        "tw_late": 639
+      },
+      {
+        "name": "C77",
+        "x": 88,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 534,
+        "tw_late": 600
+      },
+      {
+        "name": "C78",
+        "x": 88,
+        "y": 35,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 667,
+        "tw_late": 731
+      },
+      {
+        "name": "C79",
+        "x": 87,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 446,
+        "tw_late": 506
+      },
+      {
+        "name": "C80",
+        "x": 85,
+        "y": 25,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 637,
+        "tw_late": 689
+      },
+      {
+        "name": "C81",
+        "x": 85,
+        "y": 35,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 761,
+        "tw_late": 823
+      },
+      {
+        "name": "C82",
+        "x": 75,
+        "y": 55,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 459,
+        "tw_late": 529
+      },
+      {
+        "name": "C83",
+        "x": 72,
+        "y": 55,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 556,
+        "tw_late": 618
+      },
+      {
+        "name": "C84",
+        "x": 70,
+        "y": 58,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 650,
+        "tw_late": 710
+      },
+      {
+        "name": "C85",
+        "x": 68,
+        "y": 60,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 737,
+        "tw_late": 809
+      },
+      {
+        "name": "C86",
+        "x": 66,
+        "y": 55,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 173,
+        "tw_late": 241
+      },
+      {
+        "name": "C87",
+        "x": 65,
+        "y": 55,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 87,
+        "tw_late": 145
+      },
+      {
+        "name": "C88",
+        "x": 65,
+        "y": 60,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 837,
+        "tw_late": 895
+      },
+      {
+        "name": "C89",
+        "x": 63,
+        "y": 58,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 929,
+        "tw_late": 989
+      },
+      {
+        "name": "C90",
+        "x": 60,
+        "y": 55,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 21,
+        "tw_late": 84
+      },
+      {
+        "name": "C91",
+        "x": 60,
+        "y": 60,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 1010,
+        "tw_late": 1096
+      },
+      {
+        "name": "C92",
+        "x": 67,
+        "y": 85,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 459,
+        "tw_late": 519
+      },
+      {
+        "name": "C93",
+        "x": 65,
+        "y": 85,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 546,
+        "tw_late": 616
+      },
+      {
+        "name": "C94",
+        "x": 65,
+        "y": 82,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 367,
+        "tw_late": 423
+      },
+      {
+        "name": "C95",
+        "x": 62,
+        "y": 80,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 274,
+        "tw_late": 330
+      },
+      {
+        "name": "C96",
+        "x": 60,
+        "y": 80,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 177,
+        "tw_late": 243
+      },
+      {
+        "name": "C97",
+        "x": 60,
+        "y": 85,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 645,
+        "tw_late": 707
+      },
+      {
+        "name": "C98",
+        "x": 58,
+        "y": 75,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 181,
+        "tw_late": 247
+      },
+      {
+        "name": "C99",
+        "x": 55,
+        "y": 80,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 836,
+        "tw_late": 896
+      },
+      {
+        "name": "C100",
+        "x": 55,
+        "y": 85,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 744,
+        "tw_late": 798
+      }
+    ],
+    "vehicle_limit_policy": {
+      "formula": "ceil((clients + charging_stations) / 4)",
+      "rounding": "ceiling",
+      "client_count": 100,
+      "charging_station_count": 21,
+      "vehicle_limit": 31
+    }
+  }
+}

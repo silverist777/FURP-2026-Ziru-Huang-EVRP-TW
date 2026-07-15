@@ -1,0 +1,2 @@
+instance,clients,vehicles,capacity,known_cost,predicted_cost,gap_pct,time_window_violations,capacity_violations,missing_customers,duplicate_customers,depot_return_violations,all_customers_served,num_starts
+C1_2_1,200,50,200.0,2698.6,22318.207161445924,727.0290951399217,0,0,0,0,0,True,200

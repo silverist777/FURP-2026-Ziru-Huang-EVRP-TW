@@ -1,5 +1,13 @@
 # FURP Project Repository
 
+## Current checkpoint
+
+This repository studies EVRP-TW solution methods under a shared hard fleet limit. The current Track B checkpoint includes four-method reruns, shared feasibility validation, reproducible commands, and an English progress note.
+
+- [Week 5 Track B checkpoint](docs/week05_checkpoint.md)
+- [Experiment guide](src/README.md)
+- [Vehicle-limited comparison results](src/results/evrptw_four_methods_vehicle_limit/README.md)
+
 > **Faculty Undergraduate Research Practice (FURP)**
 > Undergraduate Research Group · Faculty of Science and Engineering · University of Nottingham Ningbo China
 

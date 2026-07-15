@@ -55,7 +55,7 @@ export PYTHONPATH="src:src/experiments"
 Then convert a multi-line PowerShell command like this:
 
 ```powershell
-.\.venv\Scripts\python.exe src\experiments\PyVRP\evaluate_solomon_pyvrp.py `
+.\.venv\Scripts\python.exe src\experiments\legacy\cvrp\evaluate_solomon_pyvrp.py `
   --data-dir src\data\Solomon `
   --instance C101
 ```
@@ -63,7 +63,7 @@ Then convert a multi-line PowerShell command like this:
 to:
 
 ```bash
-src/.venv_pyvrp/bin/python src/experiments/PyVRP/evaluate_solomon_pyvrp.py \
+src/.venv_pyvrp/bin/python src/experiments/legacy/cvrp/evaluate_solomon_pyvrp.py \
   --data-dir src/data/Solomon \
   --instance C101
 ```
@@ -88,7 +88,7 @@ Important:
 
 - The GA baseline for the experiment is the external `py-ga-VRPTW` submodule.
 - `py-ga-VRPTW` reads `py-ga-VRPTW\data\json\<instance>.json`, not `src\data` directly.
-- `src\experiments\cvrp_method_comparison.py` still contains a local fallback GA
+- `src\experiments\legacy\cvrp\cvrp_method_comparison.py` still contains a local fallback GA
   for same-data CVRP comparison only. Do not report that row as `py-ga-VRPTW`.
 - PyVRP is the main current path for VRPTW and EVRP-TW repair/checker runs on `src/data`.
 - The retained POMO path is the upstream yd-kwon/POMO CVRP checkpoint. The old
@@ -165,7 +165,7 @@ cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
   --device cpu `
   --solomon src\data\Solomon\C101.txt `
   --holmberger src\data\Holmberger\C1_2_1.txt `
-  --output-dir src\results\method_comparison_cvrp_srcdata_quick `
+  --output-dir src\log\week2\method-comparison-cvrp-srcdata-quick `
   --pyvrp-runtime-seconds 1 `
   --ga-pop-size 80 `
   --ga-generations 50 `
@@ -180,7 +180,7 @@ cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
   --device cuda `
   --solomon src\data\Solomon\C101.txt `
   --holmberger src\data\Holmberger\C1_2_1.txt `
-  --output-dir src\results\method_comparison_cvrp_srcdata_cuda `
+  --output-dir src\log\week2\method-comparison-cvrp-srcdata-cuda `
   --pyvrp-runtime-seconds 1 `
   --ga-pop-size 240 `
   --ga-generations 220
@@ -189,14 +189,14 @@ cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
 Output files:
 
 ```text
-src\results\method_comparison_cvrp_srcdata_quick\cvrp_method_comparison.csv
-src\results\method_comparison_cvrp_srcdata_quick\cvrp_method_comparison.md
+src\log\week2\method-comparison-cvrp-srcdata-quick\cvrp_method_comparison.csv
+src\log\week2\method-comparison-cvrp-srcdata-quick\cvrp_method_comparison.md
 ```
 
 To view only local fallback GA rows after the run:
 
 ```powershell
-Import-Csv src\results\method_comparison_cvrp_srcdata_quick\cvrp_method_comparison.csv |
+Import-Csv src\log\week2\method-comparison-cvrp-srcdata-quick\cvrp_method_comparison.csv |
   Where-Object { $_.algorithm -eq "GA" }
 ```
 
@@ -230,25 +230,25 @@ src/.venv_pyvrp/bin/python -m pip install -r py-ga-VRPTW/requirements.txt
 Run C101 with all 100 customers:
 
 ```powershell
-.\.venv\Scripts\python.exe src\experiments\GA\run_py_ga_vrptw.py `
+.\.venv\Scripts\python.exe src\experiments\legacy\prototypes\run_py_ga_vrptw.py `
   --instance C101 `
   --ind-size 100 `
   --pop-size 80 `
   --generations 50 `
   --export-csv `
-  --output-csv src\results\py_ga_vrptw_C101_100.csv
+  --output-csv src\log\week1\ga-progress\py_ga_vrptw_C101_100.csv
 ```
 
 macOS zsh/bash:
 
 ```bash
-src/.venv_pyvrp/bin/python src/experiments/GA/run_py_ga_vrptw.py \
+src/.venv_pyvrp/bin/python src/experiments/legacy/prototypes/run_py_ga_vrptw.py \
   --instance C101 \
   --ind-size 100 \
   --pop-size 80 \
   --generations 50 \
   --export-csv \
-  --output-csv src/results/py_ga_vrptw_C101_100.csv
+  --output-csv src/log/week1/ga-progress/py_ga_vrptw_C101_100.csv
 ```
 
 Main py-ga-VRPTW knobs:
@@ -274,35 +274,35 @@ Solomon-style VRPTW GA from external py-ga-VRPTW. EV constraints disabled.
 
 ```powershell
 cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
-.\.venv\Scripts\python.exe src\experiments\PyVRP\evaluate_solomon_pyvrp.py `
+.\.venv\Scripts\python.exe src\experiments\legacy\cvrp\evaluate_solomon_pyvrp.py `
   --data-dir src\data\Solomon `
   --instance C101 `
   --runtime-seconds 1 `
   --seed 1234 `
-  --output-csv src\results\pyvrp_srcdata_C101.csv
+  --output-csv src\log\week1\pyvrp-solomon-eval\pyvrp_srcdata_C101.csv
 ```
 
 First five:
 
 ```powershell
-.\.venv\Scripts\python.exe src\experiments\PyVRP\evaluate_solomon_pyvrp.py `
+.\.venv\Scripts\python.exe src\experiments\legacy\cvrp\evaluate_solomon_pyvrp.py `
   --data-dir src\data\Solomon `
   --limit 5 `
   --runtime-seconds 1 `
   --seed 1234 `
-  --output-csv src\results\pyvrp_srcdata_solomon_limit5.csv
+  --output-csv src\log\week1\pyvrp-solomon-eval\pyvrp_srcdata_solomon_limit5.csv
 ```
 
 ### 4.2 `src\data\Holmberger`
 
 ```powershell
 cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
-.\.venv\Scripts\python.exe src\experiments\PyVRP\evaluate_solomon_pyvrp.py `
+.\.venv\Scripts\python.exe src\experiments\legacy\cvrp\evaluate_solomon_pyvrp.py `
   --data-dir src\data\Holmberger `
   --instance C1_2_1 `
   --runtime-seconds 3 `
   --seed 1234 `
-  --output-csv src\results\pyvrp_srcdata_holmberger_C1_2_1.csv
+  --output-csv src\log\week1\pyvrp-holmberger-eval\pyvrp_srcdata_holmberger_C1_2_1.csv
 ```
 
 The script name says Solomon, but the parser can read the bundled Holmberger Solomon-like `.txt` files.
@@ -314,11 +314,11 @@ Smoke JSON:
 ```powershell
 cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
 $env:PYTHONPATH = "src;src\experiments"
-.\.venv\Scripts\python.exe src\experiments\PyVRP\solve_evrptw_pipeline.py `
+.\.venv\Scripts\python.exe src\experiments\methods\pyvrp\solve_evrptw_pipeline.py `
   --instance src\data\smoke_test_instance.json `
   --runtime-seconds 2 `
   --seed 1 `
-  --output src\results\srcdata_smoke_solution.json
+  --output src\log\week2\evrptw-pipeline\srcdata_smoke_solution.json
 ```
 
 Scale-up JSON:
@@ -326,11 +326,11 @@ Scale-up JSON:
 ```powershell
 cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
 $env:PYTHONPATH = "src;src\experiments"
-.\.venv\Scripts\python.exe src\experiments\PyVRP\solve_evrptw_pipeline.py `
+.\.venv\Scripts\python.exe src\experiments\methods\pyvrp\solve_evrptw_pipeline.py `
   --instance src\data\scale_up_instance.json `
   --runtime-seconds 5 `
   --seed 1 `
-  --output src\results\srcdata_scale_up_solution.json
+  --output src\log\week2\evrptw-pipeline\srcdata_scale_up_solution.json
 ```
 
 ### 4.4 Schneider-style sample
@@ -340,9 +340,9 @@ Convert to JSON:
 ```powershell
 cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
 $env:PYTHONPATH = "src;src\experiments"
-.\.venv\Scripts\python.exe src\experiments\PyVRP\parse_schneider_instance.py `
+.\.venv\Scripts\python.exe src\experiments\methods\pyvrp\parse_schneider_instance.py `
   src\data\schneider_sample.txt `
-  --output src\results\srcdata_schneider_sample_converted.json `
+  --output src\log\week2\evrptw-pipeline\srcdata_schneider_sample_converted.json `
   --vehicles 2 `
   --runtime-seconds 2 `
   --seed 1
@@ -351,19 +351,19 @@ $env:PYTHONPATH = "src;src\experiments"
 Solve through the EVRP-TW pipeline:
 
 ```powershell
-.\.venv\Scripts\python.exe src\experiments\PyVRP\solve_evrptw_pipeline.py `
+.\.venv\Scripts\python.exe src\experiments\methods\pyvrp\solve_evrptw_pipeline.py `
   --schneider src\data\schneider_sample.txt `
   --vehicles 2 `
   --runtime-seconds 2 `
   --seed 1 `
-  --output src\results\srcdata_schneider_sample_solution.json
+  --output src\log\week2\evrptw-pipeline\srcdata_schneider_sample_solution.json
 ```
 
 Check explicit routes:
 
 ```powershell
 .\.venv\Scripts\python.exe src\experiments\check_explicit_routes.py `
-  --instance src\results\srcdata_schneider_sample_converted.json `
+  --instance src\log\week2\evrptw-pipeline\srcdata_schneider_sample_converted.json `
   --routes src\data\explicit_routes_sample.json
 ```
 
@@ -379,7 +379,7 @@ cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
   --device cpu `
   --solomon src\data\Solomon\C101.txt `
   --holmberger src\data\Holmberger\C1_2_1.txt `
-  --output-dir src\results\ydkwon_pomo_srcdata_cpu
+  --output-dir src\log\week2\pomo-srcdata-cpu
 ```
 
 CUDA with augmentation:
@@ -391,7 +391,7 @@ cd E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW
   --augmentation `
   --solomon src\data\Solomon\C101.txt `
   --holmberger src\data\Holmberger\C1_2_1.txt `
-  --output-dir src\results\ydkwon_pomo_srcdata_cuda_aug
+  --output-dir src\log\week2\pomo-srcdata-cuda-aug
 ```
 
 Scope:
@@ -435,19 +435,19 @@ real per-generation `max_fitness` values and plots best cost as
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe src\experiments\render_progress_plots.py `
-  --input-csv src\results\py_ga_vrptw_C101_100.csv `
+.\.venv\Scripts\python.exe src\experiments\tools\render_progress_plots.py `
+  --input-csv src\log\week1\ga-progress\py_ga_vrptw_C101_100.csv `
   --field convergence_curve `
-  --output-dir src\results\py_ga_vrptw_C101_100_progress_plots
+  --output-dir src\results\week1\ga-progress\py-ga-C101-100
 ```
 
 macOS zsh/bash:
 
 ```bash
-src/.venv_pyvrp/bin/python src/experiments/render_progress_plots.py \
-  --input-csv src/results/py_ga_vrptw_C101_100.csv \
+src/.venv_pyvrp/bin/python src/experiments/tools/render_progress_plots.py \
+  --input-csv src/log/week1/ga-progress/py_ga_vrptw_C101_100.csv \
   --field convergence_curve \
-  --output-dir src/results/py_ga_vrptw_C101_100_progress_plots
+  --output-dir src/results/week1/ga-progress/py-ga-C101-100
 ```
 
 Use `--field improvement_over_time` to plot the improvement curve instead. The

@@ -1,0 +1,3 @@
+﻿2026-07-12 13:20:12	RUNNER_START	pid=8792
+2026-07-12 13:20:12	START	vns_ts_c101_21
+2026-07-12 13:20:12	COMMAND	E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\.venv\Scripts\python.exe src\experiments\vns_ts_evrptw_baseline.py --schneider src\data\evrptw_instances\c101_21.txt --vehicles 100 --seed 1 --iterations 80 --neighbors-per-iteration 20 --output E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\results\evrptw_four_methods_unlimited\c101_21_vns_ts.json

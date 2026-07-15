@@ -1,81 +1,36 @@
-# Results
+# Results and Visualizations
 
-This directory stores generated experiment outputs.
+This directory contains **derived, reader-facing outputs**: figures, experiment
+summaries, and short interpretation notes. Raw solver records and machine tables
+are stored separately in [`../log/`](../log/).
 
-Current files:
+## Weekly index
 
-- `schneider_sample_converted.json`: generated JSON output from `src/data/schneider_sample.txt`.
-- `schneider_sample_solution.json`: EVRP-TW repair-pipeline output for the bundled sample instance.
-- `c101C5_solution.json`: EVRP-TW repair-pipeline output for the external Schneider-style `c101C5.txt` instance.
+| Period | Main contents |
+|---|---|
+| [`week1/`](week1/) | initial POMO/PyVRP evaluations and GA progress plots |
+| [`week2/`](week2/) | CVRP method comparison and EVRP-TW pipeline versions |
+| [`week3/`](week3/) | repeated trials, hard-TW decoder, penalty studies, local rerun |
+| [`week4/`](week4/) | four-instance pilot and 100/1000-client comparison |
+| [`week5/`](week5/) | shared-fleet four-method comparison and focused diagnostics |
 
-## `c101C5_solution.json`
+Each experiment group contains at least one PNG visualization. Most newly
+generated groups use `overview.png` as the visual entry point. Rebuild them with:
 
-This is the current reproducible Week 2 baseline result.
-
-Solver stack:
-
-```text
-PyVRP VRPTW baseline + station_insertion_label_setting repair
+```powershell
+.\.venv\Scripts\python.exe src\experiments\tools\build_weekly_visualizations.py
 ```
 
-Source instance:
+Interpretation rule: hatched bars are infeasible outputs. Their distance is
+shown for diagnosis, not as a valid improvement over a feasible solution.
 
-```text
-/Users/emt/Workspace/evrp_tw/data/schneider/c101C5.txt
-```
+## What belongs here
 
-Result snapshot:
+- PNG figures and plots;
+- readable Markdown summaries and result-specific README files;
+- small derived tables only when they materially help a reader.
 
-| Metric | Value |
-| --- | ---: |
-| status | solved |
-| routes | 2 |
-| total_distance | 264 |
-| total_duration | 1729 |
-| charging_count | 3 |
-| charging_time | 439 |
-| time_window_violations | 0 |
-| capacity_violations | 0 |
-| energy_violations | 0 |
-
-Reproduce it from the repository root:
-
-```bash
-src/.venv_pyvrp/bin/python src/experiments/solve_evrptw_pipeline.py \
-  --schneider /Users/emt/Workspace/evrp_tw/data/schneider/c101C5.txt \
-  --vehicles 2 \
-  --runtime-seconds 2 \
-  --output src/results/c101C5_solution.json \
-  --fail-on-unsolved
-```
-
-This output is a baseline-plus-repair result. PyVRP builds customer routes with VRPTW constraints, then the project repair/checker code inserts charging stations and verifies EVRP-TW feasibility. It is not a full reproduction of the Schneider 2014 hybrid VNS/TS algorithm.
-
-Regenerate it from the repository root:
-
-```bash
-src/.venv_pyvrp/bin/python src/experiments/parse_schneider_instance.py \
-  src/data/schneider_sample.txt \
-  --output src/results/schneider_sample_converted.json \
-  --vehicles 2 \
-  --runtime-seconds 1
-```
-
-Check the converted result with the explicit route sample:
-
-```bash
-src/.venv_pyvrp/bin/python src/experiments/check_explicit_routes.py \
-  --instance src/results/schneider_sample_converted.json \
-  --routes src/data/explicit_routes_sample.json
-```
-
-Only keep small, reproducible outputs here. Large logs, full benchmark dumps, and temporary experiment artifacts should stay out of Git unless they are specifically needed for review.
-
-The EVRP-TW solving pipeline writes solution files here by default:
-
-```bash
-src/.venv_pyvrp/bin/python src/experiments/solve_evrptw_pipeline.py \
-  --schneider /Users/emt/Workspace/evrp_tw/data/schneider/c101C5.txt \
-  --vehicles 2 \
-  --runtime-seconds 2
-```
+Solver JSON, GA generation CSV, aggregate machine CSV, `.log`, and `.tsv` files
+normally belong in `src/log/weekN/<experiment>/`. Classification is based on
+purpose, not extension: a readable `summary.md` stays here, while a Markdown
+file that is itself a raw machine dump would go to `src/log/`.

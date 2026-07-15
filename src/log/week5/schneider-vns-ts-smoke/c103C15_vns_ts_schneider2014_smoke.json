@@ -1,0 +1,756 @@
+{
+  "status": "solved",
+  "source": {
+    "path": "src\\data\\evrptw_instances\\c103C15.txt",
+    "instance": "c103C15",
+    "problem_type": "EVRPTW",
+    "paper": "Schneider, Stenger, and Goeke (2014), Part 4"
+  },
+  "experiment_record": {
+    "record_schema": "week03_experiment_record_v1",
+    "instance_name": "c103C15",
+    "instance_size": 15,
+    "method_name": "Schneider-2014 hybrid VNS/TS E-VRPTW",
+    "objective_value": 405.0,
+    "runtime_seconds": 3.116,
+    "feasibility_status": "feasible",
+    "vehicles_used": 3,
+    "constraint_violations": "none",
+    "random_seed": 1,
+    "best_solution_found": "[[\"C59\", \"S15\", \"C85\", \"C95\", \"S3\", \"C98\"], [\"C44\", \"C40\", \"C50\", \"C33\", \"C35\", \"S13\", \"C61\"], [\"C30\", \"C18\", \"C19\", \"S7\", \"C10\", \"C13\"]]",
+    "reference_value": null,
+    "gap_to_reference_pct": null,
+    "convergence_curve": "[{\"iteration\": 0, \"phase\": \"feasibility\", \"event\": \"initial\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 310.0, \"capacity_violation\": 10.0, \"time_window_violation\": 2171.0, \"battery_violation\": 158.25, \"penalty_capacity\": 1.0, \"penalty_time_window\": 1.0, \"penalty_battery\": 1.0, \"tabu_steps\": 0, \"evaluated_moves\": 0}, {\"iteration\": 1, \"phase\": \"feasibility\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 436.0, \"capacity_violation\": 0.0, \"time_window_violation\": 182.0, \"battery_violation\": 280.5, \"penalty_capacity\": 0.833333, \"penalty_time_window\": 1.2, \"penalty_battery\": 1.2, \"tabu_steps\": 8, \"evaluated_moves\": 1267}, {\"iteration\": 2, \"phase\": \"feasibility\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 347.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 191.5, \"penalty_capacity\": 0.578704, \"penalty_time_window\": 1.44, \"penalty_battery\": 1.728, \"tabu_steps\": 16, \"evaluated_moves\": 2749}, {\"iteration\": 3, \"phase\": \"feasibility\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 371.0, \"capacity_violation\": 0.0, \"time_window_violation\": 88.0, \"battery_violation\": 62.5, \"penalty_capacity\": 0.482253, \"penalty_time_window\": 1.728, \"penalty_battery\": 2.0736, \"tabu_steps\": 24, \"evaluated_moves\": 4752}, {\"iteration\": 4, \"phase\": \"feasibility\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 372.0, \"capacity_violation\": 0.0, \"time_window_violation\": 68.0, \"battery_violation\": 74.75, \"penalty_capacity\": 0.334898, \"penalty_time_window\": 2.48832, \"penalty_battery\": 2.985984, \"tabu_steps\": 32, \"evaluated_moves\": 7032}, {\"iteration\": 5, \"phase\": \"feasibility\", \"event\": \"rejected\", \"neighborhood_k\": 2, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 372.0, \"capacity_violation\": 0.0, \"time_window_violation\": 68.0, \"battery_violation\": 74.75, \"penalty_capacity\": 0.232568, \"penalty_time_window\": 2.985984, \"penalty_battery\": 4.299817, \"tabu_steps\": 40, \"evaluated_moves\": 9386}, {\"iteration\": 6, \"phase\": \"feasibility\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 413.0, \"capacity_violation\": 0.0, \"time_window_violation\": 68.0, \"battery_violation\": 63.75, \"penalty_capacity\": 0.193807, \"penalty_time_window\": 4.299817, \"penalty_battery\": 5.15978, \"tabu_steps\": 48, \"evaluated_moves\": 11710}, {\"iteration\": 7, \"phase\": \"feasibility\", \"event\": \"rejected\", \"neighborhood_k\": 2, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 413.0, \"capacity_violation\": 0.0, \"time_window_violation\": 68.0, \"battery_violation\": 63.75, \"penalty_capacity\": 0.134588, \"penalty_time_window\": 5.15978, \"penalty_battery\": 7.430084, \"tabu_steps\": 56, \"evaluated_moves\": 14110}, {\"iteration\": 8, \"phase\": \"feasibility\", \"event\": \"rejected\", \"neighborhood_k\": 3, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 413.0, \"capacity_violation\": 0.0, \"time_window_violation\": 68.0, \"battery_violation\": 63.75, \"penalty_capacity\": 0.112157, \"penalty_time_window\": 7.430084, \"penalty_battery\": 8.9161, \"tabu_steps\": 64, \"evaluated_moves\": 16510}, {\"iteration\": 8, \"phase\": \"feasibility\", \"event\": \"add_vehicle\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 3, \"total_distance\": 427.0, \"capacity_violation\": 0.0, \"time_window_violation\": 23.0, \"battery_violation\": 94.0, \"penalty_capacity\": 0.112157, \"penalty_time_window\": 7.430084, \"penalty_battery\": 8.9161, \"tabu_steps\": 64, \"evaluated_moves\": 16510}, {\"iteration\": 9, \"phase\": \"feasibility\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 3, \"total_distance\": 483.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 28.75, \"penalty_capacity\": 0.077887, \"penalty_time_window\": 8.9161, \"penalty_battery\": 12.839185, \"tabu_steps\": 72, \"evaluated_moves\": 18874}, {\"iteration\": 10, \"phase\": \"feasibility\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": true, \"vehicle_count\": 3, \"total_distance\": 436.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 0.0, \"penalty_capacity\": 0.054088, \"penalty_time_window\": 7.430084, \"penalty_battery\": 15.407022, \"tabu_steps\": 80, \"evaluated_moves\": 21274}, {\"iteration\": 11, \"phase\": \"distance\", \"event\": \"rejected\", \"neighborhood_k\": 2, \"feasible\": true, \"vehicle_count\": 3, \"total_distance\": 436.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 0.0, \"penalty_capacity\": 0.045073, \"penalty_time_window\": 8.9161, \"penalty_battery\": 18.488426, \"tabu_steps\": 88, \"evaluated_moves\": 23674}, {\"iteration\": 12, \"phase\": \"distance\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": true, \"vehicle_count\": 3, \"total_distance\": 405.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 0.0, \"penalty_capacity\": 0.031301, \"penalty_time_window\": 6.191736, \"penalty_battery\": 15.407022, \"tabu_steps\": 96, \"evaluated_moves\": 26074}, {\"iteration\": 13, \"phase\": \"distance\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": true, \"vehicle_count\": 3, \"total_distance\": 405.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 0.0, \"penalty_capacity\": 0.026084, \"penalty_time_window\": 5.15978, \"penalty_battery\": 12.839185, \"tabu_steps\": 104, \"evaluated_moves\": 28474}, {\"iteration\": 14, \"phase\": \"distance\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": true, \"vehicle_count\": 3, \"total_distance\": 405.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 0.0, \"penalty_capacity\": 0.018114, \"penalty_time_window\": 3.583181, \"penalty_battery\": 8.9161, \"tabu_steps\": 112, \"evaluated_moves\": 30874}, {\"iteration\": 15, \"phase\": \"distance\", \"event\": \"rejected\", \"neighborhood_k\": 2, \"feasible\": true, \"vehicle_count\": 3, \"total_distance\": 405.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 0.0, \"penalty_capacity\": 0.012579, \"penalty_time_window\": 4.299817, \"penalty_battery\": 7.430084, \"tabu_steps\": 120, \"evaluated_moves\": 33274}]",
+    "improvement_over_time": "[{\"iteration\": 0, \"phase\": \"feasibility\", \"event\": \"initial\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 310.0, \"capacity_violation\": 10.0, \"time_window_violation\": 2171.0, \"battery_violation\": 158.25, \"penalty_capacity\": 1.0, \"penalty_time_window\": 1.0, \"penalty_battery\": 1.0, \"tabu_steps\": 0, \"evaluated_moves\": 0}, {\"iteration\": 1, \"phase\": \"feasibility\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 436.0, \"capacity_violation\": 0.0, \"time_window_violation\": 182.0, \"battery_violation\": 280.5, \"penalty_capacity\": 0.833333, \"penalty_time_window\": 1.2, \"penalty_battery\": 1.2, \"tabu_steps\": 8, \"evaluated_moves\": 1267}, {\"iteration\": 2, \"phase\": \"feasibility\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 347.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 191.5, \"penalty_capacity\": 0.578704, \"penalty_time_window\": 1.44, \"penalty_battery\": 1.728, \"tabu_steps\": 16, \"evaluated_moves\": 2749}, {\"iteration\": 3, \"phase\": \"feasibility\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 371.0, \"capacity_violation\": 0.0, \"time_window_violation\": 88.0, \"battery_violation\": 62.5, \"penalty_capacity\": 0.482253, \"penalty_time_window\": 1.728, \"penalty_battery\": 2.0736, \"tabu_steps\": 24, \"evaluated_moves\": 4752}, {\"iteration\": 4, \"phase\": \"feasibility\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 372.0, \"capacity_violation\": 0.0, \"time_window_violation\": 68.0, \"battery_violation\": 74.75, \"penalty_capacity\": 0.334898, \"penalty_time_window\": 2.48832, \"penalty_battery\": 2.985984, \"tabu_steps\": 32, \"evaluated_moves\": 7032}, {\"iteration\": 5, \"phase\": \"feasibility\", \"event\": \"rejected\", \"neighborhood_k\": 2, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 372.0, \"capacity_violation\": 0.0, \"time_window_violation\": 68.0, \"battery_violation\": 74.75, \"penalty_capacity\": 0.232568, \"penalty_time_window\": 2.985984, \"penalty_battery\": 4.299817, \"tabu_steps\": 40, \"evaluated_moves\": 9386}, {\"iteration\": 6, \"phase\": \"feasibility\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 413.0, \"capacity_violation\": 0.0, \"time_window_violation\": 68.0, \"battery_violation\": 63.75, \"penalty_capacity\": 0.193807, \"penalty_time_window\": 4.299817, \"penalty_battery\": 5.15978, \"tabu_steps\": 48, \"evaluated_moves\": 11710}, {\"iteration\": 7, \"phase\": \"feasibility\", \"event\": \"rejected\", \"neighborhood_k\": 2, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 413.0, \"capacity_violation\": 0.0, \"time_window_violation\": 68.0, \"battery_violation\": 63.75, \"penalty_capacity\": 0.134588, \"penalty_time_window\": 5.15978, \"penalty_battery\": 7.430084, \"tabu_steps\": 56, \"evaluated_moves\": 14110}, {\"iteration\": 8, \"phase\": \"feasibility\", \"event\": \"rejected\", \"neighborhood_k\": 3, \"feasible\": false, \"vehicle_count\": 2, \"total_distance\": 413.0, \"capacity_violation\": 0.0, \"time_window_violation\": 68.0, \"battery_violation\": 63.75, \"penalty_capacity\": 0.112157, \"penalty_time_window\": 7.430084, \"penalty_battery\": 8.9161, \"tabu_steps\": 64, \"evaluated_moves\": 16510}, {\"iteration\": 8, \"phase\": \"feasibility\", \"event\": \"add_vehicle\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 3, \"total_distance\": 427.0, \"capacity_violation\": 0.0, \"time_window_violation\": 23.0, \"battery_violation\": 94.0, \"penalty_capacity\": 0.112157, \"penalty_time_window\": 7.430084, \"penalty_battery\": 8.9161, \"tabu_steps\": 64, \"evaluated_moves\": 16510}, {\"iteration\": 9, \"phase\": \"feasibility\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": false, \"vehicle_count\": 3, \"total_distance\": 483.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 28.75, \"penalty_capacity\": 0.077887, \"penalty_time_window\": 8.9161, \"penalty_battery\": 12.839185, \"tabu_steps\": 72, \"evaluated_moves\": 18874}, {\"iteration\": 10, \"phase\": \"feasibility\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": true, \"vehicle_count\": 3, \"total_distance\": 436.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 0.0, \"penalty_capacity\": 0.054088, \"penalty_time_window\": 7.430084, \"penalty_battery\": 15.407022, \"tabu_steps\": 80, \"evaluated_moves\": 21274}, {\"iteration\": 11, \"phase\": \"distance\", \"event\": \"rejected\", \"neighborhood_k\": 2, \"feasible\": true, \"vehicle_count\": 3, \"total_distance\": 436.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 0.0, \"penalty_capacity\": 0.045073, \"penalty_time_window\": 8.9161, \"penalty_battery\": 18.488426, \"tabu_steps\": 88, \"evaluated_moves\": 23674}, {\"iteration\": 12, \"phase\": \"distance\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": true, \"vehicle_count\": 3, \"total_distance\": 405.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 0.0, \"penalty_capacity\": 0.031301, \"penalty_time_window\": 6.191736, \"penalty_battery\": 15.407022, \"tabu_steps\": 96, \"evaluated_moves\": 26074}, {\"iteration\": 13, \"phase\": \"distance\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": true, \"vehicle_count\": 3, \"total_distance\": 405.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 0.0, \"penalty_capacity\": 0.026084, \"penalty_time_window\": 5.15978, \"penalty_battery\": 12.839185, \"tabu_steps\": 104, \"evaluated_moves\": 28474}, {\"iteration\": 14, \"phase\": \"distance\", \"event\": \"accepted\", \"neighborhood_k\": 1, \"feasible\": true, \"vehicle_count\": 3, \"total_distance\": 405.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 0.0, \"penalty_capacity\": 0.018114, \"penalty_time_window\": 3.583181, \"penalty_battery\": 8.9161, \"tabu_steps\": 112, \"evaluated_moves\": 30874}, {\"iteration\": 15, \"phase\": \"distance\", \"event\": \"rejected\", \"neighborhood_k\": 2, \"feasible\": true, \"vehicle_count\": 3, \"total_distance\": 405.0, \"capacity_violation\": 0.0, \"time_window_violation\": 0.0, \"battery_violation\": 0.0, \"penalty_capacity\": 0.012579, \"penalty_time_window\": 4.299817, \"penalty_battery\": 7.430084, \"tabu_steps\": 120, \"evaluated_moves\": 33274}]",
+    "iterations": 15,
+    "generations": null,
+    "search_steps": 33274
+  },
+  "solver": {
+    "method_name": "Schneider-2014 hybrid VNS/TS E-VRPTW",
+    "elapsed_runtime_seconds": 3.116,
+    "seed": 1,
+    "outer_iterations": 15,
+    "tabu_steps": 120,
+    "evaluated_moves": 33274,
+    "stopped_by_time_limit": false,
+    "preprocessed_infeasible_arcs": 97,
+    "repair_used": false,
+    "recharge_policy": "full_recharge"
+  },
+  "algorithm": {
+    "vns": "15 cyclic-exchange neighborhoods (#routes=2..4, max chain=1..5)",
+    "tabu_neighborhood": [
+      "2-opt*",
+      "relocate",
+      "exchange",
+      "stationInRe"
+    ],
+    "acceptance": "simulated_annealing_linear_cooling",
+    "tabu_attribute": "deleted_arc_with_route_and_station_boundaries",
+    "generalized_cost": "distance + alpha*capacity + beta*time_window + gamma*battery + diversification",
+    "configuration": {
+      "seed": 1,
+      "max_vehicles": 30,
+      "initial_vehicles": null,
+      "feasibility_iterations": 8,
+      "distance_iterations": 5,
+      "tabu_iterations": 8,
+      "max_candidate_moves": 300,
+      "candidate_list_size": 12,
+      "station_candidates_per_arc": 3,
+      "tabu_tenure_min": 5,
+      "tabu_tenure_max": 15,
+      "penalty_initial": 1.0,
+      "penalty_min": 0.01,
+      "penalty_max": 10000.0,
+      "penalty_factor": 1.2,
+      "penalty_update_interval": 5,
+      "diversification_lambda": 0.01,
+      "sa_worsening_fraction": 0.04,
+      "time_limit_seconds": 60.0,
+      "progress_interval": 5
+    },
+    "final_penalty_weights": {
+      "capacity": 0.012579115212475336,
+      "time_window": 4.299816959999999,
+      "battery": 7.430083706879997
+    },
+    "preprocessed_infeasible_arcs": 97
+  },
+  "routes": [
+    {
+      "route_index": 1,
+      "visits": [
+        "C59",
+        "S15",
+        "C85",
+        "C95",
+        "S3",
+        "C98"
+      ],
+      "charging_policy": "full_recharge"
+    },
+    {
+      "route_index": 2,
+      "visits": [
+        "C44",
+        "C40",
+        "C50",
+        "C33",
+        "C35",
+        "S13",
+        "C61"
+      ],
+      "charging_policy": "full_recharge"
+    },
+    {
+      "route_index": 3,
+      "visits": [
+        "C30",
+        "C18",
+        "C19",
+        "S7",
+        "C10",
+        "C13"
+      ],
+      "charging_policy": "full_recharge"
+    }
+  ],
+  "metrics": {
+    "feasible": true,
+    "vehicle_count": 3,
+    "total_distance": 405,
+    "total_duration": 3286,
+    "makespan": 1170,
+    "served_customers": 15,
+    "missing_customers": 0,
+    "duplicate_customers": 0,
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 4,
+    "charging_time": 863
+  },
+  "generalized_evaluation": {
+    "feasible": true,
+    "distance": 405.0,
+    "capacity_violation": 0.0,
+    "time_window_violation": 0.0,
+    "battery_violation": 0.0
+  },
+  "repair": {
+    "used": false,
+    "reason": "Part 4 searches station visits directly with stationInRe."
+  },
+  "search_history": [
+    {
+      "iteration": 0,
+      "phase": "feasibility",
+      "event": "initial",
+      "neighborhood_k": 1,
+      "feasible": false,
+      "vehicle_count": 2,
+      "total_distance": 310.0,
+      "capacity_violation": 10.0,
+      "time_window_violation": 2171.0,
+      "battery_violation": 158.25,
+      "penalty_capacity": 1.0,
+      "penalty_time_window": 1.0,
+      "penalty_battery": 1.0,
+      "tabu_steps": 0,
+      "evaluated_moves": 0
+    },
+    {
+      "iteration": 1,
+      "phase": "feasibility",
+      "event": "accepted",
+      "neighborhood_k": 1,
+      "feasible": false,
+      "vehicle_count": 2,
+      "total_distance": 436.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 182.0,
+      "battery_violation": 280.5,
+      "penalty_capacity": 0.833333,
+      "penalty_time_window": 1.2,
+      "penalty_battery": 1.2,
+      "tabu_steps": 8,
+      "evaluated_moves": 1267
+    },
+    {
+      "iteration": 2,
+      "phase": "feasibility",
+      "event": "accepted",
+      "neighborhood_k": 1,
+      "feasible": false,
+      "vehicle_count": 2,
+      "total_distance": 347.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 0.0,
+      "battery_violation": 191.5,
+      "penalty_capacity": 0.578704,
+      "penalty_time_window": 1.44,
+      "penalty_battery": 1.728,
+      "tabu_steps": 16,
+      "evaluated_moves": 2749
+    },
+    {
+      "iteration": 3,
+      "phase": "feasibility",
+      "event": "accepted",
+      "neighborhood_k": 1,
+      "feasible": false,
+      "vehicle_count": 2,
+      "total_distance": 371.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 88.0,
+      "battery_violation": 62.5,
+      "penalty_capacity": 0.482253,
+      "penalty_time_window": 1.728,
+      "penalty_battery": 2.0736,
+      "tabu_steps": 24,
+      "evaluated_moves": 4752
+    },
+    {
+      "iteration": 4,
+      "phase": "feasibility",
+      "event": "accepted",
+      "neighborhood_k": 1,
+      "feasible": false,
+      "vehicle_count": 2,
+      "total_distance": 372.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 68.0,
+      "battery_violation": 74.75,
+      "penalty_capacity": 0.334898,
+      "penalty_time_window": 2.48832,
+      "penalty_battery": 2.985984,
+      "tabu_steps": 32,
+      "evaluated_moves": 7032
+    },
+    {
+      "iteration": 5,
+      "phase": "feasibility",
+      "event": "rejected",
+      "neighborhood_k": 2,
+      "feasible": false,
+      "vehicle_count": 2,
+      "total_distance": 372.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 68.0,
+      "battery_violation": 74.75,
+      "penalty_capacity": 0.232568,
+      "penalty_time_window": 2.985984,
+      "penalty_battery": 4.299817,
+      "tabu_steps": 40,
+      "evaluated_moves": 9386
+    },
+    {
+      "iteration": 6,
+      "phase": "feasibility",
+      "event": "accepted",
+      "neighborhood_k": 1,
+      "feasible": false,
+      "vehicle_count": 2,
+      "total_distance": 413.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 68.0,
+      "battery_violation": 63.75,
+      "penalty_capacity": 0.193807,
+      "penalty_time_window": 4.299817,
+      "penalty_battery": 5.15978,
+      "tabu_steps": 48,
+      "evaluated_moves": 11710
+    },
+    {
+      "iteration": 7,
+      "phase": "feasibility",
+      "event": "rejected",
+      "neighborhood_k": 2,
+      "feasible": false,
+      "vehicle_count": 2,
+      "total_distance": 413.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 68.0,
+      "battery_violation": 63.75,
+      "penalty_capacity": 0.134588,
+      "penalty_time_window": 5.15978,
+      "penalty_battery": 7.430084,
+      "tabu_steps": 56,
+      "evaluated_moves": 14110
+    },
+    {
+      "iteration": 8,
+      "phase": "feasibility",
+      "event": "rejected",
+      "neighborhood_k": 3,
+      "feasible": false,
+      "vehicle_count": 2,
+      "total_distance": 413.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 68.0,
+      "battery_violation": 63.75,
+      "penalty_capacity": 0.112157,
+      "penalty_time_window": 7.430084,
+      "penalty_battery": 8.9161,
+      "tabu_steps": 64,
+      "evaluated_moves": 16510
+    },
+    {
+      "iteration": 8,
+      "phase": "feasibility",
+      "event": "add_vehicle",
+      "neighborhood_k": 1,
+      "feasible": false,
+      "vehicle_count": 3,
+      "total_distance": 427.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 23.0,
+      "battery_violation": 94.0,
+      "penalty_capacity": 0.112157,
+      "penalty_time_window": 7.430084,
+      "penalty_battery": 8.9161,
+      "tabu_steps": 64,
+      "evaluated_moves": 16510
+    },
+    {
+      "iteration": 9,
+      "phase": "feasibility",
+      "event": "accepted",
+      "neighborhood_k": 1,
+      "feasible": false,
+      "vehicle_count": 3,
+      "total_distance": 483.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 0.0,
+      "battery_violation": 28.75,
+      "penalty_capacity": 0.077887,
+      "penalty_time_window": 8.9161,
+      "penalty_battery": 12.839185,
+      "tabu_steps": 72,
+      "evaluated_moves": 18874
+    },
+    {
+      "iteration": 10,
+      "phase": "feasibility",
+      "event": "accepted",
+      "neighborhood_k": 1,
+      "feasible": true,
+      "vehicle_count": 3,
+      "total_distance": 436.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 0.0,
+      "battery_violation": 0.0,
+      "penalty_capacity": 0.054088,
+      "penalty_time_window": 7.430084,
+      "penalty_battery": 15.407022,
+      "tabu_steps": 80,
+      "evaluated_moves": 21274
+    },
+    {
+      "iteration": 11,
+      "phase": "distance",
+      "event": "rejected",
+      "neighborhood_k": 2,
+      "feasible": true,
+      "vehicle_count": 3,
+      "total_distance": 436.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 0.0,
+      "battery_violation": 0.0,
+      "penalty_capacity": 0.045073,
+      "penalty_time_window": 8.9161,
+      "penalty_battery": 18.488426,
+      "tabu_steps": 88,
+      "evaluated_moves": 23674
+    },
+    {
+      "iteration": 12,
+      "phase": "distance",
+      "event": "accepted",
+      "neighborhood_k": 1,
+      "feasible": true,
+      "vehicle_count": 3,
+      "total_distance": 405.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 0.0,
+      "battery_violation": 0.0,
+      "penalty_capacity": 0.031301,
+      "penalty_time_window": 6.191736,
+      "penalty_battery": 15.407022,
+      "tabu_steps": 96,
+      "evaluated_moves": 26074
+    },
+    {
+      "iteration": 13,
+      "phase": "distance",
+      "event": "accepted",
+      "neighborhood_k": 1,
+      "feasible": true,
+      "vehicle_count": 3,
+      "total_distance": 405.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 0.0,
+      "battery_violation": 0.0,
+      "penalty_capacity": 0.026084,
+      "penalty_time_window": 5.15978,
+      "penalty_battery": 12.839185,
+      "tabu_steps": 104,
+      "evaluated_moves": 28474
+    },
+    {
+      "iteration": 14,
+      "phase": "distance",
+      "event": "accepted",
+      "neighborhood_k": 1,
+      "feasible": true,
+      "vehicle_count": 3,
+      "total_distance": 405.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 0.0,
+      "battery_violation": 0.0,
+      "penalty_capacity": 0.018114,
+      "penalty_time_window": 3.583181,
+      "penalty_battery": 8.9161,
+      "tabu_steps": 112,
+      "evaluated_moves": 30874
+    },
+    {
+      "iteration": 15,
+      "phase": "distance",
+      "event": "rejected",
+      "neighborhood_k": 2,
+      "feasible": true,
+      "vehicle_count": 3,
+      "total_distance": 405.0,
+      "capacity_violation": 0.0,
+      "time_window_violation": 0.0,
+      "battery_violation": 0.0,
+      "penalty_capacity": 0.012579,
+      "penalty_time_window": 4.299817,
+      "penalty_battery": 7.430084,
+      "tabu_steps": 120,
+      "evaluated_moves": 33274
+    }
+  ],
+  "violations": [],
+  "report": {
+    "feasible": true,
+    "total_distance": 405,
+    "total_duration": 3286,
+    "makespan": 1170,
+    "served_customers": 15,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 4,
+    "charging_time": 863,
+    "synchronization_violations": 0,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "C59",
+          "S15",
+          "C85",
+          "C95",
+          "S3",
+          "C98"
+        ],
+        "load": 90,
+        "distance": 155,
+        "duration": 953,
+        "wait_time": 31,
+        "return_time": 953,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 2,
+        "charging_time": 407,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "C44",
+          "C40",
+          "C50",
+          "C33",
+          "C35",
+          "S13",
+          "C61"
+        ],
+        "load": 90,
+        "distance": 127,
+        "duration": 1170,
+        "wait_time": 235,
+        "return_time": 1170,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 268,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 3,
+        "visits": [
+          "C30",
+          "C18",
+          "C19",
+          "S7",
+          "C10",
+          "C13"
+        ],
+        "load": 80,
+        "distance": 123,
+        "duration": 1163,
+        "wait_time": 402,
+        "return_time": 1163,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 188,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": []
+  },
+  "instance": {
+    "name": "c103C15",
+    "problem_type": "EVRPTW",
+    "objective": {
+      "primary": "minimize_vehicle_count",
+      "secondary": "minimize_total_distance"
+    },
+    "distance": {
+      "metric": "euclidean",
+      "scale": 1
+    },
+    "duration": {
+      "metric": "euclidean",
+      "scale": 1.0
+    },
+    "solver": {
+      "name": "PyVRP",
+      "runtime_seconds": 0,
+      "seed": 1,
+      "display": false
+    },
+    "vehicles": {
+      "num_available": 30,
+      "capacity": 200,
+      "start_depot": "D0",
+      "end_depot": "D0",
+      "tw_early": 0,
+      "tw_late": 1236,
+      "battery_capacity": 77.75,
+      "initial_battery": 77.75
+    },
+    "depot": {
+      "name": "D0",
+      "x": 40,
+      "y": 50,
+      "tw_early": 0,
+      "tw_late": 1236
+    },
+    "energy": {
+      "consumption_per_distance": 1,
+      "minimum_battery": 0
+    },
+    "charging": {
+      "policy": "full_recharge",
+      "allow_partial_recharge": false,
+      "charging_rate": 0.2881844380403458,
+      "fixed_service_duration": 0
+    },
+    "charging_stations": [
+      {
+        "name": "S0",
+        "x": 40,
+        "y": 50,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2881844380403458
+      },
+      {
+        "name": "S3",
+        "x": 57,
+        "y": 82,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2881844380403458
+      },
+      {
+        "name": "S7",
+        "x": 21,
+        "y": 83,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2881844380403458
+      },
+      {
+        "name": "S13",
+        "x": 22,
+        "y": 34,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2881844380403458
+      },
+      {
+        "name": "S15",
+        "x": 39,
+        "y": 26,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2881844380403458
+      }
+    ],
+    "clients": [
+      {
+        "name": "C61",
+        "x": 50,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 980,
+        "tw_late": 1064
+      },
+      {
+        "name": "C30",
+        "x": 20,
+        "y": 55,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 0,
+        "tw_late": 1125
+      },
+      {
+        "name": "C98",
+        "x": 58,
+        "y": 75,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 0,
+        "tw_late": 1115
+      },
+      {
+        "name": "C59",
+        "x": 38,
+        "y": 15,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 66,
+        "tw_late": 124
+      },
+      {
+        "name": "C35",
+        "x": 5,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 655,
+        "tw_late": 725
+      },
+      {
+        "name": "C13",
+        "x": 22,
+        "y": 75,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 1042,
+        "tw_late": 1106
+      },
+      {
+        "name": "C10",
+        "x": 35,
+        "y": 66,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 779,
+        "tw_late": 845
+      },
+      {
+        "name": "C44",
+        "x": 32,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 0,
+        "tw_late": 1124
+      },
+      {
+        "name": "C50",
+        "x": 26,
+        "y": 32,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 0,
+        "tw_late": 1123
+      },
+      {
+        "name": "C95",
+        "x": 62,
+        "y": 80,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 0,
+        "tw_late": 1108
+      },
+      {
+        "name": "C18",
+        "x": 15,
+        "y": 75,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 0,
+        "tw_late": 1110
+      },
+      {
+        "name": "C33",
+        "x": 8,
+        "y": 40,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 355,
+        "tw_late": 437
+      },
+      {
+        "name": "C85",
+        "x": 68,
+        "y": 60,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 0,
+        "tw_late": 1116
+      },
+      {
+        "name": "C19",
+        "x": 15,
+        "y": 80,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 455,
+        "tw_late": 513
+      },
+      {
+        "name": "C40",
+        "x": 35,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 143,
+        "tw_late": 199
+      }
+    ]
+  }
+}
