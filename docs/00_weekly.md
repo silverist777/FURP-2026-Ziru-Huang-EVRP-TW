@@ -30,6 +30,40 @@
 
 <!-- =================  YOUR ENTRIES BELOW  ================= -->
 
+### Week 5 — 2026/7/15
+
+**Attended this week's meeting:** Yes
+
+**Progress this week**
+- Introduced a shared hard vehicle-number rule for every EVRP-TW instance: `vehicle_limit = ceil((number_of_clients + number_of_charging_stations) / 4)`, including charging station `S0`.
+- Applied the fleet limit in the shared instance loader and feasibility checker, and added a regression self-test for the formula and fleet capping behavior.
+- Reran PyVRP + repair, Hybrid VNS/TS, POMO + repair, and py-ga + checker on the 5-, 10-, 15-, and 100-client EVRP-TW instances, completing a 16-run comparison matrix.
+- Retained routes, metrics, runtimes, random seeds, and constraint violations in JSON, and generated a readable comparison table plus overview and route-petal visualizations.
+- Confirmed that PyVRP + repair remained feasible on all four instances. Hybrid VNS/TS was also feasible on all four and achieved shorter routes than PyVRP on `c101C5` and `c103C15`.
+- Added a sequential reproduction script for the Week 5 experiment, with the long 100-client POMO run available through the optional `-IncludePomo100` flag.
+
+**Challenges & blockers**
+- The retained POMO checkpoint was trained for CVRP rather than EVRP-TW. Under the fleet limit, its repair stage missed customers on the 10-, 15-, and 100-client instances; on `c101_21`, it served only 33 of 100 customers.
+- The external py-ga solver does not construct routes with charging-station insertion as a hard constraint. All four checked outputs had energy violations, and some also exceeded the vehicle limit.
+- Hybrid VNS/TS is computationally expensive: the `c101_21` run took about 78 minutes, compared with about 4.4 minutes for PyVRP + repair.
+- The current comparison uses one seed and four instances, so it is a pipeline checkpoint rather than sufficient evidence for a statistical performance claim.
+
+**Next steps**
+- Run a multi-seed stability study on the 5-, 10-, and 15-client instances, reporting feasibility rate and the mean and standard deviation of distance and runtime.
+- Implement fleet-aware and charging-aware construction or repair for POMO and py-ga, using complete customer coverage with zero energy and fleet violations as the first success criterion.
+- Reuse the failed `c101_21` POMO result as a regression case for the improved repair mechanism.
+- Match the current instance and evaluation settings carefully to published benchmarks before making direct comparisons with paper results.
+
+**Hours spent (optional):**
+
+**Links (optional):**
+- [Week 5 project checkpoint](week05_checkpoint.md)
+- [Week 5 results index](../src/results/week5/README.md)
+- [Shared-fleet comparison and interpretation](../src/results/week5/four-methods-vehicle-limit/README.md)
+- [Full comparison table](../src/results/week5/four-methods-vehicle-limit/summary.md)
+- [Raw solver records](../src/log/week5/four-methods-vehicle-limit/)
+- [Reproduction script](../src/experiments/runners/run_week5_track_b.ps1)
+
 ### Week 4 — 2026/7/8
 
 **Attended this week's meeting:** Yes
