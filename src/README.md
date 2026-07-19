@@ -102,3 +102,35 @@ Python 3.12 and install from `src`:
 RouteFinder currently serves as a VRPTW neural baseline. Its official
 environment does not model battery energy, charging stations, or charging
 time, so EVRP-TW use requires a separate environment and training extension.
+
+### Run the existing Week 5 benchmark with RouteFinder
+
+The RouteFinder adapter uses the same four Schneider instances, fleet policy,
+partial-recharge repair, independent checker, and result collector as the
+existing Track B benchmark. From the repository root, run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File src\experiments\runners\run_routefinder_week5_benchmark.ps1
+```
+
+For a fast single-instance check:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File src\experiments\runners\run_routefinder_week5_benchmark.ps1 -Cases c101C5
+```
+
+The default protocol uses eight geometric augmentations, up to four distinct
+RouteFinder candidates, the 50-node checkpoint for the 5/10/15-client cases,
+and the 100-node checkpoint for `c101_21`. The repair-aware greedy packing
+variant is limited to at most 50 clients because applying the full label-setting
+repair after every insertion is prohibitively slow at 100 clients.
+
+RouteFinder raw records are written to
+`src/log/week5/routefinder-vehicle-limit/`. A combined table containing the
+existing four methods and RouteFinder is written to
+`src/results/week5/five-methods-vehicle-limit/`.
+
+The official RouteFinder environment has no fleet-size action constraint.
+Consequently, a run may finish normally with `status=unsolved` and
+`vehicle_limit_exceeded` when the model opens more routes than the shared FURP
+fleet limit. This is a benchmark result rather than a runner failure.
