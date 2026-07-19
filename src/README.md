@@ -56,3 +56,49 @@ Infeasible outputs are retained deliberately. A distance from an infeasible solu
 The latest project narrative is [`../docs/week05_checkpoint.md`](../docs/week05_checkpoint.md).
 The longer per-method command reference is
 [`../docs/src_data_method_run_tutorials.md`](../docs/src_data_method_run_tutorials.md).
+
+## RouteFinder VRPTW baseline
+
+RouteFinder 0.4.0 is deployed as a pinned submodule under `src/routefinder`.
+Its source, isolated virtual environment, downloaded checkpoints, and official
+datasets all remain inside that directory. Checkpoints, datasets, and the
+virtual environment are ignored by the RouteFinder repository and are not
+committed.
+
+The deployed environment uses:
+
+- Python 3.12;
+- PyTorch 2.11.0 with CUDA 12.8;
+- RL4CO 0.6.0;
+- TorchRL 0.6.0;
+- TensorDict 0.6.0.
+
+TorchRL and TensorDict are pinned because newer releases remove the
+`CompositeSpec` symbol referenced by the official checkpoint. The PyTorch
+compatibility variable in the runner is required because the trusted official
+checkpoint predates the `weights_only=True` loading default.
+
+Run the verified 50-node VRPTW GPU smoke test from the repository root:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File src\run_routefinder_smoke.ps1
+```
+
+The deployment validation on the current RTX 4070 evaluated 1,000 official
+VRPTW instances and reported:
+
+```text
+VRPTW | Cost: 16.365 | Gap: 2.078% | Inference time: 2.909 s
+```
+
+To rebuild the isolated environment, create `src/routefinder/.venv` with
+Python 3.12 and install from `src`:
+
+```powershell
+.\routefinder\.venv\Scripts\python.exe -m pip install -r requirements-routefinder.txt
+.\routefinder\.venv\Scripts\python.exe .\routefinder\scripts\download_hf.py
+```
+
+RouteFinder currently serves as a VRPTW neural baseline. Its official
+environment does not model battery energy, charging stations, or charging
+time, so EVRP-TW use requires a separate environment and training extension.

@@ -1,0 +1,6 @@
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+torch==2.11.0+cu128
+torchrl==0.6.0
+tensordict==0.6.0
+-e ./routefinder

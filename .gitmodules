@@ -4,3 +4,6 @@
 [submodule "py-ga-VRPTW"]
 	path = py-ga-VRPTW
 	url = https://github.com/silverist777/py-ga-VRPTW.git
+[submodule "src/routefinder"]
+	path = src/routefinder
+	url = https://github.com/ai4co/routefinder.git
