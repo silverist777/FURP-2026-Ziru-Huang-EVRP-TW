@@ -1,0 +1,579 @@
+{
+  "status": "solved",
+  "source": {
+    "path": "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\data\\evrptw_instances\\rc105C5.txt",
+    "instance": "rc105C5",
+    "problem_type": "EVRPTW"
+  },
+  "experiment_record": {
+    "record_schema": "week03_experiment_record_v1",
+    "instance_name": "rc105C5",
+    "instance_size": 5,
+    "method_name": "yd-kwon/POMO CVRP + EVRP-TW repair",
+    "objective_value": 239.0,
+    "runtime_seconds": 0.652,
+    "feasibility_status": "feasible",
+    "vehicles_used": 3,
+    "constraint_violations": "none",
+    "random_seed": 1,
+    "best_solution_found": "[[\"D0\", \"C22\", \"D0\"], [\"D0\", \"C11\", \"C82\", \"D0\"], [\"D0\", \"C55\", \"S3\", \"C36\", \"D0\"]]",
+    "reference_value": null,
+    "gap_to_reference_pct": null,
+    "convergence_curve": "single pretrained CVRP-POMO rollout",
+    "improvement_over_time": "repair attempts are recorded in repair.attempts",
+    "iterations": null,
+    "generations": null,
+    "search_steps": 12
+  },
+  "solver": {
+    "candidate_generator": "yd-kwon/POMO CVRP100 pretrained checkpoint",
+    "repair": "v3_partial_recharge_label_setting",
+    "checkpoint": "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\external\\POMO\\NEW_py_ver\\CVRP\\POMO\\result\\saved_CVRP100_model\\checkpoint-30500.pt",
+    "device": "cuda",
+    "augmentation": false,
+    "elapsed_runtime_seconds": 0.652,
+    "seed": 1,
+    "model_status": "CVRP-only checkpoint; time windows, battery, and charging stations are handled by the external repair/checker layer."
+  },
+  "candidate": {
+    "rank": 1,
+    "pomo_rank": 1,
+    "variant": "pomo_routes",
+    "actions": [
+      0,
+      2,
+      1,
+      4,
+      0,
+      3,
+      5,
+      0
+    ],
+    "customer_routes": [
+      [
+        "C22",
+        "C11",
+        "C82"
+      ],
+      [
+        "C55",
+        "C36"
+      ]
+    ],
+    "selected_augmentation_index": 0,
+    "selected_pomo_index": 1,
+    "normalized_cvrp_distance": 2.996764
+  },
+  "candidate_selection": {
+    "evaluated_candidates": 5,
+    "selected_rank": 1,
+    "selected_variant": "pomo_routes",
+    "policy": "try distinct POMO rollouts ranked by CVRP reward; choose feasible EVRP-TW repair with lowest checked distance",
+    "evaluations": [
+      {
+        "rank": 1,
+        "pomo_rank": 1,
+        "variant": "pomo_routes",
+        "customer_routes": [
+          [
+            "C22",
+            "C11",
+            "C82"
+          ],
+          [
+            "C55",
+            "C36"
+          ]
+        ],
+        "normalized_cvrp_distance": 2.996764,
+        "repair_feasible": true,
+        "checked_feasible": true,
+        "served_customers": 5,
+        "total_distance": 239,
+        "vehicle_count": 3,
+        "split_count": 1,
+        "station_insertions": 1,
+        "violation_count": 0,
+        "unsolved": []
+      },
+      {
+        "rank": 2,
+        "pomo_rank": 1,
+        "variant": "time_window_greedy_pack",
+        "customer_routes": [
+          [
+            "C55",
+            "C36"
+          ],
+          [
+            "C11",
+            "C22"
+          ],
+          [
+            "C82"
+          ]
+        ],
+        "normalized_cvrp_distance": 2.996764,
+        "repair_feasible": true,
+        "checked_feasible": true,
+        "served_customers": 5,
+        "total_distance": 245,
+        "vehicle_count": 3,
+        "split_count": 0,
+        "station_insertions": 2,
+        "violation_count": 0,
+        "unsolved": []
+      },
+      {
+        "rank": 3,
+        "pomo_rank": 2,
+        "variant": "pomo_routes",
+        "customer_routes": [
+          [
+            "C55",
+            "C11",
+            "C82",
+            "C22"
+          ],
+          [
+            "C36"
+          ]
+        ],
+        "normalized_cvrp_distance": 3.07148,
+        "repair_feasible": false,
+        "checked_feasible": false,
+        "served_customers": 2,
+        "total_distance": 84,
+        "vehicle_count": 1,
+        "split_count": 2,
+        "station_insertions": 1,
+        "violation_count": 3,
+        "unsolved": [
+          {
+            "reason": "vehicle_limit_exceeded",
+            "available": 3,
+            "needed_at_least": 4,
+            "pending_routes": [
+              [
+                "C82"
+              ],
+              [
+                "C22"
+              ],
+              [
+                "C36"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "pomo_rank": 3,
+        "variant": "pomo_routes",
+        "customer_routes": [
+          [
+            "C11",
+            "C82",
+            "C22"
+          ],
+          [
+            "C55",
+            "C36"
+          ]
+        ],
+        "normalized_cvrp_distance": 3.12568,
+        "repair_feasible": false,
+        "checked_feasible": false,
+        "served_customers": 1,
+        "total_distance": 68,
+        "vehicle_count": 1,
+        "split_count": 2,
+        "station_insertions": 0,
+        "violation_count": 4,
+        "unsolved": [
+          {
+            "reason": "vehicle_limit_exceeded",
+            "available": 3,
+            "needed_at_least": 4,
+            "pending_routes": [
+              [
+                "C82"
+              ],
+              [
+                "C22"
+              ],
+              [
+                "C55",
+                "C36"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "pomo_rank": 4,
+        "variant": "pomo_routes",
+        "customer_routes": [
+          [
+            "C36",
+            "C22",
+            "C82"
+          ],
+          [
+            "C11",
+            "C55"
+          ]
+        ],
+        "normalized_cvrp_distance": 3.433969,
+        "repair_feasible": true,
+        "checked_feasible": true,
+        "served_customers": 5,
+        "total_distance": 261,
+        "vehicle_count": 3,
+        "split_count": 1,
+        "station_insertions": 3,
+        "violation_count": 0,
+        "unsolved": []
+      }
+    ]
+  },
+  "routes": [
+    {
+      "route_index": 1,
+      "visits": [
+        "D0",
+        "C22",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 2,
+      "visits": [
+        "D0",
+        "C11",
+        "C82",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 3,
+      "visits": [
+        "D0",
+        "C55",
+        "S3",
+        "C36",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S3",
+          "station_visit": 1,
+          "arrival_battery": 28.75,
+          "departure_battery": 52,
+          "charged_amount": 23.25,
+          "charge_time": 10,
+          "policy": "partial_recharge"
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "feasible": true,
+    "vehicle_count": 3,
+    "total_distance": 239,
+    "total_duration": 409,
+    "makespan": 141,
+    "served_customers": 5,
+    "missing_customers": 0,
+    "duplicate_customers": 0,
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "vehicle_limit_violations": 0,
+    "charging_count": 1,
+    "charging_time": 10
+  },
+  "repair": {
+    "feasible": true,
+    "split_count": 1,
+    "station_insertions": 1,
+    "charging_plans": [
+      [],
+      [],
+      [
+        {
+          "station": "S3",
+          "station_visit": 1,
+          "arrival_battery": 28.75,
+          "departure_battery": 52,
+          "charged_amount": 23.25,
+          "charge_time": 10,
+          "policy": "partial_recharge"
+        }
+      ]
+    ],
+    "policy": "partial_recharge",
+    "attempts": [
+      {
+        "customers": [
+          "C22",
+          "C11",
+          "C82"
+        ],
+        "feasible": false,
+        "reason": "no_partial_recharge_route_found",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C22"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C11",
+          "C82"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C55",
+          "C36"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 1,
+        "charging_time": 10
+      }
+    ],
+    "unsolved": []
+  },
+  "violations": [],
+  "report": {
+    "feasible": true,
+    "total_distance": 239,
+    "total_duration": 409,
+    "makespan": 141,
+    "served_customers": 5,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 1,
+    "charging_time": 10,
+    "synchronization_violations": 0,
+    "vehicle_limit_violations": 0,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "C22"
+        ],
+        "load": 40,
+        "distance": 70,
+        "duration": 141,
+        "wait_time": 61,
+        "return_time": 141,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "C11",
+          "C82"
+        ],
+        "load": 49,
+        "distance": 68,
+        "duration": 136,
+        "wait_time": 48,
+        "return_time": 136,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 3,
+        "visits": [
+          "C55",
+          "S3",
+          "C36"
+        ],
+        "load": 56,
+        "distance": 101,
+        "duration": 132,
+        "wait_time": 1,
+        "return_time": 132,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 10,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": []
+  },
+  "instance": {
+    "name": "rc105C5",
+    "problem_type": "EVRPTW",
+    "objective": {
+      "primary": "minimize_vehicle_count",
+      "secondary": "minimize_total_distance"
+    },
+    "distance": {
+      "metric": "euclidean",
+      "scale": 1
+    },
+    "duration": {
+      "metric": "euclidean",
+      "scale": 1.0
+    },
+    "solver": {
+      "name": "PyVRP",
+      "runtime_seconds": 0,
+      "seed": 1,
+      "display": false
+    },
+    "vehicles": {
+      "num_available": 3,
+      "capacity": 200,
+      "start_depot": "D0",
+      "end_depot": "D0",
+      "tw_early": 0,
+      "tw_late": 240,
+      "battery_capacity": 77.75,
+      "initial_battery": 77.75
+    },
+    "depot": {
+      "name": "D0",
+      "x": 40,
+      "y": 50,
+      "tw_early": 0,
+      "tw_late": 240
+    },
+    "energy": {
+      "consumption_per_distance": 1,
+      "minimum_battery": 0
+    },
+    "charging": {
+      "policy": "partial_recharge",
+      "allow_partial_recharge": true,
+      "charging_rate": 2.564102564102564,
+      "fixed_service_duration": 0
+    },
+    "charging_stations": [
+      {
+        "name": "S0",
+        "x": 40,
+        "y": 50,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 240,
+        "charging_rate": 2.564102564102564
+      },
+      {
+        "name": "S3",
+        "x": 57,
+        "y": 82,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 240,
+        "charging_rate": 2.564102564102564
+      },
+      {
+        "name": "S9",
+        "x": 14,
+        "y": 59,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 240,
+        "charging_rate": 2.564102564102564
+      },
+      {
+        "name": "S15",
+        "x": 39,
+        "y": 26,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 240,
+        "charging_rate": 2.564102564102564
+      }
+    ],
+    "clients": [
+      {
+        "name": "C11",
+        "x": 8,
+        "y": 40,
+        "demand": 40,
+        "service_duration": 10,
+        "tw_early": 76,
+        "tw_late": 126
+      },
+      {
+        "name": "C22",
+        "x": 40,
+        "y": 15,
+        "demand": 40,
+        "service_duration": 10,
+        "tw_early": 96,
+        "tw_late": 146
+      },
+      {
+        "name": "C55",
+        "x": 30,
+        "y": 60,
+        "demand": 16,
+        "service_duration": 10,
+        "tw_early": 15,
+        "tw_late": 116
+      },
+      {
+        "name": "C82",
+        "x": 27,
+        "y": 43,
+        "demand": 9,
+        "service_duration": 10,
+        "tw_early": 111,
+        "tw_late": 147
+      },
+      {
+        "name": "C36",
+        "x": 65,
+        "y": 85,
+        "demand": 40,
+        "service_duration": 10,
+        "tw_early": 59,
+        "tw_late": 114
+      }
+    ],
+    "vehicle_limit_policy": {
+      "formula": "ceil((clients + charging_stations) / 4)",
+      "rounding": "ceiling",
+      "client_count": 5,
+      "charging_station_count": 4,
+      "vehicle_limit": 3
+    }
+  }
+}

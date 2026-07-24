@@ -30,6 +30,41 @@
 
 <!-- =================  YOUR ENTRIES BELOW  ================= -->
 
+### Week 6 — 2026-07-22
+
+**Attended this week's meeting:** Yes
+
+**Progress this week**
+- Integrated RouteFinder as a fifth benchmark method and added fleet compaction before the shared EVRP-TW charging repair. It produced checker-feasible solutions within the hard vehicle limit on the 5-, 10-, 15-, and 100-client C instances.
+- Repeated the 100-client RouteFinder run with seeds 1–10. All 10 runs served all 100 customers with zero time-window, capacity, energy, or fleet violations, using 31/31 vehicles and distance 2060.
+- Defined and ran a broader C/R/RC stability matrix covering three customer distributions, 5/10/15-client instances, and five methods. At the frozen checkpoint, 41/45 jobs were complete and 25/41 completed jobs were strict-feasible under the fresh shared checker.
+- Added contract validation, failure classification, CSV/JSON/Markdown summaries, an immutable experiment snapshot, and overview and best-route-petal visualizations so incomplete and infeasible results are not reported as valid objectives.
+- Implemented a benchmark-adapted reinsertion genetic algorithm (RI-GA), including related-customer removal, adaptive reinsertion, hard fleet/time-window/capacity decoding, charging repair, regression tests, and a batch runner. It completed all 12 C/R/RC cases and obtained strict-feasible solutions on 11/12.
+- Documented the current distance-linear battery-consumption and partial-recharge model, including its assumptions and limitations.
+
+**Challenges & blockers**
+- The three-group snapshot is incomplete: four RC/15 jobs had not finished, RC/10 had no strict-feasible result under the four-vehicle limit, and the 100-client cases were outside the paused visualization scope.
+- RouteFinder produced the same route and objective for all ten seeds because the current greedy/multistart inference is deterministic. These runs demonstrate process repeatability, not stochastic solution diversity.
+- RI-GA did not find a feasible solution for `rc102C10` with `K=4`; broader candidate search also failed, but this is not a proof that the instance is infeasible.
+- Charging repair dominates runtime on some 100-client RI-GA cases, and the current sample sizes are still too small for strong statistical claims.
+
+**Next steps**
+- Complete the remaining RC/15 jobs and the C/R/RC 100-client matrix in a new revision, then regenerate the strict-feasibility and runtime summaries without overwriting the frozen snapshot.
+- Add energy-aware route-set search or a set-partitioning stage for `rc102C10`, and verify whether a four-vehicle feasible solution exists under the current charging model.
+- Run genuine multi-seed experiments for stochastic methods and report feasibility rate plus mean, sample standard deviation, and confidence intervals by method and instance size.
+- Compare the final settings and results against the cited paper's benchmark protocol, clearly separating faithful replication from project-specific innovations.
+
+**Hours spent (optional):**
+
+**Links (optional):**
+- [Five-method vehicle-limit comparison](../src/results/week6/five-methods-vehicle-limit/summary.md)
+- [RouteFinder 10-seed repeatability summary](../src/results/week6/routefinder-multiseed/summary.md)
+- [Three-group stability summary](../src/results/week6/stability-three-groups/summary.md)
+- [Frozen-snapshot visualizations](../src/results/week6/stability-three-groups-snapshots/20260722T223640+0800_rc102_baseline_paused/README.md)
+- [Three-group experiment manifest](../src/experiments/configs/week5_three_group_stability.json)
+- [Reinsertion GA implementation](../src/experiments/methods/ga/reinsertion_ga.py)
+- [Reinsertion GA benchmark runner](../src/experiments/runners/run_reinsertion_ga_benchmark.py)
+
 ### Week 5 — 2026/7/15
 
 **Attended this week's meeting:** Yes

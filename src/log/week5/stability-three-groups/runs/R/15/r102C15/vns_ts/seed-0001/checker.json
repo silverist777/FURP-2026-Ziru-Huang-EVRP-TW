@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "fresh_recheck": true,
+  "job_id": "R-r102C15-vns_ts-seed-0001",
+  "group": "R",
+  "method": "vns_ts",
+  "instance": "r102C15",
+  "clients": 15,
+  "stations": 8,
+  "max_vehicles": 6,
+  "seed": 1,
+  "validation_status": "valid",
+  "contract_valid": true,
+  "strict_feasible": true,
+  "failure_class": "success",
+  "contract_errors": [],
+  "report": {
+    "feasible": true,
+    "total_distance": 414,
+    "total_duration": 955,
+    "makespan": 223,
+    "served_customers": 15,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 5,
+    "charging_time": 108,
+    "synchronization_violations": 0,
+    "vehicle_limit_violations": 0,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "C59",
+          "C95"
+        ],
+        "load": 48,
+        "distance": 37,
+        "duration": 165,
+        "wait_time": 108,
+        "return_time": 165,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "C91",
+          "C38",
+          "S11",
+          "C2"
+        ],
+        "load": 24,
+        "distance": 99,
+        "duration": 218,
+        "wait_time": 61,
+        "return_time": 218,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 28,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 3,
+        "visits": [
+          "S7",
+          "C11",
+          "C7",
+          "C52"
+        ],
+        "load": 26,
+        "distance": 70,
+        "duration": 132,
+        "wait_time": 17,
+        "return_time": 132,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 15,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 4,
+        "visits": [
+          "S9",
+          "C17",
+          "C45",
+          "C48",
+          "S9"
+        ],
+        "load": 54,
+        "distance": 92,
+        "duration": 217,
+        "wait_time": 59,
+        "return_time": 217,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 2,
+        "charging_time": 36,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 5,
+        "visits": [
+          "C1",
+          "C70",
+          "C80",
+          "S1",
+          "C75"
+        ],
+        "load": 39,
+        "distance": 116,
+        "duration": 223,
+        "wait_time": 38,
+        "return_time": 223,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 29,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": []
+  },
+  "route_count": 5,
+  "result_status": "solved",
+  "result_method_name": "Schneider-2014 hybrid VNS/TS E-VRPTW",
+  "expected_method_names": [
+    "Schneider-2014 hybrid VNS/TS E-VRPTW"
+  ],
+  "result_metrics_feasible": true,
+  "hashes": {
+    "instance_sha256": "AF223E2D015154F3E729F5C1D5F1A63D13BC786B7535EB8B4DBE3F9E37EE7CCF",
+    "result_sha256": "6FBD7497103070E6F82BF8C081C8388AD6350D7E6B9EFD8CB1FB4A57ABEE06F8",
+    "checker_sha256": "CB3CB4EDD21D9F915C2B7406CE3EEAFF99E004AB75DE2CBD5EB3C3ED11D6255C",
+    "fleet_policy_sha256": "D89213812E7365441D29182077921DA94D1FE2710F0ECD1DD0EAACBC350605B0",
+    "instance_loader_sha256": "683A05152D51253FD533E83464723730F67995F8E331BDCADF55D8345D4AC189",
+    "converter_sha256": "951FC2B738092BD9EC0D46CB28F2CB4E5B94942E6CFFAA4F16F76BE8EAAC30A6",
+    "validator_sha256": "B92376ABCB8BDDA6B7FADD7061702E3C6ECC167C9DF849D21EA0949D27519048"
+  }
+}

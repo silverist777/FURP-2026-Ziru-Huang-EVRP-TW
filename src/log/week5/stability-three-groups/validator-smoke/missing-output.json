@@ -1,0 +1,17 @@
+{
+  "job_id": "smoke-missing",
+  "group": "R",
+  "method": "pyvrp_repair",
+  "instance": "r104C5",
+  "clients": 5,
+  "max_vehicles": 2,
+  "seed": 1,
+  "validation_status": "error",
+  "contract_valid": false,
+  "strict_feasible": false,
+  "failure_class": "missing_output",
+  "contract_errors": [
+    "FileNotFoundError: [Errno 2] No such file or directory: 'src\\\\log\\\\week5\\\\stability-three-groups\\\\validator-smoke\\\\does-not-exist.json'"
+  ],
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\experiments\\tools\\validate_stability_result.py\", line 284, in main\n    payload = validate(args)\n              ^^^^^^^^^^^^^^\n  File \"E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\experiments\\tools\\validate_stability_result.py\", line 145, in validate\n    data = json.loads(args.result.read_text(encoding=\"utf-8\"))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\11393\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1027, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\11393\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1013, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'src\\\\log\\\\week5\\\\stability-three-groups\\\\validator-smoke\\\\does-not-exist.json'\n"
+}

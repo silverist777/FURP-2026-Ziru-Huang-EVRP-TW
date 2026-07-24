@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "fresh_recheck": true,
+  "job_id": "RC-rc105C5-vns_ts-seed-0001",
+  "group": "RC",
+  "method": "vns_ts",
+  "instance": "rc105C5",
+  "clients": 5,
+  "stations": 4,
+  "max_vehicles": 3,
+  "seed": 1,
+  "validation_status": "valid",
+  "contract_valid": true,
+  "strict_feasible": true,
+  "failure_class": "success",
+  "contract_errors": [],
+  "report": {
+    "feasible": true,
+    "total_distance": 244,
+    "total_duration": 362,
+    "makespan": 201,
+    "served_customers": 5,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 4,
+    "charging_time": 64,
+    "synchronization_violations": 0,
+    "vehicle_limit_violations": 0,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "S3",
+          "C36",
+          "S3",
+          "C82"
+        ],
+        "load": 49,
+        "distance": 118,
+        "duration": 161,
+        "wait_time": 0,
+        "return_time": 161,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 2,
+        "charging_time": 23,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "C55",
+          "S9",
+          "C11",
+          "C22",
+          "S15"
+        ],
+        "load": 96,
+        "distance": 126,
+        "duration": 201,
+        "wait_time": 4,
+        "return_time": 201,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 2,
+        "charging_time": 41,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": []
+  },
+  "route_count": 2,
+  "result_status": "solved",
+  "result_method_name": "Schneider-2014 hybrid VNS/TS E-VRPTW",
+  "expected_method_names": [
+    "Schneider-2014 hybrid VNS/TS E-VRPTW"
+  ],
+  "result_metrics_feasible": true,
+  "hashes": {
+    "instance_sha256": "1391F4CDFEEBA53891B7DB599E3C649B22F21440EA934B0B272E1B8BB58AB162",
+    "result_sha256": "4FE71D71047A5FAF4D581F60D9F1141D2507FECBCB83355BF0293B3E89137CD4",
+    "checker_sha256": "CB3CB4EDD21D9F915C2B7406CE3EEAFF99E004AB75DE2CBD5EB3C3ED11D6255C",
+    "fleet_policy_sha256": "D89213812E7365441D29182077921DA94D1FE2710F0ECD1DD0EAACBC350605B0",
+    "instance_loader_sha256": "683A05152D51253FD533E83464723730F67995F8E331BDCADF55D8345D4AC189",
+    "converter_sha256": "951FC2B738092BD9EC0D46CB28F2CB4E5B94942E6CFFAA4F16F76BE8EAAC30A6",
+    "validator_sha256": "B92376ABCB8BDDA6B7FADD7061702E3C6ECC167C9DF849D21EA0949D27519048"
+  }
+}

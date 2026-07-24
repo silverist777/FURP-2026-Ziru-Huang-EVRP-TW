@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "fresh_recheck": true,
+  "job_id": "C-c101C5-routefinder_repair-seed-0001",
+  "group": "C",
+  "method": "routefinder_repair",
+  "instance": "c101C5",
+  "clients": 5,
+  "stations": 3,
+  "max_vehicles": 2,
+  "seed": 1,
+  "validation_status": "valid",
+  "contract_valid": true,
+  "strict_feasible": true,
+  "failure_class": "success",
+  "contract_errors": [],
+  "report": {
+    "feasible": true,
+    "total_distance": 259,
+    "total_duration": 1729,
+    "makespan": 872,
+    "served_customers": 5,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 3,
+    "charging_time": 415,
+    "synchronization_violations": 0,
+    "vehicle_limit_violations": 0,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "S15",
+          "C64",
+          "C30",
+          "S0",
+          "C85"
+        ],
+        "load": 50,
+        "distance": 153,
+        "duration": 857,
+        "wait_time": 172,
+        "return_time": 857,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 2,
+        "charging_time": 262,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "C12",
+          "S5",
+          "C100"
+        ],
+        "load": 40,
+        "distance": 106,
+        "duration": 872,
+        "wait_time": 433,
+        "return_time": 872,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 153,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": []
+  },
+  "route_count": 2,
+  "result_status": "solved",
+  "result_method_name": "RouteFinder RF-Transformer + fleet compaction + EVRP-TW repair",
+  "expected_method_names": [
+    "RouteFinder RF-Transformer + fleet compaction + EVRP-TW repair",
+    "RouteFinder RF-Transformer + EVRP-TW repair"
+  ],
+  "result_metrics_feasible": true,
+  "hashes": {
+    "instance_sha256": "88F0716B30405D15CAFD6A03FC7ED3DD6EFC7CD892FB7937BF3FAD47E4BBADFA",
+    "result_sha256": "5E86738B435C52284DA9776F3C9DCE67255CF05A0F17D206B3262BEF39058F3C",
+    "checker_sha256": "CB3CB4EDD21D9F915C2B7406CE3EEAFF99E004AB75DE2CBD5EB3C3ED11D6255C",
+    "fleet_policy_sha256": "D89213812E7365441D29182077921DA94D1FE2710F0ECD1DD0EAACBC350605B0",
+    "instance_loader_sha256": "683A05152D51253FD533E83464723730F67995F8E331BDCADF55D8345D4AC189",
+    "converter_sha256": "951FC2B738092BD9EC0D46CB28F2CB4E5B94942E6CFFAA4F16F76BE8EAAC30A6",
+    "validator_sha256": "B92376ABCB8BDDA6B7FADD7061702E3C6ECC167C9DF849D21EA0949D27519048"
+  }
+}

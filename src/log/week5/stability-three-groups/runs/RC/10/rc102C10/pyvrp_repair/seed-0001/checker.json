@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "fresh_recheck": true,
+  "job_id": "RC-rc102C10-pyvrp_repair-seed-0001",
+  "group": "RC",
+  "method": "pyvrp_repair",
+  "instance": "rc102C10",
+  "clients": 10,
+  "stations": 4,
+  "max_vehicles": 4,
+  "seed": 1,
+  "validation_status": "valid",
+  "contract_valid": true,
+  "strict_feasible": false,
+  "failure_class": "checker_infeasible:coverage_missing",
+  "contract_errors": [],
+  "report": {
+    "feasible": false,
+    "total_distance": 0,
+    "total_duration": 0,
+    "makespan": 0,
+    "served_customers": 0,
+    "missing_customers": [
+      "C70",
+      "C57",
+      "C49",
+      "C45",
+      "C54",
+      "C92",
+      "C26",
+      "C11",
+      "C53",
+      "C44"
+    ],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 0,
+    "charging_time": 0,
+    "synchronization_violations": 0,
+    "vehicle_limit_violations": 0,
+    "route_metrics": [],
+    "violations": [
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C70",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C57",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C49",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C45",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C54",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C92",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C26",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C11",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C53",
+        "detail": "Customer was not visited."
+      },
+      {
+        "constraint": "customer_coverage",
+        "route_index": null,
+        "location": "C44",
+        "detail": "Customer was not visited."
+      }
+    ]
+  },
+  "route_count": 0,
+  "result_status": "unsolved",
+  "result_method_name": "PyVRP VRPTW + EVRP-TW station repair",
+  "expected_method_names": [
+    "PyVRP VRPTW + EVRP-TW station repair"
+  ],
+  "result_metrics_feasible": false,
+  "hashes": {
+    "instance_sha256": "4A90105052C9584E962FB8FEB7C0F82262BE3330924942CB8F69A693E2800BB2",
+    "result_sha256": "2F30611090C1A7345B334C0A3F225F307A26D2F7C67EAEF4616B36592E6A5176",
+    "checker_sha256": "CB3CB4EDD21D9F915C2B7406CE3EEAFF99E004AB75DE2CBD5EB3C3ED11D6255C",
+    "fleet_policy_sha256": "D89213812E7365441D29182077921DA94D1FE2710F0ECD1DD0EAACBC350605B0",
+    "instance_loader_sha256": "683A05152D51253FD533E83464723730F67995F8E331BDCADF55D8345D4AC189",
+    "converter_sha256": "951FC2B738092BD9EC0D46CB28F2CB4E5B94942E6CFFAA4F16F76BE8EAAC30A6",
+    "validator_sha256": "B92376ABCB8BDDA6B7FADD7061702E3C6ECC167C9DF849D21EA0949D27519048"
+  }
+}

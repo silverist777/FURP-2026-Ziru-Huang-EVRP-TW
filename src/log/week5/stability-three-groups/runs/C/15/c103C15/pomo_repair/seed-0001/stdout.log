@@ -1,0 +1,38 @@
+﻿POMO + EVRP-TW repair pipeline
+  status=unsolved
+  instance=c103C15
+  source=E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\data\evrptw_instances\c103C15.txt
+  vehicles=3
+  runtime=2.112s
+  selected_candidate=5/5
+  selected_variant=pomo_routes
+  candidate_routes=[['C33', 'C35', 'C61', 'C59', 'C40', 'C44', 'C50'], ['C30', 'C95', 'C18', 'C13'], ['C19', 'C85', 'C10'], ['C98']]
+  station_insertions=4
+  split_count=2
+Benchmark metrics:
+  solver=POMO+EVRPTWRepair
+  feasible=False
+  total_distance=348
+  total_duration=2728
+  makespan=1163
+  served_customers=11
+  missing_customers=4
+  duplicate_customers=0
+  time_window_violations=0
+  capacity_violations=0
+  energy_violations=0
+  charging_count=4
+  charging_time=399
+  synchronization_violations=0
+  vehicle_limit_violations=0
+Violation details:
+  route=- constraint=customer_coverage location=C98 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C10 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C85 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C19 detail=Customer was not visited.
+Solution JSON: E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\log\week5\stability-three-groups\runs\C\15\c103C15\pomo_repair\seed-0001\result.json
+
+
+[validator]
+C-c103C15-pomo_repair-seed-0001: validation=valid strict_feasible=False failure=checker_infeasible:coverage_missing
+

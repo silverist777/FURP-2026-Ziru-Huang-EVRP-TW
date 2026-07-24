@@ -1,0 +1,30 @@
+﻿EVRP-TW solving pipeline
+  status=solved
+  instance=r101_21
+  source=E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\data\evrptw_instances\r101_21.txt
+  vehicles=20
+  runtime=73.397s
+  station_insertions=23
+  split_count=1
+Benchmark metrics:
+  solver=EVRPTWRepairPipeline
+  feasible=True
+  total_distance=1619
+  total_duration=4077
+  makespan=226
+  served_customers=100
+  missing_customers=0
+  duplicate_customers=0
+  time_window_violations=0
+  capacity_violations=0
+  energy_violations=0
+  charging_count=23
+  charging_time=246
+  synchronization_violations=0
+  vehicle_limit_violations=0
+Solution JSON: E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\log\week5\stability-three-groups\runs\R\100\r101_21\pyvrp_repair\seed-0001\result.json
+
+
+[validator]
+R-r101_21-pyvrp_repair-seed-0001: validation=valid strict_feasible=True failure=success
+

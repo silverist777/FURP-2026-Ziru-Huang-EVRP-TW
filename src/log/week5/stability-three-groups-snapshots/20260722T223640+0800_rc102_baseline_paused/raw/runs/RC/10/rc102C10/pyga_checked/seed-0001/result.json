@@ -1,0 +1,879 @@
+{
+  "status": "unsolved",
+  "source": {
+    "path": "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\data\\evrptw_instances\\rc102C10.txt",
+    "instance": "rc102C10",
+    "problem_type": "EVRPTW"
+  },
+  "experiment_record": {
+    "record_schema": "week03_experiment_record_v1",
+    "instance_name": "rc102C10",
+    "instance_size": 10,
+    "method_name": "py-ga-VRPTW custom + shared checker",
+    "objective_value": 455.0,
+    "runtime_seconds": 0.123,
+    "feasibility_status": "infeasible",
+    "vehicles_used": 5,
+    "constraint_violations": "energy_violations=5; vehicle_limit_violations=1",
+    "random_seed": 1,
+    "best_solution_found": "[[\"C57\", \"C49\", \"C26\"], [\"C54\"], [\"C11\"], [\"C45\", \"C70\", \"C53\"], [\"C44\", \"C92\"]]",
+    "reference_value": null,
+    "gap_to_reference_pct": null,
+    "convergence_curve": "[{\"generation\": \"0\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"0.00016667551269044096\", \"max_fitness\": \"0.00023654490140738322\", \"avg_fitness\": \"0.00018996349979018588\", \"std_fitness\": \"1.3864103625322229e-05\"}, {\"generation\": \"1\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.00016667551269044096\", \"max_fitness\": \"0.00023654490140738322\", \"avg_fitness\": \"0.00018974512700900076\", \"std_fitness\": \"1.2840576433657365e-05\"}, {\"generation\": \"2\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"0.00016667551269044096\", \"max_fitness\": \"0.00023654490140738322\", \"avg_fitness\": \"0.0001911478216552526\", \"std_fitness\": \"1.2944925962160885e-05\"}, {\"generation\": \"3\", \"evaluated_individuals\": \"61\", \"min_fitness\": \"0.00016667551269044096\", \"max_fitness\": \"0.00023654490140738322\", \"avg_fitness\": \"0.00019140226439193347\", \"std_fitness\": \"1.2499739496888162e-05\"}, {\"generation\": \"4\", \"evaluated_individuals\": \"69\", \"min_fitness\": \"0.0001717320976259977\", \"max_fitness\": \"0.00021538648328425815\", \"avg_fitness\": \"0.00019269415264541932\", \"std_fitness\": \"1.1274614556868513e-05\"}, {\"generation\": \"5\", \"evaluated_individuals\": \"65\", \"min_fitness\": \"0.0001717320976259977\", \"max_fitness\": \"0.00021538648328425815\", \"avg_fitness\": \"0.00019322054615010867\", \"std_fitness\": \"1.0295522504091926e-05\"}, {\"generation\": \"6\", \"evaluated_individuals\": \"66\", \"min_fitness\": \"0.0001717320976259977\", \"max_fitness\": \"0.00021139863562133325\", \"avg_fitness\": \"0.00019374005843595415\", \"std_fitness\": \"1.048613405281263e-05\"}, {\"generation\": \"7\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.0001717320976259977\", \"max_fitness\": \"0.00021139863562133325\", \"avg_fitness\": \"0.0001951182958076181\", \"std_fitness\": \"9.260466048683274e-06\"}, {\"generation\": \"8\", \"evaluated_individuals\": \"65\", \"min_fitness\": \"0.00018080651883192422\", \"max_fitness\": \"0.00021139863562133325\", \"avg_fitness\": \"0.00019592642681154574\", \"std_fitness\": \"8.10921221601749e-06\"}, {\"generation\": \"9\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"0.00018132006476514692\", \"max_fitness\": \"0.00021139863562133325\", \"avg_fitness\": \"0.0001963806949147365\", \"std_fitness\": \"7.4818838945446715e-06\"}, {\"generation\": \"10\", \"evaluated_individuals\": \"67\", \"min_fitness\": \"0.0001807769153676378\", \"max_fitness\": \"0.00021139863562133325\", \"avg_fitness\": \"0.00019608201733535688\", \"std_fitness\": \"7.4000165718452054e-06\"}, {\"generation\": \"11\", \"evaluated_individuals\": \"60\", \"min_fitness\": \"0.0001807769153676378\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.0001964603482530538\", \"std_fitness\": \"6.731123416405784e-06\"}, {\"generation\": \"12\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"0.00017018853665427833\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019704735040592254\", \"std_fitness\": \"7.333379888318742e-06\"}, {\"generation\": \"13\", \"evaluated_individuals\": \"62\", \"min_fitness\": \"0.00017018853665427833\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.000197582614574667\", \"std_fitness\": \"8.15872295144415e-06\"}, {\"generation\": \"14\", \"evaluated_individuals\": \"54\", \"min_fitness\": \"0.00017018853665427833\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.000196952357845179\", \"std_fitness\": \"7.888447472119716e-06\"}, {\"generation\": \"15\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.00017018853665427833\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019647843302663003\", \"std_fitness\": \"8.69971525246803e-06\"}, {\"generation\": \"16\", \"evaluated_individuals\": \"62\", \"min_fitness\": \"0.00017018853665427833\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019667250568060576\", \"std_fitness\": \"7.593712628033688e-06\"}, {\"generation\": \"17\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"0.0001827914558128854\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019736799702464763\", \"std_fitness\": \"6.970429186011721e-06\"}, {\"generation\": \"18\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.0001827914558128854\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.000198415684918544\", \"std_fitness\": \"7.012029380863774e-06\"}, {\"generation\": \"19\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"0.00017547461761314922\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019856230628922128\", \"std_fitness\": \"6.946275866371252e-06\"}, {\"generation\": \"20\", \"evaluated_individuals\": \"71\", \"min_fitness\": \"0.00017547461761314922\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019855905791415948\", \"std_fitness\": \"6.710690304176337e-06\"}, {\"generation\": \"21\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.00018922055910517368\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019975626989402945\", \"std_fitness\": \"6.374072100233738e-06\"}, {\"generation\": \"22\", \"evaluated_individuals\": \"66\", \"min_fitness\": \"0.00018922055910517368\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00020022688112260285\", \"std_fitness\": \"6.32497294396935e-06\"}, {\"generation\": \"23\", \"evaluated_individuals\": \"58\", \"min_fitness\": \"0.00018771079202939734\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.000200465107937286\", \"std_fitness\": \"6.821271625282924e-06\"}, {\"generation\": \"24\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"0.00018275626626342373\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019979480587076605\", \"std_fitness\": \"7.62374536783805e-06\"}, {\"generation\": \"25\", \"evaluated_individuals\": \"73\", \"min_fitness\": \"0.00018692418537400043\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019921081837048112\", \"std_fitness\": \"7.379970706231143e-06\"}, {\"generation\": \"26\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"0.00018692418537400043\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019898801513178137\", \"std_fitness\": \"7.247748905345201e-06\"}, {\"generation\": \"27\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.00017615936658450863\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00020018945091628766\", \"std_fitness\": \"7.47098390326911e-06\"}, {\"generation\": \"28\", \"evaluated_individuals\": \"67\", \"min_fitness\": \"0.00017615936658450863\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.0002005835483865346\", \"std_fitness\": \"7.239352474411441e-06\"}, {\"generation\": \"29\", \"evaluated_individuals\": \"78\", \"min_fitness\": \"0.00017615936658450863\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.0002004016313839789\", \"std_fitness\": \"7.317087804732168e-06\"}, {\"generation\": \"30\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.00017615936658450863\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019914863697510798\", \"std_fitness\": \"7.318989000521342e-06\"}, {\"generation\": \"31\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.00018511932554490869\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019919652752382774\", \"std_fitness\": \"6.778058237674417e-06\"}, {\"generation\": \"32\", \"evaluated_individuals\": \"67\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019939116784495944\", \"std_fitness\": \"7.497811100831252e-06\"}, {\"generation\": \"33\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00020012417606282088\", \"std_fitness\": \"7.2932207109772175e-06\"}, {\"generation\": \"34\", \"evaluated_individuals\": \"66\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019956331658453172\", \"std_fitness\": \"7.849890673266774e-06\"}, {\"generation\": \"35\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"0.00018016734660301144\", \"max_fitness\": \"0.00021425987557614336\", \"avg_fitness\": \"0.000199599672039844\", \"std_fitness\": \"8.565998079828193e-06\"}, {\"generation\": \"36\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.00017615936658450863\", \"max_fitness\": \"0.00021425987557614336\", \"avg_fitness\": \"0.00020043676195356423\", \"std_fitness\": \"8.209658856722647e-06\"}, {\"generation\": \"37\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.00017472523043532312\", \"max_fitness\": \"0.00021425987557614336\", \"avg_fitness\": \"0.0001988863823131532\", \"std_fitness\": \"9.861274150347483e-06\"}, {\"generation\": \"38\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.00017472523043532312\", \"max_fitness\": \"0.00021425987557614336\", \"avg_fitness\": \"0.0001983013257365922\", \"std_fitness\": \"1.0574779177741766e-05\"}, {\"generation\": \"39\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.00017472523043532312\", \"max_fitness\": \"0.00021425987557614336\", \"avg_fitness\": \"0.00019807439166339035\", \"std_fitness\": \"9.872953070844848e-06\"}, {\"generation\": \"40\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.00017472523043532312\", \"max_fitness\": \"0.00021425987557614336\", \"avg_fitness\": \"0.00019815879368670548\", \"std_fitness\": \"9.719860276583942e-06\"}, {\"generation\": \"41\", \"evaluated_individuals\": \"65\", \"min_fitness\": \"0.00017615936658450863\", \"max_fitness\": \"0.00021425987557614336\", \"avg_fitness\": \"0.00020040502869567031\", \"std_fitness\": \"8.304780932108722e-06\"}, {\"generation\": \"42\", \"evaluated_individuals\": \"74\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00021333804061435027\", \"avg_fitness\": \"0.00019929961088456868\", \"std_fitness\": \"8.37713456663e-06\"}, {\"generation\": \"43\", \"evaluated_individuals\": \"58\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00021333804061435027\", \"avg_fitness\": \"0.0002003396855184795\", \"std_fitness\": \"8.001774709538074e-06\"}, {\"generation\": \"44\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00022483864684886754\", \"avg_fitness\": \"0.00020053616227899124\", \"std_fitness\": \"9.555170063212872e-06\"}, {\"generation\": \"45\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00022483864684886754\", \"avg_fitness\": \"0.00020281031704208032\", \"std_fitness\": \"9.808356307451573e-06\"}, {\"generation\": \"46\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00022483864684886754\", \"avg_fitness\": \"0.00020282289216015824\", \"std_fitness\": \"1.1129694322073644e-05\"}, {\"generation\": \"47\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00022483864684886754\", \"avg_fitness\": \"0.00020453978033964365\", \"std_fitness\": \"1.2488568960931555e-05\"}, {\"generation\": \"48\", \"evaluated_individuals\": \"73\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00022483864684886754\", \"avg_fitness\": \"0.0002059675988932975\", \"std_fitness\": \"1.2475977511346122e-05\"}, {\"generation\": \"49\", \"evaluated_individuals\": \"74\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00022483864684886754\", \"avg_fitness\": \"0.0002085691951299294\", \"std_fitness\": \"1.2811395333746188e-05\"}]",
+    "improvement_over_time": "[{\"generation\": \"0\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"0.00016667551269044096\", \"max_fitness\": \"0.00023654490140738322\", \"avg_fitness\": \"0.00018996349979018588\", \"std_fitness\": \"1.3864103625322229e-05\"}, {\"generation\": \"1\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.00016667551269044096\", \"max_fitness\": \"0.00023654490140738322\", \"avg_fitness\": \"0.00018974512700900076\", \"std_fitness\": \"1.2840576433657365e-05\"}, {\"generation\": \"2\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"0.00016667551269044096\", \"max_fitness\": \"0.00023654490140738322\", \"avg_fitness\": \"0.0001911478216552526\", \"std_fitness\": \"1.2944925962160885e-05\"}, {\"generation\": \"3\", \"evaluated_individuals\": \"61\", \"min_fitness\": \"0.00016667551269044096\", \"max_fitness\": \"0.00023654490140738322\", \"avg_fitness\": \"0.00019140226439193347\", \"std_fitness\": \"1.2499739496888162e-05\"}, {\"generation\": \"4\", \"evaluated_individuals\": \"69\", \"min_fitness\": \"0.0001717320976259977\", \"max_fitness\": \"0.00021538648328425815\", \"avg_fitness\": \"0.00019269415264541932\", \"std_fitness\": \"1.1274614556868513e-05\"}, {\"generation\": \"5\", \"evaluated_individuals\": \"65\", \"min_fitness\": \"0.0001717320976259977\", \"max_fitness\": \"0.00021538648328425815\", \"avg_fitness\": \"0.00019322054615010867\", \"std_fitness\": \"1.0295522504091926e-05\"}, {\"generation\": \"6\", \"evaluated_individuals\": \"66\", \"min_fitness\": \"0.0001717320976259977\", \"max_fitness\": \"0.00021139863562133325\", \"avg_fitness\": \"0.00019374005843595415\", \"std_fitness\": \"1.048613405281263e-05\"}, {\"generation\": \"7\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.0001717320976259977\", \"max_fitness\": \"0.00021139863562133325\", \"avg_fitness\": \"0.0001951182958076181\", \"std_fitness\": \"9.260466048683274e-06\"}, {\"generation\": \"8\", \"evaluated_individuals\": \"65\", \"min_fitness\": \"0.00018080651883192422\", \"max_fitness\": \"0.00021139863562133325\", \"avg_fitness\": \"0.00019592642681154574\", \"std_fitness\": \"8.10921221601749e-06\"}, {\"generation\": \"9\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"0.00018132006476514692\", \"max_fitness\": \"0.00021139863562133325\", \"avg_fitness\": \"0.0001963806949147365\", \"std_fitness\": \"7.4818838945446715e-06\"}, {\"generation\": \"10\", \"evaluated_individuals\": \"67\", \"min_fitness\": \"0.0001807769153676378\", \"max_fitness\": \"0.00021139863562133325\", \"avg_fitness\": \"0.00019608201733535688\", \"std_fitness\": \"7.4000165718452054e-06\"}, {\"generation\": \"11\", \"evaluated_individuals\": \"60\", \"min_fitness\": \"0.0001807769153676378\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.0001964603482530538\", \"std_fitness\": \"6.731123416405784e-06\"}, {\"generation\": \"12\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"0.00017018853665427833\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019704735040592254\", \"std_fitness\": \"7.333379888318742e-06\"}, {\"generation\": \"13\", \"evaluated_individuals\": \"62\", \"min_fitness\": \"0.00017018853665427833\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.000197582614574667\", \"std_fitness\": \"8.15872295144415e-06\"}, {\"generation\": \"14\", \"evaluated_individuals\": \"54\", \"min_fitness\": \"0.00017018853665427833\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.000196952357845179\", \"std_fitness\": \"7.888447472119716e-06\"}, {\"generation\": \"15\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.00017018853665427833\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019647843302663003\", \"std_fitness\": \"8.69971525246803e-06\"}, {\"generation\": \"16\", \"evaluated_individuals\": \"62\", \"min_fitness\": \"0.00017018853665427833\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019667250568060576\", \"std_fitness\": \"7.593712628033688e-06\"}, {\"generation\": \"17\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"0.0001827914558128854\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019736799702464763\", \"std_fitness\": \"6.970429186011721e-06\"}, {\"generation\": \"18\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.0001827914558128854\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.000198415684918544\", \"std_fitness\": \"7.012029380863774e-06\"}, {\"generation\": \"19\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"0.00017547461761314922\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019856230628922128\", \"std_fitness\": \"6.946275866371252e-06\"}, {\"generation\": \"20\", \"evaluated_individuals\": \"71\", \"min_fitness\": \"0.00017547461761314922\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019855905791415948\", \"std_fitness\": \"6.710690304176337e-06\"}, {\"generation\": \"21\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.00018922055910517368\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019975626989402945\", \"std_fitness\": \"6.374072100233738e-06\"}, {\"generation\": \"22\", \"evaluated_individuals\": \"66\", \"min_fitness\": \"0.00018922055910517368\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00020022688112260285\", \"std_fitness\": \"6.32497294396935e-06\"}, {\"generation\": \"23\", \"evaluated_individuals\": \"58\", \"min_fitness\": \"0.00018771079202939734\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.000200465107937286\", \"std_fitness\": \"6.821271625282924e-06\"}, {\"generation\": \"24\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"0.00018275626626342373\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019979480587076605\", \"std_fitness\": \"7.62374536783805e-06\"}, {\"generation\": \"25\", \"evaluated_individuals\": \"73\", \"min_fitness\": \"0.00018692418537400043\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019921081837048112\", \"std_fitness\": \"7.379970706231143e-06\"}, {\"generation\": \"26\", \"evaluated_individuals\": \"68\", \"min_fitness\": \"0.00018692418537400043\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019898801513178137\", \"std_fitness\": \"7.247748905345201e-06\"}, {\"generation\": \"27\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.00017615936658450863\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00020018945091628766\", \"std_fitness\": \"7.47098390326911e-06\"}, {\"generation\": \"28\", \"evaluated_individuals\": \"67\", \"min_fitness\": \"0.00017615936658450863\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.0002005835483865346\", \"std_fitness\": \"7.239352474411441e-06\"}, {\"generation\": \"29\", \"evaluated_individuals\": \"78\", \"min_fitness\": \"0.00017615936658450863\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.0002004016313839789\", \"std_fitness\": \"7.317087804732168e-06\"}, {\"generation\": \"30\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.00017615936658450863\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019914863697510798\", \"std_fitness\": \"7.318989000521342e-06\"}, {\"generation\": \"31\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.00018511932554490869\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019919652752382774\", \"std_fitness\": \"6.778058237674417e-06\"}, {\"generation\": \"32\", \"evaluated_individuals\": \"67\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019939116784495944\", \"std_fitness\": \"7.497811100831252e-06\"}, {\"generation\": \"33\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00020012417606282088\", \"std_fitness\": \"7.2932207109772175e-06\"}, {\"generation\": \"34\", \"evaluated_individuals\": \"66\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.0002092629731828741\", \"avg_fitness\": \"0.00019956331658453172\", \"std_fitness\": \"7.849890673266774e-06\"}, {\"generation\": \"35\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"0.00018016734660301144\", \"max_fitness\": \"0.00021425987557614336\", \"avg_fitness\": \"0.000199599672039844\", \"std_fitness\": \"8.565998079828193e-06\"}, {\"generation\": \"36\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.00017615936658450863\", \"max_fitness\": \"0.00021425987557614336\", \"avg_fitness\": \"0.00020043676195356423\", \"std_fitness\": \"8.209658856722647e-06\"}, {\"generation\": \"37\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.00017472523043532312\", \"max_fitness\": \"0.00021425987557614336\", \"avg_fitness\": \"0.0001988863823131532\", \"std_fitness\": \"9.861274150347483e-06\"}, {\"generation\": \"38\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.00017472523043532312\", \"max_fitness\": \"0.00021425987557614336\", \"avg_fitness\": \"0.0001983013257365922\", \"std_fitness\": \"1.0574779177741766e-05\"}, {\"generation\": \"39\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.00017472523043532312\", \"max_fitness\": \"0.00021425987557614336\", \"avg_fitness\": \"0.00019807439166339035\", \"std_fitness\": \"9.872953070844848e-06\"}, {\"generation\": \"40\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.00017472523043532312\", \"max_fitness\": \"0.00021425987557614336\", \"avg_fitness\": \"0.00019815879368670548\", \"std_fitness\": \"9.719860276583942e-06\"}, {\"generation\": \"41\", \"evaluated_individuals\": \"65\", \"min_fitness\": \"0.00017615936658450863\", \"max_fitness\": \"0.00021425987557614336\", \"avg_fitness\": \"0.00020040502869567031\", \"std_fitness\": \"8.304780932108722e-06\"}, {\"generation\": \"42\", \"evaluated_individuals\": \"74\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00021333804061435027\", \"avg_fitness\": \"0.00019929961088456868\", \"std_fitness\": \"8.37713456663e-06\"}, {\"generation\": \"43\", \"evaluated_individuals\": \"58\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00021333804061435027\", \"avg_fitness\": \"0.0002003396855184795\", \"std_fitness\": \"8.001774709538074e-06\"}, {\"generation\": \"44\", \"evaluated_individuals\": \"72\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00022483864684886754\", \"avg_fitness\": \"0.00020053616227899124\", \"std_fitness\": \"9.555170063212872e-06\"}, {\"generation\": \"45\", \"evaluated_individuals\": \"76\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00022483864684886754\", \"avg_fitness\": \"0.00020281031704208032\", \"std_fitness\": \"9.808356307451573e-06\"}, {\"generation\": \"46\", \"evaluated_individuals\": \"70\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00022483864684886754\", \"avg_fitness\": \"0.00020282289216015824\", \"std_fitness\": \"1.1129694322073644e-05\"}, {\"generation\": \"47\", \"evaluated_individuals\": \"64\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00022483864684886754\", \"avg_fitness\": \"0.00020453978033964365\", \"std_fitness\": \"1.2488568960931555e-05\"}, {\"generation\": \"48\", \"evaluated_individuals\": \"73\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00022483864684886754\", \"avg_fitness\": \"0.0002059675988932975\", \"std_fitness\": \"1.2475977511346122e-05\"}, {\"generation\": \"49\", \"evaluated_individuals\": \"74\", \"min_fitness\": \"0.00018039491340151052\", \"max_fitness\": \"0.00022483864684886754\", \"avg_fitness\": \"0.0002085691951299294\", \"std_fitness\": \"1.2811395333746188e-05\"}]",
+    "iterations": null,
+    "generations": 50,
+    "search_steps": 4000
+  },
+  "solver": {
+    "method_name": "py-ga-VRPTW custom + shared checker",
+    "baseline": "py-ga-VRPTW",
+    "customize_data": true,
+    "ind_size": 10,
+    "pop_size": 80,
+    "generations": 50,
+    "unit_cost": 8.0,
+    "init_cost": 100.0,
+    "wait_cost": 1.0,
+    "delay_cost": 1.5,
+    "crossover_prob": 0.85,
+    "mutation_prob": 0.02,
+    "seed": 1,
+    "elapsed_runtime_seconds": 0.123,
+    "pyga_total_cost": 4447.634,
+    "unsupported_reason": ""
+  },
+  "routes": [
+    {
+      "route_index": 1,
+      "visits": [
+        "C57",
+        "C49",
+        "C26"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 2,
+      "visits": [
+        "C54"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 3,
+      "visits": [
+        "C11"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 4,
+      "visits": [
+        "C45",
+        "C70",
+        "C53"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 5,
+      "visits": [
+        "C44",
+        "C92"
+      ],
+      "charging_plan": []
+    }
+  ],
+  "metrics": {
+    "feasible": false,
+    "vehicle_count": 5,
+    "total_distance": 455,
+    "total_duration": 860,
+    "makespan": 220,
+    "served_customers": 10,
+    "missing_customers": 0,
+    "duplicate_customers": 0,
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 5,
+    "vehicle_limit_violations": 1,
+    "charging_count": 0,
+    "charging_time": 0
+  },
+  "pyga": {
+    "stdout": "File: E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\py-ga-VRPTW\\data\\json_customize\\rc102C10.json exists.\nStart of evolution\n  Evaluated 80 individuals\n-- Generation 0 --\n  Evaluated 68 individuals\n  Min 0.00016667551269044096\n  Max 0.00023654490140738322\n  Avg 0.00018996349979018588\n  Std 1.3864103625322229e-05\n-- Generation 1 --\n  Evaluated 72 individuals\n  Min 0.00016667551269044096\n  Max 0.00023654490140738322\n  Avg 0.00018974512700900076\n  Std 1.2840576433657365e-05\n-- Generation 2 --\n  Evaluated 76 individuals\n  Min 0.00016667551269044096\n  Max 0.00023654490140738322\n  Avg 0.0001911478216552526\n  Std 1.2944925962160885e-05\n-- Generation 3 --\n  Evaluated 61 individuals\n  Min 0.00016667551269044096\n  Max 0.00023654490140738322\n  Avg 0.00019140226439193347\n  Std 1.2499739496888162e-05\n-- Generation 4 --\n  Evaluated 69 individuals\n  Min 0.0001717320976259977\n  Max 0.00021538648328425815\n  Avg 0.00019269415264541932\n  Std 1.1274614556868513e-05\n-- Generation 5 --\n  Evaluated 65 individuals\n  Min 0.0001717320976259977\n  Max 0.00021538648328425815\n  Avg 0.00019322054615010867\n  Std 1.0295522504091926e-05\n-- Generation 6 --\n  Evaluated 66 individuals\n  Min 0.0001717320976259977\n  Max 0.00021139863562133325\n  Avg 0.00019374005843595415\n  Std 1.048613405281263e-05\n-- Generation 7 --\n  Evaluated 70 individuals\n  Min 0.0001717320976259977\n  Max 0.00021139863562133325\n  Avg 0.0001951182958076181\n  Std 9.260466048683274e-06\n-- Generation 8 --\n  Evaluated 65 individuals\n  Min 0.00018080651883192422\n  Max 0.00021139863562133325\n  Avg 0.00019592642681154574\n  Std 8.10921221601749e-06\n-- Generation 9 --\n  Evaluated 68 individuals\n  Min 0.00018132006476514692\n  Max 0.00021139863562133325\n  Avg 0.0001963806949147365\n  Std 7.4818838945446715e-06\n-- Generation 10 --\n  Evaluated 67 individuals\n  Min 0.0001807769153676378\n  Max 0.00021139863562133325\n  Avg 0.00019608201733535688\n  Std 7.4000165718452054e-06\n-- Generation 11 --\n  Evaluated 60 individuals\n  Min 0.0001807769153676378\n  Max 0.0002092629731828741\n  Avg 0.0001964603482530538\n  Std 6.731123416405784e-06\n-- Generation 12 --\n  Evaluated 64 individuals\n  Min 0.00017018853665427833\n  Max 0.0002092629731828741\n  Avg 0.00019704735040592254\n  Std 7.333379888318742e-06\n-- Generation 13 --\n  Evaluated 62 individuals\n  Min 0.00017018853665427833\n  Max 0.0002092629731828741\n  Avg 0.000197582614574667\n  Std 8.15872295144415e-06\n-- Generation 14 --\n  Evaluated 54 individuals\n  Min 0.00017018853665427833\n  Max 0.0002092629731828741\n  Avg 0.000196952357845179\n  Std 7.888447472119716e-06\n-- Generation 15 --\n  Evaluated 72 individuals\n  Min 0.00017018853665427833\n  Max 0.0002092629731828741\n  Avg 0.00019647843302663003\n  Std 8.69971525246803e-06\n-- Generation 16 --\n  Evaluated 62 individuals\n  Min 0.00017018853665427833\n  Max 0.0002092629731828741\n  Avg 0.00019667250568060576\n  Std 7.593712628033688e-06\n-- Generation 17 --\n  Evaluated 76 individuals\n  Min 0.0001827914558128854\n  Max 0.0002092629731828741\n  Avg 0.00019736799702464763\n  Std 6.970429186011721e-06\n-- Generation 18 --\n  Evaluated 72 individuals\n  Min 0.0001827914558128854\n  Max 0.0002092629731828741\n  Avg 0.000198415684918544\n  Std 7.012029380863774e-06\n-- Generation 19 --\n  Evaluated 76 individuals\n  Min 0.00017547461761314922\n  Max 0.0002092629731828741\n  Avg 0.00019856230628922128\n  Std 6.946275866371252e-06\n-- Generation 20 --\n  Evaluated 71 individuals\n  Min 0.00017547461761314922\n  Max 0.0002092629731828741\n  Avg 0.00019855905791415948\n  Std 6.710690304176337e-06\n-- Generation 21 --\n  Evaluated 70 individuals\n  Min 0.00018922055910517368\n  Max 0.0002092629731828741\n  Avg 0.00019975626989402945\n  Std 6.374072100233738e-06\n-- Generation 22 --\n  Evaluated 66 individuals\n  Min 0.00018922055910517368\n  Max 0.0002092629731828741\n  Avg 0.00020022688112260285\n  Std 6.32497294396935e-06\n-- Generation 23 --\n  Evaluated 58 individuals\n  Min 0.00018771079202939734\n  Max 0.0002092629731828741\n  Avg 0.000200465107937286\n  Std 6.821271625282924e-06\n-- Generation 24 --\n  Evaluated 76 individuals\n  Min 0.00018275626626342373\n  Max 0.0002092629731828741\n  Avg 0.00019979480587076605\n  Std 7.62374536783805e-06\n-- Generation 25 --\n  Evaluated 73 individuals\n  Min 0.00018692418537400043\n  Max 0.0002092629731828741\n  Avg 0.00019921081837048112\n  Std 7.379970706231143e-06\n-- Generation 26 --\n  Evaluated 68 individuals\n  Min 0.00018692418537400043\n  Max 0.0002092629731828741\n  Avg 0.00019898801513178137\n  Std 7.247748905345201e-06\n-- Generation 27 --\n  Evaluated 70 individuals\n  Min 0.00017615936658450863\n  Max 0.0002092629731828741\n  Avg 0.00020018945091628766\n  Std 7.47098390326911e-06\n-- Generation 28 --\n  Evaluated 67 individuals\n  Min 0.00017615936658450863\n  Max 0.0002092629731828741\n  Avg 0.0002005835483865346\n  Std 7.239352474411441e-06\n-- Generation 29 --\n  Evaluated 78 individuals\n  Min 0.00017615936658450863\n  Max 0.0002092629731828741\n  Avg 0.0002004016313839789\n  Std 7.317087804732168e-06\n-- Generation 30 --\n  Evaluated 72 individuals\n  Min 0.00017615936658450863\n  Max 0.0002092629731828741\n  Avg 0.00019914863697510798\n  Std 7.318989000521342e-06\n-- Generation 31 --\n  Evaluated 72 individuals\n  Min 0.00018511932554490869\n  Max 0.0002092629731828741\n  Avg 0.00019919652752382774\n  Std 6.778058237674417e-06\n-- Generation 32 --\n  Evaluated 67 individuals\n  Min 0.00018039491340151052\n  Max 0.0002092629731828741\n  Avg 0.00019939116784495944\n  Std 7.497811100831252e-06\n-- Generation 33 --\n  Evaluated 70 individuals\n  Min 0.00018039491340151052\n  Max 0.0002092629731828741\n  Avg 0.00020012417606282088\n  Std 7.2932207109772175e-06\n-- Generation 34 --\n  Evaluated 66 individuals\n  Min 0.00018039491340151052\n  Max 0.0002092629731828741\n  Avg 0.00019956331658453172\n  Std 7.849890673266774e-06\n-- Generation 35 --\n  Evaluated 76 individuals\n  Min 0.00018016734660301144\n  Max 0.00021425987557614336\n  Avg 0.000199599672039844\n  Std 8.565998079828193e-06\n-- Generation 36 --\n  Evaluated 72 individuals\n  Min 0.00017615936658450863\n  Max 0.00021425987557614336\n  Avg 0.00020043676195356423\n  Std 8.209658856722647e-06\n-- Generation 37 --\n  Evaluated 70 individuals\n  Min 0.00017472523043532312\n  Max 0.00021425987557614336\n  Avg 0.0001988863823131532\n  Std 9.861274150347483e-06\n-- Generation 38 --\n  Evaluated 70 individuals\n  Min 0.00017472523043532312\n  Max 0.00021425987557614336\n  Avg 0.0001983013257365922\n  Std 1.0574779177741766e-05\n-- Generation 39 --\n  Evaluated 70 individuals\n  Min 0.00017472523043532312\n  Max 0.00021425987557614336\n  Avg 0.00019807439166339035\n  Std 9.872953070844848e-06\n-- Generation 40 --\n  Evaluated 72 individuals\n  Min 0.00017472523043532312\n  Max 0.00021425987557614336\n  Avg 0.00019815879368670548\n  Std 9.719860276583942e-06\n-- Generation 41 --\n  Evaluated 65 individuals\n  Min 0.00017615936658450863\n  Max 0.00021425987557614336\n  Avg 0.00020040502869567031\n  Std 8.304780932108722e-06\n-- Generation 42 --\n  Evaluated 74 individuals\n  Min 0.00018039491340151052\n  Max 0.00021333804061435027\n  Avg 0.00019929961088456868\n  Std 8.37713456663e-06\n-- Generation 43 --\n  Evaluated 58 individuals\n  Min 0.00018039491340151052\n  Max 0.00021333804061435027\n  Avg 0.0002003396855184795\n  Std 8.001774709538074e-06\n-- Generation 44 --\n  Evaluated 72 individuals\n  Min 0.00018039491340151052\n  Max 0.00022483864684886754\n  Avg 0.00020053616227899124\n  Std 9.555170063212872e-06\n-- Generation 45 --\n  Evaluated 76 individuals\n  Min 0.00018039491340151052\n  Max 0.00022483864684886754\n  Avg 0.00020281031704208032\n  Std 9.808356307451573e-06\n-- Generation 46 --\n  Evaluated 70 individuals\n  Min 0.00018039491340151052\n  Max 0.00022483864684886754\n  Avg 0.00020282289216015824\n  Std 1.1129694322073644e-05\n-- Generation 47 --\n  Evaluated 64 individuals\n  Min 0.00018039491340151052\n  Max 0.00022483864684886754\n  Avg 0.00020453978033964365\n  Std 1.2488568960931555e-05\n-- Generation 48 --\n  Evaluated 73 individuals\n  Min 0.00018039491340151052\n  Max 0.00022483864684886754\n  Avg 0.0002059675988932975\n  Std 1.2475977511346122e-05\n-- Generation 49 --\n  Evaluated 74 individuals\n  Min 0.00018039491340151052\n  Max 0.00022483864684886754\n  Avg 0.0002085691951299294\n  Std 1.2811395333746188e-05\n-- End of (successful) evolution --\nBest individual: [2, 3, 7, 5, 8, 4, 1, 9, 10, 6]\nFitness: 0.00022483864684886754\n  Vehicle 1's route: 0 - 2 - 3 - 7 - 0\n  Vehicle 2's route: 0 - 5 - 0\n  Vehicle 3's route: 0 - 8 - 0\n  Vehicle 4's route: 0 - 4 - 1 - 9 - 0\n  Vehicle 5's route: 0 - 10 - 6 - 0\nTotal cost: 4447.633954460604\nWrite to file: E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\py-ga-VRPTW\\results\\rc102C10_uC8.0_iC100.0_wC1.0_dC1.5_iS10_pS80_cP0.85_mP0.02_nG50.csv\nPath: E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\py-ga-VRPTW\\results\\rc102C10_uC8.0_iC100.0_wC1.0_dC1.5_iS10_pS80_cP0.85_mP0.02_nG50.csv does not exist.\n",
+    "csv_rows": [
+      {
+        "generation": "0",
+        "evaluated_individuals": "68",
+        "min_fitness": "0.00016667551269044096",
+        "max_fitness": "0.00023654490140738322",
+        "avg_fitness": "0.00018996349979018588",
+        "std_fitness": "1.3864103625322229e-05"
+      },
+      {
+        "generation": "1",
+        "evaluated_individuals": "72",
+        "min_fitness": "0.00016667551269044096",
+        "max_fitness": "0.00023654490140738322",
+        "avg_fitness": "0.00018974512700900076",
+        "std_fitness": "1.2840576433657365e-05"
+      },
+      {
+        "generation": "2",
+        "evaluated_individuals": "76",
+        "min_fitness": "0.00016667551269044096",
+        "max_fitness": "0.00023654490140738322",
+        "avg_fitness": "0.0001911478216552526",
+        "std_fitness": "1.2944925962160885e-05"
+      },
+      {
+        "generation": "3",
+        "evaluated_individuals": "61",
+        "min_fitness": "0.00016667551269044096",
+        "max_fitness": "0.00023654490140738322",
+        "avg_fitness": "0.00019140226439193347",
+        "std_fitness": "1.2499739496888162e-05"
+      },
+      {
+        "generation": "4",
+        "evaluated_individuals": "69",
+        "min_fitness": "0.0001717320976259977",
+        "max_fitness": "0.00021538648328425815",
+        "avg_fitness": "0.00019269415264541932",
+        "std_fitness": "1.1274614556868513e-05"
+      },
+      {
+        "generation": "5",
+        "evaluated_individuals": "65",
+        "min_fitness": "0.0001717320976259977",
+        "max_fitness": "0.00021538648328425815",
+        "avg_fitness": "0.00019322054615010867",
+        "std_fitness": "1.0295522504091926e-05"
+      },
+      {
+        "generation": "6",
+        "evaluated_individuals": "66",
+        "min_fitness": "0.0001717320976259977",
+        "max_fitness": "0.00021139863562133325",
+        "avg_fitness": "0.00019374005843595415",
+        "std_fitness": "1.048613405281263e-05"
+      },
+      {
+        "generation": "7",
+        "evaluated_individuals": "70",
+        "min_fitness": "0.0001717320976259977",
+        "max_fitness": "0.00021139863562133325",
+        "avg_fitness": "0.0001951182958076181",
+        "std_fitness": "9.260466048683274e-06"
+      },
+      {
+        "generation": "8",
+        "evaluated_individuals": "65",
+        "min_fitness": "0.00018080651883192422",
+        "max_fitness": "0.00021139863562133325",
+        "avg_fitness": "0.00019592642681154574",
+        "std_fitness": "8.10921221601749e-06"
+      },
+      {
+        "generation": "9",
+        "evaluated_individuals": "68",
+        "min_fitness": "0.00018132006476514692",
+        "max_fitness": "0.00021139863562133325",
+        "avg_fitness": "0.0001963806949147365",
+        "std_fitness": "7.4818838945446715e-06"
+      },
+      {
+        "generation": "10",
+        "evaluated_individuals": "67",
+        "min_fitness": "0.0001807769153676378",
+        "max_fitness": "0.00021139863562133325",
+        "avg_fitness": "0.00019608201733535688",
+        "std_fitness": "7.4000165718452054e-06"
+      },
+      {
+        "generation": "11",
+        "evaluated_individuals": "60",
+        "min_fitness": "0.0001807769153676378",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.0001964603482530538",
+        "std_fitness": "6.731123416405784e-06"
+      },
+      {
+        "generation": "12",
+        "evaluated_individuals": "64",
+        "min_fitness": "0.00017018853665427833",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00019704735040592254",
+        "std_fitness": "7.333379888318742e-06"
+      },
+      {
+        "generation": "13",
+        "evaluated_individuals": "62",
+        "min_fitness": "0.00017018853665427833",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.000197582614574667",
+        "std_fitness": "8.15872295144415e-06"
+      },
+      {
+        "generation": "14",
+        "evaluated_individuals": "54",
+        "min_fitness": "0.00017018853665427833",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.000196952357845179",
+        "std_fitness": "7.888447472119716e-06"
+      },
+      {
+        "generation": "15",
+        "evaluated_individuals": "72",
+        "min_fitness": "0.00017018853665427833",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00019647843302663003",
+        "std_fitness": "8.69971525246803e-06"
+      },
+      {
+        "generation": "16",
+        "evaluated_individuals": "62",
+        "min_fitness": "0.00017018853665427833",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00019667250568060576",
+        "std_fitness": "7.593712628033688e-06"
+      },
+      {
+        "generation": "17",
+        "evaluated_individuals": "76",
+        "min_fitness": "0.0001827914558128854",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00019736799702464763",
+        "std_fitness": "6.970429186011721e-06"
+      },
+      {
+        "generation": "18",
+        "evaluated_individuals": "72",
+        "min_fitness": "0.0001827914558128854",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.000198415684918544",
+        "std_fitness": "7.012029380863774e-06"
+      },
+      {
+        "generation": "19",
+        "evaluated_individuals": "76",
+        "min_fitness": "0.00017547461761314922",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00019856230628922128",
+        "std_fitness": "6.946275866371252e-06"
+      },
+      {
+        "generation": "20",
+        "evaluated_individuals": "71",
+        "min_fitness": "0.00017547461761314922",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00019855905791415948",
+        "std_fitness": "6.710690304176337e-06"
+      },
+      {
+        "generation": "21",
+        "evaluated_individuals": "70",
+        "min_fitness": "0.00018922055910517368",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00019975626989402945",
+        "std_fitness": "6.374072100233738e-06"
+      },
+      {
+        "generation": "22",
+        "evaluated_individuals": "66",
+        "min_fitness": "0.00018922055910517368",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00020022688112260285",
+        "std_fitness": "6.32497294396935e-06"
+      },
+      {
+        "generation": "23",
+        "evaluated_individuals": "58",
+        "min_fitness": "0.00018771079202939734",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.000200465107937286",
+        "std_fitness": "6.821271625282924e-06"
+      },
+      {
+        "generation": "24",
+        "evaluated_individuals": "76",
+        "min_fitness": "0.00018275626626342373",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00019979480587076605",
+        "std_fitness": "7.62374536783805e-06"
+      },
+      {
+        "generation": "25",
+        "evaluated_individuals": "73",
+        "min_fitness": "0.00018692418537400043",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00019921081837048112",
+        "std_fitness": "7.379970706231143e-06"
+      },
+      {
+        "generation": "26",
+        "evaluated_individuals": "68",
+        "min_fitness": "0.00018692418537400043",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00019898801513178137",
+        "std_fitness": "7.247748905345201e-06"
+      },
+      {
+        "generation": "27",
+        "evaluated_individuals": "70",
+        "min_fitness": "0.00017615936658450863",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00020018945091628766",
+        "std_fitness": "7.47098390326911e-06"
+      },
+      {
+        "generation": "28",
+        "evaluated_individuals": "67",
+        "min_fitness": "0.00017615936658450863",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.0002005835483865346",
+        "std_fitness": "7.239352474411441e-06"
+      },
+      {
+        "generation": "29",
+        "evaluated_individuals": "78",
+        "min_fitness": "0.00017615936658450863",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.0002004016313839789",
+        "std_fitness": "7.317087804732168e-06"
+      },
+      {
+        "generation": "30",
+        "evaluated_individuals": "72",
+        "min_fitness": "0.00017615936658450863",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00019914863697510798",
+        "std_fitness": "7.318989000521342e-06"
+      },
+      {
+        "generation": "31",
+        "evaluated_individuals": "72",
+        "min_fitness": "0.00018511932554490869",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00019919652752382774",
+        "std_fitness": "6.778058237674417e-06"
+      },
+      {
+        "generation": "32",
+        "evaluated_individuals": "67",
+        "min_fitness": "0.00018039491340151052",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00019939116784495944",
+        "std_fitness": "7.497811100831252e-06"
+      },
+      {
+        "generation": "33",
+        "evaluated_individuals": "70",
+        "min_fitness": "0.00018039491340151052",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00020012417606282088",
+        "std_fitness": "7.2932207109772175e-06"
+      },
+      {
+        "generation": "34",
+        "evaluated_individuals": "66",
+        "min_fitness": "0.00018039491340151052",
+        "max_fitness": "0.0002092629731828741",
+        "avg_fitness": "0.00019956331658453172",
+        "std_fitness": "7.849890673266774e-06"
+      },
+      {
+        "generation": "35",
+        "evaluated_individuals": "76",
+        "min_fitness": "0.00018016734660301144",
+        "max_fitness": "0.00021425987557614336",
+        "avg_fitness": "0.000199599672039844",
+        "std_fitness": "8.565998079828193e-06"
+      },
+      {
+        "generation": "36",
+        "evaluated_individuals": "72",
+        "min_fitness": "0.00017615936658450863",
+        "max_fitness": "0.00021425987557614336",
+        "avg_fitness": "0.00020043676195356423",
+        "std_fitness": "8.209658856722647e-06"
+      },
+      {
+        "generation": "37",
+        "evaluated_individuals": "70",
+        "min_fitness": "0.00017472523043532312",
+        "max_fitness": "0.00021425987557614336",
+        "avg_fitness": "0.0001988863823131532",
+        "std_fitness": "9.861274150347483e-06"
+      },
+      {
+        "generation": "38",
+        "evaluated_individuals": "70",
+        "min_fitness": "0.00017472523043532312",
+        "max_fitness": "0.00021425987557614336",
+        "avg_fitness": "0.0001983013257365922",
+        "std_fitness": "1.0574779177741766e-05"
+      },
+      {
+        "generation": "39",
+        "evaluated_individuals": "70",
+        "min_fitness": "0.00017472523043532312",
+        "max_fitness": "0.00021425987557614336",
+        "avg_fitness": "0.00019807439166339035",
+        "std_fitness": "9.872953070844848e-06"
+      },
+      {
+        "generation": "40",
+        "evaluated_individuals": "72",
+        "min_fitness": "0.00017472523043532312",
+        "max_fitness": "0.00021425987557614336",
+        "avg_fitness": "0.00019815879368670548",
+        "std_fitness": "9.719860276583942e-06"
+      },
+      {
+        "generation": "41",
+        "evaluated_individuals": "65",
+        "min_fitness": "0.00017615936658450863",
+        "max_fitness": "0.00021425987557614336",
+        "avg_fitness": "0.00020040502869567031",
+        "std_fitness": "8.304780932108722e-06"
+      },
+      {
+        "generation": "42",
+        "evaluated_individuals": "74",
+        "min_fitness": "0.00018039491340151052",
+        "max_fitness": "0.00021333804061435027",
+        "avg_fitness": "0.00019929961088456868",
+        "std_fitness": "8.37713456663e-06"
+      },
+      {
+        "generation": "43",
+        "evaluated_individuals": "58",
+        "min_fitness": "0.00018039491340151052",
+        "max_fitness": "0.00021333804061435027",
+        "avg_fitness": "0.0002003396855184795",
+        "std_fitness": "8.001774709538074e-06"
+      },
+      {
+        "generation": "44",
+        "evaluated_individuals": "72",
+        "min_fitness": "0.00018039491340151052",
+        "max_fitness": "0.00022483864684886754",
+        "avg_fitness": "0.00020053616227899124",
+        "std_fitness": "9.555170063212872e-06"
+      },
+      {
+        "generation": "45",
+        "evaluated_individuals": "76",
+        "min_fitness": "0.00018039491340151052",
+        "max_fitness": "0.00022483864684886754",
+        "avg_fitness": "0.00020281031704208032",
+        "std_fitness": "9.808356307451573e-06"
+      },
+      {
+        "generation": "46",
+        "evaluated_individuals": "70",
+        "min_fitness": "0.00018039491340151052",
+        "max_fitness": "0.00022483864684886754",
+        "avg_fitness": "0.00020282289216015824",
+        "std_fitness": "1.1129694322073644e-05"
+      },
+      {
+        "generation": "47",
+        "evaluated_individuals": "64",
+        "min_fitness": "0.00018039491340151052",
+        "max_fitness": "0.00022483864684886754",
+        "avg_fitness": "0.00020453978033964365",
+        "std_fitness": "1.2488568960931555e-05"
+      },
+      {
+        "generation": "48",
+        "evaluated_individuals": "73",
+        "min_fitness": "0.00018039491340151052",
+        "max_fitness": "0.00022483864684886754",
+        "avg_fitness": "0.0002059675988932975",
+        "std_fitness": "1.2475977511346122e-05"
+      },
+      {
+        "generation": "49",
+        "evaluated_individuals": "74",
+        "min_fitness": "0.00018039491340151052",
+        "max_fitness": "0.00022483864684886754",
+        "avg_fitness": "0.0002085691951299294",
+        "std_fitness": "1.2811395333746188e-05"
+      }
+    ]
+  },
+  "violations": [
+    {
+      "constraint": "energy",
+      "route_index": 1,
+      "location": "C26",
+      "detail": "remaining_energy=-23.25, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 1,
+      "location": "D0",
+      "detail": "remaining_energy=-82.25, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 4,
+      "location": "C53",
+      "detail": "remaining_energy=-4.25, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 4,
+      "location": "D0",
+      "detail": "remaining_energy=-24.25, minimum_battery=0"
+    },
+    {
+      "constraint": "energy",
+      "route_index": 5,
+      "location": "D0",
+      "detail": "remaining_energy=-11.25, minimum_battery=0"
+    },
+    {
+      "constraint": "vehicle_limit",
+      "route_index": null,
+      "location": "fleet",
+      "detail": "vehicles_used=5, maximum=4"
+    }
+  ],
+  "report": {
+    "feasible": false,
+    "total_distance": 455,
+    "total_duration": 860,
+    "makespan": 220,
+    "served_customers": 10,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 5,
+    "charging_count": 0,
+    "charging_time": 0,
+    "synchronization_violations": 0,
+    "vehicle_limit_violations": 1,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "C57",
+          "C49",
+          "C26"
+        ],
+        "load": 63,
+        "distance": 160,
+        "duration": 220,
+        "wait_time": 30,
+        "return_time": 220,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "C54"
+        ],
+        "load": 16,
+        "distance": 36,
+        "duration": 198,
+        "wait_time": 152,
+        "return_time": 198,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 3,
+        "visits": [
+          "C11"
+        ],
+        "load": 40,
+        "distance": 68,
+        "duration": 130,
+        "wait_time": 52,
+        "return_time": 130,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 4,
+        "visits": [
+          "C45",
+          "C70",
+          "C53"
+        ],
+        "load": 38,
+        "distance": 102,
+        "duration": 147,
+        "wait_time": 15,
+        "return_time": 147,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 5,
+        "visits": [
+          "C44",
+          "C92"
+        ],
+        "load": 24,
+        "distance": 89,
+        "duration": 165,
+        "wait_time": 56,
+        "return_time": 165,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": [
+      {
+        "constraint": "energy",
+        "route_index": 1,
+        "location": "C26",
+        "detail": "remaining_energy=-23.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 1,
+        "location": "D0",
+        "detail": "remaining_energy=-82.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 4,
+        "location": "C53",
+        "detail": "remaining_energy=-4.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 4,
+        "location": "D0",
+        "detail": "remaining_energy=-24.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 5,
+        "location": "D0",
+        "detail": "remaining_energy=-11.25, minimum_battery=0"
+      },
+      {
+        "constraint": "vehicle_limit",
+        "route_index": null,
+        "location": "fleet",
+        "detail": "vehicles_used=5, maximum=4"
+      }
+    ]
+  },
+  "instance": {
+    "name": "rc102C10",
+    "problem_type": "EVRPTW",
+    "objective": {
+      "primary": "minimize_vehicle_count",
+      "secondary": "minimize_total_distance"
+    },
+    "distance": {
+      "metric": "euclidean",
+      "scale": 1
+    },
+    "duration": {
+      "metric": "euclidean",
+      "scale": 1.0
+    },
+    "solver": {
+      "name": "PyVRP",
+      "runtime_seconds": 0,
+      "seed": 1,
+      "display": false
+    },
+    "vehicles": {
+      "num_available": 4,
+      "capacity": 200,
+      "start_depot": "D0",
+      "end_depot": "D0",
+      "tw_early": 0,
+      "tw_late": 240,
+      "battery_capacity": 77.75,
+      "initial_battery": 77.75
+    },
+    "depot": {
+      "name": "D0",
+      "x": 40,
+      "y": 50,
+      "tw_early": 0,
+      "tw_late": 240
+    },
+    "energy": {
+      "consumption_per_distance": 1,
+      "minimum_battery": 0
+    },
+    "charging": {
+      "policy": "partial_recharge",
+      "allow_partial_recharge": true,
+      "charging_rate": 2.564102564102564,
+      "fixed_service_duration": 0
+    },
+    "charging_stations": [
+      {
+        "name": "S0",
+        "x": 40,
+        "y": 50,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 240,
+        "charging_rate": 2.564102564102564
+      },
+      {
+        "name": "S1",
+        "x": 77,
+        "y": 52,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 240,
+        "charging_rate": 2.564102564102564
+      },
+      {
+        "name": "S15",
+        "x": 39,
+        "y": 26,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 240,
+        "charging_rate": 2.564102564102564
+      },
+      {
+        "name": "S19",
+        "x": 77,
+        "y": 30,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 240,
+        "charging_rate": 2.564102564102564
+      }
+    ],
+    "clients": [
+      {
+        "name": "C70",
+        "x": 35,
+        "y": 69,
+        "demand": 23,
+        "service_duration": 10,
+        "tw_early": 83,
+        "tw_late": 113
+      },
+      {
+        "name": "C57",
+        "x": 30,
+        "y": 25,
+        "demand": 23,
+        "service_duration": 10,
+        "tw_early": 27,
+        "tw_late": 57
+      },
+      {
+        "name": "C49",
+        "x": 42,
+        "y": 12,
+        "demand": 10,
+        "service_duration": 10,
+        "tw_early": 85,
+        "tw_late": 115
+      },
+      {
+        "name": "C45",
+        "x": 20,
+        "y": 82,
+        "demand": 10,
+        "service_duration": 10,
+        "tw_early": 53,
+        "tw_late": 83
+      },
+      {
+        "name": "C54",
+        "x": 55,
+        "y": 60,
+        "demand": 16,
+        "service_duration": 10,
+        "tw_early": 170,
+        "tw_late": 200
+      },
+      {
+        "name": "C92",
+        "x": 53,
+        "y": 43,
+        "demand": 14,
+        "service_duration": 10,
+        "tw_early": 140,
+        "tw_late": 170
+      },
+      {
+        "name": "C26",
+        "x": 95,
+        "y": 30,
+        "demand": 30,
+        "service_duration": 10,
+        "tw_early": 121,
+        "tw_late": 151
+      },
+      {
+        "name": "C11",
+        "x": 8,
+        "y": 40,
+        "demand": 40,
+        "service_duration": 10,
+        "tw_early": 86,
+        "tw_late": 116
+      },
+      {
+        "name": "C53",
+        "x": 20,
+        "y": 50,
+        "demand": 5,
+        "service_duration": 10,
+        "tw_early": 0,
+        "tw_late": 210
+      },
+      {
+        "name": "C44",
+        "x": 55,
+        "y": 82,
+        "demand": 10,
+        "service_duration": 10,
+        "tw_early": 36,
+        "tw_late": 66
+      }
+    ],
+    "vehicle_limit_policy": {
+      "formula": "ceil((clients + charging_stations) / 4)",
+      "rounding": "ceiling",
+      "client_count": 10,
+      "charging_station_count": 4,
+      "vehicle_limit": 4
+    }
+  }
+}

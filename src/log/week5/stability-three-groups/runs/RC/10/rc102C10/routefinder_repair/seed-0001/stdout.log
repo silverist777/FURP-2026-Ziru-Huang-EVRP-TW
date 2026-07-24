@@ -1,0 +1,44 @@
+﻿RouteFinder + fleet compaction + EVRP-TW repair pipeline
+  status=unsolved
+  instance=rc102C10
+  checkpoint=E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\routefinder\checkpoints\50\rf-transformer.ckpt
+  candidates=5
+  inference=0.364s
+  total_runtime=4.452s
+  raw_route_count=4
+  compacted_route_count=None
+  final_route_count=2
+  raw_routes=[['C11', 'C53'], ['C26', 'C54'], ['C44', 'C45', 'C70'], ['C57', 'C49', 'C92']]
+  compacted_routes=[['C11', 'C53'], ['C26', 'C54'], ['C44', 'C45', 'C70'], ['C57', 'C49', 'C92']]
+  station_insertions=2
+  split_count=1
+  reason=
+Benchmark metrics:
+  solver=RouteFinderEVRPTWRepair
+  feasible=False
+  total_distance=199
+  total_duration=356
+  makespan=214
+  served_customers=4
+  missing_customers=6
+  duplicate_customers=0
+  time_window_violations=0
+  capacity_violations=0
+  energy_violations=0
+  charging_count=2
+  charging_time=21
+  synchronization_violations=0
+  vehicle_limit_violations=0
+Violation details:
+  route=- constraint=customer_coverage location=C70 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C57 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C49 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C45 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C92 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C44 detail=Customer was not visited.
+Solution JSON: E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\log\week5\stability-three-groups\runs\RC\10\rc102C10\routefinder_repair\seed-0001\result.json
+
+
+[validator]
+RC-rc102C10-routefinder_repair-seed-0001: validation=invalid strict_feasible=False failure=contract_mismatch
+

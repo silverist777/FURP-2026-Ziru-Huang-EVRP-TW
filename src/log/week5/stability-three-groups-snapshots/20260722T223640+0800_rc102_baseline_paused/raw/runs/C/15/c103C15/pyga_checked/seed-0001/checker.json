@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "fresh_recheck": true,
+  "job_id": "C-c103C15-pyga_checked-seed-0001",
+  "group": "C",
+  "method": "pyga_checked",
+  "instance": "c103C15",
+  "clients": 15,
+  "stations": 5,
+  "max_vehicles": 5,
+  "seed": 1,
+  "validation_status": "valid",
+  "contract_valid": true,
+  "strict_feasible": false,
+  "failure_class": "checker_infeasible:energy_or_charging",
+  "contract_errors": [],
+  "report": {
+    "feasible": false,
+    "total_distance": 558,
+    "total_duration": 3479,
+    "makespan": 1163,
+    "served_customers": 15,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 12,
+    "charging_count": 0,
+    "charging_time": 0,
+    "synchronization_violations": 0,
+    "vehicle_limit_violations": 0,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "C35",
+          "C13"
+        ],
+        "load": 40,
+        "distance": 112,
+        "duration": 1163,
+        "wait_time": 871,
+        "return_time": 1163,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "C44",
+          "C50",
+          "C95",
+          "C85"
+        ],
+        "load": 80,
+        "distance": 139,
+        "duration": 499,
+        "wait_time": 0,
+        "return_time": 499,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 3,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 3,
+        "visits": [
+          "C59",
+          "C40",
+          "C30",
+          "C33",
+          "C10",
+          "C98",
+          "C61"
+        ],
+        "load": 110,
+        "distance": 228,
+        "duration": 1142,
+        "wait_time": 284,
+        "return_time": 1142,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 6,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 4,
+        "visits": [
+          "C19",
+          "C18"
+        ],
+        "load": 30,
+        "distance": 79,
+        "duration": 675,
+        "wait_time": 416,
+        "return_time": 675,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": [
+      {
+        "constraint": "energy",
+        "route_index": 1,
+        "location": "C13",
+        "detail": "remaining_energy=-3.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 1,
+        "location": "D0",
+        "detail": "remaining_energy=-34.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 2,
+        "location": "C95",
+        "detail": "remaining_energy=-10.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 2,
+        "location": "C85",
+        "detail": "remaining_energy=-31.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 2,
+        "location": "D0",
+        "detail": "remaining_energy=-61.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 3,
+        "location": "C30",
+        "detail": "remaining_energy=-1.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 3,
+        "location": "C33",
+        "detail": "remaining_energy=-20.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 3,
+        "location": "C10",
+        "detail": "remaining_energy=-57.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 3,
+        "location": "C98",
+        "detail": "remaining_energy=-82.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 3,
+        "location": "C61",
+        "detail": "remaining_energy=-128.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 3,
+        "location": "D0",
+        "detail": "remaining_energy=-150.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 4,
+        "location": "D0",
+        "detail": "remaining_energy=-1.25, minimum_battery=0"
+      }
+    ]
+  },
+  "route_count": 4,
+  "result_status": "unsolved",
+  "result_method_name": "py-ga-VRPTW custom + shared checker",
+  "expected_method_names": [
+    "py-ga-VRPTW custom + shared checker"
+  ],
+  "result_metrics_feasible": false,
+  "hashes": {
+    "instance_sha256": "F332D203E0186209ABA7316A148453ECC80BDE07FB9A33D586D8B8B33B5E5FA8",
+    "result_sha256": "EA7870FC9A4FD054E8B76B1484E7ACF1E5C9DE3C412F193A60937FE574D63EF7",
+    "checker_sha256": "CB3CB4EDD21D9F915C2B7406CE3EEAFF99E004AB75DE2CBD5EB3C3ED11D6255C",
+    "fleet_policy_sha256": "D89213812E7365441D29182077921DA94D1FE2710F0ECD1DD0EAACBC350605B0",
+    "instance_loader_sha256": "683A05152D51253FD533E83464723730F67995F8E331BDCADF55D8345D4AC189",
+    "converter_sha256": "951FC2B738092BD9EC0D46CB28F2CB4E5B94942E6CFFAA4F16F76BE8EAAC30A6",
+    "validator_sha256": "B92376ABCB8BDDA6B7FADD7061702E3C6ECC167C9DF849D21EA0949D27519048"
+  }
+}

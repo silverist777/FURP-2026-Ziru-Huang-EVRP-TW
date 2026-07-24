@@ -1,0 +1,12 @@
+﻿Traceback (most recent call last):
+  File "E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\experiments\tools\summarize_three_group_stability.py", line 1112, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\experiments\tools\summarize_three_group_stability.py", line 1051, in main
+    rows = [collect_job(job) for job in jobs]
+            ^^^^^^^^^^^^^^^^
+  File "E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\experiments\tools\summarize_three_group_stability.py", line 697, in collect_job
+    runner_contract_errors, runtime, exit_code, timed_out = validate_runner(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 4)
+

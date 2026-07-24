@@ -1,0 +1,1287 @@
+{
+  "schema_version": 1,
+  "fresh_recheck": true,
+  "job_id": "C-c101_21-pyga_checked-seed-0001",
+  "group": "C",
+  "method": "pyga_checked",
+  "instance": "c101_21",
+  "clients": 100,
+  "stations": 21,
+  "max_vehicles": 31,
+  "seed": 1,
+  "validation_status": "valid",
+  "contract_valid": true,
+  "strict_feasible": false,
+  "failure_class": "checker_infeasible:fleet",
+  "contract_errors": [],
+  "report": {
+    "feasible": false,
+    "total_distance": 4644,
+    "total_duration": 38329,
+    "makespan": 1175,
+    "served_customers": 100,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 52,
+    "charging_count": 0,
+    "charging_time": 0,
+    "synchronization_violations": 0,
+    "vehicle_limit_violations": 1,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "C83"
+        ],
+        "load": 10,
+        "distance": 64,
+        "duration": 678,
+        "wait_time": 524,
+        "return_time": 678,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "C18",
+          "C10"
+        ],
+        "load": 30,
+        "distance": 74,
+        "duration": 886,
+        "wait_time": 632,
+        "return_time": 886,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 3,
+        "visits": [
+          "C82",
+          "C51"
+        ],
+        "load": 30,
+        "distance": 116,
+        "duration": 938,
+        "wait_time": 642,
+        "return_time": 938,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 4,
+        "visits": [
+          "C21",
+          "C24",
+          "C29",
+          "C37"
+        ],
+        "load": 60,
+        "distance": 80,
+        "duration": 698,
+        "wait_time": 258,
+        "return_time": 698,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 5,
+        "visits": [
+          "C14",
+          "C7"
+        ],
+        "load": 30,
+        "distance": 81,
+        "duration": 880,
+        "wait_time": 619,
+        "return_time": 880,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 6,
+        "visits": [
+          "C78"
+        ],
+        "load": 20,
+        "distance": 100,
+        "duration": 807,
+        "wait_time": 617,
+        "return_time": 807,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 7,
+        "visits": [
+          "C28"
+        ],
+        "load": 20,
+        "distance": 36,
+        "duration": 546,
+        "wait_time": 420,
+        "return_time": 546,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 8,
+        "visits": [
+          "C1",
+          "C77",
+          "C88"
+        ],
+        "load": 50,
+        "distance": 141,
+        "duration": 954,
+        "wait_time": 543,
+        "return_time": 954,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 9,
+        "visits": [
+          "C2",
+          "C97",
+          "C57"
+        ],
+        "load": 100,
+        "distance": 150,
+        "duration": 1114,
+        "wait_time": 694,
+        "return_time": 1114,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 10,
+        "visits": [
+          "C25",
+          "C79",
+          "C49"
+        ],
+        "load": 60,
+        "distance": 159,
+        "duration": 1120,
+        "wait_time": 691,
+        "return_time": 1120,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 3,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 11,
+        "visits": [
+          "C39"
+        ],
+        "load": 20,
+        "distance": 80,
+        "duration": 504,
+        "wait_time": 334,
+        "return_time": 504,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 12,
+        "visits": [
+          "C20",
+          "C44",
+          "C48",
+          "C80",
+          "C91"
+        ],
+        "load": 50,
+        "distance": 156,
+        "duration": 1122,
+        "wait_time": 516,
+        "return_time": 1122,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 3,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 13,
+        "visits": [
+          "C81"
+        ],
+        "load": 30,
+        "distance": 94,
+        "duration": 898,
+        "wait_time": 714,
+        "return_time": 898,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 14,
+        "visits": [
+          "C76",
+          "C84",
+          "C55"
+        ],
+        "load": 40,
+        "distance": 168,
+        "duration": 1030,
+        "wait_time": 592,
+        "return_time": 1030,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 3,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 15,
+        "visits": [
+          "C58",
+          "C72"
+        ],
+        "load": 40,
+        "distance": 98,
+        "duration": 1018,
+        "wait_time": 740,
+        "return_time": 1018,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 16,
+        "visits": [
+          "C22",
+          "C3"
+        ],
+        "load": 30,
+        "distance": 48,
+        "duration": 969,
+        "wait_time": 741,
+        "return_time": 969,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 17,
+        "visits": [
+          "C34",
+          "C30",
+          "C15"
+        ],
+        "load": 70,
+        "distance": 109,
+        "duration": 871,
+        "wait_time": 492,
+        "return_time": 871,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 18,
+        "visits": [
+          "C100",
+          "C52"
+        ],
+        "load": 30,
+        "distance": 117,
+        "duration": 1153,
+        "wait_time": 856,
+        "return_time": 1153,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 19,
+        "visits": [
+          "C6",
+          "C5"
+        ],
+        "load": 30,
+        "distance": 38,
+        "duration": 1055,
+        "wait_time": 837,
+        "return_time": 1055,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 20,
+        "visits": [
+          "C73",
+          "C89"
+        ],
+        "load": 20,
+        "distance": 120,
+        "duration": 1043,
+        "wait_time": 743,
+        "return_time": 1043,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 21,
+        "visits": [
+          "C47",
+          "C9"
+        ],
+        "load": 20,
+        "distance": 74,
+        "duration": 1068,
+        "wait_time": 814,
+        "return_time": 1068,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 22,
+        "visits": [
+          "C16"
+        ],
+        "load": 40,
+        "distance": 80,
+        "duration": 488,
+        "wait_time": 318,
+        "return_time": 488,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 23,
+        "visits": [
+          "C96",
+          "C53",
+          "C46",
+          "C35"
+        ],
+        "load": 70,
+        "distance": 206,
+        "duration": 844,
+        "wait_time": 278,
+        "return_time": 844,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 4,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 24,
+        "visits": [
+          "C94"
+        ],
+        "load": 10,
+        "distance": 82,
+        "duration": 498,
+        "wait_time": 326,
+        "return_time": 498,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 25,
+        "visits": [
+          "C64",
+          "C69"
+        ],
+        "load": 20,
+        "distance": 44,
+        "duration": 554,
+        "wait_time": 330,
+        "return_time": 554,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 26,
+        "visits": [
+          "C70"
+        ],
+        "load": 30,
+        "distance": 118,
+        "duration": 539,
+        "wait_time": 331,
+        "return_time": 539,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 27,
+        "visits": [
+          "C92"
+        ],
+        "load": 20,
+        "distance": 88,
+        "duration": 593,
+        "wait_time": 415,
+        "return_time": 593,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 28,
+        "visits": [
+          "C33",
+          "C13"
+        ],
+        "load": 70,
+        "distance": 103,
+        "duration": 1163,
+        "wait_time": 880,
+        "return_time": 1163,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 29,
+        "visits": [
+          "C93"
+        ],
+        "load": 40,
+        "distance": 86,
+        "duration": 679,
+        "wait_time": 503,
+        "return_time": 679,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 30,
+        "visits": [
+          "C65"
+        ],
+        "load": 10,
+        "distance": 26,
+        "duration": 170,
+        "wait_time": 54,
+        "return_time": 170,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 31,
+        "visits": [
+          "C90",
+          "C12",
+          "C27",
+          "C54"
+        ],
+        "load": 80,
+        "distance": 186,
+        "duration": 940,
+        "wait_time": 394,
+        "return_time": 940,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 3,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 32,
+        "visits": [
+          "C32",
+          "C43"
+        ],
+        "load": 40,
+        "distance": 73,
+        "duration": 896,
+        "wait_time": 643,
+        "return_time": 896,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 33,
+        "visits": [
+          "C62"
+        ],
+        "load": 20,
+        "distance": 36,
+        "duration": 277,
+        "wait_time": 151,
+        "return_time": 277,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 34,
+        "visits": [
+          "C60",
+          "C45"
+        ],
+        "load": 30,
+        "distance": 92,
+        "duration": 533,
+        "wait_time": 261,
+        "return_time": 533,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 35,
+        "visits": [
+          "C38"
+        ],
+        "load": 30,
+        "distance": 82,
+        "duration": 603,
+        "wait_time": 431,
+        "return_time": 603,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 36,
+        "visits": [
+          "C59",
+          "C85"
+        ],
+        "load": 40,
+        "distance": 119,
+        "duration": 857,
+        "wait_time": 558,
+        "return_time": 857,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 37,
+        "visits": [
+          "C26",
+          "C99",
+          "C66"
+        ],
+        "load": 30,
+        "distance": 118,
+        "duration": 1175,
+        "wait_time": 787,
+        "return_time": 1175,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 38,
+        "visits": [
+          "C41",
+          "C61"
+        ],
+        "load": 20,
+        "distance": 56,
+        "duration": 1092,
+        "wait_time": 856,
+        "return_time": 1092,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 39,
+        "visits": [
+          "C71",
+          "C8"
+        ],
+        "load": 40,
+        "distance": 141,
+        "duration": 1165,
+        "wait_time": 844,
+        "return_time": 1165,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 40,
+        "visits": [
+          "C36"
+        ],
+        "load": 10,
+        "distance": 70,
+        "duration": 403,
+        "wait_time": 243,
+        "return_time": 403,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 41,
+        "visits": [
+          "C63"
+        ],
+        "load": 50,
+        "distance": 28,
+        "duration": 119,
+        "wait_time": 1,
+        "return_time": 119,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 42,
+        "visits": [
+          "C67",
+          "C56"
+        ],
+        "load": 40,
+        "distance": 93,
+        "duration": 485,
+        "wait_time": 212,
+        "return_time": 485,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 43,
+        "visits": [
+          "C98"
+        ],
+        "load": 20,
+        "distance": 62,
+        "duration": 302,
+        "wait_time": 150,
+        "return_time": 302,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 44,
+        "visits": [
+          "C74",
+          "C4"
+        ],
+        "load": 60,
+        "distance": 73,
+        "duration": 692,
+        "wait_time": 439,
+        "return_time": 692,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 45,
+        "visits": [
+          "C31"
+        ],
+        "load": 20,
+        "distance": 68,
+        "duration": 591,
+        "wait_time": 433,
+        "return_time": 591,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 46,
+        "visits": [
+          "C86"
+        ],
+        "load": 10,
+        "distance": 52,
+        "duration": 289,
+        "wait_time": 147,
+        "return_time": 289,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 47,
+        "visits": [
+          "C87"
+        ],
+        "load": 20,
+        "distance": 50,
+        "duration": 202,
+        "wait_time": 62,
+        "return_time": 202,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 48,
+        "visits": [
+          "C75",
+          "C68"
+        ],
+        "load": 30,
+        "distance": 72,
+        "duration": 465,
+        "wait_time": 213,
+        "return_time": 465,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 49,
+        "visits": [
+          "C40",
+          "C50"
+        ],
+        "load": 20,
+        "distance": 53,
+        "duration": 1036,
+        "wait_time": 803,
+        "return_time": 1036,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 50,
+        "visits": [
+          "C42"
+        ],
+        "load": 20,
+        "distance": 38,
+        "duration": 348,
+        "wait_time": 220,
+        "return_time": 348,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 51,
+        "visits": [
+          "C23",
+          "C95",
+          "C19",
+          "C17",
+          "C11"
+        ],
+        "load": 80,
+        "distance": 146,
+        "duration": 979,
+        "wait_time": 383,
+        "return_time": 979,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 4,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": [
+      {
+        "constraint": "energy",
+        "route_index": 3,
+        "location": "C51",
+        "detail": "remaining_energy=-11.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 3,
+        "location": "D0",
+        "detail": "remaining_energy=-36.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 4,
+        "location": "D0",
+        "detail": "remaining_energy=-0.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 5,
+        "location": "D0",
+        "detail": "remaining_energy=-1.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 6,
+        "location": "D0",
+        "detail": "remaining_energy=-20.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 8,
+        "location": "C88",
+        "detail": "remaining_energy=-34.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 8,
+        "location": "D0",
+        "detail": "remaining_energy=-61.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 9,
+        "location": "C57",
+        "detail": "remaining_energy=-35.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 9,
+        "location": "D0",
+        "detail": "remaining_energy=-70.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 10,
+        "location": "C79",
+        "detail": "remaining_energy=-1.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 10,
+        "location": "C49",
+        "detail": "remaining_energy=-60.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 10,
+        "location": "D0",
+        "detail": "remaining_energy=-79.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 11,
+        "location": "D0",
+        "detail": "remaining_energy=-0.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 12,
+        "location": "C80",
+        "detail": "remaining_energy=-11.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 12,
+        "location": "C91",
+        "detail": "remaining_energy=-54.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 12,
+        "location": "D0",
+        "detail": "remaining_energy=-76.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 13,
+        "location": "D0",
+        "detail": "remaining_energy=-14.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 14,
+        "location": "C84",
+        "detail": "remaining_energy=-2.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 14,
+        "location": "C55",
+        "detail": "remaining_energy=-53.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 14,
+        "location": "D0",
+        "detail": "remaining_energy=-88.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 15,
+        "location": "D0",
+        "detail": "remaining_energy=-18.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 17,
+        "location": "D0",
+        "detail": "remaining_energy=-29.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 18,
+        "location": "C52",
+        "detail": "remaining_energy=-16.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 18,
+        "location": "D0",
+        "detail": "remaining_energy=-37.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 20,
+        "location": "C89",
+        "detail": "remaining_energy=-16.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 20,
+        "location": "D0",
+        "detail": "remaining_energy=-40.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 22,
+        "location": "D0",
+        "detail": "remaining_energy=-0.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 23,
+        "location": "C53",
+        "detail": "remaining_energy=-33.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 23,
+        "location": "C46",
+        "detail": "remaining_energy=-63.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 23,
+        "location": "C35",
+        "detail": "remaining_energy=-88.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 23,
+        "location": "D0",
+        "detail": "remaining_energy=-126.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 24,
+        "location": "D0",
+        "detail": "remaining_energy=-2.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 26,
+        "location": "D0",
+        "detail": "remaining_energy=-38.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 27,
+        "location": "D0",
+        "detail": "remaining_energy=-8.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 28,
+        "location": "D0",
+        "detail": "remaining_energy=-23.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 29,
+        "location": "D0",
+        "detail": "remaining_energy=-6.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 31,
+        "location": "C27",
+        "detail": "remaining_energy=-20.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 31,
+        "location": "C54",
+        "detail": "remaining_energy=-66.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 31,
+        "location": "D0",
+        "detail": "remaining_energy=-106.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 34,
+        "location": "D0",
+        "detail": "remaining_energy=-12.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 35,
+        "location": "D0",
+        "detail": "remaining_energy=-2.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 36,
+        "location": "C85",
+        "detail": "remaining_energy=-9.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 36,
+        "location": "D0",
+        "detail": "remaining_energy=-39.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 37,
+        "location": "C66",
+        "detail": "remaining_energy=-21.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 37,
+        "location": "D0",
+        "detail": "remaining_energy=-38.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 39,
+        "location": "C8",
+        "detail": "remaining_energy=-43.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 39,
+        "location": "D0",
+        "detail": "remaining_energy=-61.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 42,
+        "location": "D0",
+        "detail": "remaining_energy=-13.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 51,
+        "location": "C19",
+        "detail": "remaining_energy=-22.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 51,
+        "location": "C17",
+        "detail": "remaining_energy=-28.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 51,
+        "location": "C11",
+        "detail": "remaining_energy=-46.31, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 51,
+        "location": "D0",
+        "detail": "remaining_energy=-66.31, minimum_battery=0"
+      },
+      {
+        "constraint": "vehicle_limit",
+        "route_index": null,
+        "location": "fleet",
+        "detail": "vehicles_used=51, maximum=31"
+      }
+    ]
+  },
+  "route_count": 51,
+  "result_status": "unsolved",
+  "result_method_name": "py-ga-VRPTW custom + shared checker",
+  "expected_method_names": [
+    "py-ga-VRPTW custom + shared checker"
+  ],
+  "result_metrics_feasible": false,
+  "hashes": {
+    "instance_sha256": "D88A950AF0E14EF4B8285E8926EA3D362E4EC07DC97529BA8BF31DA61BFAA851",
+    "result_sha256": "864D3E5E1997B9B1D547BEFE3E12D9588B46C81172D58651D80F8F4108E91498",
+    "checker_sha256": "CB3CB4EDD21D9F915C2B7406CE3EEAFF99E004AB75DE2CBD5EB3C3ED11D6255C",
+    "fleet_policy_sha256": "D89213812E7365441D29182077921DA94D1FE2710F0ECD1DD0EAACBC350605B0",
+    "instance_loader_sha256": "683A05152D51253FD533E83464723730F67995F8E331BDCADF55D8345D4AC189",
+    "converter_sha256": "951FC2B738092BD9EC0D46CB28F2CB4E5B94942E6CFFAA4F16F76BE8EAAC30A6",
+    "validator_sha256": "783707CDE458F748E9A754BFCE1192B60953968CE8F7D993F22197B14C4AC8D2"
+  }
+}

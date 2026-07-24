@@ -1,0 +1,39 @@
+﻿File: E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\py-ga-VRPTW\data\json_customize\r102C15.json exists.
+py-ga-VRPTW custom + shared checker
+  status=unsolved
+  instance=r102C15
+  output=E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\log\week5\stability-three-groups\runs\R\15\r102C15\pyga_checked\seed-0001\result.json
+  vehicles=7
+  distance=499
+  served_customers=15
+Benchmark metrics:
+  solver=py-ga-VRPTW custom + shared checker
+  seed=1
+  runtime=0.14s
+  feasible=False
+  total_distance=499
+  total_duration=1168
+  makespan=185
+  served_customers=15
+  missing_customers=0
+  duplicate_customers=0
+  time_window_violations=0
+  capacity_violations=0
+  energy_violations=6
+  charging_count=0
+  charging_time=0
+  synchronization_violations=0
+  vehicle_limit_violations=1
+Violation details:
+  route=1 constraint=energy location=D0 detail=remaining_energy=-5.37, minimum_battery=0
+  route=2 constraint=energy location=D0 detail=remaining_energy=-15.37, minimum_battery=0
+  route=3 constraint=energy location=D0 detail=remaining_energy=-15.37, minimum_battery=0
+  route=5 constraint=energy location=C2 detail=remaining_energy=-23.37, minimum_battery=0
+  route=5 constraint=energy location=D0 detail=remaining_energy=-41.37, minimum_battery=0
+  route=6 constraint=energy location=D0 detail=remaining_energy=-24.37, minimum_battery=0
+  route=- constraint=vehicle_limit location=fleet detail=vehicles_used=7, maximum=6
+
+
+[validator]
+R-r102C15-pyga_checked-seed-0001: validation=valid strict_feasible=False failure=checker_infeasible:fleet
+

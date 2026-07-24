@@ -1,0 +1,21 @@
+method,method_label,size,expected_runs,observed_runner_files,strict_feasible_runs,feasible_rate,wilson95_low,wilson95_high,distance_n,distance_mean,distance_sample_sd,runtime_n,runtime_mean,runtime_sample_sd
+pyvrp_repair,PyVRP VRPTW + EVRP-TW repair,5,3,3,3,1.0,0.438503,1.0,3,216.0,69.742383,3,10.259706,0.017816
+pyvrp_repair,PyVRP VRPTW + EVRP-TW repair,10,3,3,2,0.666667,0.20766,0.938508,2,317.5,98.287843,3,10.36084,0.122032
+pyvrp_repair,PyVRP VRPTW + EVRP-TW repair,15,3,3,3,1.0,0.438503,1.0,3,426.333333,38.214308,3,10.696057,0.342757
+pyvrp_repair,PyVRP VRPTW + EVRP-TW repair,100,3,0,0,0.0,0.0,0.561497,0,,,0,,
+vns_ts,Schneider hybrid VNS/TS,5,3,3,3,1.0,0.438503,1.0,3,213.0,67.104396,3,11.647045,4.218313
+vns_ts,Schneider hybrid VNS/TS,10,3,3,2,0.666667,0.20766,0.938508,2,320.0,101.823376,3,84.312132,25.543385
+vns_ts,Schneider hybrid VNS/TS,15,3,2,2,0.666667,0.20766,0.938508,2,399.0,21.213203,2,189.058262,102.245983
+vns_ts,Schneider hybrid VNS/TS,100,3,0,0,0.0,0.0,0.561497,0,,,0,,
+pomo_repair,POMO CVRP + EVRP-TW repair,5,3,3,3,1.0,0.438503,1.0,3,231.0,37.64306,3,2.559213,0.088601
+pomo_repair,POMO CVRP + EVRP-TW repair,10,3,3,0,0.0,0.0,0.561497,0,,,3,2.800862,0.373515
+pomo_repair,POMO CVRP + EVRP-TW repair,15,3,2,0,0.0,0.0,0.561497,0,,,2,5.15633,1.542259
+pomo_repair,POMO CVRP + EVRP-TW repair,100,3,0,0,0.0,0.0,0.561497,0,,,0,,
+pyga_checked,py-ga-VRPTW + shared checker,5,3,3,0,0.0,0.0,0.561497,0,,,3,0.515749,0.253413
+pyga_checked,py-ga-VRPTW + shared checker,10,3,3,0,0.0,0.0,0.561497,0,,,3,0.352099,0.009645
+pyga_checked,py-ga-VRPTW + shared checker,15,3,2,0,0.0,0.0,0.561497,0,,,2,0.373174,0.00485
+pyga_checked,py-ga-VRPTW + shared checker,100,3,0,0,0.0,0.0,0.561497,0,,,0,,
+routefinder_repair,RouteFinder + fleet compaction + EVRP-TW repair,5,3,3,3,1.0,0.438503,1.0,3,214.333333,68.061247,3,10.391409,0.286833
+routefinder_repair,RouteFinder + fleet compaction + EVRP-TW repair,10,3,3,2,0.666667,0.20766,0.938508,2,361.0,89.095454,3,10.69679,0.475627
+routefinder_repair,RouteFinder + fleet compaction + EVRP-TW repair,15,3,2,2,0.666667,0.20766,0.938508,2,471.0,1.414214,2,12.377573,1.267125
+routefinder_repair,RouteFinder + fleet compaction + EVRP-TW repair,100,3,0,0,0.0,0.0,0.561497,0,,,0,,

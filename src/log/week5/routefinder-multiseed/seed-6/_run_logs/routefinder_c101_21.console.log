@@ -1,0 +1,32 @@
+﻿RouteFinder + fleet compaction + EVRP-TW repair pipeline
+  status=solved
+  instance=c101_21
+  checkpoint=E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\routefinder\checkpoints\100\rf-transformer.ckpt
+  candidates=1
+  inference=0.739s
+  total_runtime=38.293s
+  raw_route_count=56
+  compacted_route_count=31
+  final_route_count=31
+  station_insertions=11
+  split_count=0
+Benchmark metrics:
+  solver=RouteFinderEVRPTWRepair
+  feasible=True
+  total_distance=2060
+  total_duration=29575
+  makespan=1175
+  served_customers=100
+  missing_customers=0
+  duplicate_customers=0
+  time_window_violations=0
+  capacity_violations=0
+  energy_violations=0
+  charging_count=11
+  charging_time=1046
+  synchronization_violations=0
+  vehicle_limit_violations=0
+Solution JSON: E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\log\week5\routefinder-multiseed\seed-6\c101_21_routefinder_repair.json
+
+W0722 21:32:54.005000 29784 routefinder\.venv\Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+

@@ -1,0 +1,1015 @@
+{
+  "schema_version": 1,
+  "script_version": "1.0",
+  "generated_at_utc": "2026-07-24T03:04:07.384704+00:00",
+  "snapshot_name": "20260722T223640+0800_rc102_baseline_paused",
+  "experiment_id": "week5_three_group_stability",
+  "batch_id": "20260722T221947558-f9a6a076",
+  "scope": {
+    "groups": [
+      "C",
+      "R",
+      "RC"
+    ],
+    "sizes": [
+      5,
+      10,
+      15
+    ],
+    "methods": [
+      "pyvrp_repair",
+      "vns_ts",
+      "pomo_repair",
+      "pyga_checked",
+      "routefinder_repair"
+    ],
+    "seed": 1
+  },
+  "counts": {
+    "requested": 45,
+    "completed": 41,
+    "pending": 4,
+    "strict_feasible": 25,
+    "completed_not_strict_feasible": 16,
+    "timed_out": 0
+  },
+  "strict_feasible_definition": {
+    "fresh_recheck": true,
+    "validation_status": "valid",
+    "contract_valid": true,
+    "strict_feasible": true,
+    "distance_source": "checker.json report.total_distance",
+    "vehicle_count_source": "checker.json route_count",
+    "runtime_source": "runner.json wall_runtime_seconds"
+  },
+  "path_resolution_policy": {
+    "expected_jobs_built_from": [
+      "protocol/week5_three_group_stability.json",
+      "raw/batch_index.json"
+    ],
+    "job_directory_template": "raw/runs/{group}/{clients}/{instance}/{method}/seed-{seed:04d}",
+    "runs_csv_used": false,
+    "live_absolute_paths_used": false,
+    "ignored_absolute_fields": [
+      "batch_index.manifest",
+      "batch_index.raw_dir",
+      "batch_index.result_dir",
+      "batch_index.jobs[*].runner_path",
+      "batch_index.jobs[*].checker_path",
+      "runner.result_path",
+      "runner.stdout_path",
+      "runner.stderr_path",
+      "runner.checker_path"
+    ],
+    "route_location_source": "embedded result.json instance object"
+  },
+  "job_construction_checks": {
+    "selected_groups": [
+      "C",
+      "R",
+      "RC"
+    ],
+    "selected_sizes": [
+      5,
+      10,
+      15
+    ],
+    "selected_methods": [
+      "pyvrp_repair",
+      "vns_ts",
+      "pomo_repair",
+      "pyga_checked",
+      "routefinder_repair"
+    ],
+    "seed": 1,
+    "expected_job_count": 45,
+    "batch_job_count": 45,
+    "job_id_sets_match": true,
+    "missing_from_batch_index": [],
+    "unexpected_in_batch_index": []
+  },
+  "completeness_checks": {
+    "declared_vs_computed_counts": {
+      "requested": {
+        "declared": 45,
+        "computed": 45,
+        "matches": true
+      },
+      "completed": {
+        "declared": 41,
+        "computed": 41,
+        "matches": true
+      },
+      "pending": {
+        "declared": 4,
+        "computed": 4,
+        "matches": true
+      },
+      "strict_feasible": {
+        "declared": 25,
+        "computed": 25,
+        "matches": true
+      },
+      "timed_out": {
+        "declared": 0,
+        "computed": 0,
+        "matches": true
+      }
+    },
+    "all_declared_counts_match": true,
+    "record_parse_or_identity_issues": [],
+    "pending_jobs": [
+      {
+        "job_id": "RC-rc103C15-vns_ts-seed-0001",
+        "existing_files": []
+      },
+      {
+        "job_id": "RC-rc103C15-pomo_repair-seed-0001",
+        "existing_files": []
+      },
+      {
+        "job_id": "RC-rc103C15-pyga_checked-seed-0001",
+        "existing_files": []
+      },
+      {
+        "job_id": "RC-rc103C15-routefinder_repair-seed-0001",
+        "existing_files": []
+      }
+    ]
+  },
+  "snapshot_integrity": {
+    "hash_manifest": "sha256sums.csv",
+    "hash_manifest_sha256": "D3C89C141928898CAC58C0ED41574B351E6D6C9739F181C254A688A770354903",
+    "listed_files": 251,
+    "matching_files": 250,
+    "mismatch_count": 1,
+    "missing_count": 0,
+    "unexpected_count": 0,
+    "all_listed_files_ok": false,
+    "trusted_raw_and_protocol_ok": true,
+    "mismatches": [
+      {
+        "relative_path": "results/summary.md",
+        "expected_bytes": 6211,
+        "actual_bytes": 6122,
+        "expected_sha256": "CFC79B84B3A60E94BF8C8483F7EA298884701D6790E34D79192B92FCBEECBB4A",
+        "actual_sha256": "A392CD5029D5FCC6B0C84EC64A7173399263617C883CE220B68ABFF83C1524CB"
+      }
+    ],
+    "missing": [],
+    "unexpected": [],
+    "trusted_scope_issues": [],
+    "summary_md_hash_mismatch": {
+      "relative_path": "results/summary.md",
+      "expected_bytes": 6211,
+      "actual_bytes": 6122,
+      "expected_sha256": "CFC79B84B3A60E94BF8C8483F7EA298884701D6790E34D79192B92FCBEECBB4A",
+      "actual_sha256": "A392CD5029D5FCC6B0C84EC64A7173399263617C883CE220B68ABFF83C1524CB"
+    },
+    "summary_md_used_as_input": false
+  },
+  "input_hashes": {
+    "file_count": 125,
+    "tree_sha256": "E20977308CC39B2F733A0C0A158129FCD6A13FC401C134A581D18EA436CB6277",
+    "files": [
+      {
+        "relative_path": "protocol/week5_three_group_stability.json",
+        "bytes": 3921,
+        "sha256": "8046CE2840EA77DED955EFDA92DD47A8E11407F0EAC7F520A56BC4621F258876"
+      },
+      {
+        "relative_path": "raw/batch_index.json",
+        "bytes": 29293,
+        "sha256": "19A1D408D33EC9A0C6AA8918BB33D321AC396F420D300A0E96E0093D3FEF44DD"
+      },
+      {
+        "relative_path": "raw/runs/C/10/c101C10/pomo_repair/seed-0001/checker.json",
+        "bytes": 3768,
+        "sha256": "F3AFDAF2DADEFB6D3F598F49924BFFA757BE1A07A3A29B12A244186235D45C92"
+      },
+      {
+        "relative_path": "raw/runs/C/10/c101C10/pomo_repair/seed-0001/result.json",
+        "bytes": 20301,
+        "sha256": "7981178E1A0A25CC80CFD3671FB2EA5E9D64D3E4851F97FB0CBF1B5E2D38EF21"
+      },
+      {
+        "relative_path": "raw/runs/C/10/c101C10/pomo_repair/seed-0001/runner.json",
+        "bytes": 4105,
+        "sha256": "35C746D9DB37653D120F88C657C80F75D588B2E218D40B35139194377F4DAD36"
+      },
+      {
+        "relative_path": "raw/runs/C/10/c101C10/pyga_checked/seed-0001/checker.json",
+        "bytes": 5074,
+        "sha256": "8F309CDFCCBE406CC9D03B62525D2D41A871004E949BD786A7E09BC16636B8A2"
+      },
+      {
+        "relative_path": "raw/runs/C/10/c101C10/pyga_checked/seed-0001/result.json",
+        "bytes": 58872,
+        "sha256": "F8BD3AE53B957F728B5B96102A4E779A876F0E84264BF5DC8D33FDA00E495D8F"
+      },
+      {
+        "relative_path": "raw/runs/C/10/c101C10/pyga_checked/seed-0001/runner.json",
+        "bytes": 4819,
+        "sha256": "5838EF8091FB079C3339AAB4077261C4310A4C2A17B844D817C51EC802A2C3A0"
+      },
+      {
+        "relative_path": "raw/runs/C/10/c101C10/pyvrp_repair/seed-0001/checker.json",
+        "bytes": 3303,
+        "sha256": "4F9D476EAFC8A52D65ADB075DB8CCB290014853368CC2903445FDD936243D9CA"
+      },
+      {
+        "relative_path": "raw/runs/C/10/c101C10/pyvrp_repair/seed-0001/result.json",
+        "bytes": 12548,
+        "sha256": "20FC6629003ED60986A50FECB860761FDDB3EE8031F27683F84E49B5EF80DD46"
+      },
+      {
+        "relative_path": "raw/runs/C/10/c101C10/pyvrp_repair/seed-0001/runner.json",
+        "bytes": 4082,
+        "sha256": "597FED1BCD1F68A44227F088BCB5310B3B9108BC7A2B403F15B39A75368EEDE6"
+      },
+      {
+        "relative_path": "raw/runs/C/10/c101C10/routefinder_repair/seed-0001/checker.json",
+        "bytes": 3816,
+        "sha256": "2B904CED214D9E4AEAAA40467531B3AC9A418734784F69C7F8381FC7A41D4C75"
+      },
+      {
+        "relative_path": "raw/runs/C/10/c101C10/routefinder_repair/seed-0001/result.json",
+        "bytes": 19710,
+        "sha256": "ADADD72A190117B053F36095E2C27E8EE6E6B444AB78873AFFCDD901A32B0B44"
+      },
+      {
+        "relative_path": "raw/runs/C/10/c101C10/routefinder_repair/seed-0001/runner.json",
+        "bytes": 4715,
+        "sha256": "0A00F3D27B363BF7F63FC01E33C1C4D8276659B74FF3CD84991C8D0D590CAD75"
+      },
+      {
+        "relative_path": "raw/runs/C/10/c101C10/vns_ts/seed-0001/checker.json",
+        "bytes": 3293,
+        "sha256": "437C48B6DEFA34A8326DBFD456E5F575074B44E9CB338362606ED52656ABB973"
+      },
+      {
+        "relative_path": "raw/runs/C/10/c101C10/vns_ts/seed-0001/result.json",
+        "bytes": 324788,
+        "sha256": "5BD917D87F453BF1D0E4CF9F19548B2B295650FD78A4253CCE713DD55C426991"
+      },
+      {
+        "relative_path": "raw/runs/C/10/c101C10/vns_ts/seed-0001/runner.json",
+        "bytes": 4074,
+        "sha256": "B9D70195B773DC64C86FFBED393BC5397941CAD056C9432B59BEE5826E07E1C6"
+      },
+      {
+        "relative_path": "raw/runs/C/15/c103C15/pomo_repair/seed-0001/checker.json",
+        "bytes": 4067,
+        "sha256": "5078AD301EAAB4D357A3302C6A3C5D2E53F7778E5BAA625A9D6FC1929BF85102"
+      },
+      {
+        "relative_path": "raw/runs/C/15/c103C15/pomo_repair/seed-0001/result.json",
+        "bytes": 24233,
+        "sha256": "CEFA8B92B881B0FA4DDE63F745227252807A76EFE30D75B6197E8EDE0258076D"
+      },
+      {
+        "relative_path": "raw/runs/C/15/c103C15/pomo_repair/seed-0001/runner.json",
+        "bytes": 4105,
+        "sha256": "418FE855AEF27B328BB473C99604871527E81E104DC2A4CD8B33F34A27B22798"
+      },
+      {
+        "relative_path": "raw/runs/C/15/c103C15/pyga_checked/seed-0001/checker.json",
+        "bytes": 5796,
+        "sha256": "A16861D9A442AB5521413049406D54BFF307A2D0BD4FFA57F92C83B69B7D8218"
+      },
+      {
+        "relative_path": "raw/runs/C/15/c103C15/pyga_checked/seed-0001/result.json",
+        "bytes": 61492,
+        "sha256": "EA7870FC9A4FD054E8B76B1484E7ACF1E5C9DE3C412F193A60937FE574D63EF7"
+      },
+      {
+        "relative_path": "raw/runs/C/15/c103C15/pyga_checked/seed-0001/runner.json",
+        "bytes": 4819,
+        "sha256": "C5B07DF745468FB0944A1577CE6A1FAD28A46E7DA8F425933F1F90894A3413DF"
+      },
+      {
+        "relative_path": "raw/runs/C/15/c103C15/pyvrp_repair/seed-0001/checker.json",
+        "bytes": 3804,
+        "sha256": "DB8116CFD5DCD4C6BDC01000E817B3B8CF3F17A5AD947EEFD3D9A367523522F1"
+      },
+      {
+        "relative_path": "raw/runs/C/15/c103C15/pyvrp_repair/seed-0001/result.json",
+        "bytes": 14833,
+        "sha256": "4447693C15C56A3DD77374D4668ABF9556874B40181517AC7AA8BA2AC1194CE4"
+      },
+      {
+        "relative_path": "raw/runs/C/15/c103C15/pyvrp_repair/seed-0001/runner.json",
+        "bytes": 4082,
+        "sha256": "4EAF27BB0CD275267E9ED2EFC8FB1AD86A69B38C1AB605DC569BCD2B1063A858"
+      },
+      {
+        "relative_path": "raw/runs/C/15/c103C15/routefinder_repair/seed-0001/checker.json",
+        "bytes": 4313,
+        "sha256": "62E7E4DB8A546A1020540A2C6C245261B5D98C9C14E3C84EC05CD13292FBC831"
+      },
+      {
+        "relative_path": "raw/runs/C/15/c103C15/routefinder_repair/seed-0001/result.json",
+        "bytes": 22626,
+        "sha256": "239FC092528D15268C4BB2648DF0D6B36B402131697F4AC0C305374A937F9909"
+      },
+      {
+        "relative_path": "raw/runs/C/15/c103C15/routefinder_repair/seed-0001/runner.json",
+        "bytes": 4714,
+        "sha256": "792D875677DCAC47494B3FA0ED563DDFAB0EE02DC65C97ACF81743B0F3B94D21"
+      },
+      {
+        "relative_path": "raw/runs/C/15/c103C15/vns_ts/seed-0001/checker.json",
+        "bytes": 3383,
+        "sha256": "174E5E95849C603997AC686FDC02A2E1C3700069C344358BEA596137D3654EF5"
+      },
+      {
+        "relative_path": "raw/runs/C/15/c103C15/vns_ts/seed-0001/result.json",
+        "bytes": 221866,
+        "sha256": "F8FDEDCCFBE06A2861D28DA0A991D8873EEDAAE8F4CE9FBEFB85D7978FAFCCCB"
+      },
+      {
+        "relative_path": "raw/runs/C/15/c103C15/vns_ts/seed-0001/runner.json",
+        "bytes": 4075,
+        "sha256": "99A8914B3E49B67C3767EEF444842E1FF77FA4932C7A3B1BF98E079CD3EAFAEA"
+      },
+      {
+        "relative_path": "raw/runs/C/5/c101C5/pomo_repair/seed-0001/checker.json",
+        "bytes": 2749,
+        "sha256": "69AF66E57E7F93DFDDF49D6D9B50E2E01FA0825F4EE5AE9C67E79762EA74275B"
+      },
+      {
+        "relative_path": "raw/runs/C/5/c101C5/pomo_repair/seed-0001/result.json",
+        "bytes": 14591,
+        "sha256": "2BF1EEFC4415CF29CE9234621038DECC39A566223FAF07A662A4F196B21B2C40"
+      },
+      {
+        "relative_path": "raw/runs/C/5/c101C5/pomo_repair/seed-0001/runner.json",
+        "bytes": 4085,
+        "sha256": "DAF7BE00273C128692224BE52A45CFE1FA345753C6326647C7E4DD1B0657513B"
+      },
+      {
+        "relative_path": "raw/runs/C/5/c101C5/pyga_checked/seed-0001/checker.json",
+        "bytes": 3247,
+        "sha256": "A546D1E32510868E934A65D7F2A3B9100C1D2154983D0DE778AFE4852DA3E909"
+      },
+      {
+        "relative_path": "raw/runs/C/5/c101C5/pyga_checked/seed-0001/result.json",
+        "bytes": 54689,
+        "sha256": "775947DCAC65AAF38B04C709AA28178A00295A0B99B4BF596FDF3B6E0AAD04B3"
+      },
+      {
+        "relative_path": "raw/runs/C/5/c101C5/pyga_checked/seed-0001/runner.json",
+        "bytes": 4787,
+        "sha256": "E62740B54D250A22EE25D5C701BBD0B7EE137657855492494A3AE33F9BC315BE"
+      },
+      {
+        "relative_path": "raw/runs/C/5/c101C5/pyvrp_repair/seed-0001/checker.json",
+        "bytes": 2755,
+        "sha256": "BA4ACA30C4DA1604C1E997E6C10E72859338E4611CF23A6F1F19C12ABD59704E"
+      },
+      {
+        "relative_path": "raw/runs/C/5/c101C5/pyvrp_repair/seed-0001/result.json",
+        "bytes": 8943,
+        "sha256": "09066C7CE10EA529B77C8BB2F38AE39B45FC8E861C515E9971C23ED6324E72C7"
+      },
+      {
+        "relative_path": "raw/runs/C/5/c101C5/pyvrp_repair/seed-0001/runner.json",
+        "bytes": 4062,
+        "sha256": "6205A8361F0D3C57F1F14FB2273623B23986FD0FF222A063671EEED65FF32D35"
+      },
+      {
+        "relative_path": "raw/runs/C/5/c101C5/routefinder_repair/seed-0001/checker.json",
+        "bytes": 2872,
+        "sha256": "23540D0F053B71792CFBEF80B29A2763325EE199EF981B3BEC06982105F301A2"
+      },
+      {
+        "relative_path": "raw/runs/C/5/c101C5/routefinder_repair/seed-0001/result.json",
+        "bytes": 14702,
+        "sha256": "5E86738B435C52284DA9776F3C9DCE67255CF05A0F17D206B3262BEF39058F3C"
+      },
+      {
+        "relative_path": "raw/runs/C/5/c101C5/routefinder_repair/seed-0001/runner.json",
+        "bytes": 4695,
+        "sha256": "829E3E5F061B87A7FBF087D202BC8F41F9A2B35B3011693F34FF836E3EF5C769"
+      },
+      {
+        "relative_path": "raw/runs/C/5/c101C5/vns_ts/seed-0001/checker.json",
+        "bytes": 2744,
+        "sha256": "498DC1C24EE9B4A9A866C3520B11EFDF11D67071A910573EFF6ECE91728A5ECC"
+      },
+      {
+        "relative_path": "raw/runs/C/5/c101C5/vns_ts/seed-0001/result.json",
+        "bytes": 217130,
+        "sha256": "4147CEDC962E850B469DB33F0E462CB33E86F778C03BBE7A08D4922CEF5E3292"
+      },
+      {
+        "relative_path": "raw/runs/C/5/c101C5/vns_ts/seed-0001/runner.json",
+        "bytes": 4054,
+        "sha256": "7D083979BCC011F1FE759F2CE87CC129F6DBA14B149FFABED21611752E93B6AA"
+      },
+      {
+        "relative_path": "raw/runs/R/10/r102C10/pomo_repair/seed-0001/checker.json",
+        "bytes": 3843,
+        "sha256": "0F76C242FBEC9434CB7002C99F4DCBAEF7B9318C9356C069553C15F52D65779D"
+      },
+      {
+        "relative_path": "raw/runs/R/10/r102C10/pomo_repair/seed-0001/result.json",
+        "bytes": 21631,
+        "sha256": "801FECEE4B8EE967B47F27DBC40EA37999F1C38F3BE3B9FC26740C8FFDECC595"
+      },
+      {
+        "relative_path": "raw/runs/R/10/r102C10/pomo_repair/seed-0001/runner.json",
+        "bytes": 4105,
+        "sha256": "4448EB17A04ECD7BDD4637B0D5660A3696E53DDDBE52DB7789D924EF2BF97579"
+      },
+      {
+        "relative_path": "raw/runs/R/10/r102C10/pyga_checked/seed-0001/checker.json",
+        "bytes": 4501,
+        "sha256": "F0F21FA5F59976AF3C070A318C3EAA058A673D7B41DAD357178E72B86D874A23"
+      },
+      {
+        "relative_path": "raw/runs/R/10/r102C10/pyga_checked/seed-0001/result.json",
+        "bytes": 57860,
+        "sha256": "80D01777B0521CE727F3C965D6E0B3F69B20E7C4DF95F58E3704D17D20A48E66"
+      },
+      {
+        "relative_path": "raw/runs/R/10/r102C10/pyga_checked/seed-0001/runner.json",
+        "bytes": 4818,
+        "sha256": "8AB81FE470003A8142C41F43722379EE71685D08BCE19691D274EA6E275CF6D2"
+      },
+      {
+        "relative_path": "raw/runs/R/10/r102C10/pyvrp_repair/seed-0001/checker.json",
+        "bytes": 3254,
+        "sha256": "6CE5C399AADB0F95FE5D50B2D479F2B89E7312E436B7516EFBC0B22D6CFC3C89"
+      },
+      {
+        "relative_path": "raw/runs/R/10/r102C10/pyvrp_repair/seed-0001/result.json",
+        "bytes": 11256,
+        "sha256": "D1DE8D4642CB202A3087C8BF600948C7ED17495871AB22423DA992B85A6A4DBB"
+      },
+      {
+        "relative_path": "raw/runs/R/10/r102C10/pyvrp_repair/seed-0001/runner.json",
+        "bytes": 4082,
+        "sha256": "8874C5A090A9EBA63E24C8B4555C18F7439C2805B2D1D437061D82A40DD397BA"
+      },
+      {
+        "relative_path": "raw/runs/R/10/r102C10/routefinder_repair/seed-0001/checker.json",
+        "bytes": 3762,
+        "sha256": "237318A06D11BBE400285FFBF8E3BEBDCB7C724C41C742A18DFC4689CDD141E4"
+      },
+      {
+        "relative_path": "raw/runs/R/10/r102C10/routefinder_repair/seed-0001/result.json",
+        "bytes": 17655,
+        "sha256": "120BDA23760E3FF81B995C281BF138B9F4C2C128966BD2C8194D49C832622DDC"
+      },
+      {
+        "relative_path": "raw/runs/R/10/r102C10/routefinder_repair/seed-0001/runner.json",
+        "bytes": 4715,
+        "sha256": "623DFB6B6F845D93F43EF8B1E2203618DF6D499ADB05B5C70E848AC45A39C864"
+      },
+      {
+        "relative_path": "raw/runs/R/10/r102C10/vns_ts/seed-0001/checker.json",
+        "bytes": 3242,
+        "sha256": "DCE29EC46790AA7BF40A151ECCC426BF8010623CDA97F7AA3015516E15CCBBB0"
+      },
+      {
+        "relative_path": "raw/runs/R/10/r102C10/vns_ts/seed-0001/result.json",
+        "bytes": 323823,
+        "sha256": "A6A40B532B474024EBE496F26C6A48F704232115422097F3838289A177D08032"
+      },
+      {
+        "relative_path": "raw/runs/R/10/r102C10/vns_ts/seed-0001/runner.json",
+        "bytes": 4074,
+        "sha256": "AF0B9C25AC893FCE2800451117EC573A6F7162154F5C288E4F556A9068FF9296"
+      },
+      {
+        "relative_path": "raw/runs/R/15/r102C15/pomo_repair/seed-0001/checker.json",
+        "bytes": 4687,
+        "sha256": "14832323FC74173BB1D18F16790EDD7B74AF0BD50C7FA264DB369521FC945655"
+      },
+      {
+        "relative_path": "raw/runs/R/15/r102C15/pomo_repair/seed-0001/result.json",
+        "bytes": 26363,
+        "sha256": "C6409DE0697FCF13D12F70931B9D450037321AC3CDBA690B5F3B8AB2E678B321"
+      },
+      {
+        "relative_path": "raw/runs/R/15/r102C15/pomo_repair/seed-0001/runner.json",
+        "bytes": 4105,
+        "sha256": "2E4A78F30EB790A6408D6E10A06ADAF488333483BBB71F92B6DD9AC94DA210B1"
+      },
+      {
+        "relative_path": "raw/runs/R/15/r102C15/pyga_checked/seed-0001/checker.json",
+        "bytes": 6141,
+        "sha256": "2EE8BF7A9471C6B80310D5DD36DF7027D4E5C9E033820FA3D484908BA71ABCBD"
+      },
+      {
+        "relative_path": "raw/runs/R/15/r102C15/pyga_checked/seed-0001/result.json",
+        "bytes": 62170,
+        "sha256": "A138D4736F3804EB8AA9EE0596133A131F3E729AE6D04B9E6C5FB12F7D9F47A3"
+      },
+      {
+        "relative_path": "raw/runs/R/15/r102C15/pyga_checked/seed-0001/runner.json",
+        "bytes": 4819,
+        "sha256": "B2033682F1D56526865EC8F309D0081663FD6E5FCBE1A05D3C6BF20D5C0DBBAC"
+      },
+      {
+        "relative_path": "raw/runs/R/15/r102C15/pyvrp_repair/seed-0001/checker.json",
+        "bytes": 4644,
+        "sha256": "1EBABFE86F497B20CDDFAE85048CF4CFE6DA621583B577CAFDE091FC2D7B615B"
+      },
+      {
+        "relative_path": "raw/runs/R/15/r102C15/pyvrp_repair/seed-0001/result.json",
+        "bytes": 18311,
+        "sha256": "6055661429FC92635F98A71741664FDD5EDB4BCC376FB543D5DA80F837E809AC"
+      },
+      {
+        "relative_path": "raw/runs/R/15/r102C15/pyvrp_repair/seed-0001/runner.json",
+        "bytes": 4082,
+        "sha256": "F8554215A606A30B5E0761FEF4E721535B1FB302A13ADCBF0829C257786E24AE"
+      },
+      {
+        "relative_path": "raw/runs/R/15/r102C15/routefinder_repair/seed-0001/checker.json",
+        "bytes": 4741,
+        "sha256": "7D9E5A744D52E7C2C8E44C00C24D96DC3E8D4280ED9916752BE9C2233E33DA6F"
+      },
+      {
+        "relative_path": "raw/runs/R/15/r102C15/routefinder_repair/seed-0001/result.json",
+        "bytes": 24453,
+        "sha256": "5148AEF3ED2DACEF643B6090B564BCDF5D843D7FCD5A136A29D24B43261237C0"
+      },
+      {
+        "relative_path": "raw/runs/R/15/r102C15/routefinder_repair/seed-0001/runner.json",
+        "bytes": 4715,
+        "sha256": "337ACFEE30A82CCDC857A6C9F88BA287938FCAF3816028E75B3024DB96E1F0ED"
+      },
+      {
+        "relative_path": "raw/runs/R/15/r102C15/vns_ts/seed-0001/checker.json",
+        "bytes": 4188,
+        "sha256": "9D439A0D8009EBF0B29185EECE226B6B615B27585CAD7B4D4AD7126868DB659D"
+      },
+      {
+        "relative_path": "raw/runs/R/15/r102C15/vns_ts/seed-0001/result.json",
+        "bytes": 538381,
+        "sha256": "6FBD7497103070E6F82BF8C081C8388AD6350D7E6B9EFD8CB1FB4A57ABEE06F8"
+      },
+      {
+        "relative_path": "raw/runs/R/15/r102C15/vns_ts/seed-0001/runner.json",
+        "bytes": 4074,
+        "sha256": "18A6D3A2C3DE98C35EF5C61658F89C1D0B488F981AFEDA9C49CE7C17F81113B0"
+      },
+      {
+        "relative_path": "raw/runs/R/5/r104C5/pomo_repair/seed-0001/checker.json",
+        "bytes": 2738,
+        "sha256": "99D13429D776A9999E0D1F26D0937CC57F5625317777E854217783923BC3A6DD"
+      },
+      {
+        "relative_path": "raw/runs/R/5/r104C5/pomo_repair/seed-0001/result.json",
+        "bytes": 14099,
+        "sha256": "CFD23CBEE22F70D6F28FC4B434EBF812401A8FDDA8D2893630189552F6FFA472"
+      },
+      {
+        "relative_path": "raw/runs/R/5/r104C5/pomo_repair/seed-0001/runner.json",
+        "bytes": 4084,
+        "sha256": "3CFCCAD4B2ADFF923D3BF6F1719E292D4438E0998195E12561839234C959E28A"
+      },
+      {
+        "relative_path": "raw/runs/R/5/r104C5/pyga_checked/seed-0001/checker.json",
+        "bytes": 3000,
+        "sha256": "CFD91EC42EA69D31F8938E15EDA9B561C40C3470DDCAFA15C4D171E5248F544C"
+      },
+      {
+        "relative_path": "raw/runs/R/5/r104C5/pyga_checked/seed-0001/result.json",
+        "bytes": 53939,
+        "sha256": "D35776A17649C6216D7345AF188FA606BD03FB31D57A85A82A3CFD9E13F40512"
+      },
+      {
+        "relative_path": "raw/runs/R/5/r104C5/pyga_checked/seed-0001/runner.json",
+        "bytes": 4787,
+        "sha256": "953650281F99D2B4858BB2B291EB329C9B4E98D6A9D49709F6831CED8F35B1E7"
+      },
+      {
+        "relative_path": "raw/runs/R/5/r104C5/pyvrp_repair/seed-0001/checker.json",
+        "bytes": 2710,
+        "sha256": "5C436D196AC7287AB192CFEEAFB877223DEDF80AC98311854EC77F1219A9A467"
+      },
+      {
+        "relative_path": "raw/runs/R/5/r104C5/pyvrp_repair/seed-0001/result.json",
+        "bytes": 8040,
+        "sha256": "F8D18D3C41E45672A8CD25581FBB41863DCA2BB15E40AC9A0087222591855A56"
+      },
+      {
+        "relative_path": "raw/runs/R/5/r104C5/pyvrp_repair/seed-0001/runner.json",
+        "bytes": 4062,
+        "sha256": "846BB27B30C27FA5D3B12D860D28E29869EE66EBE4BC43D07B44A91463C3AA96"
+      },
+      {
+        "relative_path": "raw/runs/R/5/r104C5/routefinder_repair/seed-0001/checker.json",
+        "bytes": 2807,
+        "sha256": "AF91A5BD56EF72F9066C570BAF286F3C1E5B6CE0EEE770600769C2F6F95E48A7"
+      },
+      {
+        "relative_path": "raw/runs/R/5/r104C5/routefinder_repair/seed-0001/result.json",
+        "bytes": 12012,
+        "sha256": "9FF72CC2590C072A1F3EE2974F0173FF3504A74A8A925FDAD1B0044F1D638911"
+      },
+      {
+        "relative_path": "raw/runs/R/5/r104C5/routefinder_repair/seed-0001/runner.json",
+        "bytes": 4695,
+        "sha256": "393E769C19F4453E0033E2BFA616F2B93780E46F0022E35F03DB03A5E24F543F"
+      },
+      {
+        "relative_path": "raw/runs/R/5/r104C5/vns_ts/seed-0001/checker.json",
+        "bytes": 2698,
+        "sha256": "0F2AB9D0C1B261FA1BFB94AD42E20B02A3B8A7005C054FA55D2B048A1FE6B3DA"
+      },
+      {
+        "relative_path": "raw/runs/R/5/r104C5/vns_ts/seed-0001/result.json",
+        "bytes": 216632,
+        "sha256": "360CD50629353145DFD677802065F7A162AB0EFD1C5C89FE4F114B95BA3A45EA"
+      },
+      {
+        "relative_path": "raw/runs/R/5/r104C5/vns_ts/seed-0001/runner.json",
+        "bytes": 4053,
+        "sha256": "10F0A7C50A5395C7042766FA1343E62875CEF3C1F3CF40D0D906AF6B03A1B850"
+      },
+      {
+        "relative_path": "raw/runs/RC/10/rc102C10/pomo_repair/seed-0001/checker.json",
+        "bytes": 3633,
+        "sha256": "5CF9A5AFAE5887DD32B9BF84CF9F4703C466A05F56018A0A94C2A97CA945B7EE"
+      },
+      {
+        "relative_path": "raw/runs/RC/10/rc102C10/pomo_repair/seed-0001/result.json",
+        "bytes": 18747,
+        "sha256": "6175375F9075B2B1B0BB0CD5E83B46C3041C84CE9CD1FEB9E23746F8AAB0FE58"
+      },
+      {
+        "relative_path": "raw/runs/RC/10/rc102C10/pomo_repair/seed-0001/runner.json",
+        "bytes": 4127,
+        "sha256": "6B21AEA41E8E429F615B8FD590FA5F804A38B2CC93C09172A7370D5B0C125F41"
+      },
+      {
+        "relative_path": "raw/runs/RC/10/rc102C10/pyga_checked/seed-0001/checker.json",
+        "bytes": 5069,
+        "sha256": "A297405D3A7F15E32541AEAB6ED6B3E97CE5F745C311EC138E4114082B85F384"
+      },
+      {
+        "relative_path": "raw/runs/RC/10/rc102C10/pyga_checked/seed-0001/result.json",
+        "bytes": 58612,
+        "sha256": "907C31DEACF91216BEDA79CC8DCDE947E3D415EC1C7BF9B356AFAA4D8357140A"
+      },
+      {
+        "relative_path": "raw/runs/RC/10/rc102C10/pyga_checked/seed-0001/runner.json",
+        "bytes": 4851,
+        "sha256": "BED9DB4964E057564D8DF4ADA73954743AF5FCADF58911E460989052A77B18F8"
+      },
+      {
+        "relative_path": "raw/runs/RC/10/rc102C10/pyvrp_repair/seed-0001/checker.json",
+        "bytes": 3639,
+        "sha256": "4A2D0399F4A78D9F70FE621D96DA86D786C706F4BAD748B8E640DAB39B822735"
+      },
+      {
+        "relative_path": "raw/runs/RC/10/rc102C10/pyvrp_repair/seed-0001/result.json",
+        "bytes": 11034,
+        "sha256": "2F30611090C1A7345B334C0A3F225F307A26D2F7C67EAEF4616B36592E6A5176"
+      },
+      {
+        "relative_path": "raw/runs/RC/10/rc102C10/pyvrp_repair/seed-0001/runner.json",
+        "bytes": 4104,
+        "sha256": "E572D66B92051807DF14827052797F167CEF4B9E38BF18034AF1E2E1322FDE39"
+      },
+      {
+        "relative_path": "raw/runs/RC/10/rc102C10/routefinder_repair/seed-0001/checker.json",
+        "bytes": 3990,
+        "sha256": "8682860DDAA18CD53DA0324C22654C21B1238CDBF55ADE599BACE785E2A25D06"
+      },
+      {
+        "relative_path": "raw/runs/RC/10/rc102C10/routefinder_repair/seed-0001/result.json",
+        "bytes": 32082,
+        "sha256": "95B1FC6BE8F3BF64D94135BC3E565339EE6B74FE467A6DD0807150AB9DF216E6"
+      },
+      {
+        "relative_path": "raw/runs/RC/10/rc102C10/routefinder_repair/seed-0001/runner.json",
+        "bytes": 4737,
+        "sha256": "97B7B1B63CB66F6DFAE3929203C8A03992C9AD1AD37E38D2CCC3882774AD43C5"
+      },
+      {
+        "relative_path": "raw/runs/RC/10/rc102C10/vns_ts/seed-0001/checker.json",
+        "bytes": 3886,
+        "sha256": "BF07F8A8E3AB5C5520CC5C994C4B095E5744FA2E70E95C5201D6FFFE3527F7EB"
+      },
+      {
+        "relative_path": "raw/runs/RC/10/rc102C10/vns_ts/seed-0001/result.json",
+        "bytes": 429780,
+        "sha256": "881E791991B469A65524FB5CCE60C7C0BF11EA16B41D3BB7DA3544B8004087B7"
+      },
+      {
+        "relative_path": "raw/runs/RC/10/rc102C10/vns_ts/seed-0001/runner.json",
+        "bytes": 4097,
+        "sha256": "E47D271247EC8148A93302C196F0069917BE80FB8EAB4129357BEF77A38EE061"
+      },
+      {
+        "relative_path": "raw/runs/RC/15/rc103C15/pyvrp_repair/seed-0001/checker.json",
+        "bytes": 3776,
+        "sha256": "2E04D084D41ECBCCAB4F906DC67FB4CCE0D1E738602E721567A05010463946FC"
+      },
+      {
+        "relative_path": "raw/runs/RC/15/rc103C15/pyvrp_repair/seed-0001/result.json",
+        "bytes": 14002,
+        "sha256": "4CF15EE4119851909F2E81C060E74B9FD312F6D1E4DADCE0A97A9DC98659DEEE"
+      },
+      {
+        "relative_path": "raw/runs/RC/15/rc103C15/pyvrp_repair/seed-0001/runner.json",
+        "bytes": 4104,
+        "sha256": "F376B9E4DC7C01CD08266CC6A7100877CAB800F1D207F3A30ADDCB0A288CA660"
+      },
+      {
+        "relative_path": "raw/runs/RC/5/rc105C5/pomo_repair/seed-0001/checker.json",
+        "bytes": 3120,
+        "sha256": "AA2CA2B94DE0FC926B7D52A61DEE8931EE012431592AE3BE0CB88CFA80CA215B"
+      },
+      {
+        "relative_path": "raw/runs/RC/5/rc105C5/pomo_repair/seed-0001/result.json",
+        "bytes": 13674,
+        "sha256": "DFD1A9CAF7325361CAABB871ED500B7EAB5FB20A7980A1A35EB572DC58A48BA8"
+      },
+      {
+        "relative_path": "raw/runs/RC/5/rc105C5/pomo_repair/seed-0001/runner.json",
+        "bytes": 4107,
+        "sha256": "29B68247A7AA403B09E728739387C600B2DDAD2DF15E6E0649AD085F567F3330"
+      },
+      {
+        "relative_path": "raw/runs/RC/5/rc105C5/pyga_checked/seed-0001/checker.json",
+        "bytes": 3417,
+        "sha256": "A94902617683C80E960D13F1185DB4030ADA2414056965C2EAC798057203575C"
+      },
+      {
+        "relative_path": "raw/runs/RC/5/rc105C5/pyga_checked/seed-0001/result.json",
+        "bytes": 55107,
+        "sha256": "53D36B6C61371A2AFD9A4C312CCA3CC5924FFFCB53AE679BB4D62B1206BFC09B"
+      },
+      {
+        "relative_path": "raw/runs/RC/5/rc105C5/pyga_checked/seed-0001/runner.json",
+        "bytes": 4819,
+        "sha256": "517772EEF57D9E6549A13D9001A742B09A7DF5047D3303A8B7DDE8F16670CE32"
+      },
+      {
+        "relative_path": "raw/runs/RC/5/rc105C5/pyvrp_repair/seed-0001/checker.json",
+        "bytes": 3145,
+        "sha256": "143599F26406C81A47E7E854F9C3F0B77BF4FCC843C18CD7AA8A632B3D264507"
+      },
+      {
+        "relative_path": "raw/runs/RC/5/rc105C5/pyvrp_repair/seed-0001/result.json",
+        "bytes": 9521,
+        "sha256": "045B91A41851DC6F7427D8676B418545E6A6EA2864776CE908590FDBC73E84E0"
+      },
+      {
+        "relative_path": "raw/runs/RC/5/rc105C5/pyvrp_repair/seed-0001/runner.json",
+        "bytes": 4084,
+        "sha256": "9B77162B1C5926587C67861B34DA9B28FCD4B2BBB954003F3AAEDE50B2426FEB"
+      },
+      {
+        "relative_path": "raw/runs/RC/5/rc105C5/routefinder_repair/seed-0001/checker.json",
+        "bytes": 3242,
+        "sha256": "F5C27CEF53DA09C90046E37F634B4A3A5AC70740450E0AB68EDE21FFE221C3F4"
+      },
+      {
+        "relative_path": "raw/runs/RC/5/rc105C5/routefinder_repair/seed-0001/result.json",
+        "bytes": 14150,
+        "sha256": "99CCBA8D826CA5D4C125339D671D4B0C1E4E9949185C65C18F1D5EFD97CD05C9"
+      },
+      {
+        "relative_path": "raw/runs/RC/5/rc105C5/routefinder_repair/seed-0001/runner.json",
+        "bytes": 4716,
+        "sha256": "E3583FC324AFF3D3086E622839D54D81B467E5B501A9259DF52872CA5A6F6FF4"
+      },
+      {
+        "relative_path": "raw/runs/RC/5/rc105C5/vns_ts/seed-0001/checker.json",
+        "bytes": 2756,
+        "sha256": "E61C0EF883FF7590386B7C0B18B6220AF5FB724D9FB35A9038967F2D77315C22"
+      },
+      {
+        "relative_path": "raw/runs/RC/5/rc105C5/vns_ts/seed-0001/result.json",
+        "bytes": 218934,
+        "sha256": "4FE71D71047A5FAF4D581F60D9F1141D2507FECBCB83355BF0293B3E89137CD4"
+      },
+      {
+        "relative_path": "raw/runs/RC/5/rc105C5/vns_ts/seed-0001/runner.json",
+        "bytes": 4076,
+        "sha256": "1C9A786897D49E8F0C98CE464AB1806EAD0F884DC499EC88EDF6DBE15B09C6B4"
+      }
+    ]
+  },
+  "best_route_selection": [
+    {
+      "group": "C",
+      "family": "clustered",
+      "clients": 5,
+      "instance": "c101C5",
+      "max_vehicles": 2,
+      "status": "strict_best",
+      "completed_methods": 5,
+      "total_methods": 5,
+      "strict_feasible_methods": 4,
+      "best_method": "vns_ts",
+      "best_method_label": "VNS/TS",
+      "fresh_checker_distance": 259.0,
+      "vehicle_count": 2,
+      "wall_runtime_seconds": 11.955139,
+      "job_id": "C-c101C5-vns_ts-seed-0001",
+      "result_relative_path": "raw/runs/C/5/c101C5/vns_ts/seed-0001/result.json",
+      "checker_relative_path": "raw/runs/C/5/c101C5/vns_ts/seed-0001/checker.json",
+      "location_source_relative_path": "raw/runs/C/5/c101C5/vns_ts/seed-0001/result.json",
+      "note": "Best among 4 strict-feasible methods"
+    },
+    {
+      "group": "C",
+      "family": "clustered",
+      "clients": 10,
+      "instance": "c101C10",
+      "max_vehicles": 4,
+      "status": "strict_best",
+      "completed_methods": 5,
+      "total_methods": 5,
+      "strict_feasible_methods": 3,
+      "best_method": "pyvrp_repair",
+      "best_method_label": "PyVRP",
+      "fresh_checker_distance": 387.0,
+      "vehicle_count": 3,
+      "wall_runtime_seconds": 10.333048,
+      "job_id": "C-c101C10-pyvrp_repair-seed-0001",
+      "result_relative_path": "raw/runs/C/10/c101C10/pyvrp_repair/seed-0001/result.json",
+      "checker_relative_path": "raw/runs/C/10/c101C10/pyvrp_repair/seed-0001/checker.json",
+      "location_source_relative_path": "raw/runs/C/10/c101C10/pyvrp_repair/seed-0001/result.json",
+      "note": "Best among 3 strict-feasible methods"
+    },
+    {
+      "group": "C",
+      "family": "clustered",
+      "clients": 15,
+      "instance": "c103C15",
+      "max_vehicles": 5,
+      "status": "strict_best",
+      "completed_methods": 5,
+      "total_methods": 5,
+      "strict_feasible_methods": 3,
+      "best_method": "vns_ts",
+      "best_method_label": "VNS/TS",
+      "fresh_checker_distance": 384.0,
+      "vehicle_count": 3,
+      "wall_runtime_seconds": 116.759434,
+      "job_id": "C-c103C15-vns_ts-seed-0001",
+      "result_relative_path": "raw/runs/C/15/c103C15/vns_ts/seed-0001/result.json",
+      "checker_relative_path": "raw/runs/C/15/c103C15/vns_ts/seed-0001/checker.json",
+      "location_source_relative_path": "raw/runs/C/15/c103C15/vns_ts/seed-0001/result.json",
+      "note": "Best among 3 strict-feasible methods"
+    },
+    {
+      "group": "R",
+      "family": "random",
+      "clients": 5,
+      "instance": "r104C5",
+      "max_vehicles": 2,
+      "status": "strict_best",
+      "completed_methods": 5,
+      "total_methods": 5,
+      "strict_feasible_methods": 4,
+      "best_method": "pyvrp_repair",
+      "best_method_label": "PyVRP",
+      "fresh_checker_distance": 136.0,
+      "vehicle_count": 2,
+      "wall_runtime_seconds": 10.249241,
+      "job_id": "R-r104C5-pyvrp_repair-seed-0001",
+      "result_relative_path": "raw/runs/R/5/r104C5/pyvrp_repair/seed-0001/result.json",
+      "checker_relative_path": "raw/runs/R/5/r104C5/pyvrp_repair/seed-0001/checker.json",
+      "location_source_relative_path": "raw/runs/R/5/r104C5/pyvrp_repair/seed-0001/result.json",
+      "note": "Best among 4 strict-feasible methods"
+    },
+    {
+      "group": "R",
+      "family": "random",
+      "clients": 10,
+      "instance": "r102C10",
+      "max_vehicles": 4,
+      "status": "strict_best",
+      "completed_methods": 5,
+      "total_methods": 5,
+      "strict_feasible_methods": 3,
+      "best_method": "pyvrp_repair",
+      "best_method_label": "PyVRP",
+      "fresh_checker_distance": 248.0,
+      "vehicle_count": 3,
+      "wall_runtime_seconds": 10.494371,
+      "job_id": "R-r102C10-pyvrp_repair-seed-0001",
+      "result_relative_path": "raw/runs/R/10/r102C10/pyvrp_repair/seed-0001/result.json",
+      "checker_relative_path": "raw/runs/R/10/r102C10/pyvrp_repair/seed-0001/checker.json",
+      "location_source_relative_path": "raw/runs/R/10/r102C10/pyvrp_repair/seed-0001/result.json",
+      "note": "Best among 3 strict-feasible methods"
+    },
+    {
+      "group": "R",
+      "family": "random",
+      "clients": 15,
+      "instance": "r102C15",
+      "max_vehicles": 6,
+      "status": "strict_best",
+      "completed_methods": 5,
+      "total_methods": 5,
+      "strict_feasible_methods": 3,
+      "best_method": "vns_ts",
+      "best_method_label": "VNS/TS",
+      "fresh_checker_distance": 414.0,
+      "vehicle_count": 5,
+      "wall_runtime_seconds": 261.35709,
+      "job_id": "R-r102C15-vns_ts-seed-0001",
+      "result_relative_path": "raw/runs/R/15/r102C15/vns_ts/seed-0001/result.json",
+      "checker_relative_path": "raw/runs/R/15/r102C15/vns_ts/seed-0001/checker.json",
+      "location_source_relative_path": "raw/runs/R/15/r102C15/vns_ts/seed-0001/result.json",
+      "note": "Best among 3 strict-feasible methods"
+    },
+    {
+      "group": "RC",
+      "family": "mixed",
+      "clients": 5,
+      "instance": "rc105C5",
+      "max_vehicles": 3,
+      "status": "strict_best",
+      "completed_methods": 5,
+      "total_methods": 5,
+      "strict_feasible_methods": 4,
+      "best_method": "pomo_repair",
+      "best_method_label": "POMO",
+      "fresh_checker_distance": 239.0,
+      "vehicle_count": 3,
+      "wall_runtime_seconds": 2.552612,
+      "job_id": "RC-rc105C5-pomo_repair-seed-0001",
+      "result_relative_path": "raw/runs/RC/5/rc105C5/pomo_repair/seed-0001/result.json",
+      "checker_relative_path": "raw/runs/RC/5/rc105C5/pomo_repair/seed-0001/checker.json",
+      "location_source_relative_path": "raw/runs/RC/5/rc105C5/pomo_repair/seed-0001/result.json",
+      "note": "Best among 4 strict-feasible methods"
+    },
+    {
+      "group": "RC",
+      "family": "mixed",
+      "clients": 10,
+      "instance": "rc102C10",
+      "max_vehicles": 4,
+      "status": "no_strict_feasible",
+      "completed_methods": 5,
+      "total_methods": 5,
+      "strict_feasible_methods": 0,
+      "best_method": "",
+      "best_method_label": "",
+      "fresh_checker_distance": "",
+      "vehicle_count": "",
+      "wall_runtime_seconds": "",
+      "job_id": "",
+      "result_relative_path": "",
+      "checker_relative_path": "",
+      "location_source_relative_path": "raw/runs/RC/10/rc102C10/pyvrp_repair/seed-0001/result.json",
+      "note": "No strict-feasible solution"
+    },
+    {
+      "group": "RC",
+      "family": "mixed",
+      "clients": 15,
+      "instance": "rc103C15",
+      "max_vehicles": 5,
+      "status": "provisional_best",
+      "completed_methods": 1,
+      "total_methods": 5,
+      "strict_feasible_methods": 1,
+      "best_method": "pyvrp_repair",
+      "best_method_label": "PyVRP",
+      "fresh_checker_distance": 399.0,
+      "vehicle_count": 4,
+      "wall_runtime_seconds": 10.343761,
+      "job_id": "RC-rc103C15-pyvrp_repair-seed-0001",
+      "result_relative_path": "raw/runs/RC/15/rc103C15/pyvrp_repair/seed-0001/result.json",
+      "checker_relative_path": "raw/runs/RC/15/rc103C15/pyvrp_repair/seed-0001/checker.json",
+      "location_source_relative_path": "raw/runs/RC/15/rc103C15/pyvrp_repair/seed-0001/result.json",
+      "note": "Provisional best among 1/5 completed methods"
+    }
+  ],
+  "generated_artifacts": {
+    "overview.png": {
+      "bytes": 265991,
+      "sha256": "644BD6396E09A1E688D27B5DED5833F2A1431D2B4AE0F7FE452B06B074F4811D"
+    },
+    "best-route-petals.png": {
+      "bytes": 603230,
+      "sha256": "7857008C78E56E808D6348020D92516DE25275887A3812F3E31EC63F397BE3B1"
+    },
+    "best-route-selection.csv": {
+      "bytes": 2904,
+      "sha256": "A5DAEC65A706CB7DFC1F7F0C55C1CC893C3E1C210F0116C6989D1F49D7E3E1DD"
+    }
+  },
+  "interpretation_notes": [
+    "The overview contains only the 45 jobs selected by the snapshotted 5/10/15-client batch.",
+    "Distance and vehicle bars require all four fresh-checker strict-feasibility fields.",
+    "Completed non-strict results are status placeholders for distance/vehicles and hatched runtime bars.",
+    "RC/10 is intentionally shown as No strict-feasible solution.",
+    "RC/15 is provisional because only 1/5 methods had completed when the snapshot was taken.",
+    "results/summary.md is not an input; its known hash mismatch is reported by snapshot_integrity."
+  ]
+}

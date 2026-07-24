@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "fresh_recheck": true,
+  "job_id": "RC-rc102C10-pyga_checked-seed-0001",
+  "group": "RC",
+  "method": "pyga_checked",
+  "instance": "rc102C10",
+  "clients": 10,
+  "stations": 4,
+  "max_vehicles": 4,
+  "seed": 1,
+  "validation_status": "valid",
+  "contract_valid": true,
+  "strict_feasible": false,
+  "failure_class": "checker_infeasible:fleet",
+  "contract_errors": [],
+  "report": {
+    "feasible": false,
+    "total_distance": 455,
+    "total_duration": 860,
+    "makespan": 220,
+    "served_customers": 10,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 5,
+    "charging_count": 0,
+    "charging_time": 0,
+    "synchronization_violations": 0,
+    "vehicle_limit_violations": 1,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "C57",
+          "C49",
+          "C26"
+        ],
+        "load": 63,
+        "distance": 160,
+        "duration": 220,
+        "wait_time": 30,
+        "return_time": 220,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "C54"
+        ],
+        "load": 16,
+        "distance": 36,
+        "duration": 198,
+        "wait_time": 152,
+        "return_time": 198,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 3,
+        "visits": [
+          "C11"
+        ],
+        "load": 40,
+        "distance": 68,
+        "duration": 130,
+        "wait_time": 52,
+        "return_time": 130,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 4,
+        "visits": [
+          "C45",
+          "C70",
+          "C53"
+        ],
+        "load": 38,
+        "distance": 102,
+        "duration": 147,
+        "wait_time": 15,
+        "return_time": 147,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 2,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 5,
+        "visits": [
+          "C44",
+          "C92"
+        ],
+        "load": 24,
+        "distance": 89,
+        "duration": 165,
+        "wait_time": 56,
+        "return_time": 165,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": [
+      {
+        "constraint": "energy",
+        "route_index": 1,
+        "location": "C26",
+        "detail": "remaining_energy=-23.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 1,
+        "location": "D0",
+        "detail": "remaining_energy=-82.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 4,
+        "location": "C53",
+        "detail": "remaining_energy=-4.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 4,
+        "location": "D0",
+        "detail": "remaining_energy=-24.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 5,
+        "location": "D0",
+        "detail": "remaining_energy=-11.25, minimum_battery=0"
+      },
+      {
+        "constraint": "vehicle_limit",
+        "route_index": null,
+        "location": "fleet",
+        "detail": "vehicles_used=5, maximum=4"
+      }
+    ]
+  },
+  "route_count": 5,
+  "result_status": "unsolved",
+  "result_method_name": "py-ga-VRPTW custom + shared checker",
+  "expected_method_names": [
+    "py-ga-VRPTW custom + shared checker"
+  ],
+  "result_metrics_feasible": false,
+  "hashes": {
+    "instance_sha256": "4A90105052C9584E962FB8FEB7C0F82262BE3330924942CB8F69A693E2800BB2",
+    "result_sha256": "907C31DEACF91216BEDA79CC8DCDE947E3D415EC1C7BF9B356AFAA4D8357140A",
+    "checker_sha256": "CB3CB4EDD21D9F915C2B7406CE3EEAFF99E004AB75DE2CBD5EB3C3ED11D6255C",
+    "fleet_policy_sha256": "D89213812E7365441D29182077921DA94D1FE2710F0ECD1DD0EAACBC350605B0",
+    "instance_loader_sha256": "683A05152D51253FD533E83464723730F67995F8E331BDCADF55D8345D4AC189",
+    "converter_sha256": "951FC2B738092BD9EC0D46CB28F2CB4E5B94942E6CFFAA4F16F76BE8EAAC30A6",
+    "validator_sha256": "B92376ABCB8BDDA6B7FADD7061702E3C6ECC167C9DF849D21EA0949D27519048"
+  }
+}

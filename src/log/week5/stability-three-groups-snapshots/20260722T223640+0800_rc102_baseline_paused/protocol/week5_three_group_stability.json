@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "experiment_id": "week5_three_group_stability",
+  "title": "Week 5 three-group EVRP-TW method stability benchmark",
+  "seed": 1,
+  "sizes": [5, 10, 15, 100],
+  "selection_rule": {
+    "dataset": "Schneider-style EVRP-TW instances bundled under src/data/evrptw_instances",
+    "grouping": "Use one group for each canonical customer-location distribution: C (clustered), R (random), and RC (mixed).",
+    "small_instances": "For each distribution and each of 5, 10, and 15 clients, select the lexicographically first bundled canonical instance.",
+    "large_instances": "For each distribution, select the 101_21 instance: 100 clients and 21 charging stations.",
+    "regression_anchor": "The C group exactly preserves the four instances in the existing Week 5 benchmark.",
+    "fleet_policy": "max_vehicles = ceil((clients + stations) / 4); stations includes S0."
+  },
+  "methods": [
+    {
+      "id": "pyvrp_repair",
+      "label": "PyVRP VRPTW + EVRP-TW repair"
+    },
+    {
+      "id": "vns_ts",
+      "label": "Schneider hybrid VNS/TS"
+    },
+    {
+      "id": "pomo_repair",
+      "label": "POMO CVRP + EVRP-TW repair"
+    },
+    {
+      "id": "pyga_checked",
+      "label": "py-ga-VRPTW + shared checker"
+    },
+    {
+      "id": "routefinder_repair",
+      "label": "RouteFinder + fleet compaction + EVRP-TW repair"
+    }
+  ],
+  "groups": [
+    {
+      "id": "C",
+      "family": "clustered",
+      "cases": [
+        {
+          "instance": "c101C5",
+          "path": "src/data/evrptw_instances/c101C5.txt",
+          "clients": 5,
+          "stations": 3,
+          "max_vehicles": 2
+        },
+        {
+          "instance": "c101C10",
+          "path": "src/data/evrptw_instances/c101C10.txt",
+          "clients": 10,
+          "stations": 5,
+          "max_vehicles": 4
+        },
+        {
+          "instance": "c103C15",
+          "path": "src/data/evrptw_instances/c103C15.txt",
+          "clients": 15,
+          "stations": 5,
+          "max_vehicles": 5
+        },
+        {
+          "instance": "c101_21",
+          "path": "src/data/evrptw_instances/c101_21.txt",
+          "clients": 100,
+          "stations": 21,
+          "max_vehicles": 31
+        }
+      ]
+    },
+    {
+      "id": "R",
+      "family": "random",
+      "cases": [
+        {
+          "instance": "r104C5",
+          "path": "src/data/evrptw_instances/r104C5.txt",
+          "clients": 5,
+          "stations": 3,
+          "max_vehicles": 2
+        },
+        {
+          "instance": "r102C10",
+          "path": "src/data/evrptw_instances/r102C10.txt",
+          "clients": 10,
+          "stations": 4,
+          "max_vehicles": 4
+        },
+        {
+          "instance": "r102C15",
+          "path": "src/data/evrptw_instances/r102C15.txt",
+          "clients": 15,
+          "stations": 8,
+          "max_vehicles": 6
+        },
+        {
+          "instance": "r101_21",
+          "path": "src/data/evrptw_instances/r101_21.txt",
+          "clients": 100,
+          "stations": 21,
+          "max_vehicles": 31
+        }
+      ]
+    },
+    {
+      "id": "RC",
+      "family": "mixed",
+      "cases": [
+        {
+          "instance": "rc105C5",
+          "path": "src/data/evrptw_instances/rc105C5.txt",
+          "clients": 5,
+          "stations": 4,
+          "max_vehicles": 3
+        },
+        {
+          "instance": "rc102C10",
+          "path": "src/data/evrptw_instances/rc102C10.txt",
+          "clients": 10,
+          "stations": 4,
+          "max_vehicles": 4
+        },
+        {
+          "instance": "rc103C15",
+          "path": "src/data/evrptw_instances/rc103C15.txt",
+          "clients": 15,
+          "stations": 5,
+          "max_vehicles": 5
+        },
+        {
+          "instance": "rc101_21",
+          "path": "src/data/evrptw_instances/rc101_21.txt",
+          "clients": 100,
+          "stations": 21,
+          "max_vehicles": 31
+        }
+      ]
+    }
+  ]
+}

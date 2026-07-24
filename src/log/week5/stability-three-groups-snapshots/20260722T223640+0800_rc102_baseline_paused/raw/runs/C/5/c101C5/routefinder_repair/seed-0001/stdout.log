@@ -1,0 +1,36 @@
+﻿RouteFinder + fleet compaction + EVRP-TW repair pipeline
+  status=solved
+  instance=c101C5
+  checkpoint=E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\routefinder\checkpoints\50\rf-transformer.ckpt
+  candidates=1
+  inference=0.377s
+  total_runtime=4.406s
+  raw_route_count=4
+  compacted_route_count=2
+  final_route_count=2
+  raw_routes=[['C30'], ['C12', 'C100'], ['C85'], ['C64']]
+  compacted_routes=[['C64', 'C30', 'C85'], ['C12', 'C100']]
+  station_insertions=3
+  split_count=0
+Benchmark metrics:
+  solver=RouteFinderEVRPTWRepair
+  feasible=True
+  total_distance=259
+  total_duration=1729
+  makespan=872
+  served_customers=5
+  missing_customers=0
+  duplicate_customers=0
+  time_window_violations=0
+  capacity_violations=0
+  energy_violations=0
+  charging_count=3
+  charging_time=415
+  synchronization_violations=0
+  vehicle_limit_violations=0
+Solution JSON: E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\log\week5\stability-three-groups\runs\C\5\c101C5\routefinder_repair\seed-0001\result.json
+
+
+[validator]
+C-c101C5-routefinder_repair-seed-0001: validation=valid strict_feasible=True failure=success
+

@@ -1,0 +1,44 @@
+﻿POMO + EVRP-TW repair pipeline
+  status=unsolved
+  instance=rc102C10
+  source=E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\data\evrptw_instances\rc102C10.txt
+  vehicles=0
+  runtime=0.633s
+  selected_candidate=2/5
+  selected_variant=time_window_greedy_pack
+  candidate_routes=[['C53', 'C57'], ['C44'], ['C45'], ['C70'], ['C49'], ['C11'], ['C26'], ['C92', 'C54']]
+  station_insertions=0
+  split_count=0
+Benchmark metrics:
+  solver=POMO+EVRPTWRepair
+  feasible=False
+  total_distance=0
+  total_duration=0
+  makespan=0
+  served_customers=0
+  missing_customers=10
+  duplicate_customers=0
+  time_window_violations=0
+  capacity_violations=0
+  energy_violations=0
+  charging_count=0
+  charging_time=0
+  synchronization_violations=0
+  vehicle_limit_violations=0
+Violation details:
+  route=- constraint=customer_coverage location=C70 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C57 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C49 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C45 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C54 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C92 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C26 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C11 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C53 detail=Customer was not visited.
+  route=- constraint=customer_coverage location=C44 detail=Customer was not visited.
+Solution JSON: E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\log\week5\stability-three-groups\runs\RC\10\rc102C10\pomo_repair\seed-0001\result.json
+
+
+[validator]
+RC-rc102C10-pomo_repair-seed-0001: validation=valid strict_feasible=False failure=checker_infeasible:coverage_missing
+

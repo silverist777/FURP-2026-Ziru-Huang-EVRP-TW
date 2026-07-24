@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "fresh_recheck": true,
+  "job_id": "RC-rc105C5-pyga_checked-seed-0001",
+  "group": "RC",
+  "method": "pyga_checked",
+  "instance": "rc105C5",
+  "clients": 5,
+  "stations": 4,
+  "max_vehicles": 3,
+  "seed": 1,
+  "validation_status": "valid",
+  "contract_valid": true,
+  "strict_feasible": false,
+  "failure_class": "checker_infeasible:energy_or_charging",
+  "contract_errors": [],
+  "report": {
+    "feasible": false,
+    "total_distance": 228,
+    "total_duration": 336,
+    "makespan": 172,
+    "served_customers": 5,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 4,
+    "charging_count": 0,
+    "charging_time": 0,
+    "synchronization_violations": 0,
+    "vehicle_limit_violations": 0,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "C11",
+          "C22"
+        ],
+        "load": 80,
+        "distance": 110,
+        "duration": 172,
+        "wait_time": 42,
+        "return_time": 172,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 1,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "C36",
+          "C55",
+          "C82"
+        ],
+        "load": 65,
+        "distance": 118,
+        "duration": 164,
+        "wait_time": 16,
+        "return_time": 164,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 3,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": [
+      {
+        "constraint": "energy",
+        "route_index": 1,
+        "location": "D0",
+        "detail": "remaining_energy=-32.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 2,
+        "location": "C55",
+        "detail": "remaining_energy=-8.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 2,
+        "location": "C82",
+        "detail": "remaining_energy=-25.25, minimum_battery=0"
+      },
+      {
+        "constraint": "energy",
+        "route_index": 2,
+        "location": "D0",
+        "detail": "remaining_energy=-40.25, minimum_battery=0"
+      }
+    ]
+  },
+  "route_count": 2,
+  "result_status": "unsolved",
+  "result_method_name": "py-ga-VRPTW custom + shared checker",
+  "expected_method_names": [
+    "py-ga-VRPTW custom + shared checker"
+  ],
+  "result_metrics_feasible": false,
+  "hashes": {
+    "instance_sha256": "1391F4CDFEEBA53891B7DB599E3C649B22F21440EA934B0B272E1B8BB58AB162",
+    "result_sha256": "53D36B6C61371A2AFD9A4C312CCA3CC5924FFFCB53AE679BB4D62B1206BFC09B",
+    "checker_sha256": "CB3CB4EDD21D9F915C2B7406CE3EEAFF99E004AB75DE2CBD5EB3C3ED11D6255C",
+    "fleet_policy_sha256": "D89213812E7365441D29182077921DA94D1FE2710F0ECD1DD0EAACBC350605B0",
+    "instance_loader_sha256": "683A05152D51253FD533E83464723730F67995F8E331BDCADF55D8345D4AC189",
+    "converter_sha256": "951FC2B738092BD9EC0D46CB28F2CB4E5B94942E6CFFAA4F16F76BE8EAAC30A6",
+    "validator_sha256": "B92376ABCB8BDDA6B7FADD7061702E3C6ECC167C9DF849D21EA0949D27519048"
+  }
+}

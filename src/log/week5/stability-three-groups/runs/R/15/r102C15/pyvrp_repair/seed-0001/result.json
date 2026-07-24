@@ -1,0 +1,788 @@
+{
+  "status": "solved",
+  "source": {
+    "path": "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\data\\evrptw_instances\\r102C15.txt",
+    "instance": "r102C15",
+    "problem_type": "EVRPTW"
+  },
+  "experiment_record": {
+    "record_schema": "week03_experiment_record_v1",
+    "instance_name": "r102C15",
+    "instance_size": 15,
+    "method_name": "PyVRP VRPTW + EVRP-TW station repair",
+    "objective_value": 470.0,
+    "runtime_seconds": 10.562,
+    "feasibility_status": "feasible",
+    "vehicles_used": 6,
+    "constraint_violations": "none",
+    "random_seed": 1,
+    "best_solution_found": "[[\"D0\", \"S7\", \"C11\", \"C7\", \"C52\", \"D0\"], [\"D0\", \"S9\", \"C17\", \"C45\", \"C48\", \"S9\", \"D0\"], [\"D0\", \"C1\", \"C70\", \"C80\", \"S1\", \"D0\"], [\"D0\", \"S11\", \"C91\", \"S11\", \"C38\", \"D0\"], [\"D0\", \"C2\", \"C75\", \"S14\", \"D0\"], [\"D0\", \"C59\", \"C95\", \"D0\"]]",
+    "reference_value": null,
+    "gap_to_reference_pct": null,
+    "convergence_curve": "not captured; repair attempts are recorded in repair.attempts",
+    "improvement_over_time": "not captured",
+    "iterations": null,
+    "generations": null,
+    "search_steps": 7
+  },
+  "solver": {
+    "baseline": "PyVRP VRPTW",
+    "repair": "v3_partial_recharge_label_setting",
+    "pyvrp_version": "0.13.4",
+    "runtime_seconds": 10,
+    "elapsed_runtime_seconds": 10.562,
+    "seed": 1
+  },
+  "routes": [
+    {
+      "route_index": 1,
+      "visits": [
+        "D0",
+        "S7",
+        "C11",
+        "C7",
+        "C52",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S7",
+          "station_visit": 1,
+          "arrival_battery": 30.630000000000003,
+          "departure_battery": 40,
+          "charged_amount": 9.369999999999997,
+          "charge_time": 5,
+          "policy": "partial_recharge"
+        }
+      ]
+    },
+    {
+      "route_index": 2,
+      "visits": [
+        "D0",
+        "S9",
+        "C17",
+        "C45",
+        "C48",
+        "S9",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S9",
+          "station_visit": 1,
+          "arrival_battery": 39.63,
+          "departure_battery": 60.63,
+          "charged_amount": 21.0,
+          "charge_time": 11,
+          "policy": "partial_recharge"
+        },
+        {
+          "station": "S9",
+          "station_visit": 2,
+          "arrival_battery": 10.630000000000003,
+          "departure_battery": 21,
+          "charged_amount": 10.369999999999997,
+          "charge_time": 6,
+          "policy": "partial_recharge"
+        }
+      ]
+    },
+    {
+      "route_index": 3,
+      "visits": [
+        "D0",
+        "C1",
+        "C70",
+        "C80",
+        "S1",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S1",
+          "station_visit": 1,
+          "arrival_battery": 2.6300000000000026,
+          "departure_battery": 29,
+          "charged_amount": 26.369999999999997,
+          "charge_time": 13,
+          "policy": "partial_recharge"
+        }
+      ]
+    },
+    {
+      "route_index": 4,
+      "visits": [
+        "D0",
+        "S11",
+        "C91",
+        "S11",
+        "C38",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S11",
+          "station_visit": 1,
+          "arrival_battery": 31.630000000000003,
+          "departure_battery": 60.63,
+          "charged_amount": 29.0,
+          "charge_time": 15,
+          "policy": "partial_recharge"
+        },
+        {
+          "station": "S11",
+          "station_visit": 2,
+          "arrival_battery": 52.63,
+          "departure_battery": 56,
+          "charged_amount": 3.3699999999999974,
+          "charge_time": 2,
+          "policy": "partial_recharge"
+        }
+      ]
+    },
+    {
+      "route_index": 5,
+      "visits": [
+        "D0",
+        "C2",
+        "C75",
+        "S14",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S14",
+          "station_visit": 1,
+          "arrival_battery": 2.6300000000000026,
+          "departure_battery": 33,
+          "charged_amount": 30.369999999999997,
+          "charge_time": 15,
+          "policy": "partial_recharge"
+        }
+      ]
+    },
+    {
+      "route_index": 6,
+      "visits": [
+        "D0",
+        "C59",
+        "C95",
+        "D0"
+      ],
+      "charging_plan": []
+    }
+  ],
+  "metrics": {
+    "feasible": true,
+    "vehicle_count": 6,
+    "total_distance": 470,
+    "total_duration": 958,
+    "makespan": 198,
+    "served_customers": 15,
+    "missing_customers": 0,
+    "duplicate_customers": 0,
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "vehicle_limit_violations": 0,
+    "charging_count": 7,
+    "charging_time": 67
+  },
+  "baseline": {
+    "pyvrp_solution_feasible": true,
+    "pyvrp_time_warp": 0,
+    "customer_routes": [
+      [
+        "C11",
+        "C7",
+        "C52"
+      ],
+      [
+        "C17",
+        "C45",
+        "C48"
+      ],
+      [
+        "C1",
+        "C70",
+        "C80"
+      ],
+      [
+        "C91",
+        "C38",
+        "C2",
+        "C75"
+      ],
+      [
+        "C59",
+        "C95"
+      ]
+    ]
+  },
+  "repair": {
+    "feasible": true,
+    "split_count": 1,
+    "station_insertions": 7,
+    "charging_plans": [
+      [
+        {
+          "station": "S7",
+          "station_visit": 1,
+          "arrival_battery": 30.630000000000003,
+          "departure_battery": 40,
+          "charged_amount": 9.369999999999997,
+          "charge_time": 5,
+          "policy": "partial_recharge"
+        }
+      ],
+      [
+        {
+          "station": "S9",
+          "station_visit": 1,
+          "arrival_battery": 39.63,
+          "departure_battery": 60.63,
+          "charged_amount": 21.0,
+          "charge_time": 11,
+          "policy": "partial_recharge"
+        },
+        {
+          "station": "S9",
+          "station_visit": 2,
+          "arrival_battery": 10.630000000000003,
+          "departure_battery": 21,
+          "charged_amount": 10.369999999999997,
+          "charge_time": 6,
+          "policy": "partial_recharge"
+        }
+      ],
+      [
+        {
+          "station": "S1",
+          "station_visit": 1,
+          "arrival_battery": 2.6300000000000026,
+          "departure_battery": 29,
+          "charged_amount": 26.369999999999997,
+          "charge_time": 13,
+          "policy": "partial_recharge"
+        }
+      ],
+      [
+        {
+          "station": "S11",
+          "station_visit": 1,
+          "arrival_battery": 31.630000000000003,
+          "departure_battery": 60.63,
+          "charged_amount": 29.0,
+          "charge_time": 15,
+          "policy": "partial_recharge"
+        },
+        {
+          "station": "S11",
+          "station_visit": 2,
+          "arrival_battery": 52.63,
+          "departure_battery": 56,
+          "charged_amount": 3.3699999999999974,
+          "charge_time": 2,
+          "policy": "partial_recharge"
+        }
+      ],
+      [
+        {
+          "station": "S14",
+          "station_visit": 1,
+          "arrival_battery": 2.6300000000000026,
+          "departure_battery": 33,
+          "charged_amount": 30.369999999999997,
+          "charge_time": 15,
+          "policy": "partial_recharge"
+        }
+      ],
+      []
+    ],
+    "policy": "partial_recharge",
+    "attempts": [
+      {
+        "customers": [
+          "C11",
+          "C7",
+          "C52"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 1,
+        "charging_time": 5
+      },
+      {
+        "customers": [
+          "C17",
+          "C45",
+          "C48"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 2,
+        "charging_time": 17
+      },
+      {
+        "customers": [
+          "C1",
+          "C70",
+          "C80"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 1,
+        "charging_time": 13
+      },
+      {
+        "customers": [
+          "C91",
+          "C38",
+          "C2",
+          "C75"
+        ],
+        "feasible": false,
+        "reason": "no_partial_recharge_route_found",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C91",
+          "C38"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 2,
+        "charging_time": 17
+      },
+      {
+        "customers": [
+          "C2",
+          "C75"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 1,
+        "charging_time": 15
+      },
+      {
+        "customers": [
+          "C59",
+          "C95"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      }
+    ],
+    "unsolved": []
+  },
+  "violations": [],
+  "report": {
+    "feasible": true,
+    "total_distance": 470,
+    "total_duration": 958,
+    "makespan": 198,
+    "served_customers": 15,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 7,
+    "charging_time": 67,
+    "synchronization_violations": 0,
+    "vehicle_limit_violations": 0,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "S7",
+          "C11",
+          "C7",
+          "C52"
+        ],
+        "load": 26,
+        "distance": 70,
+        "duration": 132,
+        "wait_time": 27,
+        "return_time": 132,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 5,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "S9",
+          "C17",
+          "C45",
+          "C48",
+          "S9"
+        ],
+        "load": 54,
+        "distance": 92,
+        "duration": 198,
+        "wait_time": 59,
+        "return_time": 198,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 2,
+        "charging_time": 17,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 3,
+        "visits": [
+          "C1",
+          "C70",
+          "C80",
+          "S1"
+        ],
+        "load": 21,
+        "distance": 87,
+        "duration": 168,
+        "wait_time": 38,
+        "return_time": 168,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 13,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 4,
+        "visits": [
+          "S11",
+          "C91",
+          "S11",
+          "C38"
+        ],
+        "load": 17,
+        "distance": 93,
+        "duration": 169,
+        "wait_time": 39,
+        "return_time": 169,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 2,
+        "charging_time": 17,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 5,
+        "visits": [
+          "C2",
+          "C75",
+          "S14"
+        ],
+        "load": 25,
+        "distance": 91,
+        "duration": 126,
+        "wait_time": 0,
+        "return_time": 126,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 15,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 6,
+        "visits": [
+          "C59",
+          "C95"
+        ],
+        "load": 48,
+        "distance": 37,
+        "duration": 165,
+        "wait_time": 108,
+        "return_time": 165,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": []
+  },
+  "instance": {
+    "name": "r102C15",
+    "problem_type": "EVRPTW",
+    "objective": {
+      "primary": "minimize_vehicle_count",
+      "secondary": "minimize_total_distance"
+    },
+    "distance": {
+      "metric": "euclidean",
+      "scale": 1
+    },
+    "duration": {
+      "metric": "euclidean",
+      "scale": 1.0
+    },
+    "solver": {
+      "name": "PyVRP",
+      "runtime_seconds": 10,
+      "seed": 1,
+      "display": false
+    },
+    "vehicles": {
+      "num_available": 6,
+      "capacity": 200,
+      "start_depot": "D0",
+      "end_depot": "D0",
+      "tw_early": 0,
+      "tw_late": 230,
+      "battery_capacity": 60.63,
+      "initial_battery": 60.63
+    },
+    "depot": {
+      "name": "D0",
+      "x": 35,
+      "y": 35,
+      "tw_early": 0,
+      "tw_late": 230
+    },
+    "energy": {
+      "consumption_per_distance": 1,
+      "minimum_battery": 0
+    },
+    "charging": {
+      "policy": "partial_recharge",
+      "allow_partial_recharge": true,
+      "charging_rate": 2.0408163265306123,
+      "fixed_service_duration": 0
+    },
+    "charging_stations": [
+      {
+        "name": "S0",
+        "x": 35,
+        "y": 35,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 230,
+        "charging_rate": 2.0408163265306123
+      },
+      {
+        "name": "S1",
+        "x": 64,
+        "y": 37,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 230,
+        "charging_rate": 2.0408163265306123
+      },
+      {
+        "name": "S5",
+        "x": 28,
+        "y": 62,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 230,
+        "charging_rate": 2.0408163265306123
+      },
+      {
+        "name": "S7",
+        "x": 20,
+        "y": 61,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 230,
+        "charging_rate": 2.0408163265306123
+      },
+      {
+        "name": "S9",
+        "x": 15,
+        "y": 42,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 230,
+        "charging_rate": 2.0408163265306123
+      },
+      {
+        "name": "S11",
+        "x": 11,
+        "y": 18,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 230,
+        "charging_rate": 2.0408163265306123
+      },
+      {
+        "name": "S12",
+        "x": -2,
+        "y": 25,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 230,
+        "charging_rate": 2.0408163265306123
+      },
+      {
+        "name": "S14",
+        "x": 25,
+        "y": 4,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 230,
+        "charging_rate": 2.0408163265306123
+      }
+    ],
+    "clients": [
+      {
+        "name": "C38",
+        "x": 5,
+        "y": 5,
+        "demand": 16,
+        "service_duration": 10,
+        "tw_early": 113,
+        "tw_late": 123
+      },
+      {
+        "name": "C11",
+        "x": 20,
+        "y": 65,
+        "demand": 12,
+        "service_duration": 10,
+        "tw_early": 55,
+        "tw_late": 65
+      },
+      {
+        "name": "C45",
+        "x": 6,
+        "y": 38,
+        "demand": 16,
+        "service_duration": 10,
+        "tw_early": 125,
+        "tw_late": 135
+      },
+      {
+        "name": "C2",
+        "x": 35,
+        "y": 17,
+        "demand": 7,
+        "service_duration": 10,
+        "tw_early": 0,
+        "tw_late": 202
+      },
+      {
+        "name": "C7",
+        "x": 20,
+        "y": 50,
+        "demand": 5,
+        "service_duration": 10,
+        "tw_early": 88,
+        "tw_late": 98
+      },
+      {
+        "name": "C59",
+        "x": 21,
+        "y": 24,
+        "demand": 28,
+        "service_duration": 10,
+        "tw_early": 101,
+        "tw_late": 111
+      },
+      {
+        "name": "C75",
+        "x": 49,
+        "y": 11,
+        "demand": 18,
+        "service_duration": 10,
+        "tw_early": 0,
+        "tw_late": 192
+      },
+      {
+        "name": "C48",
+        "x": 13,
+        "y": 52,
+        "demand": 36,
+        "service_duration": 10,
+        "tw_early": 147,
+        "tw_late": 157
+      },
+      {
+        "name": "C17",
+        "x": 5,
+        "y": 30,
+        "demand": 2,
+        "service_duration": 10,
+        "tw_early": 87,
+        "tw_late": 97
+      },
+      {
+        "name": "C1",
+        "x": 41,
+        "y": 49,
+        "demand": 10,
+        "service_duration": 10,
+        "tw_early": 36,
+        "tw_late": 46
+      },
+      {
+        "name": "C70",
+        "x": 37,
+        "y": 56,
+        "demand": 5,
+        "service_duration": 10,
+        "tw_early": 49,
+        "tw_late": 59
+      },
+      {
+        "name": "C91",
+        "x": 15,
+        "y": 19,
+        "demand": 1,
+        "service_duration": 10,
+        "tw_early": 87,
+        "tw_late": 97
+      },
+      {
+        "name": "C52",
+        "x": 27,
+        "y": 43,
+        "demand": 9,
+        "service_duration": 10,
+        "tw_early": 111,
+        "tw_late": 121
+      },
+      {
+        "name": "C95",
+        "x": 25,
+        "y": 24,
+        "demand": 20,
+        "service_duration": 10,
+        "tw_early": 140,
+        "tw_late": 150
+      },
+      {
+        "name": "C80",
+        "x": 56,
+        "y": 37,
+        "demand": 6,
+        "service_duration": 10,
+        "tw_early": 108,
+        "tw_late": 118
+      }
+    ],
+    "vehicle_limit_policy": {
+      "formula": "ceil((clients + charging_stations) / 4)",
+      "rounding": "ceiling",
+      "client_count": 15,
+      "charging_station_count": 8,
+      "vehicle_limit": 6
+    }
+  }
+}

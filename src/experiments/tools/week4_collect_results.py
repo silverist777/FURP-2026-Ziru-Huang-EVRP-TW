@@ -86,6 +86,8 @@ def row_from_solution(path: Path) -> dict:
         "charging_count": metrics.get("charging_count", ""),
         "charging_time": metrics.get("charging_time", ""),
         "timeout_or_unsupported_reason": data.get("timeout_reason")
+        or data.get("failure_reason")
+        or data.get("infeasible_reason")
         or data.get("unsupported_reason")
         or solver.get("timeout_reason")
         or solver.get("unsupported_reason")

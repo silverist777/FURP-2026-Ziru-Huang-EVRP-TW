@@ -1,0 +1,85 @@
+﻿File: E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\py-ga-VRPTW\data\json_customize\c101_21.json exists.
+py-ga-VRPTW custom + shared checker
+  status=unsolved
+  instance=c101_21
+  output=E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\log\week5\stability-three-groups\runs\C\100\c101_21\pyga_checked\seed-0001\result.json
+  vehicles=51
+  distance=4644
+  served_customers=100
+Benchmark metrics:
+  solver=py-ga-VRPTW custom + shared checker
+  seed=1
+  runtime=0.63s
+  feasible=False
+  total_distance=4644
+  total_duration=38329
+  makespan=1175
+  served_customers=100
+  missing_customers=0
+  duplicate_customers=0
+  time_window_violations=0
+  capacity_violations=0
+  energy_violations=52
+  charging_count=0
+  charging_time=0
+  synchronization_violations=0
+  vehicle_limit_violations=1
+Violation details:
+  route=3 constraint=energy location=C51 detail=remaining_energy=-11.31, minimum_battery=0
+  route=3 constraint=energy location=D0 detail=remaining_energy=-36.31, minimum_battery=0
+  route=4 constraint=energy location=D0 detail=remaining_energy=-0.31, minimum_battery=0
+  route=5 constraint=energy location=D0 detail=remaining_energy=-1.31, minimum_battery=0
+  route=6 constraint=energy location=D0 detail=remaining_energy=-20.31, minimum_battery=0
+  route=8 constraint=energy location=C88 detail=remaining_energy=-34.31, minimum_battery=0
+  route=8 constraint=energy location=D0 detail=remaining_energy=-61.31, minimum_battery=0
+  route=9 constraint=energy location=C57 detail=remaining_energy=-35.31, minimum_battery=0
+  route=9 constraint=energy location=D0 detail=remaining_energy=-70.31, minimum_battery=0
+  route=10 constraint=energy location=C79 detail=remaining_energy=-1.31, minimum_battery=0
+  route=10 constraint=energy location=C49 detail=remaining_energy=-60.31, minimum_battery=0
+  route=10 constraint=energy location=D0 detail=remaining_energy=-79.31, minimum_battery=0
+  route=11 constraint=energy location=D0 detail=remaining_energy=-0.31, minimum_battery=0
+  route=12 constraint=energy location=C80 detail=remaining_energy=-11.31, minimum_battery=0
+  route=12 constraint=energy location=C91 detail=remaining_energy=-54.31, minimum_battery=0
+  route=12 constraint=energy location=D0 detail=remaining_energy=-76.31, minimum_battery=0
+  route=13 constraint=energy location=D0 detail=remaining_energy=-14.31, minimum_battery=0
+  route=14 constraint=energy location=C84 detail=remaining_energy=-2.31, minimum_battery=0
+  route=14 constraint=energy location=C55 detail=remaining_energy=-53.31, minimum_battery=0
+  route=14 constraint=energy location=D0 detail=remaining_energy=-88.31, minimum_battery=0
+  route=15 constraint=energy location=D0 detail=remaining_energy=-18.31, minimum_battery=0
+  route=17 constraint=energy location=D0 detail=remaining_energy=-29.31, minimum_battery=0
+  route=18 constraint=energy location=C52 detail=remaining_energy=-16.31, minimum_battery=0
+  route=18 constraint=energy location=D0 detail=remaining_energy=-37.31, minimum_battery=0
+  route=20 constraint=energy location=C89 detail=remaining_energy=-16.31, minimum_battery=0
+  route=20 constraint=energy location=D0 detail=remaining_energy=-40.31, minimum_battery=0
+  route=22 constraint=energy location=D0 detail=remaining_energy=-0.31, minimum_battery=0
+  route=23 constraint=energy location=C53 detail=remaining_energy=-33.31, minimum_battery=0
+  route=23 constraint=energy location=C46 detail=remaining_energy=-63.31, minimum_battery=0
+  route=23 constraint=energy location=C35 detail=remaining_energy=-88.31, minimum_battery=0
+  route=23 constraint=energy location=D0 detail=remaining_energy=-126.31, minimum_battery=0
+  route=24 constraint=energy location=D0 detail=remaining_energy=-2.31, minimum_battery=0
+  route=26 constraint=energy location=D0 detail=remaining_energy=-38.31, minimum_battery=0
+  route=27 constraint=energy location=D0 detail=remaining_energy=-8.31, minimum_battery=0
+  route=28 constraint=energy location=D0 detail=remaining_energy=-23.31, minimum_battery=0
+  route=29 constraint=energy location=D0 detail=remaining_energy=-6.31, minimum_battery=0
+  route=31 constraint=energy location=C27 detail=remaining_energy=-20.31, minimum_battery=0
+  route=31 constraint=energy location=C54 detail=remaining_energy=-66.31, minimum_battery=0
+  route=31 constraint=energy location=D0 detail=remaining_energy=-106.31, minimum_battery=0
+  route=34 constraint=energy location=D0 detail=remaining_energy=-12.31, minimum_battery=0
+  route=35 constraint=energy location=D0 detail=remaining_energy=-2.31, minimum_battery=0
+  route=36 constraint=energy location=C85 detail=remaining_energy=-9.31, minimum_battery=0
+  route=36 constraint=energy location=D0 detail=remaining_energy=-39.31, minimum_battery=0
+  route=37 constraint=energy location=C66 detail=remaining_energy=-21.31, minimum_battery=0
+  route=37 constraint=energy location=D0 detail=remaining_energy=-38.31, minimum_battery=0
+  route=39 constraint=energy location=C8 detail=remaining_energy=-43.31, minimum_battery=0
+  route=39 constraint=energy location=D0 detail=remaining_energy=-61.31, minimum_battery=0
+  route=42 constraint=energy location=D0 detail=remaining_energy=-13.31, minimum_battery=0
+  route=51 constraint=energy location=C19 detail=remaining_energy=-22.31, minimum_battery=0
+  route=51 constraint=energy location=C17 detail=remaining_energy=-28.31, minimum_battery=0
+  route=51 constraint=energy location=C11 detail=remaining_energy=-46.31, minimum_battery=0
+  route=51 constraint=energy location=D0 detail=remaining_energy=-66.31, minimum_battery=0
+  route=- constraint=vehicle_limit location=fleet detail=vehicles_used=51, maximum=31
+
+
+[validator]
+C-c101_21-pyga_checked-seed-0001: validation=valid strict_feasible=False failure=checker_infeasible:fleet
+

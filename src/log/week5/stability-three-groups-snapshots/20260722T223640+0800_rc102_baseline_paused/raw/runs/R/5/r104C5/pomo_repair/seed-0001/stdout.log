@@ -1,0 +1,33 @@
+﻿POMO + EVRP-TW repair pipeline
+  status=solved
+  instance=r104C5
+  source=E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\data\evrptw_instances\r104C5.txt
+  vehicles=2
+  runtime=0.533s
+  selected_candidate=2/5
+  selected_variant=time_window_greedy_pack
+  candidate_routes=[['C71', 'C5', 'C99'], ['C1', 'C87']]
+  station_insertions=3
+  split_count=0
+Benchmark metrics:
+  solver=POMO+EVRPTWRepair
+  feasible=True
+  total_distance=190
+  total_duration=380
+  makespan=194
+  served_customers=5
+  missing_customers=0
+  duplicate_customers=0
+  time_window_violations=0
+  capacity_violations=0
+  energy_violations=0
+  charging_count=3
+  charging_time=35
+  synchronization_violations=0
+  vehicle_limit_violations=0
+Solution JSON: E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\log\week5\stability-three-groups\runs\R\5\r104C5\pomo_repair\seed-0001\result.json
+
+
+[validator]
+R-r104C5-pomo_repair-seed-0001: validation=valid strict_feasible=True failure=success
+

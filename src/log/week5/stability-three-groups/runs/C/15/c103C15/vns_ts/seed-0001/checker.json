@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "fresh_recheck": true,
+  "job_id": "C-c103C15-vns_ts-seed-0001",
+  "group": "C",
+  "method": "vns_ts",
+  "instance": "c103C15",
+  "clients": 15,
+  "stations": 5,
+  "max_vehicles": 5,
+  "seed": 1,
+  "validation_status": "valid",
+  "contract_valid": true,
+  "strict_feasible": true,
+  "failure_class": "success",
+  "contract_errors": [],
+  "report": {
+    "feasible": true,
+    "total_distance": 384,
+    "total_duration": 3215,
+    "makespan": 1166,
+    "served_customers": 15,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 5,
+    "charging_time": 873,
+    "synchronization_violations": 0,
+    "vehicle_limit_violations": 0,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "C85",
+          "C98",
+          "C95",
+          "S3",
+          "C10"
+        ],
+        "load": 90,
+        "distance": 103,
+        "duration": 886,
+        "wait_time": 218,
+        "return_time": 886,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 205,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "S15",
+          "C40",
+          "C30",
+          "C18",
+          "C19",
+          "S7",
+          "C13"
+        ],
+        "load": 80,
+        "distance": 131,
+        "duration": 1163,
+        "wait_time": 262,
+        "return_time": 1163,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 2,
+        "charging_time": 320,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 3,
+        "visits": [
+          "S15",
+          "C59",
+          "C44",
+          "C50",
+          "C33",
+          "C35",
+          "S13",
+          "C61"
+        ],
+        "load": 90,
+        "distance": 150,
+        "duration": 1166,
+        "wait_time": 128,
+        "return_time": 1166,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 2,
+        "charging_time": 348,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": []
+  },
+  "route_count": 3,
+  "result_status": "solved",
+  "result_method_name": "Schneider-2014 hybrid VNS/TS E-VRPTW",
+  "expected_method_names": [
+    "Schneider-2014 hybrid VNS/TS E-VRPTW"
+  ],
+  "result_metrics_feasible": true,
+  "hashes": {
+    "instance_sha256": "F332D203E0186209ABA7316A148453ECC80BDE07FB9A33D586D8B8B33B5E5FA8",
+    "result_sha256": "F8FDEDCCFBE06A2861D28DA0A991D8873EEDAAE8F4CE9FBEFB85D7978FAFCCCB",
+    "checker_sha256": "CB3CB4EDD21D9F915C2B7406CE3EEAFF99E004AB75DE2CBD5EB3C3ED11D6255C",
+    "fleet_policy_sha256": "D89213812E7365441D29182077921DA94D1FE2710F0ECD1DD0EAACBC350605B0",
+    "instance_loader_sha256": "683A05152D51253FD533E83464723730F67995F8E331BDCADF55D8345D4AC189",
+    "converter_sha256": "951FC2B738092BD9EC0D46CB28F2CB4E5B94942E6CFFAA4F16F76BE8EAAC30A6",
+    "validator_sha256": "B92376ABCB8BDDA6B7FADD7061702E3C6ECC167C9DF849D21EA0949D27519048"
+  }
+}

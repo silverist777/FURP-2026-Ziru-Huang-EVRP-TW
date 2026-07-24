@@ -1,0 +1,397 @@
+{
+    "schema_version":  1,
+    "batch_id":  "20260722T221947558-f9a6a076",
+    "updated_at":  "2026-07-22T22:34:42.2960880+08:00",
+    "manifest":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\experiments\\configs\\week5_three_group_stability.json",
+    "raw_dir":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups",
+    "result_dir":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\results\\week5\\stability-three-groups",
+    "seed":  1,
+    "selections":  {
+                       "groups":  [
+                                      "C",
+                                      "R",
+                                      "RC"
+                                  ],
+                       "sizes":  [
+                                     5,
+                                     10,
+                                     15
+                                 ],
+                       "methods":  [
+                                       "pyvrp_repair",
+                                       "vns_ts",
+                                       "pomo_repair",
+                                       "pyga_checked",
+                                       "routefinder_repair"
+                                   ]
+                   },
+    "counts":  {
+                   "requested":  45,
+                   "completed":  41,
+                   "pending":  4,
+                   "strict_feasible":  25,
+                   "timed_out":  0
+               },
+    "jobs":  [
+                 {
+                     "job_id":  "C-c101C5-pyvrp_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\5\\c101C5\\pyvrp_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\5\\c101C5\\pyvrp_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "C-c101C5-vns_ts-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\5\\c101C5\\vns_ts\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\5\\c101C5\\vns_ts\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "C-c101C5-pomo_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\5\\c101C5\\pomo_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\5\\c101C5\\pomo_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "C-c101C5-pyga_checked-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\5\\c101C5\\pyga_checked\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\5\\c101C5\\pyga_checked\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "C-c101C5-routefinder_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\5\\c101C5\\routefinder_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\5\\c101C5\\routefinder_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "R-r104C5-pyvrp_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\5\\r104C5\\pyvrp_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\5\\r104C5\\pyvrp_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "R-r104C5-vns_ts-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\5\\r104C5\\vns_ts\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\5\\r104C5\\vns_ts\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "R-r104C5-pomo_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\5\\r104C5\\pomo_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\5\\r104C5\\pomo_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "R-r104C5-pyga_checked-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\5\\r104C5\\pyga_checked\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\5\\r104C5\\pyga_checked\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "R-r104C5-routefinder_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\5\\r104C5\\routefinder_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\5\\r104C5\\routefinder_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "RC-rc105C5-pyvrp_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\5\\rc105C5\\pyvrp_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\5\\rc105C5\\pyvrp_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "RC-rc105C5-vns_ts-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\5\\rc105C5\\vns_ts\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\5\\rc105C5\\vns_ts\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "RC-rc105C5-pomo_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\5\\rc105C5\\pomo_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\5\\rc105C5\\pomo_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "RC-rc105C5-pyga_checked-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\5\\rc105C5\\pyga_checked\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\5\\rc105C5\\pyga_checked\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "RC-rc105C5-routefinder_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\5\\rc105C5\\routefinder_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\5\\rc105C5\\routefinder_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "C-c101C10-pyvrp_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\10\\c101C10\\pyvrp_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\10\\c101C10\\pyvrp_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "C-c101C10-vns_ts-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\10\\c101C10\\vns_ts\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\10\\c101C10\\vns_ts\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "C-c101C10-pomo_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\10\\c101C10\\pomo_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\10\\c101C10\\pomo_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "C-c101C10-pyga_checked-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\10\\c101C10\\pyga_checked\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\10\\c101C10\\pyga_checked\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "C-c101C10-routefinder_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\10\\c101C10\\routefinder_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\10\\c101C10\\routefinder_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "R-r102C10-pyvrp_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\10\\r102C10\\pyvrp_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\10\\r102C10\\pyvrp_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "R-r102C10-vns_ts-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\10\\r102C10\\vns_ts\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\10\\r102C10\\vns_ts\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "R-r102C10-pomo_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\10\\r102C10\\pomo_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\10\\r102C10\\pomo_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "R-r102C10-pyga_checked-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\10\\r102C10\\pyga_checked\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\10\\r102C10\\pyga_checked\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "R-r102C10-routefinder_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\10\\r102C10\\routefinder_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\10\\r102C10\\routefinder_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "RC-rc102C10-pyvrp_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\10\\rc102C10\\pyvrp_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\10\\rc102C10\\pyvrp_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "RC-rc102C10-vns_ts-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\10\\rc102C10\\vns_ts\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\10\\rc102C10\\vns_ts\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "RC-rc102C10-pomo_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\10\\rc102C10\\pomo_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\10\\rc102C10\\pomo_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "RC-rc102C10-pyga_checked-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\10\\rc102C10\\pyga_checked\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\10\\rc102C10\\pyga_checked\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "RC-rc102C10-routefinder_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\10\\rc102C10\\routefinder_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\10\\rc102C10\\routefinder_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "C-c103C15-pyvrp_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\15\\c103C15\\pyvrp_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\15\\c103C15\\pyvrp_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "C-c103C15-vns_ts-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\15\\c103C15\\vns_ts\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\15\\c103C15\\vns_ts\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "C-c103C15-pomo_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\15\\c103C15\\pomo_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\15\\c103C15\\pomo_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "C-c103C15-pyga_checked-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\15\\c103C15\\pyga_checked\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\15\\c103C15\\pyga_checked\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "C-c103C15-routefinder_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\15\\c103C15\\routefinder_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\C\\15\\c103C15\\routefinder_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "R-r102C15-pyvrp_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\15\\r102C15\\pyvrp_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\15\\r102C15\\pyvrp_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "R-r102C15-vns_ts-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\15\\r102C15\\vns_ts\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\15\\r102C15\\vns_ts\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "R-r102C15-pomo_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\15\\r102C15\\pomo_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\15\\r102C15\\pomo_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "R-r102C15-pyga_checked-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\15\\r102C15\\pyga_checked\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\15\\r102C15\\pyga_checked\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "R-r102C15-routefinder_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\15\\r102C15\\routefinder_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\R\\15\\r102C15\\routefinder_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "RC-rc103C15-pyvrp_repair-seed-0001",
+                     "completed":  true,
+                     "strict_feasible":  true,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\15\\rc103C15\\pyvrp_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\15\\rc103C15\\pyvrp_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "RC-rc103C15-vns_ts-seed-0001",
+                     "completed":  false,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\15\\rc103C15\\vns_ts\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\15\\rc103C15\\vns_ts\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "RC-rc103C15-pomo_repair-seed-0001",
+                     "completed":  false,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\15\\rc103C15\\pomo_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\15\\rc103C15\\pomo_repair\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "RC-rc103C15-pyga_checked-seed-0001",
+                     "completed":  false,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\15\\rc103C15\\pyga_checked\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\15\\rc103C15\\pyga_checked\\seed-0001\\checker.json"
+                 },
+                 {
+                     "job_id":  "RC-rc103C15-routefinder_repair-seed-0001",
+                     "completed":  false,
+                     "strict_feasible":  false,
+                     "timed_out":  false,
+                     "runner_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\15\\rc103C15\\routefinder_repair\\seed-0001\\runner.json",
+                     "checker_path":  "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\log\\week5\\stability-three-groups\\runs\\RC\\15\\rc103C15\\routefinder_repair\\seed-0001\\checker.json"
+                 }
+             ]
+}

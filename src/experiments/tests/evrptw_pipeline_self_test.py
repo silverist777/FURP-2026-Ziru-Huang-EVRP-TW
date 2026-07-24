@@ -3,7 +3,10 @@ import argparse
 from checkers.feasibility_checker import check_explicit_routes
 from core.instance_loader import load_instance_data
 from methods.pyvrp.evrptw_v3_repair import (
+    Label,
     charge_decisions_payload,
+    dominates,
+    dominates_for_feasibility,
     repair_customer_sequence,
     repair_routes_with_splitting,
 )
@@ -138,6 +141,60 @@ def test_unsolved_route():
     assert_ok(not result.feasible, "Unreachable customer should remain unsolved.")
 
 
+def test_dominance_respects_station_visit_budget():
+    fewer_visits = Label(
+        location_name="S1",
+        position=1,
+        time=5,
+        battery=5,
+        distance=5,
+        path=["D0", "S1"],
+        charging_time=1,
+        station_visits=1,
+    )
+    more_visits = Label(
+        location_name="S1",
+        position=1,
+        time=4,
+        battery=6,
+        distance=4,
+        path=["D0", "S2", "S1"],
+        charging_time=0,
+        station_visits=2,
+    )
+    assert_ok(
+        not dominates(more_visits, fewer_visits),
+        "A label with less station-visit budget must not be dominated.",
+    )
+    assert_ok(
+        not dominates_for_feasibility(more_visits, fewer_visits),
+        "Feasibility dominance must retain the station-visit resource.",
+    )
+
+
+def test_feasibility_first_repair():
+    instance = make_instance(
+        clients=[customer("C1", 8)],
+        stations=[station("S1", 4)],
+    )
+    result = repair_customer_sequence(
+        ["C1"],
+        instance,
+        feasibility_first=True,
+    )
+    assert_ok(result.feasible, "Feasibility-first repair should find a route.")
+
+    report = check_explicit_routes(
+        routes=[result.route],
+        depot=instance.checker_depot_spec(),
+        customers=instance.checker_customer_specs(),
+        charging_stations=instance.checker_charging_station_specs(),
+        config=instance.checker_config(),
+        charging_plans=[charge_decisions_payload(result.charge_decisions)],
+    )
+    assert_ok(report.feasible, "Checker should accept feasibility-first output.")
+
+
 def test_real_schneider_parser(path):
     data = convert_schneider_instance(path, num_vehicles=2, solver_runtime_seconds=1)
     assert_ok(data["vehicles"]["battery_capacity"] == 77.75, "Q parse failed.")
@@ -159,6 +216,8 @@ def main():
     test_partial_recharge_beats_full_recharge()
     test_split_repair()
     test_unsolved_route()
+    test_dominance_respects_station_visit_budget()
+    test_feasibility_first_repair()
     if args.schneider is not None:
         test_real_schneider_parser(args.schneider)
     print("EVRP-TW pipeline self-test passed.")

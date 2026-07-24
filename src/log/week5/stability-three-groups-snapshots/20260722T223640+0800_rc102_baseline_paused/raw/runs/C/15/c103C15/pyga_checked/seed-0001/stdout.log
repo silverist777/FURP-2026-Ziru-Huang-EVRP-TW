@@ -1,0 +1,44 @@
+﻿File: E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\py-ga-VRPTW\data\json_customize\c103C15.json exists.
+py-ga-VRPTW custom + shared checker
+  status=unsolved
+  instance=c103C15
+  output=E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\log\week5\stability-three-groups\runs\C\15\c103C15\pyga_checked\seed-0001\result.json
+  vehicles=4
+  distance=558
+  served_customers=15
+Benchmark metrics:
+  solver=py-ga-VRPTW custom + shared checker
+  seed=1
+  runtime=0.15s
+  feasible=False
+  total_distance=558
+  total_duration=3479
+  makespan=1163
+  served_customers=15
+  missing_customers=0
+  duplicate_customers=0
+  time_window_violations=0
+  capacity_violations=0
+  energy_violations=12
+  charging_count=0
+  charging_time=0
+  synchronization_violations=0
+  vehicle_limit_violations=0
+Violation details:
+  route=1 constraint=energy location=C13 detail=remaining_energy=-3.25, minimum_battery=0
+  route=1 constraint=energy location=D0 detail=remaining_energy=-34.25, minimum_battery=0
+  route=2 constraint=energy location=C95 detail=remaining_energy=-10.25, minimum_battery=0
+  route=2 constraint=energy location=C85 detail=remaining_energy=-31.25, minimum_battery=0
+  route=2 constraint=energy location=D0 detail=remaining_energy=-61.25, minimum_battery=0
+  route=3 constraint=energy location=C30 detail=remaining_energy=-1.25, minimum_battery=0
+  route=3 constraint=energy location=C33 detail=remaining_energy=-20.25, minimum_battery=0
+  route=3 constraint=energy location=C10 detail=remaining_energy=-57.25, minimum_battery=0
+  route=3 constraint=energy location=C98 detail=remaining_energy=-82.25, minimum_battery=0
+  route=3 constraint=energy location=C61 detail=remaining_energy=-128.25, minimum_battery=0
+  route=3 constraint=energy location=D0 detail=remaining_energy=-150.25, minimum_battery=0
+  route=4 constraint=energy location=D0 detail=remaining_energy=-1.25, minimum_battery=0
+
+
+[validator]
+C-c103C15-pyga_checked-seed-0001: validation=valid strict_feasible=False failure=checker_infeasible:energy_or_charging
+

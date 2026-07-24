@@ -1,0 +1,35 @@
+﻿File: E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\py-ga-VRPTW\data\json_customize\c101C5.json exists.
+py-ga-VRPTW custom + shared checker
+  status=unsolved
+  instance=c101C5
+  output=E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\log\week5\stability-three-groups\runs\C\5\c101C5\pyga_checked\seed-0001\result.json
+  vehicles=2
+  distance=240
+  served_customers=5
+Benchmark metrics:
+  solver=py-ga-VRPTW custom + shared checker
+  seed=1
+  runtime=0.09s
+  feasible=False
+  total_distance=240
+  total_duration=1729
+  makespan=872
+  served_customers=5
+  missing_customers=0
+  duplicate_customers=0
+  time_window_violations=0
+  capacity_violations=0
+  energy_violations=3
+  charging_count=0
+  charging_time=0
+  synchronization_violations=0
+  vehicle_limit_violations=0
+Violation details:
+  route=1 constraint=energy location=C100 detail=remaining_energy=-36.25, minimum_battery=0
+  route=1 constraint=energy location=D0 detail=remaining_energy=-74.25, minimum_battery=0
+  route=2 constraint=energy location=D0 detail=remaining_energy=-10.25, minimum_battery=0
+
+
+[validator]
+C-c101C5-pyga_checked-seed-0001: validation=valid strict_feasible=False failure=checker_infeasible:energy_or_charging
+

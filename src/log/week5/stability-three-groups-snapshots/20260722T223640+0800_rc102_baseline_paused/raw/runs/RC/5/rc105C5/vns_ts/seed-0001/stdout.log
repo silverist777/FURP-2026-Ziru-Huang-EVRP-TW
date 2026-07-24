@@ -1,0 +1,193 @@
+﻿VNS/TS progress phase=feasibility iteration=0 event=initial vehicles=1 feasible=False distance=201 violations=(0.0,145.0,123.2) moves=0
+VNS/TS progress phase=feasibility iteration=1 event=accepted vehicles=1 feasible=False distance=221 violations=(0.0,157.0,0.0) moves=1128
+VNS/TS progress phase=feasibility iteration=2 event=accepted vehicles=1 feasible=False distance=210 violations=(0.0,135.0,0.0) moves=2527
+VNS/TS progress phase=feasibility iteration=3 event=accepted vehicles=1 feasible=False distance=205 violations=(0.0,128.0,27.2) moves=3720
+VNS/TS progress phase=feasibility iteration=4 event=accepted vehicles=1 feasible=False distance=204 violations=(0.0,126.0,44.2) moves=4773
+VNS/TS progress phase=feasibility iteration=5 event=accepted vehicles=1 feasible=False distance=204 violations=(0.0,126.0,44.2) moves=5901
+VNS/TS progress phase=feasibility iteration=6 event=accepted vehicles=1 feasible=False distance=204 violations=(0.0,126.0,44.2) moves=7012
+VNS/TS progress phase=feasibility iteration=7 event=accepted vehicles=1 feasible=False distance=204 violations=(0.0,126.0,44.2) moves=8168
+VNS/TS progress phase=feasibility iteration=8 event=accepted vehicles=1 feasible=False distance=218 violations=(0.0,123.0,74.2) moves=9250
+VNS/TS progress phase=feasibility iteration=9 event=accepted vehicles=1 feasible=False distance=205 violations=(0.0,98.0,91.2) moves=9920
+VNS/TS progress phase=feasibility iteration=10 event=accepted vehicles=1 feasible=False distance=205 violations=(0.0,98.0,91.2) moves=10757
+VNS/TS progress phase=feasibility iteration=11 event=accepted vehicles=1 feasible=False distance=203 violations=(0.0,97.0,125.2) moves=11395
+VNS/TS progress phase=feasibility iteration=12 event=accepted vehicles=1 feasible=False distance=203 violations=(0.0,97.0,125.2) moves=12065
+VNS/TS progress phase=feasibility iteration=13 event=accepted vehicles=1 feasible=False distance=205 violations=(0.0,98.0,91.2) moves=12750
+VNS/TS progress phase=feasibility iteration=14 event=accepted vehicles=1 feasible=False distance=205 violations=(0.0,98.0,91.2) moves=13474
+VNS/TS progress phase=feasibility iteration=15 event=accepted vehicles=1 feasible=False distance=205 violations=(0.0,98.0,91.2) moves=14192
+VNS/TS progress phase=feasibility iteration=16 event=accepted vehicles=1 feasible=False distance=205 violations=(0.0,98.0,91.2) moves=15031
+VNS/TS progress phase=feasibility iteration=17 event=accepted vehicles=1 feasible=False distance=205 violations=(0.0,98.0,91.2) moves=16106
+VNS/TS progress phase=feasibility iteration=18 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=17359
+VNS/TS progress phase=feasibility iteration=19 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=18614
+VNS/TS progress phase=feasibility iteration=20 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=19929
+VNS/TS progress phase=feasibility iteration=21 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=21446
+VNS/TS progress phase=feasibility iteration=22 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=22816
+VNS/TS progress phase=feasibility iteration=23 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=24208
+VNS/TS progress phase=feasibility iteration=24 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=25489
+VNS/TS progress phase=feasibility iteration=25 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=26742
+VNS/TS progress phase=feasibility iteration=26 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=28233
+VNS/TS progress phase=feasibility iteration=27 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=29486
+VNS/TS progress phase=feasibility iteration=28 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=30739
+VNS/TS progress phase=feasibility iteration=29 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=32083
+VNS/TS progress phase=feasibility iteration=30 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=33185
+VNS/TS progress phase=feasibility iteration=31 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=34277
+VNS/TS progress phase=feasibility iteration=32 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=35511
+VNS/TS progress phase=feasibility iteration=33 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=36837
+VNS/TS progress phase=feasibility iteration=34 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=38078
+VNS/TS progress phase=feasibility iteration=35 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=39419
+VNS/TS progress phase=feasibility iteration=36 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=40683
+VNS/TS progress phase=feasibility iteration=37 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=41954
+VNS/TS progress phase=feasibility iteration=38 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=43297
+VNS/TS progress phase=feasibility iteration=39 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=44600
+VNS/TS progress phase=feasibility iteration=40 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=45839
+VNS/TS progress phase=feasibility iteration=41 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=47242
+VNS/TS progress phase=feasibility iteration=42 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=48529
+VNS/TS progress phase=feasibility iteration=43 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=49886
+VNS/TS progress phase=feasibility iteration=44 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=51185
+VNS/TS progress phase=feasibility iteration=45 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=52620
+VNS/TS progress phase=feasibility iteration=46 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=53898
+VNS/TS progress phase=feasibility iteration=47 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=55221
+VNS/TS progress phase=feasibility iteration=48 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=56552
+VNS/TS progress phase=feasibility iteration=49 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=57906
+VNS/TS progress phase=feasibility iteration=50 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=59157
+VNS/TS progress phase=feasibility iteration=51 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=60470
+VNS/TS progress phase=feasibility iteration=52 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=61739
+VNS/TS progress phase=feasibility iteration=53 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=62932
+VNS/TS progress phase=feasibility iteration=54 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=64215
+VNS/TS progress phase=feasibility iteration=55 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=65394
+VNS/TS progress phase=feasibility iteration=56 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=66793
+VNS/TS progress phase=feasibility iteration=57 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=68182
+VNS/TS progress phase=feasibility iteration=58 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=69566
+VNS/TS progress phase=feasibility iteration=59 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=70858
+VNS/TS progress phase=feasibility iteration=60 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=72272
+VNS/TS progress phase=feasibility iteration=61 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=73588
+VNS/TS progress phase=feasibility iteration=62 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=74916
+VNS/TS progress phase=feasibility iteration=63 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=76199
+VNS/TS progress phase=feasibility iteration=64 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=77538
+VNS/TS progress phase=feasibility iteration=65 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=78867
+VNS/TS progress phase=feasibility iteration=66 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=80233
+VNS/TS progress phase=feasibility iteration=67 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=81671
+VNS/TS progress phase=feasibility iteration=68 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=83078
+VNS/TS progress phase=feasibility iteration=69 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=84330
+VNS/TS progress phase=feasibility iteration=70 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=85657
+VNS/TS progress phase=feasibility iteration=71 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=86951
+VNS/TS progress phase=feasibility iteration=72 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=88182
+VNS/TS progress phase=feasibility iteration=73 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=89470
+VNS/TS progress phase=feasibility iteration=74 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=90773
+VNS/TS progress phase=feasibility iteration=75 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=92109
+VNS/TS progress phase=feasibility iteration=76 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=93536
+VNS/TS progress phase=feasibility iteration=77 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=94725
+VNS/TS progress phase=feasibility iteration=78 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=96010
+VNS/TS progress phase=feasibility iteration=79 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=97347
+VNS/TS progress phase=feasibility iteration=80 event=accepted vehicles=1 feasible=False distance=223 violations=(0.0,134.0,0.0) moves=98695
+VNS/TS progress phase=feasibility iteration=80 event=add_vehicle vehicles=2 feasible=False distance=210 violations=(0.0,45.0,54.5) moves=98695
+VNS/TS progress phase=feasibility iteration=81 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=100669
+VNS/TS progress phase=distance iteration=82 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=103355
+VNS/TS progress phase=distance iteration=83 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=105415
+VNS/TS progress phase=distance iteration=84 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=107867
+VNS/TS progress phase=distance iteration=85 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=110209
+VNS/TS progress phase=distance iteration=86 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=112722
+VNS/TS progress phase=distance iteration=87 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=115217
+VNS/TS progress phase=distance iteration=88 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=117866
+VNS/TS progress phase=distance iteration=89 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=120365
+VNS/TS progress phase=distance iteration=90 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=122666
+VNS/TS progress phase=distance iteration=91 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=125151
+VNS/TS progress phase=distance iteration=92 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=127500
+VNS/TS progress phase=distance iteration=93 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=129770
+VNS/TS progress phase=distance iteration=94 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=131797
+VNS/TS progress phase=distance iteration=95 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=134355
+VNS/TS progress phase=distance iteration=96 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=136863
+VNS/TS progress phase=distance iteration=97 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=139330
+VNS/TS progress phase=distance iteration=98 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=141621
+VNS/TS progress phase=distance iteration=99 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=143913
+VNS/TS progress phase=distance iteration=100 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=146084
+VNS/TS progress phase=distance iteration=101 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=148691
+VNS/TS progress phase=distance iteration=102 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=150659
+VNS/TS progress phase=distance iteration=103 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=153373
+VNS/TS progress phase=distance iteration=104 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=155967
+VNS/TS progress phase=distance iteration=105 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=158420
+VNS/TS progress phase=distance iteration=106 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=160815
+VNS/TS progress phase=distance iteration=107 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=163279
+VNS/TS progress phase=distance iteration=108 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=165815
+VNS/TS progress phase=distance iteration=109 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=168229
+VNS/TS progress phase=distance iteration=110 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=170728
+VNS/TS progress phase=distance iteration=111 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=173059
+VNS/TS progress phase=distance iteration=112 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=175541
+VNS/TS progress phase=distance iteration=113 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=177903
+VNS/TS progress phase=distance iteration=114 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=180386
+VNS/TS progress phase=distance iteration=115 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=182928
+VNS/TS progress phase=distance iteration=116 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=185066
+VNS/TS progress phase=distance iteration=117 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=187554
+VNS/TS progress phase=distance iteration=118 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=190135
+VNS/TS progress phase=distance iteration=119 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=192672
+VNS/TS progress phase=distance iteration=120 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=194908
+VNS/TS progress phase=distance iteration=121 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=197357
+VNS/TS progress phase=distance iteration=122 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=199957
+VNS/TS progress phase=distance iteration=123 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=202460
+VNS/TS progress phase=distance iteration=124 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=204637
+VNS/TS progress phase=distance iteration=125 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=207256
+VNS/TS progress phase=distance iteration=126 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=209025
+VNS/TS progress phase=distance iteration=127 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=211358
+VNS/TS progress phase=distance iteration=128 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=213760
+VNS/TS progress phase=distance iteration=129 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=216223
+VNS/TS progress phase=distance iteration=130 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=218321
+VNS/TS progress phase=distance iteration=131 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=220835
+VNS/TS progress phase=distance iteration=132 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=223356
+VNS/TS progress phase=distance iteration=133 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=225881
+VNS/TS progress phase=distance iteration=134 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=227807
+VNS/TS progress phase=distance iteration=135 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=229948
+VNS/TS progress phase=distance iteration=136 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=231989
+VNS/TS progress phase=distance iteration=137 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=234352
+VNS/TS progress phase=distance iteration=138 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=236904
+VNS/TS progress phase=distance iteration=139 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=239478
+VNS/TS progress phase=distance iteration=140 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=241956
+VNS/TS progress phase=distance iteration=141 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=244525
+VNS/TS progress phase=distance iteration=142 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=246845
+VNS/TS progress phase=distance iteration=143 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=248965
+VNS/TS progress phase=distance iteration=144 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=251471
+VNS/TS progress phase=distance iteration=145 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=253947
+VNS/TS progress phase=distance iteration=146 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=255940
+VNS/TS progress phase=distance iteration=147 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=258554
+VNS/TS progress phase=distance iteration=148 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=260372
+VNS/TS progress phase=distance iteration=149 event=rejected vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=262255
+VNS/TS progress phase=distance iteration=150 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=264621
+VNS/TS progress phase=distance iteration=151 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=267212
+VNS/TS progress phase=distance iteration=152 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=269546
+VNS/TS progress phase=distance iteration=153 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=272004
+VNS/TS progress phase=distance iteration=154 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=274602
+VNS/TS progress phase=distance iteration=155 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=277104
+VNS/TS progress phase=distance iteration=156 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=279467
+VNS/TS progress phase=distance iteration=157 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=281907
+VNS/TS progress phase=distance iteration=158 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=284155
+VNS/TS progress phase=distance iteration=159 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=286635
+VNS/TS progress phase=distance iteration=160 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=289022
+VNS/TS progress phase=distance iteration=161 event=accepted vehicles=2 feasible=True distance=244 violations=(0.0,0.0,0.0) moves=291426
+Schneider-2014 hybrid VNS/TS E-VRPTW
+  status=solved
+  instance=rc105C5
+  output=E:\WorkSpace\FURP-2026-Ziru-Huang-EVRP-TW\src\log\week5\stability-three-groups\runs\RC\5\rc105C5\vns_ts\seed-0001\result.json
+  vehicles=2
+  distance=244
+  evaluated_moves=291426
+Benchmark metrics:
+  solver=Schneider-2014 hybrid VNS/TS E-VRPTW
+  seed=1
+  runtime=15.57s
+  feasible=True
+  total_distance=244
+  total_duration=362
+  makespan=201
+  served_customers=5
+  missing_customers=0
+  duplicate_customers=0
+  time_window_violations=0
+  capacity_violations=0
+  energy_violations=0
+  charging_count=4
+  charging_time=64
+  synchronization_violations=0
+  vehicle_limit_violations=0
+
+
+[validator]
+RC-rc105C5-vns_ts-seed-0001: validation=valid strict_feasible=True failure=success
+

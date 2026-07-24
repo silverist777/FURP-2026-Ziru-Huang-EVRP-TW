@@ -1,0 +1,4617 @@
+{
+  "status": "solved",
+  "infeasible_reason": "",
+  "failure_reason": "",
+  "unsupported_reason": "",
+  "source": {
+    "path": "src\\data\\evrptw_instances\\c101_21.txt",
+    "instance": "c101_21",
+    "problem_type": "EVRPTW"
+  },
+  "experiment_record": {
+    "record_schema": "week03_experiment_record_v1",
+    "instance_name": "c101_21",
+    "instance_size": 100,
+    "method_name": "RouteFinder RF-Transformer + fleet compaction + EVRP-TW repair",
+    "objective_value": 2060.0,
+    "runtime_seconds": 38.306,
+    "feasibility_status": "feasible",
+    "vehicles_used": 31,
+    "constraint_violations": "none",
+    "random_seed": 4,
+    "best_solution_found": "[[\"D0\", \"S19\", \"C79\", \"C76\", \"C80\", \"S18\", \"C72\", \"D0\"], [\"D0\", \"C20\", \"C46\", \"C47\", \"D0\"], [\"D0\", \"C41\", \"C40\", \"C42\", \"C44\", \"C45\", \"C43\", \"D0\"], [\"D0\", \"C67\", \"C65\", \"C62\", \"C64\", \"C68\", \"C69\", \"D0\"], [\"D0\", \"C21\", \"C48\", \"C51\", \"C50\", \"D0\"], [\"D0\", \"C63\", \"C74\", \"S19\", \"C73\", \"C70\", \"C71\", \"C77\", \"C78\", \"S20\", \"D0\"], [\"D0\", \"S16\", \"C54\", \"D0\"], [\"D0\", \"C55\", \"D0\"], [\"D0\", \"S15\", \"C59\", \"C60\", \"C58\", \"C56\", \"C53\", \"S16\", \"D0\"], [\"D0\", \"C90\", \"S20\", \"C81\", \"D0\"], [\"D0\", \"C7\", \"C8\", \"D0\"], [\"D0\", \"C13\", \"D0\"], [\"D0\", \"C66\", \"D0\"], [\"D0\", \"C91\", \"D0\"], [\"D0\", \"C52\", \"D0\"], [\"D0\", \"C5\", \"D0\"], [\"D0\", \"C6\", \"C9\", \"D0\"], [\"D0\", \"C49\", \"D0\"], [\"D0\", \"C89\", \"D0\"], [\"D0\", \"C61\", \"D0\"], [\"D0\", \"C10\", \"C11\", \"D0\"], [\"D0\", \"C57\", \"D0\"], [\"D0\", \"C75\", \"C85\", \"C88\", \"D0\"], [\"D0\", \"C87\", \"C83\", \"D0\"], [\"D0\", \"C86\", \"C82\", \"C84\", \"D0\"], [\"D0\", \"C96\", \"C95\", \"C94\", \"C92\", \"C93\", \"C97\", \"C100\", \"C99\", \"S3\", \"D0\"], [\"D0\", \"C23\", \"C22\", \"C29\", \"C32\", \"C33\", \"C31\", \"D0\"], [\"D0\", \"C24\", \"C25\", \"C27\", \"C30\", \"C28\", \"C26\", \"D0\"], [\"D0\", \"C34\", \"C36\", \"C39\", \"C38\", \"C37\", \"C35\", \"S11\", \"D0\"], [\"D0\", \"C1\", \"C98\", \"C2\", \"C4\", \"C3\", \"D0\"], [\"D0\", \"S7\", \"C12\", \"C14\", \"C16\", \"C19\", \"C18\", \"C17\", \"C15\", \"D0\"]]",
+    "reference_value": null,
+    "gap_to_reference_pct": null,
+    "convergence_curve": "not captured",
+    "improvement_over_time": "RouteFinder candidate variants are evaluated until the shared checker proves feasibility",
+    "iterations": null,
+    "generations": null,
+    "search_steps": 133402
+  },
+  "solver": {
+    "baseline": "RouteFinder RF-Transformer VRPTW",
+    "method_name": "RouteFinder RF-Transformer + fleet compaction + EVRP-TW repair",
+    "repair": "v3_partial_recharge_label_setting_feasibility_first",
+    "checkpoint": "E:\\WorkSpace\\FURP-2026-Ziru-Huang-EVRP-TW\\src\\routefinder\\checkpoints\\100\\rf-transformer.ckpt",
+    "routefinder_commit": "fe0e45b6df118af03c5f42db8b93a351f7629131",
+    "torch_version": "2.11.0+cu128",
+    "device": "cuda",
+    "num_augment": 8,
+    "max_candidates": 4,
+    "greedy_pack_max_clients": 50,
+    "fleet_compaction_enabled": true,
+    "fleet_compaction_used": true,
+    "evaluated_candidate_count": 1,
+    "stopped_after_first_feasible": true,
+    "elapsed_runtime_seconds": 38.306,
+    "inference_seconds": 0.718,
+    "seed": 4,
+    "unsupported_reason": ""
+  },
+  "normalization": {
+    "coordinate_origin": [
+      0.0,
+      5.0
+    ],
+    "coordinate_scale": 95.0,
+    "time_scale": 95.0,
+    "demand_scale": 200.0,
+    "routefinder_vehicle_capacity": 1.0
+  },
+  "candidate": {
+    "rank": 1,
+    "routefinder_rank": 1,
+    "variant": "fleet_compaction_vrptw_regret",
+    "normalized_vrptw_cost": 35.119942,
+    "estimated_unrounded_original_distance": 3336.394,
+    "actions": [
+      79,
+      76,
+      80,
+      0,
+      20,
+      46,
+      0,
+      41,
+      40,
+      42,
+      44,
+      45,
+      0,
+      67,
+      65,
+      62,
+      64,
+      68,
+      69,
+      0,
+      21,
+      48,
+      0,
+      63,
+      74,
+      73,
+      70,
+      71,
+      77,
+      78,
+      0,
+      54,
+      0,
+      55,
+      0,
+      59,
+      60,
+      58,
+      56,
+      53,
+      0,
+      90,
+      81,
+      0,
+      8,
+      0,
+      13,
+      0,
+      66,
+      0,
+      91,
+      0,
+      52,
+      0,
+      5,
+      0,
+      9,
+      0,
+      49,
+      0,
+      89,
+      0,
+      61,
+      0,
+      11,
+      0,
+      57,
+      0,
+      3,
+      0,
+      50,
+      0,
+      72,
+      0,
+      88,
+      0,
+      99,
+      0,
+      51,
+      0,
+      75,
+      85,
+      0,
+      10,
+      0,
+      7,
+      0,
+      43,
+      0,
+      84,
+      0,
+      100,
+      0,
+      47,
+      0,
+      15,
+      0,
+      35,
+      0,
+      6,
+      0,
+      87,
+      83,
+      0,
+      86,
+      82,
+      0,
+      97,
+      0,
+      96,
+      95,
+      94,
+      92,
+      93,
+      0,
+      23,
+      22,
+      29,
+      32,
+      33,
+      31,
+      0,
+      24,
+      25,
+      27,
+      30,
+      0,
+      34,
+      36,
+      39,
+      0,
+      1,
+      98,
+      0,
+      26,
+      0,
+      17,
+      0,
+      37,
+      0,
+      4,
+      0,
+      12,
+      14,
+      16,
+      0,
+      28,
+      0,
+      2,
+      0,
+      38,
+      0,
+      18,
+      0,
+      19,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "raw_route_count": 56,
+    "raw_customer_routes": [
+      [
+        "C79",
+        "C76",
+        "C80"
+      ],
+      [
+        "C20",
+        "C46"
+      ],
+      [
+        "C41",
+        "C40",
+        "C42",
+        "C44",
+        "C45"
+      ],
+      [
+        "C67",
+        "C65",
+        "C62",
+        "C64",
+        "C68",
+        "C69"
+      ],
+      [
+        "C21",
+        "C48"
+      ],
+      [
+        "C63",
+        "C74",
+        "C73",
+        "C70",
+        "C71",
+        "C77",
+        "C78"
+      ],
+      [
+        "C54"
+      ],
+      [
+        "C55"
+      ],
+      [
+        "C59",
+        "C60",
+        "C58",
+        "C56",
+        "C53"
+      ],
+      [
+        "C90",
+        "C81"
+      ],
+      [
+        "C8"
+      ],
+      [
+        "C13"
+      ],
+      [
+        "C66"
+      ],
+      [
+        "C91"
+      ],
+      [
+        "C52"
+      ],
+      [
+        "C5"
+      ],
+      [
+        "C9"
+      ],
+      [
+        "C49"
+      ],
+      [
+        "C89"
+      ],
+      [
+        "C61"
+      ],
+      [
+        "C11"
+      ],
+      [
+        "C57"
+      ],
+      [
+        "C3"
+      ],
+      [
+        "C50"
+      ],
+      [
+        "C72"
+      ],
+      [
+        "C88"
+      ],
+      [
+        "C99"
+      ],
+      [
+        "C51"
+      ],
+      [
+        "C75",
+        "C85"
+      ],
+      [
+        "C10"
+      ],
+      [
+        "C7"
+      ],
+      [
+        "C43"
+      ],
+      [
+        "C84"
+      ],
+      [
+        "C100"
+      ],
+      [
+        "C47"
+      ],
+      [
+        "C15"
+      ],
+      [
+        "C35"
+      ],
+      [
+        "C6"
+      ],
+      [
+        "C87",
+        "C83"
+      ],
+      [
+        "C86",
+        "C82"
+      ],
+      [
+        "C97"
+      ],
+      [
+        "C96",
+        "C95",
+        "C94",
+        "C92",
+        "C93"
+      ],
+      [
+        "C23",
+        "C22",
+        "C29",
+        "C32",
+        "C33",
+        "C31"
+      ],
+      [
+        "C24",
+        "C25",
+        "C27",
+        "C30"
+      ],
+      [
+        "C34",
+        "C36",
+        "C39"
+      ],
+      [
+        "C1",
+        "C98"
+      ],
+      [
+        "C26"
+      ],
+      [
+        "C17"
+      ],
+      [
+        "C37"
+      ],
+      [
+        "C4"
+      ],
+      [
+        "C12",
+        "C14",
+        "C16"
+      ],
+      [
+        "C28"
+      ],
+      [
+        "C2"
+      ],
+      [
+        "C38"
+      ],
+      [
+        "C18"
+      ],
+      [
+        "C19"
+      ]
+    ],
+    "compacted_route_count": 31,
+    "customer_routes": [
+      [
+        "C79",
+        "C76",
+        "C80",
+        "C72"
+      ],
+      [
+        "C20",
+        "C46",
+        "C47"
+      ],
+      [
+        "C41",
+        "C40",
+        "C42",
+        "C44",
+        "C45",
+        "C43"
+      ],
+      [
+        "C67",
+        "C65",
+        "C62",
+        "C64",
+        "C68",
+        "C69"
+      ],
+      [
+        "C21",
+        "C48",
+        "C51",
+        "C50"
+      ],
+      [
+        "C63",
+        "C74",
+        "C73",
+        "C70",
+        "C71",
+        "C77",
+        "C78"
+      ],
+      [
+        "C54"
+      ],
+      [
+        "C55"
+      ],
+      [
+        "C59",
+        "C60",
+        "C58",
+        "C56",
+        "C53"
+      ],
+      [
+        "C90",
+        "C81"
+      ],
+      [
+        "C7",
+        "C8"
+      ],
+      [
+        "C13"
+      ],
+      [
+        "C66"
+      ],
+      [
+        "C91"
+      ],
+      [
+        "C52"
+      ],
+      [
+        "C5"
+      ],
+      [
+        "C6",
+        "C9"
+      ],
+      [
+        "C49"
+      ],
+      [
+        "C89"
+      ],
+      [
+        "C61"
+      ],
+      [
+        "C10",
+        "C11"
+      ],
+      [
+        "C57"
+      ],
+      [
+        "C75",
+        "C85",
+        "C88"
+      ],
+      [
+        "C87",
+        "C83"
+      ],
+      [
+        "C86",
+        "C82",
+        "C84"
+      ],
+      [
+        "C96",
+        "C95",
+        "C94",
+        "C92",
+        "C93",
+        "C97",
+        "C100",
+        "C99"
+      ],
+      [
+        "C23",
+        "C22",
+        "C29",
+        "C32",
+        "C33",
+        "C31"
+      ],
+      [
+        "C24",
+        "C25",
+        "C27",
+        "C30",
+        "C28",
+        "C26"
+      ],
+      [
+        "C34",
+        "C36",
+        "C39",
+        "C38",
+        "C37",
+        "C35"
+      ],
+      [
+        "C1",
+        "C98",
+        "C2",
+        "C4",
+        "C3"
+      ],
+      [
+        "C12",
+        "C14",
+        "C16",
+        "C19",
+        "C18",
+        "C17",
+        "C15"
+      ]
+    ],
+    "fleet_compaction": {
+      "algorithm": "longest_route_anchors_fail_first_vrptw_regret_insertion",
+      "feasible": true,
+      "routes": [
+        [
+          "C79",
+          "C76",
+          "C80",
+          "C72"
+        ],
+        [
+          "C20",
+          "C46",
+          "C47"
+        ],
+        [
+          "C41",
+          "C40",
+          "C42",
+          "C44",
+          "C45",
+          "C43"
+        ],
+        [
+          "C67",
+          "C65",
+          "C62",
+          "C64",
+          "C68",
+          "C69"
+        ],
+        [
+          "C21",
+          "C48",
+          "C51",
+          "C50"
+        ],
+        [
+          "C63",
+          "C74",
+          "C73",
+          "C70",
+          "C71",
+          "C77",
+          "C78"
+        ],
+        [
+          "C54"
+        ],
+        [
+          "C55"
+        ],
+        [
+          "C59",
+          "C60",
+          "C58",
+          "C56",
+          "C53"
+        ],
+        [
+          "C90",
+          "C81"
+        ],
+        [
+          "C7",
+          "C8"
+        ],
+        [
+          "C13"
+        ],
+        [
+          "C66"
+        ],
+        [
+          "C91"
+        ],
+        [
+          "C52"
+        ],
+        [
+          "C5"
+        ],
+        [
+          "C6",
+          "C9"
+        ],
+        [
+          "C49"
+        ],
+        [
+          "C89"
+        ],
+        [
+          "C61"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C57"
+        ],
+        [
+          "C75",
+          "C85",
+          "C88"
+        ],
+        [
+          "C87",
+          "C83"
+        ],
+        [
+          "C86",
+          "C82",
+          "C84"
+        ],
+        [
+          "C96",
+          "C95",
+          "C94",
+          "C92",
+          "C93",
+          "C97",
+          "C100",
+          "C99"
+        ],
+        [
+          "C23",
+          "C22",
+          "C29",
+          "C32",
+          "C33",
+          "C31"
+        ],
+        [
+          "C24",
+          "C25",
+          "C27",
+          "C30",
+          "C28",
+          "C26"
+        ],
+        [
+          "C34",
+          "C36",
+          "C39",
+          "C38",
+          "C37",
+          "C35"
+        ],
+        [
+          "C1",
+          "C98",
+          "C2",
+          "C4",
+          "C3"
+        ],
+        [
+          "C12",
+          "C14",
+          "C16",
+          "C19",
+          "C18",
+          "C17",
+          "C15"
+        ]
+      ],
+      "input_route_count": 56,
+      "output_route_count": 31,
+      "target_max_vehicles": 31,
+      "moved_customers": 25,
+      "evaluated_insertions": 36018,
+      "runtime_seconds": 0.089797,
+      "failure_reason": ""
+    }
+  },
+  "candidate_evaluations": [
+    {
+      "rank": 1,
+      "routefinder_rank": 1,
+      "variant": "fleet_compaction_vrptw_regret",
+      "normalized_vrptw_cost": 35.119942,
+      "raw_route_count": 56,
+      "compacted_route_count": 31,
+      "customer_routes": [
+        [
+          "C79",
+          "C76",
+          "C80",
+          "C72"
+        ],
+        [
+          "C20",
+          "C46",
+          "C47"
+        ],
+        [
+          "C41",
+          "C40",
+          "C42",
+          "C44",
+          "C45",
+          "C43"
+        ],
+        [
+          "C67",
+          "C65",
+          "C62",
+          "C64",
+          "C68",
+          "C69"
+        ],
+        [
+          "C21",
+          "C48",
+          "C51",
+          "C50"
+        ],
+        [
+          "C63",
+          "C74",
+          "C73",
+          "C70",
+          "C71",
+          "C77",
+          "C78"
+        ],
+        [
+          "C54"
+        ],
+        [
+          "C55"
+        ],
+        [
+          "C59",
+          "C60",
+          "C58",
+          "C56",
+          "C53"
+        ],
+        [
+          "C90",
+          "C81"
+        ],
+        [
+          "C7",
+          "C8"
+        ],
+        [
+          "C13"
+        ],
+        [
+          "C66"
+        ],
+        [
+          "C91"
+        ],
+        [
+          "C52"
+        ],
+        [
+          "C5"
+        ],
+        [
+          "C6",
+          "C9"
+        ],
+        [
+          "C49"
+        ],
+        [
+          "C89"
+        ],
+        [
+          "C61"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C57"
+        ],
+        [
+          "C75",
+          "C85",
+          "C88"
+        ],
+        [
+          "C87",
+          "C83"
+        ],
+        [
+          "C86",
+          "C82",
+          "C84"
+        ],
+        [
+          "C96",
+          "C95",
+          "C94",
+          "C92",
+          "C93",
+          "C97",
+          "C100",
+          "C99"
+        ],
+        [
+          "C23",
+          "C22",
+          "C29",
+          "C32",
+          "C33",
+          "C31"
+        ],
+        [
+          "C24",
+          "C25",
+          "C27",
+          "C30",
+          "C28",
+          "C26"
+        ],
+        [
+          "C34",
+          "C36",
+          "C39",
+          "C38",
+          "C37",
+          "C35"
+        ],
+        [
+          "C1",
+          "C98",
+          "C2",
+          "C4",
+          "C3"
+        ],
+        [
+          "C12",
+          "C14",
+          "C16",
+          "C19",
+          "C18",
+          "C17",
+          "C15"
+        ]
+      ],
+      "fleet_compaction": {
+        "algorithm": "longest_route_anchors_fail_first_vrptw_regret_insertion",
+        "feasible": true,
+        "routes": [
+          [
+            "C79",
+            "C76",
+            "C80",
+            "C72"
+          ],
+          [
+            "C20",
+            "C46",
+            "C47"
+          ],
+          [
+            "C41",
+            "C40",
+            "C42",
+            "C44",
+            "C45",
+            "C43"
+          ],
+          [
+            "C67",
+            "C65",
+            "C62",
+            "C64",
+            "C68",
+            "C69"
+          ],
+          [
+            "C21",
+            "C48",
+            "C51",
+            "C50"
+          ],
+          [
+            "C63",
+            "C74",
+            "C73",
+            "C70",
+            "C71",
+            "C77",
+            "C78"
+          ],
+          [
+            "C54"
+          ],
+          [
+            "C55"
+          ],
+          [
+            "C59",
+            "C60",
+            "C58",
+            "C56",
+            "C53"
+          ],
+          [
+            "C90",
+            "C81"
+          ],
+          [
+            "C7",
+            "C8"
+          ],
+          [
+            "C13"
+          ],
+          [
+            "C66"
+          ],
+          [
+            "C91"
+          ],
+          [
+            "C52"
+          ],
+          [
+            "C5"
+          ],
+          [
+            "C6",
+            "C9"
+          ],
+          [
+            "C49"
+          ],
+          [
+            "C89"
+          ],
+          [
+            "C61"
+          ],
+          [
+            "C10",
+            "C11"
+          ],
+          [
+            "C57"
+          ],
+          [
+            "C75",
+            "C85",
+            "C88"
+          ],
+          [
+            "C87",
+            "C83"
+          ],
+          [
+            "C86",
+            "C82",
+            "C84"
+          ],
+          [
+            "C96",
+            "C95",
+            "C94",
+            "C92",
+            "C93",
+            "C97",
+            "C100",
+            "C99"
+          ],
+          [
+            "C23",
+            "C22",
+            "C29",
+            "C32",
+            "C33",
+            "C31"
+          ],
+          [
+            "C24",
+            "C25",
+            "C27",
+            "C30",
+            "C28",
+            "C26"
+          ],
+          [
+            "C34",
+            "C36",
+            "C39",
+            "C38",
+            "C37",
+            "C35"
+          ],
+          [
+            "C1",
+            "C98",
+            "C2",
+            "C4",
+            "C3"
+          ],
+          [
+            "C12",
+            "C14",
+            "C16",
+            "C19",
+            "C18",
+            "C17",
+            "C15"
+          ]
+        ],
+        "input_route_count": 56,
+        "output_route_count": 31,
+        "target_max_vehicles": 31,
+        "moved_customers": 25,
+        "evaluated_insertions": 36018,
+        "runtime_seconds": 0.089797,
+        "failure_reason": ""
+      },
+      "repair_feasible": true,
+      "checked_feasible": true,
+      "checked_distance": 2060,
+      "vehicle_count": 31,
+      "station_insertions": 11,
+      "split_count": 0,
+      "served_customers": 100,
+      "missing_customers": 0,
+      "duplicate_customers": 0,
+      "time_window_violations": 0,
+      "capacity_violations": 0,
+      "energy_violations": 0,
+      "vehicle_limit_violations": 0,
+      "violations": [],
+      "unsolved": []
+    }
+  ],
+  "fleet_compaction_attempts": [
+    {
+      "routefinder_rank": 1,
+      "algorithm": "longest_route_anchors_fail_first_vrptw_regret_insertion",
+      "feasible": true,
+      "routes": [
+        [
+          "C79",
+          "C76",
+          "C80",
+          "C72"
+        ],
+        [
+          "C20",
+          "C46",
+          "C47"
+        ],
+        [
+          "C41",
+          "C40",
+          "C42",
+          "C44",
+          "C45",
+          "C43"
+        ],
+        [
+          "C67",
+          "C65",
+          "C62",
+          "C64",
+          "C68",
+          "C69"
+        ],
+        [
+          "C21",
+          "C48",
+          "C51",
+          "C50"
+        ],
+        [
+          "C63",
+          "C74",
+          "C73",
+          "C70",
+          "C71",
+          "C77",
+          "C78"
+        ],
+        [
+          "C54"
+        ],
+        [
+          "C55"
+        ],
+        [
+          "C59",
+          "C60",
+          "C58",
+          "C56",
+          "C53"
+        ],
+        [
+          "C90",
+          "C81"
+        ],
+        [
+          "C7",
+          "C8"
+        ],
+        [
+          "C13"
+        ],
+        [
+          "C66"
+        ],
+        [
+          "C91"
+        ],
+        [
+          "C52"
+        ],
+        [
+          "C5"
+        ],
+        [
+          "C6",
+          "C9"
+        ],
+        [
+          "C49"
+        ],
+        [
+          "C89"
+        ],
+        [
+          "C61"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C57"
+        ],
+        [
+          "C75",
+          "C85",
+          "C88"
+        ],
+        [
+          "C87",
+          "C83"
+        ],
+        [
+          "C86",
+          "C82",
+          "C84"
+        ],
+        [
+          "C96",
+          "C95",
+          "C94",
+          "C92",
+          "C93",
+          "C97",
+          "C100",
+          "C99"
+        ],
+        [
+          "C23",
+          "C22",
+          "C29",
+          "C32",
+          "C33",
+          "C31"
+        ],
+        [
+          "C24",
+          "C25",
+          "C27",
+          "C30",
+          "C28",
+          "C26"
+        ],
+        [
+          "C34",
+          "C36",
+          "C39",
+          "C38",
+          "C37",
+          "C35"
+        ],
+        [
+          "C1",
+          "C98",
+          "C2",
+          "C4",
+          "C3"
+        ],
+        [
+          "C12",
+          "C14",
+          "C16",
+          "C19",
+          "C18",
+          "C17",
+          "C15"
+        ]
+      ],
+      "input_route_count": 56,
+      "output_route_count": 31,
+      "target_max_vehicles": 31,
+      "moved_customers": 25,
+      "evaluated_insertions": 36018,
+      "runtime_seconds": 0.089797,
+      "failure_reason": ""
+    },
+    {
+      "routefinder_rank": 2,
+      "algorithm": "longest_route_anchors_fail_first_vrptw_regret_insertion",
+      "feasible": true,
+      "routes": [
+        [
+          "C86",
+          "C73",
+          "C70",
+          "C79",
+          "C76",
+          "C80",
+          "C72"
+        ],
+        [
+          "C52"
+        ],
+        [
+          "C49"
+        ],
+        [
+          "C66"
+        ],
+        [
+          "C13"
+        ],
+        [
+          "C50"
+        ],
+        [
+          "C57"
+        ],
+        [
+          "C7",
+          "C8"
+        ],
+        [
+          "C41",
+          "C54"
+        ],
+        [
+          "C20",
+          "C46",
+          "C35"
+        ],
+        [
+          "C55"
+        ],
+        [
+          "C43",
+          "C51"
+        ],
+        [
+          "C61"
+        ],
+        [
+          "C2",
+          "C6",
+          "C9"
+        ],
+        [
+          "C5"
+        ],
+        [
+          "C91"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C59",
+          "C60",
+          "C58",
+          "C56",
+          "C53",
+          "C48"
+        ],
+        [
+          "C63",
+          "C65",
+          "C71",
+          "C78",
+          "C81"
+        ],
+        [
+          "C67",
+          "C74",
+          "C77"
+        ],
+        [
+          "C90",
+          "C87",
+          "C82",
+          "C83",
+          "C84",
+          "C85",
+          "C88",
+          "C89"
+        ],
+        [
+          "C21",
+          "C47"
+        ],
+        [
+          "C40",
+          "C42",
+          "C44",
+          "C45"
+        ],
+        [
+          "C23",
+          "C4",
+          "C3"
+        ],
+        [
+          "C62",
+          "C64",
+          "C68",
+          "C69"
+        ],
+        [
+          "C75",
+          "C1",
+          "C96",
+          "C95",
+          "C94",
+          "C92"
+        ],
+        [
+          "C98",
+          "C93",
+          "C97",
+          "C100",
+          "C99"
+        ],
+        [
+          "C24",
+          "C29",
+          "C32",
+          "C33",
+          "C31"
+        ],
+        [
+          "C34",
+          "C36",
+          "C39",
+          "C38",
+          "C37"
+        ],
+        [
+          "C22",
+          "C25",
+          "C27",
+          "C30",
+          "C28",
+          "C26"
+        ],
+        [
+          "C12",
+          "C14",
+          "C16",
+          "C19",
+          "C18",
+          "C17",
+          "C15"
+        ]
+      ],
+      "input_route_count": 55,
+      "output_route_count": 31,
+      "target_max_vehicles": 31,
+      "moved_customers": 24,
+      "evaluated_insertions": 34400,
+      "runtime_seconds": 0.091193,
+      "failure_reason": ""
+    },
+    {
+      "routefinder_rank": 3,
+      "algorithm": "longest_route_anchors_fail_first_vrptw_regret_insertion",
+      "feasible": true,
+      "routes": [
+        [
+          "C67",
+          "C4",
+          "C17"
+        ],
+        [
+          "C23",
+          "C26"
+        ],
+        [
+          "C20",
+          "C18",
+          "C35"
+        ],
+        [
+          "C21",
+          "C22",
+          "C52"
+        ],
+        [
+          "C75",
+          "C1",
+          "C12",
+          "C15"
+        ],
+        [
+          "C49"
+        ],
+        [
+          "C47",
+          "C50"
+        ],
+        [
+          "C66"
+        ],
+        [
+          "C57"
+        ],
+        [
+          "C61"
+        ],
+        [
+          "C3",
+          "C9",
+          "C8"
+        ],
+        [
+          "C51"
+        ],
+        [
+          "C91"
+        ],
+        [
+          "C10",
+          "C11",
+          "C13"
+        ],
+        [
+          "C55"
+        ],
+        [
+          "C79",
+          "C76",
+          "C78",
+          "C81",
+          "C72"
+        ],
+        [
+          "C5"
+        ],
+        [
+          "C41",
+          "C54"
+        ],
+        [
+          "C24",
+          "C25",
+          "C27",
+          "C30",
+          "C28"
+        ],
+        [
+          "C40",
+          "C42",
+          "C44",
+          "C45"
+        ],
+        [
+          "C29",
+          "C32",
+          "C33",
+          "C31"
+        ],
+        [
+          "C90",
+          "C96",
+          "C95",
+          "C94",
+          "C92",
+          "C93"
+        ],
+        [
+          "C34",
+          "C36",
+          "C39",
+          "C38",
+          "C37"
+        ],
+        [
+          "C87",
+          "C98",
+          "C97",
+          "C100",
+          "C99"
+        ],
+        [
+          "C59",
+          "C60",
+          "C58",
+          "C56",
+          "C53"
+        ],
+        [
+          "C63",
+          "C2",
+          "C6",
+          "C7"
+        ],
+        [
+          "C65",
+          "C86",
+          "C82",
+          "C83",
+          "C84",
+          "C85",
+          "C88",
+          "C89"
+        ],
+        [
+          "C14",
+          "C16",
+          "C19"
+        ],
+        [
+          "C74",
+          "C69",
+          "C46",
+          "C43"
+        ],
+        [
+          "C62",
+          "C64",
+          "C68",
+          "C48"
+        ],
+        [
+          "C73",
+          "C70",
+          "C71",
+          "C77",
+          "C80"
+        ]
+      ],
+      "input_route_count": 53,
+      "output_route_count": 31,
+      "target_max_vehicles": 31,
+      "moved_customers": 22,
+      "evaluated_insertions": 29348,
+      "runtime_seconds": 0.080446,
+      "failure_reason": ""
+    },
+    {
+      "routefinder_rank": 4,
+      "algorithm": "longest_route_anchors_fail_first_vrptw_regret_insertion",
+      "feasible": true,
+      "routes": [
+        [
+          "C79",
+          "C77",
+          "C76",
+          "C78",
+          "C81"
+        ],
+        [
+          "C23",
+          "C22",
+          "C29",
+          "C27",
+          "C30",
+          "C28",
+          "C17"
+        ],
+        [
+          "C75",
+          "C4",
+          "C97",
+          "C100"
+        ],
+        [
+          "C13"
+        ],
+        [
+          "C20",
+          "C24",
+          "C25",
+          "C32",
+          "C33",
+          "C38",
+          "C37"
+        ],
+        [
+          "C15"
+        ],
+        [
+          "C8"
+        ],
+        [
+          "C6",
+          "C9"
+        ],
+        [
+          "C11"
+        ],
+        [
+          "C5"
+        ],
+        [
+          "C91"
+        ],
+        [
+          "C10"
+        ],
+        [
+          "C3"
+        ],
+        [
+          "C66"
+        ],
+        [
+          "C7"
+        ],
+        [
+          "C2",
+          "C99"
+        ],
+        [
+          "C52"
+        ],
+        [
+          "C89"
+        ],
+        [
+          "C72",
+          "C61"
+        ],
+        [
+          "C49"
+        ],
+        [
+          "C90",
+          "C86",
+          "C83"
+        ],
+        [
+          "C1",
+          "C12",
+          "C14",
+          "C16",
+          "C19",
+          "C18"
+        ],
+        [
+          "C21",
+          "C34",
+          "C36",
+          "C39",
+          "C31",
+          "C51",
+          "C50"
+        ],
+        [
+          "C87",
+          "C96",
+          "C95",
+          "C94",
+          "C92",
+          "C93"
+        ],
+        [
+          "C67",
+          "C48",
+          "C35"
+        ],
+        [
+          "C41",
+          "C40",
+          "C42",
+          "C44",
+          "C45",
+          "C46",
+          "C47",
+          "C43"
+        ],
+        [
+          "C59",
+          "C60",
+          "C58",
+          "C56",
+          "C53",
+          "C54",
+          "C55",
+          "C57"
+        ],
+        [
+          "C98",
+          "C82",
+          "C84",
+          "C85",
+          "C88"
+        ],
+        [
+          "C63",
+          "C65",
+          "C26"
+        ],
+        [
+          "C74",
+          "C62",
+          "C64",
+          "C68",
+          "C69"
+        ],
+        [
+          "C73",
+          "C70",
+          "C71",
+          "C80"
+        ]
+      ],
+      "input_route_count": 55,
+      "output_route_count": 31,
+      "target_max_vehicles": 31,
+      "moved_customers": 24,
+      "evaluated_insertions": 33605,
+      "runtime_seconds": 0.08366,
+      "failure_reason": ""
+    }
+  ],
+  "routes": [
+    {
+      "route_index": 1,
+      "visits": [
+        "D0",
+        "S19",
+        "C79",
+        "C76",
+        "C80",
+        "S18",
+        "C72",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S19",
+          "station_visit": 1,
+          "arrival_battery": 41.69,
+          "departure_battery": 79.69,
+          "charged_amount": 38.0,
+          "charge_time": 129,
+          "policy": "partial_recharge"
+        },
+        {
+          "station": "S18",
+          "station_visit": 2,
+          "arrival_battery": 37.69,
+          "departure_battery": 66,
+          "charged_amount": 28.310000000000002,
+          "charge_time": 96,
+          "policy": "partial_recharge"
+        }
+      ]
+    },
+    {
+      "route_index": 2,
+      "visits": [
+        "D0",
+        "C20",
+        "C46",
+        "C47",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 3,
+      "visits": [
+        "D0",
+        "C41",
+        "C40",
+        "C42",
+        "C44",
+        "C45",
+        "C43",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 4,
+      "visits": [
+        "D0",
+        "C67",
+        "C65",
+        "C62",
+        "C64",
+        "C68",
+        "C69",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 5,
+      "visits": [
+        "D0",
+        "C21",
+        "C48",
+        "C51",
+        "C50",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 6,
+      "visits": [
+        "D0",
+        "C63",
+        "C74",
+        "S19",
+        "C73",
+        "C70",
+        "C71",
+        "C77",
+        "C78",
+        "S20",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S19",
+          "station_visit": 1,
+          "arrival_battery": 38.69,
+          "departure_battery": 59,
+          "charged_amount": 20.310000000000002,
+          "charge_time": 69,
+          "policy": "partial_recharge"
+        },
+        {
+          "station": "S20",
+          "station_visit": 2,
+          "arrival_battery": 10,
+          "departure_battery": 50,
+          "charged_amount": 40,
+          "charge_time": 136,
+          "policy": "partial_recharge"
+        }
+      ]
+    },
+    {
+      "route_index": 7,
+      "visits": [
+        "D0",
+        "S16",
+        "C54",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S16",
+          "station_visit": 1,
+          "arrival_battery": 39.69,
+          "departure_battery": 79.69,
+          "charged_amount": 40.0,
+          "charge_time": 136,
+          "policy": "partial_recharge"
+        }
+      ]
+    },
+    {
+      "route_index": 8,
+      "visits": [
+        "D0",
+        "C55",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 9,
+      "visits": [
+        "D0",
+        "S15",
+        "C59",
+        "C60",
+        "C58",
+        "C56",
+        "C53",
+        "S16",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S15",
+          "station_visit": 1,
+          "arrival_battery": 60.69,
+          "departure_battery": 71,
+          "charged_amount": 10.310000000000002,
+          "charge_time": 35,
+          "policy": "partial_recharge"
+        },
+        {
+          "station": "S16",
+          "station_visit": 2,
+          "arrival_battery": 29,
+          "departure_battery": 40,
+          "charged_amount": 11,
+          "charge_time": 38,
+          "policy": "partial_recharge"
+        }
+      ]
+    },
+    {
+      "route_index": 10,
+      "visits": [
+        "D0",
+        "C90",
+        "S20",
+        "C81",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S20",
+          "station_visit": 1,
+          "arrival_battery": 26.689999999999998,
+          "departure_battery": 79.69,
+          "charged_amount": 53.0,
+          "charge_time": 180,
+          "policy": "partial_recharge"
+        }
+      ]
+    },
+    {
+      "route_index": 11,
+      "visits": [
+        "D0",
+        "C7",
+        "C8",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 12,
+      "visits": [
+        "D0",
+        "C13",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 13,
+      "visits": [
+        "D0",
+        "C66",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 14,
+      "visits": [
+        "D0",
+        "C91",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 15,
+      "visits": [
+        "D0",
+        "C52",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 16,
+      "visits": [
+        "D0",
+        "C5",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 17,
+      "visits": [
+        "D0",
+        "C6",
+        "C9",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 18,
+      "visits": [
+        "D0",
+        "C49",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 19,
+      "visits": [
+        "D0",
+        "C89",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 20,
+      "visits": [
+        "D0",
+        "C61",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 21,
+      "visits": [
+        "D0",
+        "C10",
+        "C11",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 22,
+      "visits": [
+        "D0",
+        "C57",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 23,
+      "visits": [
+        "D0",
+        "C75",
+        "C85",
+        "C88",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 24,
+      "visits": [
+        "D0",
+        "C87",
+        "C83",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 25,
+      "visits": [
+        "D0",
+        "C86",
+        "C82",
+        "C84",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 26,
+      "visits": [
+        "D0",
+        "C96",
+        "C95",
+        "C94",
+        "C92",
+        "C93",
+        "C97",
+        "C100",
+        "C99",
+        "S3",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S3",
+          "station_visit": 1,
+          "arrival_battery": 15.689999999999998,
+          "departure_battery": 33,
+          "charged_amount": 17.310000000000002,
+          "charge_time": 59,
+          "policy": "partial_recharge"
+        }
+      ]
+    },
+    {
+      "route_index": 27,
+      "visits": [
+        "D0",
+        "C23",
+        "C22",
+        "C29",
+        "C32",
+        "C33",
+        "C31",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 28,
+      "visits": [
+        "D0",
+        "C24",
+        "C25",
+        "C27",
+        "C30",
+        "C28",
+        "C26",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 29,
+      "visits": [
+        "D0",
+        "C34",
+        "C36",
+        "C39",
+        "C38",
+        "C37",
+        "C35",
+        "S11",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S11",
+          "station_visit": 1,
+          "arrival_battery": 17.689999999999998,
+          "departure_battery": 33,
+          "charged_amount": 15.310000000000002,
+          "charge_time": 52,
+          "policy": "partial_recharge"
+        }
+      ]
+    },
+    {
+      "route_index": 30,
+      "visits": [
+        "D0",
+        "C1",
+        "C98",
+        "C2",
+        "C4",
+        "C3",
+        "D0"
+      ],
+      "charging_plan": []
+    },
+    {
+      "route_index": 31,
+      "visits": [
+        "D0",
+        "S7",
+        "C12",
+        "C14",
+        "C16",
+        "C19",
+        "C18",
+        "C17",
+        "C15",
+        "D0"
+      ],
+      "charging_plan": [
+        {
+          "station": "S7",
+          "station_visit": 1,
+          "arrival_battery": 45.69,
+          "departure_battery": 79.69,
+          "charged_amount": 34.0,
+          "charge_time": 116,
+          "policy": "partial_recharge"
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "feasible": true,
+    "vehicle_count": 31,
+    "max_vehicles": 31,
+    "vehicle_limit_excess": 0,
+    "total_distance": 2060,
+    "partial_total_distance": 2060,
+    "total_duration": 29575,
+    "makespan": 1175,
+    "served_customers": 100,
+    "missing_customers": 0,
+    "duplicate_customers": 0,
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "vehicle_limit_violations": 0,
+    "charging_count": 11,
+    "charging_time": 1046
+  },
+  "repair": {
+    "feasible": true,
+    "feasibility_first": true,
+    "split_count": 0,
+    "station_insertions": 11,
+    "charging_plans": [
+      [
+        {
+          "station": "S19",
+          "station_visit": 1,
+          "arrival_battery": 41.69,
+          "departure_battery": 79.69,
+          "charged_amount": 38.0,
+          "charge_time": 129,
+          "policy": "partial_recharge"
+        },
+        {
+          "station": "S18",
+          "station_visit": 2,
+          "arrival_battery": 37.69,
+          "departure_battery": 66,
+          "charged_amount": 28.310000000000002,
+          "charge_time": 96,
+          "policy": "partial_recharge"
+        }
+      ],
+      [],
+      [],
+      [],
+      [],
+      [
+        {
+          "station": "S19",
+          "station_visit": 1,
+          "arrival_battery": 38.69,
+          "departure_battery": 59,
+          "charged_amount": 20.310000000000002,
+          "charge_time": 69,
+          "policy": "partial_recharge"
+        },
+        {
+          "station": "S20",
+          "station_visit": 2,
+          "arrival_battery": 10,
+          "departure_battery": 50,
+          "charged_amount": 40,
+          "charge_time": 136,
+          "policy": "partial_recharge"
+        }
+      ],
+      [
+        {
+          "station": "S16",
+          "station_visit": 1,
+          "arrival_battery": 39.69,
+          "departure_battery": 79.69,
+          "charged_amount": 40.0,
+          "charge_time": 136,
+          "policy": "partial_recharge"
+        }
+      ],
+      [],
+      [
+        {
+          "station": "S15",
+          "station_visit": 1,
+          "arrival_battery": 60.69,
+          "departure_battery": 71,
+          "charged_amount": 10.310000000000002,
+          "charge_time": 35,
+          "policy": "partial_recharge"
+        },
+        {
+          "station": "S16",
+          "station_visit": 2,
+          "arrival_battery": 29,
+          "departure_battery": 40,
+          "charged_amount": 11,
+          "charge_time": 38,
+          "policy": "partial_recharge"
+        }
+      ],
+      [
+        {
+          "station": "S20",
+          "station_visit": 1,
+          "arrival_battery": 26.689999999999998,
+          "departure_battery": 79.69,
+          "charged_amount": 53.0,
+          "charge_time": 180,
+          "policy": "partial_recharge"
+        }
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        {
+          "station": "S3",
+          "station_visit": 1,
+          "arrival_battery": 15.689999999999998,
+          "departure_battery": 33,
+          "charged_amount": 17.310000000000002,
+          "charge_time": 59,
+          "policy": "partial_recharge"
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "station": "S11",
+          "station_visit": 1,
+          "arrival_battery": 17.689999999999998,
+          "departure_battery": 33,
+          "charged_amount": 15.310000000000002,
+          "charge_time": 52,
+          "policy": "partial_recharge"
+        }
+      ],
+      [],
+      [
+        {
+          "station": "S7",
+          "station_visit": 1,
+          "arrival_battery": 45.69,
+          "departure_battery": 79.69,
+          "charged_amount": 34.0,
+          "charge_time": 116,
+          "policy": "partial_recharge"
+        }
+      ]
+    ],
+    "policy": "partial_recharge",
+    "attempts": [
+      {
+        "customers": [
+          "C79",
+          "C76",
+          "C80",
+          "C72"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 2,
+        "charging_time": 225
+      },
+      {
+        "customers": [
+          "C20",
+          "C46",
+          "C47"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C41",
+          "C40",
+          "C42",
+          "C44",
+          "C45",
+          "C43"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C67",
+          "C65",
+          "C62",
+          "C64",
+          "C68",
+          "C69"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C21",
+          "C48",
+          "C51",
+          "C50"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C63",
+          "C74",
+          "C73",
+          "C70",
+          "C71",
+          "C77",
+          "C78"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 2,
+        "charging_time": 205
+      },
+      {
+        "customers": [
+          "C54"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 1,
+        "charging_time": 136
+      },
+      {
+        "customers": [
+          "C55"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C59",
+          "C60",
+          "C58",
+          "C56",
+          "C53"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 2,
+        "charging_time": 73
+      },
+      {
+        "customers": [
+          "C90",
+          "C81"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 1,
+        "charging_time": 180
+      },
+      {
+        "customers": [
+          "C7",
+          "C8"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C13"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C66"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C91"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C52"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C5"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C6",
+          "C9"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C49"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C89"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C61"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C10",
+          "C11"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C57"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C75",
+          "C85",
+          "C88"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C87",
+          "C83"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C86",
+          "C82",
+          "C84"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C96",
+          "C95",
+          "C94",
+          "C92",
+          "C93",
+          "C97",
+          "C100",
+          "C99"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 1,
+        "charging_time": 59
+      },
+      {
+        "customers": [
+          "C23",
+          "C22",
+          "C29",
+          "C32",
+          "C33",
+          "C31"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C24",
+          "C25",
+          "C27",
+          "C30",
+          "C28",
+          "C26"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C34",
+          "C36",
+          "C39",
+          "C38",
+          "C37",
+          "C35"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 1,
+        "charging_time": 52
+      },
+      {
+        "customers": [
+          "C1",
+          "C98",
+          "C2",
+          "C4",
+          "C3"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 0,
+        "charging_time": 0
+      },
+      {
+        "customers": [
+          "C12",
+          "C14",
+          "C16",
+          "C19",
+          "C18",
+          "C17",
+          "C15"
+        ],
+        "feasible": true,
+        "reason": "",
+        "charging_count": 1,
+        "charging_time": 116
+      }
+    ],
+    "unsolved": []
+  },
+  "violations": [],
+  "report": {
+    "feasible": true,
+    "total_distance": 2060,
+    "total_duration": 29575,
+    "makespan": 1175,
+    "served_customers": 100,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 11,
+    "charging_time": 1046,
+    "synchronization_violations": 0,
+    "vehicle_limit_violations": 0,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "S19",
+          "C79",
+          "C76",
+          "C80",
+          "S18",
+          "C72"
+        ],
+        "load": 40,
+        "distance": 125,
+        "duration": 1018,
+        "wait_time": 308,
+        "return_time": 1018,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 2,
+        "charging_time": 225,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "C20",
+          "C46",
+          "C47"
+        ],
+        "load": 50,
+        "distance": 49,
+        "duration": 806,
+        "wait_time": 487,
+        "return_time": 806,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 3,
+        "visits": [
+          "C41",
+          "C40",
+          "C42",
+          "C44",
+          "C45",
+          "C43"
+        ],
+        "load": 70,
+        "distance": 51,
+        "duration": 896,
+        "wait_time": 305,
+        "return_time": 896,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 4,
+        "visits": [
+          "C67",
+          "C65",
+          "C62",
+          "C64",
+          "C68",
+          "C69"
+        ],
+        "load": 70,
+        "distance": 47,
+        "duration": 588,
+        "wait_time": 1,
+        "return_time": 588,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 5,
+        "visits": [
+          "C21",
+          "C48",
+          "C51",
+          "C50"
+        ],
+        "load": 50,
+        "distance": 60,
+        "duration": 1036,
+        "wait_time": 616,
+        "return_time": 1036,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 6,
+        "visits": [
+          "C63",
+          "C74",
+          "S19",
+          "C73",
+          "C70",
+          "C71",
+          "C77",
+          "C78",
+          "S20"
+        ],
+        "load": 190,
+        "distance": 140,
+        "duration": 976,
+        "wait_time": 1,
+        "return_time": 976,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 2,
+        "charging_time": 205,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 7,
+        "visits": [
+          "S16",
+          "C54"
+        ],
+        "load": 40,
+        "distance": 86,
+        "duration": 940,
+        "wait_time": 628,
+        "return_time": 940,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 136,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 8,
+        "visits": [
+          "C55"
+        ],
+        "load": 10,
+        "distance": 70,
+        "duration": 1030,
+        "wait_time": 870,
+        "return_time": 1030,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 9,
+        "visits": [
+          "S15",
+          "C59",
+          "C60",
+          "C58",
+          "C56",
+          "C53",
+          "S16"
+        ],
+        "load": 110,
+        "distance": 101,
+        "duration": 624,
+        "wait_time": 0,
+        "return_time": 624,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 2,
+        "charging_time": 73,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 10,
+        "visits": [
+          "C90",
+          "S20",
+          "C81"
+        ],
+        "load": 40,
+        "distance": 110,
+        "duration": 898,
+        "wait_time": 428,
+        "return_time": 898,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 180,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 11,
+        "visits": [
+          "C7",
+          "C8"
+        ],
+        "load": 40,
+        "distance": 37,
+        "duration": 1165,
+        "wait_time": 948,
+        "return_time": 1165,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 12,
+        "visits": [
+          "C13"
+        ],
+        "load": 30,
+        "distance": 62,
+        "duration": 1163,
+        "wait_time": 1011,
+        "return_time": 1163,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 13,
+        "visits": [
+          "C66"
+        ],
+        "load": 10,
+        "distance": 34,
+        "duration": 1175,
+        "wait_time": 1051,
+        "return_time": 1175,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 14,
+        "visits": [
+          "C91"
+        ],
+        "load": 10,
+        "distance": 44,
+        "duration": 1122,
+        "wait_time": 988,
+        "return_time": 1122,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 15,
+        "visits": [
+          "C52"
+        ],
+        "load": 10,
+        "distance": 42,
+        "duration": 1153,
+        "wait_time": 1021,
+        "return_time": 1153,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 16,
+        "visits": [
+          "C5"
+        ],
+        "load": 10,
+        "distance": 30,
+        "duration": 1055,
+        "wait_time": 935,
+        "return_time": 1055,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 17,
+        "visits": [
+          "C6",
+          "C9"
+        ],
+        "load": 30,
+        "distance": 41,
+        "duration": 1068,
+        "wait_time": 847,
+        "return_time": 1068,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 18,
+        "visits": [
+          "C49"
+        ],
+        "load": 10,
+        "distance": 38,
+        "duration": 1120,
+        "wait_time": 992,
+        "return_time": 1120,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 19,
+        "visits": [
+          "C89"
+        ],
+        "load": 10,
+        "distance": 48,
+        "duration": 1043,
+        "wait_time": 905,
+        "return_time": 1043,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 20,
+        "visits": [
+          "C61"
+        ],
+        "load": 10,
+        "distance": 44,
+        "duration": 1092,
+        "wait_time": 958,
+        "return_time": 1092,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 21,
+        "visits": [
+          "C10",
+          "C11"
+        ],
+        "load": 20,
+        "distance": 40,
+        "duration": 982,
+        "wait_time": 762,
+        "return_time": 982,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 22,
+        "visits": [
+          "C57"
+        ],
+        "load": 40,
+        "distance": 70,
+        "duration": 1114,
+        "wait_time": 954,
+        "return_time": 1114,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 23,
+        "visits": [
+          "C75",
+          "C85",
+          "C88"
+        ],
+        "load": 80,
+        "distance": 70,
+        "duration": 954,
+        "wait_time": 614,
+        "return_time": 954,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 24,
+        "visits": [
+          "C87",
+          "C83"
+        ],
+        "load": 30,
+        "distance": 64,
+        "duration": 678,
+        "wait_time": 434,
+        "return_time": 678,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 25,
+        "visits": [
+          "C86",
+          "C82",
+          "C84"
+        ],
+        "load": 50,
+        "distance": 72,
+        "duration": 771,
+        "wait_time": 429,
+        "return_time": 771,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 26,
+        "visits": [
+          "C96",
+          "C95",
+          "C94",
+          "C92",
+          "C93",
+          "C97",
+          "C100",
+          "C99",
+          "S3"
+        ],
+        "load": 170,
+        "distance": 97,
+        "duration": 1022,
+        "wait_time": 146,
+        "return_time": 1022,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 59,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 27,
+        "visits": [
+          "C23",
+          "C22",
+          "C29",
+          "C32",
+          "C33",
+          "C31"
+        ],
+        "load": 130,
+        "distance": 79,
+        "duration": 619,
+        "wait_time": 0,
+        "return_time": 619,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 28,
+        "visits": [
+          "C24",
+          "C25",
+          "C27",
+          "C30",
+          "C28",
+          "C26"
+        ],
+        "load": 100,
+        "distance": 44,
+        "duration": 778,
+        "wait_time": 194,
+        "return_time": 778,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 29,
+        "visits": [
+          "C34",
+          "C36",
+          "C39",
+          "C38",
+          "C37",
+          "C35",
+          "S11"
+        ],
+        "load": 110,
+        "distance": 95,
+        "duration": 849,
+        "wait_time": 162,
+        "return_time": 849,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 52,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 30,
+        "visits": [
+          "C1",
+          "C98",
+          "C2",
+          "C4",
+          "C3"
+        ],
+        "load": 80,
+        "distance": 70,
+        "duration": 969,
+        "wait_time": 449,
+        "return_time": 969,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 31,
+        "visits": [
+          "S7",
+          "C12",
+          "C14",
+          "C16",
+          "C19",
+          "C18",
+          "C17",
+          "C15"
+        ],
+        "load": 160,
+        "distance": 100,
+        "duration": 871,
+        "wait_time": 25,
+        "return_time": 871,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 116,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": []
+  },
+  "instance": {
+    "name": "c101_21",
+    "problem_type": "EVRPTW",
+    "objective": {
+      "primary": "minimize_vehicle_count",
+      "secondary": "minimize_total_distance"
+    },
+    "distance": {
+      "metric": "euclidean",
+      "scale": 1
+    },
+    "duration": {
+      "metric": "euclidean",
+      "scale": 1.0
+    },
+    "solver": {
+      "name": "RouteFinder",
+      "runtime_seconds": 0,
+      "seed": 4,
+      "display": false
+    },
+    "vehicles": {
+      "num_available": 31,
+      "capacity": 200,
+      "start_depot": "D0",
+      "end_depot": "D0",
+      "tw_early": 0,
+      "tw_late": 1236,
+      "battery_capacity": 79.69,
+      "initial_battery": 79.69
+    },
+    "depot": {
+      "name": "D0",
+      "x": 40,
+      "y": 50,
+      "tw_early": 0,
+      "tw_late": 1236
+    },
+    "energy": {
+      "consumption_per_distance": 1,
+      "minimum_battery": 0
+    },
+    "charging": {
+      "policy": "partial_recharge",
+      "allow_partial_recharge": true,
+      "charging_rate": 0.2949852507374631,
+      "fixed_service_duration": 0
+    },
+    "charging_stations": [
+      {
+        "name": "S0",
+        "x": 40,
+        "y": 50,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S1",
+        "x": 73,
+        "y": 52,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S2",
+        "x": 90,
+        "y": 55,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S3",
+        "x": 55,
+        "y": 79,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S4",
+        "x": 69,
+        "y": 89,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S5",
+        "x": 32,
+        "y": 80,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S6",
+        "x": 39,
+        "y": 96,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S7",
+        "x": 23,
+        "y": 80,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S8",
+        "x": 4,
+        "y": 83,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S9",
+        "x": 18,
+        "y": 58,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S10",
+        "x": 1,
+        "y": 56,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S11",
+        "x": 13,
+        "y": 31,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S12",
+        "x": -5,
+        "y": 38,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S13",
+        "x": 26,
+        "y": 37,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S14",
+        "x": 28,
+        "y": 13,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S15",
+        "x": 39,
+        "y": 31,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S16",
+        "x": 48,
+        "y": 11,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S17",
+        "x": 59,
+        "y": 17,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S18",
+        "x": 73,
+        "y": 23,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S19",
+        "x": 74,
+        "y": 32,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      },
+      {
+        "name": "S20",
+        "x": 90,
+        "y": 44,
+        "service_duration": 0,
+        "tw_early": 0,
+        "tw_late": 1236,
+        "charging_rate": 0.2949852507374631
+      }
+    ],
+    "clients": [
+      {
+        "name": "C1",
+        "x": 45,
+        "y": 68,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 78,
+        "tw_late": 140
+      },
+      {
+        "name": "C2",
+        "x": 45,
+        "y": 70,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 499,
+        "tw_late": 553
+      },
+      {
+        "name": "C3",
+        "x": 42,
+        "y": 66,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 863,
+        "tw_late": 931
+      },
+      {
+        "name": "C4",
+        "x": 42,
+        "y": 68,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 584,
+        "tw_late": 656
+      },
+      {
+        "name": "C5",
+        "x": 42,
+        "y": 65,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 950,
+        "tw_late": 1026
+      },
+      {
+        "name": "C6",
+        "x": 40,
+        "y": 69,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 683,
+        "tw_late": 741
+      },
+      {
+        "name": "C7",
+        "x": 40,
+        "y": 66,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 774,
+        "tw_late": 836
+      },
+      {
+        "name": "C8",
+        "x": 38,
+        "y": 68,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 1057,
+        "tw_late": 1125
+      },
+      {
+        "name": "C9",
+        "x": 38,
+        "y": 70,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 958,
+        "tw_late": 1040
+      },
+      {
+        "name": "C10",
+        "x": 35,
+        "y": 66,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 779,
+        "tw_late": 845
+      },
+      {
+        "name": "C11",
+        "x": 35,
+        "y": 69,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 869,
+        "tw_late": 941
+      },
+      {
+        "name": "C12",
+        "x": 25,
+        "y": 85,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 176,
+        "tw_late": 228
+      },
+      {
+        "name": "C13",
+        "x": 22,
+        "y": 75,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 1042,
+        "tw_late": 1106
+      },
+      {
+        "name": "C14",
+        "x": 22,
+        "y": 85,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 263,
+        "tw_late": 327
+      },
+      {
+        "name": "C15",
+        "x": 20,
+        "y": 80,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 745,
+        "tw_late": 789
+      },
+      {
+        "name": "C16",
+        "x": 20,
+        "y": 85,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 358,
+        "tw_late": 416
+      },
+      {
+        "name": "C17",
+        "x": 18,
+        "y": 75,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 633,
+        "tw_late": 711
+      },
+      {
+        "name": "C18",
+        "x": 15,
+        "y": 75,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 557,
+        "tw_late": 601
+      },
+      {
+        "name": "C19",
+        "x": 15,
+        "y": 80,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 455,
+        "tw_late": 513
+      },
+      {
+        "name": "C20",
+        "x": 30,
+        "y": 50,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 10,
+        "tw_late": 70
+      },
+      {
+        "name": "C21",
+        "x": 30,
+        "y": 52,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 11,
+        "tw_late": 73
+      },
+      {
+        "name": "C22",
+        "x": 28,
+        "y": 52,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 73,
+        "tw_late": 131
+      },
+      {
+        "name": "C23",
+        "x": 28,
+        "y": 55,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 13,
+        "tw_late": 70
+      },
+      {
+        "name": "C24",
+        "x": 25,
+        "y": 50,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 72,
+        "tw_late": 138
+      },
+      {
+        "name": "C25",
+        "x": 25,
+        "y": 52,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 158,
+        "tw_late": 232
+      },
+      {
+        "name": "C26",
+        "x": 25,
+        "y": 55,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 672,
+        "tw_late": 744
+      },
+      {
+        "name": "C27",
+        "x": 23,
+        "y": 52,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 263,
+        "tw_late": 311
+      },
+      {
+        "name": "C28",
+        "x": 23,
+        "y": 55,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 438,
+        "tw_late": 510
+      },
+      {
+        "name": "C29",
+        "x": 20,
+        "y": 50,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 174,
+        "tw_late": 226
+      },
+      {
+        "name": "C30",
+        "x": 20,
+        "y": 55,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 355,
+        "tw_late": 407
+      },
+      {
+        "name": "C31",
+        "x": 10,
+        "y": 35,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 467,
+        "tw_late": 517
+      },
+      {
+        "name": "C32",
+        "x": 10,
+        "y": 40,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 271,
+        "tw_late": 337
+      },
+      {
+        "name": "C33",
+        "x": 8,
+        "y": 40,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 355,
+        "tw_late": 437
+      },
+      {
+        "name": "C34",
+        "x": 8,
+        "y": 45,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 194,
+        "tw_late": 244
+      },
+      {
+        "name": "C35",
+        "x": 5,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 655,
+        "tw_late": 725
+      },
+      {
+        "name": "C36",
+        "x": 5,
+        "y": 45,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 278,
+        "tw_late": 346
+      },
+      {
+        "name": "C37",
+        "x": 2,
+        "y": 40,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 569,
+        "tw_late": 619
+      },
+      {
+        "name": "C38",
+        "x": 0,
+        "y": 40,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 472,
+        "tw_late": 532
+      },
+      {
+        "name": "C39",
+        "x": 0,
+        "y": 45,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 374,
+        "tw_late": 440
+      },
+      {
+        "name": "C40",
+        "x": 35,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 143,
+        "tw_late": 199
+      },
+      {
+        "name": "C41",
+        "x": 35,
+        "y": 32,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 49,
+        "tw_late": 109
+      },
+      {
+        "name": "C42",
+        "x": 33,
+        "y": 32,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 239,
+        "tw_late": 289
+      },
+      {
+        "name": "C43",
+        "x": 33,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 789,
+        "tw_late": 849
+      },
+      {
+        "name": "C44",
+        "x": 32,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 325,
+        "tw_late": 387
+      },
+      {
+        "name": "C45",
+        "x": 30,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 421,
+        "tw_late": 475
+      },
+      {
+        "name": "C46",
+        "x": 30,
+        "y": 32,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 601,
+        "tw_late": 665
+      },
+      {
+        "name": "C47",
+        "x": 30,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 698,
+        "tw_late": 754
+      },
+      {
+        "name": "C48",
+        "x": 28,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 511,
+        "tw_late": 569
+      },
+      {
+        "name": "C49",
+        "x": 28,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 1011,
+        "tw_late": 1073
+      },
+      {
+        "name": "C50",
+        "x": 26,
+        "y": 32,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 923,
+        "tw_late": 975
+      },
+      {
+        "name": "C51",
+        "x": 25,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 823,
+        "tw_late": 889
+      },
+      {
+        "name": "C52",
+        "x": 25,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 1042,
+        "tw_late": 1102
+      },
+      {
+        "name": "C53",
+        "x": 44,
+        "y": 5,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 437,
+        "tw_late": 511
+      },
+      {
+        "name": "C54",
+        "x": 42,
+        "y": 10,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 810,
+        "tw_late": 868
+      },
+      {
+        "name": "C55",
+        "x": 42,
+        "y": 15,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 905,
+        "tw_late": 963
+      },
+      {
+        "name": "C56",
+        "x": 40,
+        "y": 5,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 350,
+        "tw_late": 410
+      },
+      {
+        "name": "C57",
+        "x": 40,
+        "y": 15,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 989,
+        "tw_late": 1063
+      },
+      {
+        "name": "C58",
+        "x": 38,
+        "y": 5,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 256,
+        "tw_late": 320
+      },
+      {
+        "name": "C59",
+        "x": 38,
+        "y": 15,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 66,
+        "tw_late": 124
+      },
+      {
+        "name": "C60",
+        "x": 35,
+        "y": 5,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 167,
+        "tw_late": 223
+      },
+      {
+        "name": "C61",
+        "x": 50,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 980,
+        "tw_late": 1064
+      },
+      {
+        "name": "C62",
+        "x": 50,
+        "y": 35,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 169,
+        "tw_late": 229
+      },
+      {
+        "name": "C63",
+        "x": 50,
+        "y": 40,
+        "demand": 50,
+        "service_duration": 90,
+        "tw_early": 15,
+        "tw_late": 85
+      },
+      {
+        "name": "C64",
+        "x": 48,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 263,
+        "tw_late": 325
+      },
+      {
+        "name": "C65",
+        "x": 48,
+        "y": 40,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 67,
+        "tw_late": 139
+      },
+      {
+        "name": "C66",
+        "x": 47,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 1068,
+        "tw_late": 1129
+      },
+      {
+        "name": "C67",
+        "x": 47,
+        "y": 40,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 13,
+        "tw_late": 88
+      },
+      {
+        "name": "C68",
+        "x": 45,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 354,
+        "tw_late": 420
+      },
+      {
+        "name": "C69",
+        "x": 45,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 448,
+        "tw_late": 516
+      },
+      {
+        "name": "C70",
+        "x": 95,
+        "y": 30,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 390,
+        "tw_late": 444
+      },
+      {
+        "name": "C71",
+        "x": 95,
+        "y": 35,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 481,
+        "tw_late": 543
+      },
+      {
+        "name": "C72",
+        "x": 53,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 904,
+        "tw_late": 954
+      },
+      {
+        "name": "C73",
+        "x": 92,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 287,
+        "tw_late": 361
+      },
+      {
+        "name": "C74",
+        "x": 53,
+        "y": 35,
+        "demand": 50,
+        "service_duration": 90,
+        "tw_early": 78,
+        "tw_late": 142
+      },
+      {
+        "name": "C75",
+        "x": 45,
+        "y": 65,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 16,
+        "tw_late": 91
+      },
+      {
+        "name": "C76",
+        "x": 90,
+        "y": 35,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 575,
+        "tw_late": 639
+      },
+      {
+        "name": "C77",
+        "x": 88,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 534,
+        "tw_late": 600
+      },
+      {
+        "name": "C78",
+        "x": 88,
+        "y": 35,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 667,
+        "tw_late": 731
+      },
+      {
+        "name": "C79",
+        "x": 87,
+        "y": 30,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 446,
+        "tw_late": 506
+      },
+      {
+        "name": "C80",
+        "x": 85,
+        "y": 25,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 637,
+        "tw_late": 689
+      },
+      {
+        "name": "C81",
+        "x": 85,
+        "y": 35,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 761,
+        "tw_late": 823
+      },
+      {
+        "name": "C82",
+        "x": 75,
+        "y": 55,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 459,
+        "tw_late": 529
+      },
+      {
+        "name": "C83",
+        "x": 72,
+        "y": 55,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 556,
+        "tw_late": 618
+      },
+      {
+        "name": "C84",
+        "x": 70,
+        "y": 58,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 650,
+        "tw_late": 710
+      },
+      {
+        "name": "C85",
+        "x": 68,
+        "y": 60,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 737,
+        "tw_late": 809
+      },
+      {
+        "name": "C86",
+        "x": 66,
+        "y": 55,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 173,
+        "tw_late": 241
+      },
+      {
+        "name": "C87",
+        "x": 65,
+        "y": 55,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 87,
+        "tw_late": 145
+      },
+      {
+        "name": "C88",
+        "x": 65,
+        "y": 60,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 837,
+        "tw_late": 895
+      },
+      {
+        "name": "C89",
+        "x": 63,
+        "y": 58,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 929,
+        "tw_late": 989
+      },
+      {
+        "name": "C90",
+        "x": 60,
+        "y": 55,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 21,
+        "tw_late": 84
+      },
+      {
+        "name": "C91",
+        "x": 60,
+        "y": 60,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 1010,
+        "tw_late": 1096
+      },
+      {
+        "name": "C92",
+        "x": 67,
+        "y": 85,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 459,
+        "tw_late": 519
+      },
+      {
+        "name": "C93",
+        "x": 65,
+        "y": 85,
+        "demand": 40,
+        "service_duration": 90,
+        "tw_early": 546,
+        "tw_late": 616
+      },
+      {
+        "name": "C94",
+        "x": 65,
+        "y": 82,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 367,
+        "tw_late": 423
+      },
+      {
+        "name": "C95",
+        "x": 62,
+        "y": 80,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 274,
+        "tw_late": 330
+      },
+      {
+        "name": "C96",
+        "x": 60,
+        "y": 80,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 177,
+        "tw_late": 243
+      },
+      {
+        "name": "C97",
+        "x": 60,
+        "y": 85,
+        "demand": 30,
+        "service_duration": 90,
+        "tw_early": 645,
+        "tw_late": 707
+      },
+      {
+        "name": "C98",
+        "x": 58,
+        "y": 75,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 181,
+        "tw_late": 247
+      },
+      {
+        "name": "C99",
+        "x": 55,
+        "y": 80,
+        "demand": 10,
+        "service_duration": 90,
+        "tw_early": 836,
+        "tw_late": 896
+      },
+      {
+        "name": "C100",
+        "x": 55,
+        "y": 85,
+        "demand": 20,
+        "service_duration": 90,
+        "tw_early": 744,
+        "tw_late": 798
+      }
+    ],
+    "vehicle_limit_policy": {
+      "formula": "ceil((clients + charging_stations) / 4)",
+      "rounding": "ceiling",
+      "client_count": 100,
+      "charging_station_count": 21,
+      "vehicle_limit": 31
+    }
+  }
+}

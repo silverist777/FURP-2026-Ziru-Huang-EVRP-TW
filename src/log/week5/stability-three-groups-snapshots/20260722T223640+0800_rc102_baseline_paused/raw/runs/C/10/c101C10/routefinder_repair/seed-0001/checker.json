@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "fresh_recheck": true,
+  "job_id": "C-c101C10-routefinder_repair-seed-0001",
+  "group": "C",
+  "method": "routefinder_repair",
+  "instance": "c101C10",
+  "clients": 10,
+  "stations": 5,
+  "max_vehicles": 4,
+  "seed": 1,
+  "validation_status": "valid",
+  "contract_valid": true,
+  "strict_feasible": true,
+  "failure_class": "success",
+  "contract_errors": [],
+  "report": {
+    "feasible": true,
+    "total_distance": 424,
+    "total_duration": 3637,
+    "makespan": 1163,
+    "served_customers": 10,
+    "missing_customers": [],
+    "duplicate_customers": [],
+    "time_window_violations": 0,
+    "capacity_violations": 0,
+    "energy_violations": 0,
+    "charging_count": 4,
+    "charging_time": 676,
+    "synchronization_violations": 0,
+    "vehicle_limit_violations": 0,
+    "route_metrics": [
+      {
+        "route_index": 1,
+        "visits": [
+          "S20",
+          "C78",
+          "C54",
+          "S16"
+        ],
+        "load": 60,
+        "distance": 163,
+        "duration": 1061,
+        "wait_time": 422,
+        "return_time": 1061,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 2,
+        "charging_time": 296,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 2,
+        "visits": [
+          "C96",
+          "C95",
+          "S3",
+          "C100",
+          "C89"
+        ],
+        "load": 70,
+        "distance": 99,
+        "duration": 1043,
+        "wait_time": 434,
+        "return_time": 1043,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 150,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 3,
+        "visits": [
+          "C98",
+          "C4",
+          "S0",
+          "C13"
+        ],
+        "load": 60,
+        "distance": 128,
+        "duration": 1163,
+        "wait_time": 535,
+        "return_time": 1163,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 1,
+        "charging_time": 230,
+        "synchronization_violations": 0
+      },
+      {
+        "route_index": 4,
+        "visits": [
+          "C27"
+        ],
+        "load": 10,
+        "distance": 34,
+        "duration": 370,
+        "wait_time": 246,
+        "return_time": 370,
+        "time_window_violations": 0,
+        "capacity_violations": 0,
+        "energy_violations": 0,
+        "charging_count": 0,
+        "charging_time": 0,
+        "synchronization_violations": 0
+      }
+    ],
+    "violations": []
+  },
+  "route_count": 4,
+  "result_status": "solved",
+  "result_method_name": "RouteFinder RF-Transformer + fleet compaction + EVRP-TW repair",
+  "expected_method_names": [
+    "RouteFinder RF-Transformer + fleet compaction + EVRP-TW repair",
+    "RouteFinder RF-Transformer + EVRP-TW repair"
+  ],
+  "result_metrics_feasible": true,
+  "hashes": {
+    "instance_sha256": "DD7802727D0CC6E535D65323112B8E7ED2DC22F2D7250E1F5C408C5AEF8CFFEF",
+    "result_sha256": "ADADD72A190117B053F36095E2C27E8EE6E6B444AB78873AFFCDD901A32B0B44",
+    "checker_sha256": "CB3CB4EDD21D9F915C2B7406CE3EEAFF99E004AB75DE2CBD5EB3C3ED11D6255C",
+    "fleet_policy_sha256": "D89213812E7365441D29182077921DA94D1FE2710F0ECD1DD0EAACBC350605B0",
+    "instance_loader_sha256": "683A05152D51253FD533E83464723730F67995F8E331BDCADF55D8345D4AC189",
+    "converter_sha256": "951FC2B738092BD9EC0D46CB28F2CB4E5B94942E6CFFAA4F16F76BE8EAAC30A6",
+    "validator_sha256": "B92376ABCB8BDDA6B7FADD7061702E3C6ECC167C9DF849D21EA0949D27519048"
+  }
+}
